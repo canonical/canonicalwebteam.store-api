@@ -8,18 +8,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - uses: dschep/install-poetry-action@v1.2
 
-    - name: Install system dependencies
-      run: |
-        sudo apt update && sudo apt install -y --no-install-recommends python3-setuptools
-        pip3 install --upgrade setuptools
-        pip3 install wheel twine
+    - name: Install dependencies
+      run: sudo apt update && sudo apt install -y --no-install-recommends python3-venv
+
+    - name: Make poetry use Python 3
+      run: sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 
     - name: Build package
-      run: python3 setup.py sdist bdist_wheel
-
-    - name: Twine check
-      run: python3 -m twine check dist/*
+      run: poetry build
 
   lint-python:
     runs-on: ubuntu-latest
@@ -27,26 +25,29 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Install system dependencies
+    - name: Install dependencies
       run: |
         sudo apt update && sudo apt install -y --no-install-recommends python3-setuptools
-        pip3 install --upgrade setuptools
         pip3 install flake8 black
 
     - name: Lint Python
-      run: python3 -m flake8 canonicalwebteam tests setup.py && python3 -m black --line-length 79 --check canonicalwebteam tests setup.py
+      run: python3 -m flake8 canonicalwebteam tests && python3 -m black --line-length 79 --check canonicalwebteam tests
 
   test-python:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v1
+    - uses: dschep/install-poetry-action@v1.2
 
-    - name: Install system dependencies
-      run: |
-        sudo apt update && sudo apt install -y --no-install-recommends python3-setuptools
-        pip3 install --upgrade setuptools
-        pip3 install wheel
+    - name: Install dependencies
+      run: sudo apt update && sudo apt install -y --no-install-recommends python3-venv
+
+    - name: Make poetry use Python 3
+      run: sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
+
+    - name: Install poetry dependencies
+      run: poetry install
 
     - name: Test Python
-      run: python3 setup.py test
+      run: poetry run pytest
