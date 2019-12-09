@@ -4,9 +4,9 @@ import talisker.requests
 from canonicalwebteam.store_api import requests
 
 from canonicalwebteam.store_api.exceptions import (
-    ApiResponseDecodeError,
-    ApiResponseError,
-    ApiResponseErrorList,
+    StoreApiResponseDecodeError,
+    StoreApiResponseError,
+    StoreApiResponseErrorList,
 )
 
 SNAPCRAFT_IO_API = os.getenv(
@@ -89,7 +89,7 @@ class StoreApi:
         try:
             body = response.json()
         except ValueError as decode_error:
-            api_error_exception = ApiResponseDecodeError(
+            api_error_exception = StoreApiResponseDecodeError(
                 "JSON decoding failed: {}".format(decode_error)
             )
             raise api_error_exception
@@ -102,14 +102,14 @@ class StoreApi:
                     if "error_list" in body
                     else body["error-list"]
                 )
-                api_error_exception = ApiResponseErrorList(
+                api_error_exception = StoreApiResponseErrorList(
                     "The api returned a list of errors",
                     response.status_code,
                     error_body,
                 )
                 raise api_error_exception
             else:
-                raise ApiResponseError(
+                raise StoreApiResponseError(
                     "Unknown error from api", response.status_code
                 )
 

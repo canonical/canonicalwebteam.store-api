@@ -4,9 +4,9 @@ import requests
 
 from pybreaker import CircuitBreaker, CircuitBreakerError
 from canonicalwebteam.store_api.exceptions import (
-    ApiCircuitBreaker,
-    ApiConnectionError,
-    ApiTimeoutError,
+    StoreApiCircuitBreaker,
+    StoreApiConnectionError,
+    StoreApiTimeoutError,
 )
 
 
@@ -48,15 +48,15 @@ class BaseSession:
                 super().request, method=method, url=url, **kwargs
             )
         except requests.exceptions.Timeout:
-            raise ApiTimeoutError(
+            raise StoreApiTimeoutError(
                 "The request to {} took too long".format(url)
             )
         except requests.exceptions.ConnectionError:
-            raise ApiConnectionError(
+            raise StoreApiConnectionError(
                 "Failed to establish connection to {}.".format(url)
             )
         except CircuitBreakerError:
-            raise ApiCircuitBreaker(
+            raise StoreApiCircuitBreaker(
                 "Requests are closed because of too many failures".format(url)
             )
 
