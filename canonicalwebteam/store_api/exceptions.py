@@ -1,4 +1,4 @@
-class ApiError(Exception):
+class StoreApiError(Exception):
     """
     Base exception for any errors in the API layer
     """
@@ -6,7 +6,7 @@ class ApiError(Exception):
     pass
 
 
-class ApiConnectionError(ApiError):
+class StoreApiConnectionError(StoreApiError):
     """
     Communication with the API failed
     """
@@ -14,7 +14,7 @@ class ApiConnectionError(ApiError):
     pass
 
 
-class ApiTimeoutError(ApiError):
+class StoreApiTimeoutError(StoreApiError):
     """
     Communication with the API timed out
     """
@@ -22,23 +22,7 @@ class ApiTimeoutError(ApiError):
     pass
 
 
-class MissingUsername(ApiError):
-    """
-    The user hasn't registed a username
-    """
-
-    pass
-
-
-class AgreementNotSigned(ApiError):
-    """
-    The user needs to sign the agreement
-    """
-
-    pass
-
-
-class ApiResponseDecodeError(ApiError):
+class StoreApiResponseDecodeError(StoreApiError):
     """
     We failed to properly decode the response from the API
     """
@@ -46,7 +30,7 @@ class ApiResponseDecodeError(ApiError):
     pass
 
 
-class ApiResponseError(ApiError):
+class StoreApiResponseError(StoreApiError):
     """
     The API responded with an error
     """
@@ -56,7 +40,7 @@ class ApiResponseError(ApiError):
         return super().__init__(message)
 
 
-class ApiResponseErrorList(ApiResponseError):
+class StoreApiResponseErrorList(StoreApiResponseError):
     """
     The API responded with a list of errors,
     which are included in self.errors
@@ -67,14 +51,5 @@ class ApiResponseErrorList(ApiResponseError):
         return super().__init__(message, status_code)
 
 
-class MacaroonRefreshRequired(ApiError):
-    """
-    The macaroon needs to be refreshed
-    """
-
-    def __init__(self):
-        return super().__init__("The Macaroon needs to be refreshed")
-
-
-class ApiCircuitBreaker(ApiError):
+class StoreApiCircuitBreaker(StoreApiError):
     pass
