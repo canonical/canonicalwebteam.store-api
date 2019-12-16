@@ -1,5 +1,9 @@
 # Canonical Store Api - Python package
 
+![](https://github.com/canonical-web-and-design/canonicalwebteam.store-api/workflows/Test%20live%20APIs/badge.svg)
+![](https://github.com/canonical-web-and-design/canonicalwebteam.store-api/workflows/Tests/badge.svg)
+![](https://github.com/canonical-web-and-design/canonicalwebteam.store-api/workflows/Publish/badge.svg)
+
 ## How to install
 
 To install this extension as a requirement in your project, you can use PIP:
