@@ -112,7 +112,6 @@ class StoreApi:
     def get_publisher_items(self, publisher, size=500, page=1, api_version=1):
         return self.search(
             search="publisher:" + publisher,
-            category="featured",
             size=size,
             page=page,
             api_version=api_version,
