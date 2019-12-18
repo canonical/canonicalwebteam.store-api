@@ -1,0 +1,48 @@
+interactions:
+- request:
+    body: '[{"metric_name": "weekly_installed_base_by_country_percent", "snap_id":
+      "kJWM6jE26DiyziWpGNKtedvNlmC1mbIi", "start": "2019-12-18", "end": "2019-12-18"}]'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '152'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+      X-Ubuntu-Series:
+      - '16'
+    method: POST
+    uri: https://api.snapcraft.io/api/v1/snaps/metrics
+  response:
+    body:
+      string: '[{"buckets":[],"metric_name":"weekly_installed_base_by_country_percent","series":[],"snap_id":"kJWM6jE26DiyziWpGNKtedvNlmC1mbIi","status":"NO
+        DATA"}]
+
+        '
+    headers:
+      Content-Length:
+      - '150'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 18 Dec 2019 15:23:13 GMT
+      Server:
+      - gunicorn/19.7.1
+      Snap-Store-Version:
+      - '17'
+      X-Request-Id:
+      - 5BBD5DB6A9F40A325DDF01BB5DFA44619D83A8F
+      X-VCS-Revision:
+      - 7adc6b1
+      X-View-Name:
+      - snapdevicegw.webapi_metrics.metrics
+    status:
+      code: 200
+      message: OK
+version: 1

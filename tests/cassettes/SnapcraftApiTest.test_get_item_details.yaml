@@ -1,0 +1,46 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Snap-Device-Series:
+      - '16'
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: https://api.snapcraft.io/v2/snaps/info/toto?fields=title%2Csummary%2Cdescription%2Clicense%2Ccontact%2Cwebsite%2Cpublisher%2Cprices%2Cmedia%2Cdownload%2Cversion%2Ccreated-at%2Cconfinement%2Ccategories%2Ctrending
+  response:
+    body:
+      string: '{"channel-map":[{"channel":{"architecture":"amd64","name":"stable","released-at":"2019-09-09T12:21:28.024543+00:00","risk":"stable","track":"latest"},"confinement":"strict","created-at":"2019-09-09T12:20:41.196608+00:00","download":{"deltas":[],"sha3-384":"76ff148aac32bbf13f3462bae6eaadf7f68cef6e4f7f856fa9242068a7dabce41a95bc2bacd39dacd4555b0980b44a07","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_11.snap"},"version":"giant-quarter"},{"channel":{"architecture":"armhf","name":"stable","released-at":"2018-09-11T10:55:16.586335+00:00","risk":"stable","track":"latest"},"confinement":"strict","created-at":"2018-02-08T16:12:11.263686+00:00","download":{"deltas":[],"sha3-384":"0404600b3d6d460ffe0194a073eec25827273e77a98b58e1f58bb1e8b8809eac4b63f53ebb2edc6a9b547eff907dd996","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_3.snap"},"version":"0.1"},{"channel":{"architecture":"i386","name":"stable","released-at":"2018-09-11T10:55:35.069588+00:00","risk":"stable","track":"latest"},"confinement":"strict","created-at":"2018-02-08T21:06:10.904194+00:00","download":{"deltas":[],"sha3-384":"58c8747083e9f142d9880f42b5935b093199e95b4f98b2cf95786cee648a6df52f3fc110856cb7be817a8e646af5f8d2","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_5.snap"},"version":"0.1"},{"channel":{"architecture":"amd64","name":"candidate","released-at":"2019-08-08T14:49:22.569434+00:00","risk":"candidate","track":"latest"},"confinement":"strict","created-at":"2019-02-20T10:30:04.777030+00:00","download":{"deltas":[],"sha3-384":"edddaffd18bbd5b7527b45b3c6f59f0bdb7181bb986b038eb3300cded866dadad2afb4826d4875957b73e39e5ccf6aab","size":469504000,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_9.snap"},"version":"wheelbarrow"},{"channel":{"architecture":"armhf","name":"candidate","released-at":"2018-09-11T10:54:41.937549+00:00","risk":"candidate","track":"latest"},"confinement":"strict","created-at":"2018-02-08T16:12:11.263686+00:00","download":{"deltas":[],"sha3-384":"0404600b3d6d460ffe0194a073eec25827273e77a98b58e1f58bb1e8b8809eac4b63f53ebb2edc6a9b547eff907dd996","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_3.snap"},"version":"0.1"},{"channel":{"architecture":"i386","name":"candidate","released-at":"2018-09-11T10:55:28.842887+00:00","risk":"candidate","track":"latest"},"confinement":"strict","created-at":"2018-02-08T21:06:10.904194+00:00","download":{"deltas":[],"sha3-384":"58c8747083e9f142d9880f42b5935b093199e95b4f98b2cf95786cee648a6df52f3fc110856cb7be817a8e646af5f8d2","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_5.snap"},"version":"0.1"},{"channel":{"architecture":"amd64","name":"beta","released-at":"2019-08-08T14:50:56.040496+00:00","risk":"beta","track":"latest"},"confinement":"strict","created-at":"2019-02-20T10:30:04.777030+00:00","download":{"deltas":[],"sha3-384":"edddaffd18bbd5b7527b45b3c6f59f0bdb7181bb986b038eb3300cded866dadad2afb4826d4875957b73e39e5ccf6aab","size":469504000,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_9.snap"},"version":"wheelbarrow"},{"channel":{"architecture":"armhf","name":"beta","released-at":"2018-10-16T13:17:46.563541+00:00","risk":"beta","track":"latest"},"confinement":"strict","created-at":"2018-02-08T16:12:11.263686+00:00","download":{"deltas":[],"sha3-384":"0404600b3d6d460ffe0194a073eec25827273e77a98b58e1f58bb1e8b8809eac4b63f53ebb2edc6a9b547eff907dd996","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_3.snap"},"version":"0.1"},{"channel":{"architecture":"i386","name":"beta","released-at":"2018-10-16T13:53:26.120683+00:00","risk":"beta","track":"latest"},"confinement":"strict","created-at":"2018-02-08T21:06:10.904194+00:00","download":{"deltas":[],"sha3-384":"58c8747083e9f142d9880f42b5935b093199e95b4f98b2cf95786cee648a6df52f3fc110856cb7be817a8e646af5f8d2","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_5.snap"},"version":"0.1"}],"default-track":null,"name":"toto","snap":{"categories":[{"featured":false,"name":"social"}],"contact":"","description":"This
+        is a command line tool to make your life happier.\n\nfor more information
+        click on this link: https://toto.space/","license":"AGPL-3.0","media":[{"height":null,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/06/Artboard_0gjcICX.png","width":null},{"height":null,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/03/Artboard_fNArkm1.png","width":null},{"height":null,"type":"video","url":"https://youtu.be/WznLv41fOL0","width":null}],"prices":{},"publisher":{"display-name":"Thomas
+        Bille","id":"YB37ytC2fSCv2o7tx8aHXucGkuTJmSnF","username":"tbmb","validation":"unproven"},"summary":"Cool
+        tool for happy people","title":"toto","trending":false,"website":"https://toto.space"},"snap-id":"kJWM6jE26DiyziWpGNKtedvNlmC1mbIi"}
+
+        '
+    headers:
+      Content-Length:
+      - '5141'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 18 Dec 2019 15:23:13 GMT
+      Server:
+      - gunicorn/19.7.1
+      Snap-Store-Version:
+      - '17'
+      X-Request-Id:
+      - 5BBD5DB6A9F20A325DDF01BB5DFA44609D83958
+      X-VCS-Revision:
+      - 7adc6b1
+      X-View-Name:
+      - snapdevicegw.webapi_info.snap_info
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,150 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=publisher%3A28zEonXNoBLvIB7xneRbltOsp0Nf7DwS&size=500&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"apps": ["goland"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/go_1282x.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/go_1282x.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/go_overview.png"}],
+        "origin": "jetbrains", "package_name": "goland", "publisher": "jetbrains",
+        "summary": "A Clever IDE to Go", "title": "GoLand"}, {"apps": ["datagrip"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/product_256.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/product_256.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/2.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/1.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/3.png"}],
+        "origin": "jetbrains", "package_name": "datagrip", "publisher": "jetbrains",
+        "summary": "IntelliJ-based IDE for databases and SQL", "title": "DataGrip"},
+        {"apps": ["rubymine"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/rubymine.ico.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/rubymine.ico.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/rm_1.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/rm_2.png"}],
+        "origin": "jetbrains", "package_name": "rubymine", "publisher": "jetbrains",
+        "summary": "The Most Intelligent Ruby and Rails IDE", "title": "RubyMine"},
+        {"apps": ["intellij-idea-educational"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/icon_CE_256_2Qe5uEl.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/icon_CE_256_2Qe5uEl.png"}],
+        "origin": "jetbrains", "package_name": "intellij-idea-educational", "publisher":
+        "jetbrains", "summary": "IntelliJ IDEA Educational Edition", "title": "IDEA
+        Educational"}, {"apps": ["phpstorm"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/webide.ico_HA9tBL0.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/webide.ico_HA9tBL0.png"},
+        {"height": 980, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/welcome.png",
+        "width": 1554}, {"height": 2105, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/overview.png",
+        "width": 3706}], "origin": "jetbrains", "package_name": "phpstorm", "publisher":
+        "jetbrains", "summary": "PHP IDE for Professional Development", "title": "PhpStorm"},
+        {"apps": ["pycharm-community"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/PyCharmCore256.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/PyCharmCore256.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/pycharm_com_general.png"}],
+        "origin": "jetbrains", "package_name": "pycharm-community", "publisher": "jetbrains",
+        "summary": "Python IDE for Professional Developers", "title": "PyCharm CE"},
+        {"apps": ["intellij-idea-community"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/icon_CE_256_2Qe5uEl.png",
+        "media": [{"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/09/screenshot_Pm7mWCg.png"},
+        {"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/icon_CE_256_2Qe5uEl.png"}],
+        "origin": "jetbrains", "package_name": "intellij-idea-community", "publisher":
+        "jetbrains", "summary": "Capable & Ergonomic Java IDE", "title": "IDEA Community"},
+        {"apps": ["pycharm-educational"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/PyCharmEdu256.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/PyCharmEdu256.png"}],
+        "origin": "jetbrains", "package_name": "pycharm-educational", "publisher":
+        "jetbrains", "summary": "Easy and Professional Tool to Learn & Teach Programming
+        with Python", "title": "PyCharm EDU"}, {"apps": ["space"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/ezgif.com-gif-maker.png",
+        "media": [{"height": 512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/ezgif.com-gif-maker.png",
+        "width": 512}, {"height": 1860, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/home_for_teams.png",
+        "width": 2880}, {"height": 1638, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/collaborate_on_code_in_place.png",
+        "width": 2880}, {"height": 1736, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/issue_tracking.png",
+        "width": 2880}], "origin": "jetbrains", "package_name": "space", "publisher":
+        "jetbrains", "summary": "Desktop Application for JetBrains Space", "title":
+        "Space"}, {"apps": ["rider"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/snap-icon.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/snap-icon.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/rider1.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/rider2.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/rider3.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/rider0.png"}],
+        "origin": "jetbrains", "package_name": "rider", "publisher": "jetbrains",
+        "summary": "A fast & powerful cross-platform .NET IDE", "title": "Rider"},
+        {"apps": ["pycharm-professional"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/05/pycharm_logo_256.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/05/pycharm_logo_256.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/pycharm_pro_general.png"}],
+        "origin": "jetbrains", "package_name": "pycharm-professional", "publisher":
+        "jetbrains", "summary": "Python IDE for Professional Developers", "title":
+        "PyCharm Pro"}, {"apps": ["clion"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/clion.ico.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/clion.ico.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screen_Shot_2017-12-20_at_19.40.03.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screen_Shot_2017-12-20_at_20.37.09.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screen_Shot_2017-12-20_at_20.30.54.png"}],
+        "origin": "jetbrains", "package_name": "clion", "publisher": "jetbrains",
+        "summary": "A cross-platform IDE for C and C++", "title": "CLion"}, {"apps":
+        ["webstorm"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/WebStorm_1282x.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/WebStorm_1282x.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/webstorm-on-linux.png"}],
+        "origin": "jetbrains", "package_name": "webstorm", "publisher": "jetbrains",
+        "summary": "Powerful IDE for modern JavaScript development", "title": "WebStorm"},
+        {"apps": ["kotlinc-native", "klib", "kotlin-native", "cinterop", "konanc"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/256px-kotlin-logo-svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/256px-kotlin-logo-svg.png"}],
+        "origin": "jetbrains", "package_name": "kotlin-native", "publisher": "jetbrains",
+        "summary": "Kotlin/Native compiler", "title": "kotlin-native"}, {"apps": ["intellij-idea-ultimate"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/logo_zjwX5FR.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/logo_zjwX5FR.png"},
+        {"height": 705, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/idea_overview_2_copy.png",
+        "width": 1008}], "origin": "jetbrains", "package_name": "intellij-idea-ultimate",
+        "publisher": "jetbrains", "summary": "Capable & Ergonomic Java IDE for Enterprise,
+        Web & Mobile Development", "title": "IDEA Ultimate"}, {"apps": ["kotlinc-js",
+        "kotlin-dce-js", "kotlinc-jvm", "kotlinc", "kotlin"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/256px-kotlin-logo-svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/256px-kotlin-logo-svg.png"}],
+        "origin": "jetbrains", "package_name": "kotlin", "publisher": "jetbrains",
+        "summary": "Command line Kotlin compiler", "title": "Kotlin"}]}, "_links":
+        {"self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?q=publisher%3A28zEonXNoBLvIB7xneRbltOsp0Nf7DwS&size=500&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps"}}}'
+    headers:
+      Age:
+      - '307'
+      Content-Length:
+      - '10147'
+      Content-Type:
+      - application/hal+json
+      Date:
+      - Wed, 18 Dec 2019 15:18:07 GMT
+      Server:
+      - gunicorn/19.7.1
+      Snap-Store-Version:
+      - '17'
+      Vary:
+      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
+      Via:
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1655 (squid/3.5.27)
+      X-Cache:
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1655
+      X-Cache-Lookup:
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1655:3128
+      X-Request-Id:
+      - 5BBD5DB6B5F80A325C8501BB5DFA432E9C9930F
+      X-VCS-Revision:
+      - 7adc6b1
+      X-View-Name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+version: 1

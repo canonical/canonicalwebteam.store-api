@@ -1,0 +1,58 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/sections
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:sections": [{"name": "featured"}, {"name":
+        "games"}, {"name": "finance"}, {"name": "productivity"}, {"name": "utilities"},
+        {"name": "news-and-weather"}, {"name": "science"}, {"name": "health-and-fitness"},
+        {"name": "education"}, {"name": "personalisation"}, {"name": "devices-and-iot"},
+        {"name": "books-and-reference"}, {"name": "security"}, {"name": "music-and-audio"},
+        {"name": "social"}, {"name": "server-and-cloud"}, {"name": "development"},
+        {"name": "entertainment"}, {"name": "photo-and-video"}, {"name": "art-and-design"}]}}'
+    headers:
+      Age:
+      - '317'
+      Cache-Control:
+      - public, max-age=3600
+      Content-Length:
+      - '558'
+      Content-Type:
+      - application/hal+json
+      Date:
+      - Wed, 18 Dec 2019 15:17:54 GMT
+      Server:
+      - gunicorn/19.7.1
+      Snap-Store-Version:
+      - '17'
+      Vary:
+      - X-Ubuntu-Series
+      Via:
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1656 (squid/3.5.27)
+      X-Cache:
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1656
+      X-Cache-Lookup:
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1656:3128
+      X-Request-Id:
+      - 54024D4896160A325C7F01BB5DFA43219C0F280
+      X-VCS-Revision:
+      - 7adc6b1
+      X-View-Name:
+      - snapdevicegw.webapi_search.section_listing
+    status:
+      code: 200
+      message: OK
+version: 1
