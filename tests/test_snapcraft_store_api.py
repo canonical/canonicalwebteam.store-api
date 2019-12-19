@@ -12,6 +12,7 @@ class SnapcraftApiTest(VCRTestCase):
         result = self.client.get_all_items(size=16, api_version=1)
         snaps = result["_embedded"]["clickindex:package"]
         self.assertEqual(len(snaps), 16)
+        [self.assertIn("snap_id", snap) for snap in snaps]
 
         # Test different size
         result = self.client.get_all_items(size=4, api_version=1)
