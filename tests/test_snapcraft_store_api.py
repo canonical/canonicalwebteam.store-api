@@ -1,4 +1,3 @@
-from urllib.parse import urlencode
 from vcr_unittest import VCRTestCase
 from canonicalwebteam.store_api.stores.snapcraft import SnapcraftStoreApi
 
