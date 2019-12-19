@@ -1,8 +1,8 @@
 # Canonical Store Api - Python package
 
-![](https://github.com/canonical-web-and-design/canonicalwebteam.store-api/workflows/Test%20live%20APIs/badge.svg)
-![](https://github.com/canonical-web-and-design/canonicalwebteam.store-api/workflows/Tests/badge.svg)
-![](https://github.com/canonical-web-and-design/canonicalwebteam.store-api/workflows/Publish/badge.svg)
+[![Test live APIs](https://github.com/canonical-web-and-design/canonicalwebteam.store-api/workflows/Test%20live%20APIs/badge.svg)](https://github.com/canonical-web-and-design/canonicalwebteam.store-api/actions?query=workflow%3ATest%20live%20APIs)
+[![Test live APIs](https://github.com/canonical-web-and-design/canonicalwebteam.store-api/workflows/Tests/badge.svg)](https://github.com/canonical-web-and-design/canonicalwebteam.store-api/actions?query=workflow%3A)
+[![Publish](https://github.com/canonical-web-and-design/canonicalwebteam.store-api/workflows/Publish/badge.svg)](https://github.com/canonical-web-and-design/canonicalwebteam.store-api/actions?query=workflow%3APublish)
 [![Code coverage](https://codecov.io/gh/canonical-web-and-design/snapcraft.io/branch/master/graph/badge.svg)](https://codecov.io/gh/canonical-web-and-design/snapcraft.io)
 
 ## How to install
