@@ -243,8 +243,8 @@ interactions:
         ["https://dashboard.snapcraft.io/site_media/appmedia/2017/08/Screenshot_from_2017-08-25_16-47-48.png"],
         "snap_id": "9BTClmjz31r0UltmbJ5nnGe0Xm1AzfMp", "summary": "System Monitor",
         "support_url": "", "title": "GNOME System Monitor", "version": "3.32.1-3-g0ea89b4922",
-        "website": ""}, {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/RT9mcUhVsRYrDLG8qnvGiy26NKvv6Qkd_1049.snap",
-        "apps": ["vlc"], "architecture": ["amd64"], "binary_filesize": 212713472,
+        "website": ""}, {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/RT9mcUhVsRYrDLG8qnvGiy26NKvv6Qkd_1397.snap",
+        "apps": ["vlc"], "architecture": ["amd64"], "binary_filesize": 212758528,
         "channel": "stable", "common_ids": [], "confinement": "strict", "contact":
         "https://www.videolan.org/support/", "content": "application", "date_published":
         "2016-07-20T14:53:35.457268Z", "deltas": [], "description": "VLC is the VideoLAN
@@ -255,19 +255,19 @@ interactions:
         network sources. It supports subtitles, closed captions and is translated
         in numerous languages.", "developer_id": "yBzXLuxwoWh5b2tgI8gxjziVNEHLm64z",
         "developer_name": "VideoLAN", "developer_validation": "verified", "download_sha3_384":
-        "61d9b303cb1a2fef0f5e548f321a0ccb1ddb5900cd891afad3bb00624971a10b7df945fdda809f103ce62769d9c64fc5",
-        "download_sha512": "26e116f9fd4f9c37f1efc7b30d7151164c6804cc9bcfce08eaac591299efedd979e52b729da2a65b010e9751be7a5d622c19811694e9c7a7d812dbc8f80c3190",
-        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/RT9mcUhVsRYrDLG8qnvGiy26NKvv6Qkd_1049.snap",
+        "d0cd0e622d34b446e98b203343390a355724b2fd1339eef72c57b28c9eea83fcb61a1b959d7f05b95c637ffcaf618eaa",
+        "download_sha512": "adb91d5ad1582419504d11e99ef45bfa3cf9e14bcfe4e2549dd642eeb06d591de30c4cfde4d98503e505ba22c3b5997d82f1c07750c726efc2ee8ef108de304b",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/RT9mcUhVsRYrDLG8qnvGiy26NKvv6Qkd_1397.snap",
         "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/07/vlc.png",
-        "last_updated": "2019-06-07T10:37:01.959945+00:00", "license": "GPL-2.0+",
+        "last_updated": "2019-12-16T21:50:10.209544+00:00", "license": "GPL-2.0+",
         "name": "vlc.videolan", "origin": "videolan", "package_name": "vlc", "prices":
         {}, "private": false, "publisher": "VideoLAN", "ratings_average": 0.0, "release":
-        ["16"], "revision": 1049, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2016/07/vlc-2.0-poney.jpg",
+        ["16"], "revision": 1397, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2016/07/vlc-2.0-poney.jpg",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/banner_32i5K4c.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/banner-icon.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/2018-04-26-161203_1126x899_scrot_yBFL55L.png"],
         "snap_id": "RT9mcUhVsRYrDLG8qnvGiy26NKvv6Qkd", "summary": "The ultimate media
-        player", "support_url": "", "title": "VLC", "version": "3.0.7", "website":
+        player", "support_url": "", "title": "VLC", "version": "3.0.8", "website":
         "https://www.videolan.org/vlc/"}, {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/XKEcBqPM06H1Z7zGOdG5fbICuf8NWK5R_971.snap",
         "apps": ["chromedriver", "chromium"], "architecture": ["amd64"], "base": "core18",
         "binary_filesize": 155369472, "channel": "stable", "common_ids": [], "confinement":
@@ -459,17 +459,17 @@ interactions:
         "revision": 44, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2018/12/kcalc_sznv9pJ.png"],
         "snap_id": "yUnRIACvPcaHjEasN7enV9PYXgrXVdML", "summary": "Scientific Calculator",
         "support_url": "", "title": "KCalc", "version": "19.08.0", "website": "https://www.kde.org"}]},
-        "_links": {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=16&page=222"},
+        "_links": {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=16&page=223"},
         "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=16&page=2"},
         "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=16"}},
-        "total": 3548}'
+        "total": 3557}'
     headers:
       Content-Length:
       - '40382'
       Content-Type:
       - application/hal+json
       Date:
-      - Wed, 18 Dec 2019 15:23:11 GMT
+      - Thu, 19 Dec 2019 14:49:14 GMT
       Server:
       - gunicorn/19.7.1
       Snap-Store-Version:
@@ -483,7 +483,195 @@ interactions:
       X-Cache-Lookup:
       - HIT from juju-7794b8-prod-ols-snap-store-indep-1374:3128
       X-Request-Id:
-      - 5BBD5DB6B4380A325C8101BB5DFA445D9D55D6D
+      - 5BBD5DB68E1E0A325C8501BB5DFB8DE9E9E3B78
+      X-VCS-Revision:
+      - 7adc6b1
+      X-View-Name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=4
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"aliases": null, "anon_download_url":
+        "https://api.snapcraft.io/api/v1/snaps/download/TWwObnuGiM3Urabc9hR2Xg2bJs6J8f2Y_20.snap",
+        "apps": ["journey"], "architecture": ["amd64"], "base": "core18", "binary_filesize":
+        81235968, "channel": "stable", "common_ids": [], "confinement": "strict",
+        "contact": "https://help.journey.cloud", "content": "application", "date_published":
+        "2018-09-12T06:04:41.572562Z", "deltas": [], "description": "Journey is a
+        journal app that keeps your private memories forever.\n\nEmbark on the journey
+        of self-improvement towards better qualities of love, life and health. Record
+        your daily events, secret, gratitude, and relive those moments in Journey.
+        Trusted by millions of users, Journey is your perfect journaling companion
+        that keeps your private memories for a lifetime.\n\n# Future-proof digital
+        journal\nDesigned to keep journal last forever, Journey gives you full control
+        of your private diary by storing them in Google Drive sync and Markdown format.\n\n#
+        Bring your memories anywhere\nSync journal across multiple platforms. Write
+        on-the-go with Journey''s mobile app and web, or settle down comfortably at
+        home and type on Windows desktop.\n\n# Grow your journaling habit\nJourney''s
+        simple and beautiful diary interface encourages you to write more.\n\n# Effortless
+        journaling\nKeeping a diary is easy with Journey; add photos or video and
+        pen your thoughts. It does the rest by adding weather and places to journal
+        entry automatically.\n\n# Relive moments beautifully\nView your journal in
+        timeline, revisit places shown in map and travel back to the past with calendar.\n\n#
+        Private diary with PIN\nKeep diary secret with passcode.\n\n# Import and export
+        journal into various formats\nImport entries from Journey and DayOne. You
+        can also export journal to Microsoft Word document (.docx) and print to PDF.\n\n#
+        Online Access\nGo to https://journey.cloud to access your diary anywhere.",
+        "developer_id": "9z97kFCXjgzmfl6xkjubwdyPdcLGvs4z", "developer_name": "Two
+        App Studio Pte. Ltd.", "developer_validation": "verified", "download_sha3_384":
+        "00bef409da0f6cdf4943e219e2945eddae7ca69ebd55b7249184e7cae2eb1523e6718d97a5cb8c13b8ee2b76187482a4",
+        "download_sha512": "2703540f18e612c09372faba11a2d95eff107ad68056ba55c4a5746106506566aeb7a5b3c87b9a7b241ae29080343c93fb9a8539a8a4c1fd1195e542a41753b6",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/TWwObnuGiM3Urabc9hR2Xg2bJs6J8f2Y_20.snap",
+        "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/icon.png",
+        "last_updated": "2019-10-30T06:04:23.171444+00:00", "license": "Proprietary",
+        "name": "journey.2appstudio", "origin": "2appstudio", "package_name": "journey",
+        "prices": {}, "private": false, "publisher": "Two App Studio Pte. Ltd.", "ratings_average":
+        0.0, "release": ["16"], "revision": 20, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2018/09/0.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2018/09/1.png", "https://dashboard.snapcraft.io/site_media/appmedia/2018/09/2_kLvfNdY.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2018/09/3_RwVxPZm.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2018/09/4.png"], "snap_id":
+        "TWwObnuGiM3Urabc9hR2Xg2bJs6J8f2Y", "summary": "Your private diary, journal
+        & companion.", "support_url": "", "title": "Journey - Diary, Journal", "version":
+        "2.14.0", "website": "https://journey.cloud"}, {"aliases": null, "anon_download_url":
+        "https://api.snapcraft.io/api/v1/snaps/download/XC73ux8XOHjoahd9keAyvM3LVkPBLTzy_3640.snap",
+        "apps": ["remmina", "winpr-makecert", "winpr-hash"], "architecture": ["amd64"],
+        "base": "core18", "binary_filesize": 15421440, "channel": "stable", "common_ids":
+        ["org.remmina.Remmina.desktop"], "confinement": "strict", "contact": "https://gitlab.com/Remmina/Remmina/issues",
+        "content": "application", "date_published": "2017-01-19T16:07:31.561979Z",
+        "deltas": [], "description": "Remmina is a remote desktop client written in
+        GTK+, aiming to be useful for\nsystem administrators and travellers, who need
+        to work with lots of remote\ncomputers in front of either large monitors or
+        tiny netbooks.\n\nRemmina supports multiple network protocols in an integrated
+        and consistent user interface.\n\nCurrently RDP, VNC, SPICE, NX, XDMCP, SSH
+        and WWW are supported.\n\nRemmina is free and open-source software, released
+        under GNU GPL license.", "developer_id": "FJvMKvFilDxPfnKUsSN2YuBVPAWSAMLK",
+        "developer_name": "Remmina Upstream Developers", "developer_validation": "verified",
+        "download_sha3_384": "c47d413961e95166bea7fc4613329b82899fcc555b3da247c6b05c4d2b1341f6db181a5493ba8183fabea1f604128c9d",
+        "download_sha512": "0fd7409de8619854f2787e5b43faff8010a8afc18a94cea625aef9b380f2b1e96a420c6cdfcdec155810bf93d23eb526a80951d8d4ca352da4d9f61cf68aedcd",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/XC73ux8XOHjoahd9keAyvM3LVkPBLTzy_3640.snap",
+        "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/org.remmina.Remmina.png",
+        "last_updated": "2019-12-05T21:55:13.775744+00:00", "license": "GPL-2.0",
+        "name": "remmina.remmina", "origin": "remmina", "package_name": "remmina",
+        "prices": {}, "private": false, "publisher": "Remmina Upstream Developers",
+        "ratings_average": 0.0, "release": ["16"], "revision": 3640, "screenshot_urls":
+        ["https://dashboard.snapcraft.io/site_media/appmedia/2018/02/Remmina_Screenshot.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Remmina-Main-Window.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Arch-Spice-Fedora.jpg",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/banner_screenshot.jpg",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/RemminaUI-1024x756.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/screenshot_banner.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Arch-Spice-Fedora.png"],
+        "snap_id": "XC73ux8XOHjoahd9keAyvM3LVkPBLTzy", "summary": "Remote Desktop
+        Client", "support_url": "", "title": "remmina", "version": "v1.3.7", "website":
+        "https://www.remmina.org"}, {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/pOBIoZ2LrCB3rDohMxoYGnbN14EHOgD7_36.snap",
+        "apps": ["spotify"], "architecture": ["amd64"], "binary_filesize": 189870080,
+        "channel": "stable", "common_ids": [], "confinement": "strict", "contact":
+        "https://community.spotify.com/t5/Desktop-Linux/bd-p/desktop_linux", "content":
+        "application", "date_published": "2017-08-01T11:53:59.677918Z", "deltas":
+        [], "description": "Love music? Play your favorite songs and albums free on
+        Linux with Spotify.\r\n\r\nStream the tracks you love instantly, browse the
+        charts or fire up readymade playlists in every genre and mood. Radio plays
+        you great song after great song, based on your music taste. Discover new music
+        too, with awesome playlists built just for you.\r\n\r\nStream Spotify free,
+        with occasional ads, or go Premium.\r\n\r\nFree:\r\n\r\n\u2022 Play any song,
+        artist, album or playlist instantly\r\n\r\n\u2022 Browse hundreds of readymade
+        playlists in every genre and mood\r\n\r\n\u2022 Stay on top of the Charts\r\n\r\n\u2022
+        Stream Radio \r\n\r\n\u2022 Enjoy podcasts, audiobooks and videos\r\n\r\n\u2022
+        Discover more music with personalized playlists\r\n\r\nPremium:\r\n\r\n\u2022
+        Download tunes and play offline\r\n\r\n\u2022 Listen ad-free\r\n\r\n\u2022
+        Get even better sound quality\r\n\r\n\u2022 Try it free for 30 days, no strings
+        attached\r\n\r\nLike us on Facebook: http://www.facebook.com/spotify \r\nFollow
+        us on Twitter: http://twitter.com/spotify\r\n\r\nNote: Spotify for Linux is
+        a labor of love from our engineers that wanted to listen to Spotify on their
+        Linux development machines. They work on it in their spare time and it is
+        currently not a platform that we actively support. The experience may differ
+        from our other Spotify Desktop clients, such as Windows and Mac.", "developer_id":
+        "Z7emHVerQzTDQrOcaLJ8wO1ir1NPl3fG", "developer_name": "Spotify", "developer_validation":
+        "verified", "download_sha3_384": "14e04a69a63aff464372a58c6f9ece2785145cdba1749e5b18fb78d1e61f4049808287ca19409b0eab18cb5a46f95796",
+        "download_sha512": "c49f1a86a9b737e64a475bbe62754a36f607669e908eb725a2395f0a0a6b95968e0c8ce27ab2c8b6c92fe8cbacb1ef58de11c79b92dc0f58c2c6d3a140706a1f",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/pOBIoZ2LrCB3rDohMxoYGnbN14EHOgD7_36.snap",
+        "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/spotify-linux-256.png",
+        "last_updated": "2019-07-22T18:47:37.219970+00:00", "license": "Proprietary",
+        "name": "spotify.spotify", "origin": "spotify", "package_name": "spotify",
+        "prices": {}, "private": false, "publisher": "Spotify", "ratings_average":
+        0.0, "release": ["16"], "revision": 36, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screenshot_from_2017-12-18_12-07-06.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screenshot_from_2017-12-18_12-09-22.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screenshot_from_2017-12-18_12-18-27.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screenshot_from_2017-12-18_12-20-23.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/banner_dSwF9EF.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/banner-icon_WaLCF17.png"],
+        "snap_id": "pOBIoZ2LrCB3rDohMxoYGnbN14EHOgD7", "summary": "Music for everyone",
+        "support_url": "", "title": "Spotify", "version": "1.1.10.546.ge08ef575-19",
+        "website": null}, {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/LPDZP2jWsSizNHoWrJnckPzVuNm8p2Ur_129.snap",
+        "apps": ["0ad", "atlas"], "architecture": ["amd64"], "base": "core18", "binary_filesize":
+        947064832, "channel": "stable", "common_ids": [], "confinement": "strict",
+        "contact": "https://launchpad.net/~osomon", "content": "application", "date_published":
+        "2017-12-22T14:26:24.498956Z", "deltas": [], "description": "0 A.D. (pronounced
+        \"zero ey-dee\") is a free, open-source, cross-platform\nreal-time strategy
+        (RTS) game of ancient warfare. In short, it is a\nhistorically-based war/economy
+        game that allows players to relive or rewrite\nthe history of Western civilizations,
+        focusing on the years between 500 B.C.\nand 500 A.D. The project is highly
+        ambitious, involving state-of-the-art 3D\ngraphics, detailed artwork, sound,
+        and a flexible and powerful custom-built\ngame engine.", "developer_id": "jaKYmIXSZaecl3C0dsYnXmbcyOSisYcv",
+        "developer_name": "Olivier Tilloy", "developer_validation": "unproven", "download_sha3_384":
+        "ff9ce5444920b94df7e5e38647e174a6dcaf4b2c7f6a6b37660558b7851115bbebc4935b90072fedda9807748758fb75",
+        "download_sha512": "956d06b45e6ee49c3e48f9fba83aabb06bdfcafeea8eefa2319008ab10d3efab6e7dee10beb9522201d161a5e8842cac0a1436a94c890978cc8922272fe05540",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/LPDZP2jWsSizNHoWrJnckPzVuNm8p2Ur_129.snap",
+        "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/icon256_f9302jP.png",
+        "last_updated": "2019-11-14T15:02:38.903541+00:00", "license": "CC-BY-SA-3.0
+        OR GPL-2.0+", "name": "0ad.osomon", "origin": "osomon", "package_name": "0ad",
+        "prices": {}, "private": false, "publisher": "Olivier Tilloy", "ratings_average":
+        0.0, "release": ["16"], "revision": 129, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2019/11/CarthaginianTown.jpg",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/BritsAbroad.jpg",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/MacedonPort.jpg",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/SpartanTown.jpg",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/MauryanColony.jpg"],
+        "snap_id": "LPDZP2jWsSizNHoWrJnckPzVuNm8p2Ur", "summary": "Real-time strategy
+        game of ancient warfare", "support_url": "", "title": "0 A.D.", "version":
+        "0.0.23b-alpha", "website": "https://code.wildfiregames.com"}]}, "_links":
+        {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=4&page=889"},
+        "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=4&page=2"},
+        "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=4"}},
+        "total": 3556}'
+    headers:
+      Age:
+      - '709'
+      Content-Length:
+      - '12382'
+      Content-Type:
+      - application/hal+json
+      Date:
+      - Thu, 19 Dec 2019 14:37:26 GMT
+      Server:
+      - gunicorn/19.7.1
+      Snap-Store-Version:
+      - '17'
+      Vary:
+      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
+      Via:
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1375 (squid/3.5.27)
+      X-Cache:
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1375
+      X-Cache-Lookup:
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1375:3128
+      X-Request-Id:
+      - 5BBD5DB686DA0A325C7F01BB5DFB8B25E81AAC0
       X-VCS-Revision:
       - 7adc6b1
       X-View-Name:

@@ -25,7 +25,7 @@ interactions:
         {"name": "entertainment"}, {"name": "photo-and-video"}, {"name": "art-and-design"}]}}'
     headers:
       Age:
-      - '317'
+      - '1880'
       Cache-Control:
       - public, max-age=3600
       Content-Length:
@@ -33,7 +33,7 @@ interactions:
       Content-Type:
       - application/hal+json
       Date:
-      - Wed, 18 Dec 2019 15:17:54 GMT
+      - Thu, 19 Dec 2019 14:17:54 GMT
       Server:
       - gunicorn/19.7.1
       Snap-Store-Version:
@@ -47,7 +47,7 @@ interactions:
       X-Cache-Lookup:
       - HIT from juju-7794b8-prod-ols-snap-store-indep-1656:3128
       X-Request-Id:
-      - 54024D4896160A325C7F01BB5DFA43219C0F280
+      - 417BBBD9C57C0A325DDF01BB5DFB8691E899B63
       X-VCS-Revision:
       - 7adc6b1
       X-View-Name:
