@@ -27,3 +27,28 @@ jobs:
       with:
         user: __token__
         password: ${{ secrets.pypi_password }}
+
+  test-coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: dschep/install-poetry-action@v1.2
+
+    - name: Install dependencies
+      run: sudo apt update && sudo apt install -y --no-install-recommends python3-venv
+
+    - name: Make poetry use Python 3
+      run: sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
+
+    - name: Install poetry dependencies
+      run: poetry install
+
+    - name: Test Python with Coverage
+      run: |
+        poetry run coverage run --source=. -m unittest discover tests
+        poetry run coverage xml
+
+    - uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
