@@ -1,0 +1,196 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=&size=10&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=security
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"apps": ["canonical-livepatch"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/08/pictogram-upgrade-orange-hex.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/08/pictogram-upgrade-orange-hex.svg.png"}],
+        "origin": "canonical", "package_name": "canonical-livepatch", "publisher":
+        "Canonical", "sections": [{"featured": true, "name": "featured"}, {"featured":
+        true, "name": "security"}, {"featured": true, "name": "server-and-cloud"}],
+        "summary": "Canonical Livepatch Client", "title": "canonical-livepatch"},
+        {"apps": [], "developer_validation": "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/torlogo.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/torlogo.png"}],
+        "origin": "irl", "package_name": "tor", "publisher": "Iain R. Learmonth",
+        "sections": [{"featured": true, "name": "security"}], "summary": "Anonymising
+        TCP overlay network", "title": "Tor Client"}, {"apps": ["proxy", "cli", "keepassxc"],
+        "developer_validation": "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/keepassxc.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/keepassxc.png"},
+        {"height": 777, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/10/kpxc1.png",
+        "width": 932}, {"height": 653, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/10/kpxc7.png",
+        "width": 920}, {"height": 777, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/10/kpxc2.png",
+        "width": 932}, {"height": 777, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/10/kpxc3.png",
+        "width": 932}, {"height": 777, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/10/kpxc4.png",
+        "width": 932}], "origin": "keepassxreboot", "package_name": "keepassxc", "publisher":
+        "Jonathan White", "sections": [{"featured": true, "name": "security"}, {"featured":
+        false, "name": "utilities"}], "summary": "Community driven port of the \u201cKeepass
+        Password Safe\u201d", "title": "KeePassXC"}, {"apps": ["bitwarden"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/256x256.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/256x256.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/bitwarden_ubuntu.PNG"}],
+        "origin": "bitwarden", "package_name": "bitwarden", "publisher": "8bit Solutions
+        LLC", "sections": [{"featured": false, "name": "productivity"}, {"featured":
+        true, "name": "security"}, {"featured": false, "name": "utilities"}], "summary":
+        "A secure and free password manager for all of your devices.", "title": "Bitwarden"},
+        {"apps": ["configure", "monitor"], "developer_validation": "unproven", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2016/03/icon.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/03/icon.svg.png"}],
+        "origin": "chadmiller", "package_name": "tor-middle-relay", "publisher": "Chad
+        Miller", "sections": [{"featured": true, "name": "security"}], "summary":
+        "Infrastructure node for other people''s use of Tor network", "title": "Tor
+        middle relay"}, {"apps": ["ncat", "nmap", "nping"], "developer_validation":
+        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/03/nmap.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/03/nmap.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/nmap-401-demoscan-798x774.gif"}],
+        "origin": "maxiberta", "package_name": "nmap", "publisher": "Maximiliano Bertacchini",
+        "sections": [{"featured": true, "name": "security"}, {"featured": false, "name":
+        "utilities"}], "summary": "Nmap (\"Network Mapper\") is a free and open source
+        utility for network discovery and security auditing", "title": "nmap"}, {"apps":
+        ["launcher", "bitmask-root", "openvpn"], "developer_validation": "unproven",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/icon.svg_hukUH1m.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/icon.svg_hukUH1m.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/03/riseupvpn-screenshot.png"}],
+        "origin": "leapsnaps", "package_name": "riseup-vpn", "publisher": "LEAP Encryption
+        Access Project", "sections": [{"featured": true, "name": "security"}], "summary":
+        "RiseupVPN, anonymous VPN. Powered by Bitmask.", "title": "riseup-vpn"}, {"apps":
+        ["init", "conntrack", "ipset", "doc", "ufw"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/logo_VkJgWaI.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/logo_VkJgWaI.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/screenshot1.png"}],
+        "origin": "canonical", "package_name": "ufw", "publisher": "Canonical", "sections":
+        [{"featured": true, "name": "security"}], "summary": "ufw - Uncomplicated
+        Firewall", "title": "UFW"}, {"apps": ["tincd"], "developer_validation": "unproven",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/ad622325ff733ea9d76a6a4af6a9f2c6_icon-2.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/ad622325ff733ea9d76a6a4af6a9f2c6_icon-2.png"}],
+        "origin": "bqrs01", "package_name": "tinc-vpn", "publisher": "Bryan", "sections":
+        [{"featured": true, "name": "security"}], "summary": "tinc open-source VPN
+        daemon", "title": "tinc VPN"}, {"apps": ["putty2john", "zip2john", "racf2john",
+        "opencl", "rar2john", "john-the-ripper", "vncpcap2john", "uaf2john", "hccap2john",
+        "gpg2john", "keepass2john", "dmg2john", "wpapcap2john"], "developer_validation":
+        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/04/icon_9.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/04/icon_9.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/help.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/build-info.png"}],
+        "origin": "claudioandre-br", "package_name": "john-the-ripper", "publisher":
+        "Claudio Andr\u00e9", "sections": [{"featured": true, "name": "security"}],
+        "summary": "John the Ripper \"Jumbo\" password cracker", "title": "John the
+        Ripper CE"}]}, "_links": {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=6&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=security"},
+        "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=2&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=security"},
+        "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=security"}},
+        "total": 53}'
+    headers:
+      Age:
+      - '1208'
+      Content-Length:
+      - '7683'
+      Content-Type:
+      - application/hal+json
+      Date:
+      - Thu, 19 Dec 2019 14:29:06 GMT
+      Server:
+      - gunicorn/19.7.1
+      Snap-Store-Version:
+      - '17'
+      Vary:
+      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
+      Via:
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1375 (squid/3.5.27)
+      X-Cache:
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1375
+      X-Cache-Lookup:
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1375:3128
+      X-Request-Id:
+      - 5BBD5DB6EB560A325C8501BB5DFB8932E8A2BF5
+      X-VCS-Revision:
+      - 7adc6b1
+      X-View-Name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=&size=2&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=server-and-cloud
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"apps": ["remove-node", "istioctl",
+        "leave", "cilium", "disable", "join", "ctr", "status", "helm", "juju", "kubectl",
+        "inspect", "add-node", "linkerd", "config", "stop", "start", "enable", "reset"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/b8a85a31-MicroK8s_SnapStore_icon.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/b8a85a31-MicroK8s_SnapStore_icon.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/m2.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/microk8s1.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/m3.png"}],
+        "origin": "canonical", "package_name": "microk8s", "publisher": "Canonical",
+        "sections": [{"featured": true, "name": "server-and-cloud"}], "summary": "Kubernetes
+        for workstations and appliances", "title": "MicroK8s"}, {"apps": ["enable-https",
+        "import", "occ", "mysqldump", "disable-https", "mysql-client", "manual-install",
+        "export"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/06/icon.svg_1.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/06/icon.svg_1.png"},
+        {"height": 1440, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/nextcloud_banner.png",
+        "width": 4320}, {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/10/Screenshot_from_2018-10-26_09-49-46.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/10/Screenshot_from_2018-10-26_09-48-50.png"}],
+        "origin": "nextcloud", "package_name": "nextcloud", "publisher": "Nextcloud",
+        "sections": [{"featured": true, "name": "server-and-cloud"}], "summary": "Nextcloud
+        Server - A safe home for all your data", "title": "Nextcloud"}]}, "_links":
+        {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=2&page=76&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=server-and-cloud"},
+        "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=2&page=2&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=server-and-cloud"},
+        "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=2&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=server-and-cloud"}},
+        "total": 152}'
+    headers:
+      Age:
+      - '708'
+      Content-Length:
+      - '2884'
+      Content-Type:
+      - application/hal+json
+      Date:
+      - Thu, 19 Dec 2019 14:37:27 GMT
+      Server:
+      - gunicorn/19.7.1
+      Snap-Store-Version:
+      - '17'
+      Vary:
+      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
+      Via:
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1375 (squid/3.5.27)
+      X-Cache:
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1375
+      X-Cache-Lookup:
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1375:3128
+      X-Request-Id:
+      - 5BBD5DB68C700A325C8101BB5DFB8B26E9BDC00
+      X-VCS-Revision:
+      - 7adc6b1
+      X-View-Name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+version: 1

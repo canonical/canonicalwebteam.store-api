@@ -49,5 +49,8 @@ jobs:
     - name: Install poetry dependencies
       run: poetry install
 
-    - name: Test Python
-      run: poetry run pytest
+    - name: Test Python with Coverage
+      run: poetry run coverage run --source=. -m unittest discover tests
+
+    - name: Upload coverage results to Codecov.io
+      run: bash <(curl -s https://codecov.io/bash) -cF python

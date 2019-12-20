@@ -1,0 +1,212 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=&size=10&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"apps": ["postman"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/logo-mark.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/logo-mark.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/Screenshot_from_2018-03-21_17-24-01.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Light-1.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Dark-4.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Dark-1.png"}],
+        "origin": "postman-inc", "package_name": "postman", "publisher": "Postman,
+        Inc.", "sections": [{"featured": true, "name": "development"}, {"featured":
+        true, "name": "featured"}], "summary": "API Development Environment", "title":
+        "Postman"}, {"apps": ["color-picker"], "developer_validation": "unproven",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/app.png",
+        "media": [{"height": 512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/app.png",
+        "width": 512}, {"height": 708, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/pic_1.png",
+        "width": 530}, {"height": 705, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/pic_2.png",
+        "width": 929}], "origin": "keshavnrj", "package_name": "color-picker", "publisher":
+        "keshavbhatt", "sections": [{"featured": false, "name": "development"}, {"featured":
+        true, "name": "featured"}, {"featured": false, "name": "utilities"}], "summary":
+        "A colour picker and colour editor for web designers and digital artists",
+        "title": "Color Picker"}, {"apps": ["powershell"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/09/Powershell_black.ico.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/09/Powershell_black.ico.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/UbuntuSnap_b7yOPlK.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/UbuntuSnapWithGetHelp.png"}],
+        "origin": "microsoft-powershell", "package_name": "powershell", "publisher":
+        "Microsoft PowerShell", "sections": [{"featured": true, "name": "development"},
+        {"featured": true, "name": "featured"}], "summary": "PowerShell for every
+        system!", "title": "powershell"}, {"apps": ["atom", "apm"], "developer_validation":
+        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/04/atom-256px.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/04/atom-256px.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/09/Screenshot_from_2017-09-05_11-04-21.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/09/Screenshot_from_2017-09-05_11-10-55.png"}],
+        "origin": "snapcrafters", "package_name": "atom", "publisher": "Snapcrafters",
+        "sections": [{"featured": true, "name": "development"}, {"featured": true,
+        "name": "featured"}], "summary": "A hackable text editor for the 21st Century.",
+        "title": "Atom"}, {"apps": ["canonical-livepatch"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/08/pictogram-upgrade-orange-hex.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/08/pictogram-upgrade-orange-hex.svg.png"}],
+        "origin": "canonical", "package_name": "canonical-livepatch", "publisher":
+        "Canonical", "sections": [{"featured": true, "name": "featured"}, {"featured":
+        true, "name": "security"}, {"featured": true, "name": "server-and-cloud"}],
+        "summary": "Canonical Livepatch Client", "title": "canonical-livepatch"},
+        {"apps": ["skype"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/Skype.png",
+        "media": [{"height": 256, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/Skype.png",
+        "width": 256}, {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/Linux_Screenshare-01.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/Linux_GVC-01.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/Linux_Group_Chat-01.png"},
+        {"height": 240, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/banner.png",
+        "width": 1218}, {"height": 240, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/banner-icon_aoySIJJ.png",
+        "width": 240}], "origin": "skype", "package_name": "skype", "publisher": "Skype",
+        "sections": [{"featured": true, "name": "featured"}, {"featured": false, "name":
+        "productivity"}, {"featured": true, "name": "social"}], "summary": "One Skype
+        for all your devices. New features. New look. All Skype.", "title": "Skype"},
+        {"apps": ["mailspring"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/256.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/256.png"},
+        {"height": 500, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/10/1500x500.jpg",
+        "width": 1500}, {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/screenshot-linux.png"}],
+        "origin": "foundry376", "package_name": "mailspring", "publisher": "Mailspring",
+        "sections": [{"featured": true, "name": "featured"}, {"featured": true, "name":
+        "productivity"}], "summary": "The best email app for people and teams at work",
+        "title": "Mailspring"}, {"apps": ["wormhole"], "developer_validation": "unproven",
+        "icon_url": "", "media": [{"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/07/Screenshot_from_2018-07-02_14-23-15.png"}],
+        "origin": "snapcrafters", "package_name": "wormhole", "publisher": "Snapcrafters",
+        "sections": [{"featured": true, "name": "featured"}, {"featured": true, "name":
+        "utilities"}], "summary": "get things from one computer to another, safely",
+        "title": "wormhole"}, {"apps": ["ffprobe", "melt", "qmelt", "ffmpeg", "ffplay",
+        "shotcut"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/02/shotcut-logo-256x256_1.png",
+        "media": [{"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/02/snapshot-1409.png"},
+        {"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/02/shotcut-logo-256x256_1.png"}],
+        "origin": "meltytech", "package_name": "shotcut", "publisher": "Meltytech,
+        LLC", "sections": [{"featured": true, "name": "featured"}, {"featured": true,
+        "name": "photo-and-video"}], "summary": "Free, cross-platform, open source
+        video editor", "title": "Shotcut"}, {"apps": ["makemkvcon", "makemkv"], "developer_validation":
+        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/makemkv-256.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/makemkv-256.png"},
+        {"height": 640, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/makemkv-banner.png",
+        "width": 1920}, {"height": 1352, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/Screenshot_at_2019-09-16_15-20-39.png",
+        "width": 1198}, {"height": 1352, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/Screenshot_at_2019-09-16_15-22-22.png",
+        "width": 1198}, {"height": 1352, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/Screenshot_at_2019-09-16_15-23-19.png",
+        "width": 1198}, {"height": 1352, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/Screenshot_at_2019-09-16_15-23-44.png",
+        "width": 1198}, {"height": 1352, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/Screenshot_at_2019-09-16_15-27-20.png",
+        "width": 1198}], "origin": "diddledan", "package_name": "makemkv", "publisher":
+        "Daniel Llewellyn", "sections": [{"featured": true, "name": "featured"}, {"featured":
+        false, "name": "photo-and-video"}, {"featured": false, "name": "utilities"}],
+        "summary": "Backup your DVD and Bluray discs", "title": "MakeMKV"}]}, "_links":
+        {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=3&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured"},
+        "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=2&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured"},
+        "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured"}},
+        "total": 27}'
+    headers:
+      Content-Length:
+      - '9548'
+      Content-Type:
+      - application/hal+json
+      Date:
+      - Thu, 19 Dec 2019 14:49:15 GMT
+      Server:
+      - gunicorn/19.7.1
+      Snap-Store-Version:
+      - '17'
+      Vary:
+      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
+      Via:
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1656 (squid/3.5.27)
+      X-Cache:
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1656
+      X-Cache-Lookup:
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1656:3128
+      X-Request-Id:
+      - 5BBD5DB690D60A325C7F01BB5DFB8DEBE8D58B7
+      X-VCS-Revision:
+      - 7adc6b1
+      X-View-Name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=&size=3&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"apps": ["postman"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/logo-mark.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/logo-mark.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/Screenshot_from_2018-03-21_17-24-01.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Light-1.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Dark-4.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Dark-1.png"}],
+        "origin": "postman-inc", "package_name": "postman", "publisher": "Postman,
+        Inc.", "sections": [{"featured": true, "name": "development"}, {"featured":
+        true, "name": "featured"}], "summary": "API Development Environment", "title":
+        "Postman"}, {"apps": ["color-picker"], "developer_validation": "unproven",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/app.png",
+        "media": [{"height": 512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/app.png",
+        "width": 512}, {"height": 708, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/pic_1.png",
+        "width": 530}, {"height": 705, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/pic_2.png",
+        "width": 929}], "origin": "keshavnrj", "package_name": "color-picker", "publisher":
+        "keshavbhatt", "sections": [{"featured": false, "name": "development"}, {"featured":
+        true, "name": "featured"}, {"featured": false, "name": "utilities"}], "summary":
+        "A colour picker and colour editor for web designers and digital artists",
+        "title": "Color Picker"}, {"apps": ["powershell"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/09/Powershell_black.ico.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/09/Powershell_black.ico.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/UbuntuSnap_b7yOPlK.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/UbuntuSnapWithGetHelp.png"}],
+        "origin": "microsoft-powershell", "package_name": "powershell", "publisher":
+        "Microsoft PowerShell", "sections": [{"featured": true, "name": "development"},
+        {"featured": true, "name": "featured"}], "summary": "PowerShell for every
+        system!", "title": "powershell"}]}, "_links": {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=9&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured"},
+        "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=2&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured"},
+        "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured"}},
+        "total": 27}'
+    headers:
+      Content-Length:
+      - '3470'
+      Content-Type:
+      - application/hal+json
+      Date:
+      - Thu, 19 Dec 2019 14:49:15 GMT
+      Server:
+      - gunicorn/19.7.1
+      Snap-Store-Version:
+      - '17'
+      Vary:
+      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
+      Via:
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1374 (squid/3.5.27)
+      X-Cache:
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1374
+      X-Cache-Lookup:
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1374:3128
+      X-Request-Id:
+      - 5BBD5DB690D60A325C7F01BB5DFB8DEBE8D5A86
+      X-VCS-Revision:
+      - 7adc6b1
+      X-View-Name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+version: 1

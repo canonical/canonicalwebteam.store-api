@@ -1,5 +1,8 @@
+from unittest import TestCase
+from semver import parse
 from canonicalwebteam.store_api import __version__
 
 
-def test_version():
-    assert __version__ == "1.0.1"
+class StoreApiTest(TestCase):
+    def test_version(self):
+        self.assertTrue(parse(__version__))

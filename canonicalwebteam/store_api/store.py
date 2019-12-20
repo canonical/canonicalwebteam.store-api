@@ -65,6 +65,7 @@ class StoreApi:
                     "developer_validation",
                     "origin",
                     "apps",
+                    "sections",
                 ]
             ),
         }

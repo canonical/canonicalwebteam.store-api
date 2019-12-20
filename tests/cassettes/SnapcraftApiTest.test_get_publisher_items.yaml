@@ -1,0 +1,761 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=publisher%3A28zEonXNoBLvIB7xneRbltOsp0Nf7DwS&size=500&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"apps": ["intellij-idea-ultimate"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/logo_zjwX5FR.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/logo_zjwX5FR.png"},
+        {"height": 705, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/idea_overview_2_copy.png",
+        "width": 1008}], "origin": "jetbrains", "package_name": "intellij-idea-ultimate",
+        "publisher": "jetbrains", "sections": [{"featured": true, "name": "development"},
+        {"featured": false, "name": "featured"}], "summary": "Capable & Ergonomic
+        Java IDE for Enterprise, Web & Mobile Development", "title": "IDEA Ultimate"},
+        {"apps": ["pycharm-educational"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/PyCharmEdu256.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/PyCharmEdu256.png"}],
+        "origin": "jetbrains", "package_name": "pycharm-educational", "publisher":
+        "jetbrains", "sections": [{"featured": false, "name": "development"}], "summary":
+        "Easy and Professional Tool to Learn & Teach Programming with Python", "title":
+        "PyCharm EDU"}, {"apps": ["kotlinc-native", "klib", "kotlin-native", "cinterop",
+        "konanc"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/256px-kotlin-logo-svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/256px-kotlin-logo-svg.png"}],
+        "origin": "jetbrains", "package_name": "kotlin-native", "publisher": "jetbrains",
+        "sections": [{"featured": false, "name": "development"}], "summary": "Kotlin/Native
+        compiler", "title": "kotlin-native"}, {"apps": ["phpstorm"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/webide.ico_HA9tBL0.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/webide.ico_HA9tBL0.png"},
+        {"height": 980, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/welcome.png",
+        "width": 1554}, {"height": 2105, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/overview.png",
+        "width": 3706}], "origin": "jetbrains", "package_name": "phpstorm", "publisher":
+        "jetbrains", "sections": [{"featured": true, "name": "development"}], "summary":
+        "PHP IDE for Professional Development", "title": "PhpStorm"}, {"apps": ["rider"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/snap-icon.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/snap-icon.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/rider1.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/rider2.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/rider3.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/rider0.png"}],
+        "origin": "jetbrains", "package_name": "rider", "publisher": "jetbrains",
+        "sections": [{"featured": false, "name": "development"}, {"featured": false,
+        "name": "utilities"}], "summary": "A fast & powerful cross-platform .NET IDE",
+        "title": "Rider"}, {"apps": ["space"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/ezgif.com-gif-maker.png",
+        "media": [{"height": 512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/ezgif.com-gif-maker.png",
+        "width": 512}, {"height": 1860, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/home_for_teams.png",
+        "width": 2880}, {"height": 1638, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/collaborate_on_code_in_place.png",
+        "width": 2880}, {"height": 1736, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/issue_tracking.png",
+        "width": 2880}], "origin": "jetbrains", "package_name": "space", "publisher":
+        "jetbrains", "sections": [{"featured": false, "name": "development"}], "summary":
+        "Desktop Application for JetBrains Space", "title": "Space"}, {"apps": ["kotlinc-js",
+        "kotlin-dce-js", "kotlinc-jvm", "kotlinc", "kotlin"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/256px-kotlin-logo-svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/256px-kotlin-logo-svg.png"}],
+        "origin": "jetbrains", "package_name": "kotlin", "publisher": "jetbrains",
+        "sections": [{"featured": false, "name": "development"}], "summary": "Command
+        line Kotlin compiler", "title": "Kotlin"}, {"apps": ["pycharm-community"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/PyCharmCore256.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/PyCharmCore256.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/pycharm_com_general.png"}],
+        "origin": "jetbrains", "package_name": "pycharm-community", "publisher": "jetbrains",
+        "sections": [{"featured": true, "name": "development"}], "summary": "Python
+        IDE for Professional Developers", "title": "PyCharm CE"}, {"apps": ["goland"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/go_1282x.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/go_1282x.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/go_overview.png"}],
+        "origin": "jetbrains", "package_name": "goland", "publisher": "jetbrains",
+        "sections": [{"featured": false, "name": "development"}], "summary": "A Clever
+        IDE to Go", "title": "GoLand"}, {"apps": ["clion"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/clion.ico.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/clion.ico.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screen_Shot_2017-12-20_at_19.40.03.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screen_Shot_2017-12-20_at_20.37.09.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screen_Shot_2017-12-20_at_20.30.54.png"}],
+        "origin": "jetbrains", "package_name": "clion", "publisher": "jetbrains",
+        "sections": [{"featured": false, "name": "development"}], "summary": "A cross-platform
+        IDE for C and C++", "title": "CLion"}, {"apps": ["datagrip"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/product_256.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/product_256.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/2.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/1.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/3.png"}],
+        "origin": "jetbrains", "package_name": "datagrip", "publisher": "jetbrains",
+        "sections": [{"featured": false, "name": "development"}], "summary": "IntelliJ-based
+        IDE for databases and SQL", "title": "DataGrip"}, {"apps": ["pycharm-professional"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/05/pycharm_logo_256.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/05/pycharm_logo_256.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/pycharm_pro_general.png"}],
+        "origin": "jetbrains", "package_name": "pycharm-professional", "publisher":
+        "jetbrains", "sections": [{"featured": true, "name": "development"}], "summary":
+        "Python IDE for Professional Developers", "title": "PyCharm Pro"}, {"apps":
+        ["rubymine"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/rubymine.ico.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/rubymine.ico.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/rm_1.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/rm_2.png"}],
+        "origin": "jetbrains", "package_name": "rubymine", "publisher": "jetbrains",
+        "sections": [{"featured": false, "name": "development"}], "summary": "The
+        Most Intelligent Ruby and Rails IDE", "title": "RubyMine"}, {"apps": ["intellij-idea-educational"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/icon_CE_256_2Qe5uEl.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/icon_CE_256_2Qe5uEl.png"}],
+        "origin": "jetbrains", "package_name": "intellij-idea-educational", "publisher":
+        "jetbrains", "sections": [], "summary": "IntelliJ IDEA Educational Edition",
+        "title": "IDEA Educational"}, {"apps": ["webstorm"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/WebStorm_1282x.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/WebStorm_1282x.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/webstorm-on-linux.png"}],
+        "origin": "jetbrains", "package_name": "webstorm", "publisher": "jetbrains",
+        "sections": [{"featured": true, "name": "development"}], "summary": "Powerful
+        IDE for modern JavaScript development", "title": "WebStorm"}, {"apps": ["intellij-idea-community"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/icon_CE_256_2Qe5uEl.png",
+        "media": [{"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/09/screenshot_Pm7mWCg.png"},
+        {"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/icon_CE_256_2Qe5uEl.png"}],
+        "origin": "jetbrains", "package_name": "intellij-idea-community", "publisher":
+        "jetbrains", "sections": [{"featured": true, "name": "development"}], "summary":
+        "Capable & Ergonomic Java IDE", "title": "IDEA Community"}]}, "_links": {"self":
+        {"href": "https://api.snapcraft.io/api/v1/snaps/search?q=publisher%3A28zEonXNoBLvIB7xneRbltOsp0Nf7DwS&size=500&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections"}}}'
+    headers:
+      Age:
+      - '856'
+      Content-Length:
+      - '11121'
+      Content-Type:
+      - application/hal+json
+      Date:
+      - Thu, 19 Dec 2019 14:35:01 GMT
+      Server:
+      - gunicorn/19.7.1
+      Snap-Store-Version:
+      - '17'
+      Vary:
+      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
+      Via:
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1375 (squid/3.5.27)
+      X-Cache:
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1375
+      X-Cache-Lookup:
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1375:3128
+      X-Request-Id:
+      - 5BBD5DB682520A325C8501BB5DFB8A94E902F17
+      X-VCS-Revision:
+      - 7adc6b1
+      X-View-Name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=publisher%3A2rsYZu6kqYVFsSejExu4YENdXQEO40Xb&size=500&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"apps": ["knights"], "developer_validation":
+        "verified", "icon_url": "", "media": [], "origin": "kde", "package_name":
+        "knights", "publisher": "KDE", "sections": [], "summary": "Chess game", "title":
+        "knights"}, {"apps": ["kfourinline"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/03/128-apps-kfourinline.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/03/128-apps-kfourinline.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kfourinline.png"}],
+        "origin": "kde", "package_name": "kfourinline", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Connect Four game", "title":
+        "kfourinline"}, {"apps": ["kblackbox"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/kblackbox.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/kblackbox.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/kblackbox.png"}],
+        "origin": "kde", "package_name": "kblackbox", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Blackbox Logic Game",
+        "title": "kblackbox"}, {"apps": ["kdenlive"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/10/icon_12.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/10/icon_12.png"},
+        {"height": 1327, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/10/19-08.png",
+        "width": 1974}], "origin": "kde", "package_name": "kdenlive", "publisher":
+        "KDE", "sections": [{"featured": false, "name": "photo-and-video"}], "summary":
+        "Kdenlive video editor", "title": "kdenlive"}, {"apps": ["skrooge"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/icon.svg_uB08EBP.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/icon.svg_uB08EBP.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/docks_left_right.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/after_mass_update.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/docks_detached.png"}],
+        "origin": "kde", "package_name": "skrooge", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "finance"}], "summary": "Skrooge is a personal
+        finances manager powered by KDE", "title": "Skrooge"}, {"apps": ["kompare"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kompare_ksj0yYy.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kompare_ksj0yYy.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kompare.png"}],
+        "origin": "kde", "package_name": "kompare", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "development"}], "summary": "Diff/Patch Frontend",
+        "title": "kompare"}, {"apps": ["ktorrent"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/icon.svg_mXwQg2o.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/icon.svg_mXwQg2o.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/ktorrent.png"}],
+        "origin": "kde", "package_name": "ktorrent", "publisher": "KDE", "sections":
+        [], "summary": "BitTorrent Client", "title": "ktorrent"}, {"apps": ["symboleditor"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/symboleditor-2.png",
+        "media": [{"height": 128, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/symboleditor-2.png",
+        "width": 128}, {"height": 765, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/symboleditor.png",
+        "width": 543}], "origin": "kde", "package_name": "symboleditor", "publisher":
+        "KDE", "sections": [], "summary": "A cross stitch symbol editor", "title":
+        "symboleditor"}, {"apps": [], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Mascot_konqi-app-dev.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Mascot_konqi-app-dev.png"},
+        {"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Mascot_konqi-app-dev_D3N4I2u.png"}],
+        "origin": "kde", "package_name": "kde-frameworks-5-core18-sdk", "publisher":
+        "KDE", "sections": [], "summary": "KDE Frameworks 5", "title": "kde-frameworks-5-core18-sdk"},
+        {"apps": ["kalzium"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kalzium.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kalzium.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kalzium_nEaxPC9.png"}],
+        "origin": "kde", "package_name": "kalzium", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "education"}], "summary": "KDE Periodic Table
+        of Elements", "title": "kalzium"}, {"apps": ["peruse"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/sc-apps-peruse.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/sc-apps-peruse.svg.png"}],
+        "origin": "kde", "package_name": "peruse", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "books-and-reference"}], "summary": "Comic Book
+        Reader", "title": "peruse"}, {"apps": ["artikulate"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/artikulate.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/artikulate.svg.png"}],
+        "origin": "kde", "package_name": "artikulate", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "education"}], "summary": "Artikulate Pronunciation
+        Trainer", "title": "artikulate"}, {"apps": ["kcolorchooser"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kcolorchooser.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kcolorchooser.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kcolorchooser_BfxLEmC.png"}],
+        "origin": "kde", "package_name": "kcolorchooser", "publisher": "KDE", "sections":
+        [], "summary": "color chooser and palette editor", "title": "kcolorchooser"},
+        {"apps": ["palapeli"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/palapeli_9eQYMiV.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/palapeli_9eQYMiV.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/palapeli.png"}],
+        "origin": "kde", "package_name": "palapeli", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Jigsaw puzzle game", "title":
+        "palapeli"}, {"apps": ["klickety"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/klickety.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/klickety.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/klickety-1.png"}],
+        "origin": "kde", "package_name": "klickety", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "SameGame puzzle game",
+        "title": "klickety"}, {"apps": ["gcompris"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/gcompris-qt.png",
+        "media": [{"height": 254, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/gcompris-qt.png",
+        "width": 254}, {"height": 1080, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/gcompris.png",
+        "width": 1920}], "origin": "kde", "package_name": "gcompris", "publisher":
+        "KDE", "sections": [{"featured": false, "name": "education"}], "summary":
+        "Multi-Activity Educational game for children 2 to 10", "title": "gcompris"},
+        {"apps": ["knavalbattle"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/knavalbattle_Zh4JuW1.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/knavalbattle_Zh4JuW1.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/knavalbattle.png"}],
+        "origin": "kde", "package_name": "knavalbattle", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "battleship board game",
+        "title": "knavalbattle"}, {"apps": ["klines"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/klines.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/klines.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/klines_XGRB1yv.png"}],
+        "origin": "kde", "package_name": "klines", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "color lines game", "title":
+        "klines"}, {"apps": ["kmag"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kmag_oY1LJyF.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kmag_oY1LJyF.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kmag.png"}],
+        "origin": "kde", "package_name": "kmag", "publisher": "KDE", "sections": [],
+        "summary": "A screen magnification tool", "title": "kmag"}, {"apps": ["kturtle"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/hisc-apps-kturtle.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/hisc-apps-kturtle.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/kturtle1.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/kturtle2.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/kturtle3.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/kturtle4.png"}],
+        "origin": "kde", "package_name": "kturtle", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "education"}], "summary": "Educational Programming
+        Environment", "title": "KTurtle"}, {"apps": ["rocs"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/rocs.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/rocs.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/rocs_j0Z4Kge.png"}],
+        "origin": "kde", "package_name": "rocs", "publisher": "KDE", "sections": [],
+        "summary": "Graph Theory Tool for Professors and Students.", "title": "rocs"},
+        {"apps": ["kubrick"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kubrick.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kubrick.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kubrick_W8DgFHs.png"}],
+        "origin": "kde", "package_name": "kubrick", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "A 3-D game based on Rubik''s
+        Cube", "title": "kubrick"}, {"apps": ["kreversi"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kreversi_VIE4fr4.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kreversi_VIE4fr4.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kreversi.png"}],
+        "origin": "kde", "package_name": "kreversi", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Reversi Board Game", "title":
+        "kreversi"}, {"apps": ["step"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/step.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/step.svg.png"}],
+        "origin": "kde", "package_name": "step", "publisher": "KDE", "sections": [{"featured":
+        true, "name": "science"}], "summary": "Simulate physics experiments", "title":
+        "step"}, {"apps": ["kmines"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/kmines.png", "media":
+        [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/kmines.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kmines.png"}],
+        "origin": "kde", "package_name": "kmines", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Minesweeper-like Game",
+        "title": "kmines"}, {"apps": ["picmi"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/picmi.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/picmi.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/picmi.png"}],
+        "origin": "kde", "package_name": "picmi", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Puzzle game based on number
+        logic", "title": "picmi"}, {"apps": ["parley"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/parley.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/parley.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/parley_NFqv5Ob.png"}],
+        "origin": "kde", "package_name": "parley", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "education"}], "summary": "vocabulary trainer",
+        "title": "parley"}, {"apps": ["keurocalc"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/keurocalc.png",
+        "media": [{"height": 48, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/keurocalc.png",
+        "width": 48}, {"height": 480, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/keurocalc-2.png",
+        "width": 783}], "origin": "kde", "package_name": "keurocalc", "publisher":
+        "KDE", "sections": [], "summary": "Currency converter and calculator", "title":
+        "keurocalc"}, {"apps": ["kbounce"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kbounce_Rs0Sw5I.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kbounce_Rs0Sw5I.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kbounce.png"}],
+        "origin": "kde", "package_name": "kbounce", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Jezzball arcade game",
+        "title": "kbounce"}, {"apps": ["kspaceduel"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kspaceduel.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kspaceduel.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kspaceduel_A3qyUmK.png"}],
+        "origin": "kde", "package_name": "kspaceduel", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Space Arcade Game", "title":
+        "kspaceduel"}, {"apps": ["kiten"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kiten_02pjNur.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kiten_02pjNur.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kiten.png"}],
+        "origin": "kde", "package_name": "kiten", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "books-and-reference"}], "summary": "Japanese
+        Reference and Study Tool", "title": "kiten"}, {"apps": ["kcalc"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_30.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_30.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/kcalc_sznv9pJ.png"}],
+        "origin": "kde", "package_name": "kcalc", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "finance"}], "summary": "Scientific Calculator",
+        "title": "KCalc"}, {"apps": ["kiriki"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kiriki_zhKG1Kn.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kiriki_zhKG1Kn.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kiriki.png"}],
+        "origin": "kde", "package_name": "kiriki", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Yahtzee-like Dice Game",
+        "title": "kiriki"}, {"apps": ["labplot"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/09/icon.svg_mPJC3ZK.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/09/icon.svg_mPJC3ZK.png"}],
+        "origin": "kde", "package_name": "labplot", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "science"}], "summary": "interactive graphing
+        and analysis of scientific data", "title": "labplot"}, {"apps": ["ark"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/ark.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/ark.png"}],
+        "origin": "kde", "package_name": "ark", "publisher": "KDE", "sections": [{"featured":
+        false, "name": "utilities"}], "summary": "Work with file archives", "title":
+        "ark"}, {"apps": ["falkon"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/02/falkon.png", "media":
+        [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/02/falkon.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/falkon.png"}],
+        "origin": "kde", "package_name": "falkon", "publisher": "KDE", "sections":
+        [], "summary": "Web Browser", "title": "Falkon"}, {"apps": ["kdiamond"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kdiamond_YdbhHJV.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kdiamond_YdbhHJV.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kdiamond.png"}],
+        "origin": "kde", "package_name": "kdiamond", "publisher": "KDE", "sections":
+        [], "summary": "three-in-a-row game", "title": "kdiamond"}, {"apps": ["ksirk"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/ksirk.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/ksirk.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/ksirk_IBY9C6a.png"}],
+        "origin": "kde", "package_name": "ksirk", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Risk strategy game", "title":
+        "ksirk"}, {"apps": ["kwordquiz"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kwordquiz.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kwordquiz.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kwordquiz_Z9mXYZO.png"}],
+        "origin": "kde", "package_name": "kwordquiz", "publisher": "KDE", "sections":
+        [], "summary": "A flashcard and vocabulary learning program", "title": "kwordquiz"},
+        {"apps": ["kjumpingcube"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kjumpingcube.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kjumpingcube.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kjumpingcube_vvA0oyJ.png"}],
+        "origin": "kde", "package_name": "kjumpingcube", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "simple tactical game",
+        "title": "kjumpingcube"}, {"apps": ["umbrello"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/umbrello.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/umbrello.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/umbrello.png"}],
+        "origin": "kde", "package_name": "umbrello", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "development"}], "summary": "UML modelling tool
+        and code generator", "title": "Umbrello"}, {"apps": ["klettres"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/klettres.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/klettres.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/klettres_4X0d9sQ.png"}],
+        "origin": "kde", "package_name": "klettres", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "education"}], "summary": "a KDE program to learn
+        the alphabet", "title": "klettres"}, {"apps": ["kdf"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kdf.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kdf.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kdf-1.png"}],
+        "origin": "kde", "package_name": "kdf", "publisher": "KDE", "sections": [],
+        "summary": "disk information utility", "title": "kdf"}, {"apps": ["kalgebra"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/kalgebra.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/kalgebra.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/kalgebra.png"}],
+        "origin": "kde", "package_name": "kalgebra", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "science"}], "summary": "algebraic graphing calculator",
+        "title": "KAlgebra"}, {"apps": ["kruler"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_13.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_13.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kruler.png"}],
+        "origin": "kde", "package_name": "kruler", "publisher": "KDE", "sections":
+        [], "summary": "Screen Ruler", "title": "kruler"}, {"apps": ["cervisia"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/cervisia.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/cervisia.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/cervisia_IUmKTAd.png"}],
+        "origin": "kde", "package_name": "cervisia", "publisher": "KDE", "sections":
+        [], "summary": "graphical CVS client", "title": "cervisia"}, {"apps": ["bomber"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/bomber.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/bomber.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/bomber.png"}],
+        "origin": "kde", "package_name": "bomber", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Arcade Bombing Game",
+        "title": "bomber"}, {"apps": ["kmousetool"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kmousetool_eCNtOgf.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kmousetool_eCNtOgf.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kmousetool.png"}],
+        "origin": "kde", "package_name": "kmousetool", "publisher": "KDE", "sections":
+        [], "summary": "mouse manipulation tool for the disabled", "title": "kmousetool"},
+        {"apps": ["skanlite"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/skanlite.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/skanlite.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/skanlite_IyqQP8r.png"}],
+        "origin": "kde", "package_name": "skanlite", "publisher": "KDE", "sections":
+        [], "summary": "image scanner based on the KSane backend", "title": "skanlite"},
+        {"apps": ["kolourpaint"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/kolourpaint.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/kolourpaint.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/kolourpaint.png"}],
+        "origin": "kde", "package_name": "kolourpaint", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "art-and-design"}], "summary": "An easy-to-use
+        paint program", "title": "kolourpaint"}, {"apps": ["okular"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/02/icon.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/02/icon.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/okular.png"}],
+        "origin": "kde", "package_name": "okular", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "productivity"}], "summary": "Document Viewer",
+        "title": "Okular"}, {"apps": ["kollision"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/kollision.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/kollision.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kollision.png"}],
+        "origin": "kde", "package_name": "kollision", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Casual ball game", "title":
+        "kollision"}, {"apps": ["kbreakout"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/kbreakout.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/kbreakout.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kbreakout.png"}],
+        "origin": "kde", "package_name": "kbreakout", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "ball and paddle game",
+        "title": "kbreakout"}, {"apps": ["kstars"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kstars_RxPcFQa.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kstars_RxPcFQa.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kstars.png"}],
+        "origin": "kde", "package_name": "kstars", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "featured"}, {"featured": true, "name": "science"}],
+        "summary": "KStars is a desktop planetarium for amateur and professional astronomers.",
+        "title": "kstars"}, {"apps": ["ktimer"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/ktimer_NfrluAs.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/ktimer_NfrluAs.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/ktimer.png"}],
+        "origin": "kde", "package_name": "ktimer", "publisher": "KDE", "sections":
+        [], "summary": "countdown timer", "title": "ktimer"}, {"apps": [], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/icon_21.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/icon_21.png"}],
+        "origin": "kde", "package_name": "kde-frameworks-5-core18", "publisher": "KDE",
+        "sections": [], "summary": "KDE Frameworks 5", "title": "kde-frameworks-5-core18"},
+        {"apps": ["kgeography"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_16.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_16.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/kgeography.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/Screenshot_20181205_134850.png"}],
+        "origin": "kde", "package_name": "kgeography", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "education"}], "summary": "A Geography Learning
+        Program", "title": "kgeography"}, {"apps": ["kig"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kig_Fdt1D8M.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kig_Fdt1D8M.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kig.png"}],
+        "origin": "kde", "package_name": "kig", "publisher": "KDE", "sections": [{"featured":
+        true, "name": "education"}], "summary": "Explore Geometric Constructions",
+        "title": "kig"}, {"apps": ["gwenview"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/gwenview.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/gwenview.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/gwenview-1.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/gwenview-2.png"}],
+        "origin": "kde", "package_name": "gwenview", "publisher": "KDE", "sections":
+        [], "summary": "A simple image viewer", "title": "gwenview"}, {"apps": ["konquest"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/konquest_om8CypS.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/konquest_om8CypS.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/konquest.png"}],
+        "origin": "kde", "package_name": "konquest", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Galactic Strategy Game",
+        "title": "konquest"}, {"apps": ["massif-visualizer"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/09/icon.svg_OIyMATB.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/09/icon.svg_OIyMATB.png"}],
+        "origin": "kde", "package_name": "massif-visualizer", "publisher": "KDE",
+        "sections": [], "summary": "Tool for visualizing memory usage recorded by
+        Valgrind Massif", "title": "massif-visualizer"}, {"apps": ["ksnakeduel"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/ksnakeduel_Tm67e6C.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/ksnakeduel_Tm67e6C.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/ksnakeduel.png"}],
+        "origin": "kde", "package_name": "ksnakeduel", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Tron-like Game", "title":
+        "ksnakeduel"}, {"apps": ["dragon"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/dragon.png", "media":
+        [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/dragon.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/dragonplayer.png"}],
+        "origin": "kde", "package_name": "dragon", "publisher": "KDE", "sections":
+        [], "summary": "simple video player", "title": "dragon"}, {"apps": [], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/10/icon_21.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/10/icon_21.png"}],
+        "origin": "kde", "package_name": "kde-frameworks-5", "publisher": "KDE", "sections":
+        [], "summary": "KDE Frameworks 5", "title": "kde-frameworks-5"}, {"apps":
+        ["xdg-portal-test-kde"], "developer_validation": "verified", "icon_url": "",
+        "media": [], "origin": "kde", "package_name": "xdg-portal-test-kde", "publisher":
+        "KDE", "sections": [], "summary": "xdg-portal-test-kde", "title": "xdg-portal-test-kde"},
+        {"apps": ["kbruch"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_21.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_21.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/kbruch.png"}],
+        "origin": "kde", "package_name": "kbruch", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "education"}], "summary": "Exercise Fractions",
+        "title": "KBruch"}, {"apps": ["killbots"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/killbots_3X2FBuM.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/killbots_3X2FBuM.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/killbots.png"}],
+        "origin": "kde", "package_name": "killbots", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "port of the classic BSD
+        console game robots", "title": "killbots"}, {"apps": ["kmahjongg"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/kmahjongg.png",
+        "media": [{"height": 128, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/kmahjongg.png",
+        "width": 128}, {"height": 764, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/kmahjongg-2.png",
+        "width": 1356}], "origin": "kde", "package_name": "kmahjongg", "publisher":
+        "KDE", "sections": [{"featured": false, "name": "games"}], "summary": "Mahjong
+        Solitaire", "title": "kmahjongg"}, {"apps": ["kwave"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kwave_LKlRQMU.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kwave_LKlRQMU.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kwave.png"}],
+        "origin": "kde", "package_name": "kwave", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "music-and-audio"}], "summary": "Kwave is a sound
+        editor built on KDE Frameworks 5", "title": "kwave"}, {"apps": ["minuet"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/minuet.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/minuet.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/minuet_gd7Hn9F.png"}],
+        "origin": "kde", "package_name": "minuet", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "education"}], "summary": "Music Education Software",
+        "title": "minuet"}, {"apps": ["knetwalk"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/knetwalk_rNySFRA.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/knetwalk_rNySFRA.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/knetwalk.png"}],
+        "origin": "kde", "package_name": "knetwalk", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "wire puzzle game", "title":
+        "knetwalk"}, {"apps": ["kirigami2gallery"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/preferences-desktop-theme.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/preferences-desktop-theme.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/Screenshot_20181120_110659.png"}],
+        "origin": "kde", "package_name": "kirigami-gallery", "publisher": "KDE", "sections":
+        [], "summary": "Shows examples of Kirigami components and allows you to play
+        with them", "title": "kirigami-gallery"}, {"apps": ["ksudoku"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/ksudoku.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/ksudoku.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/ksudoku_0zaPf5M.png"}],
+        "origin": "kde", "package_name": "ksudoku", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "KSudoku, Sudoku game &
+        more by KDE", "title": "ksudoku"}, {"apps": ["yakuake"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/yakuake.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/yakuake.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/yakuake-1.png"}],
+        "origin": "kde", "package_name": "yakuake", "publisher": "KDE", "sections":
+        [], "summary": "Quake-style terminal emulator based on KDE Konsole technology",
+        "title": "yakuake"}, {"apps": ["konversation"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_22.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_22.png"}],
+        "origin": "kde", "package_name": "konversation", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "social"}], "summary": "IRC client", "title":
+        "konversation"}, {"apps": ["cantor"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/cantor.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/cantor.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/cantor.png"}],
+        "origin": "kde", "package_name": "cantor", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "science"}], "summary": "KDE Frontend to Mathematical
+        Software", "title": "cantor"}, {"apps": ["kigo"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kigo.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kigo.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kigo_4UGl1NF.png"}],
+        "origin": "kde", "package_name": "kigo", "publisher": "KDE", "sections": [{"featured":
+        false, "name": "games"}], "summary": "Go Board Game", "title": "kigo"}, {"apps":
+        ["ktuberling"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/ktuberling.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/ktuberling.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/ktuberling_cPkOa1J.png"}],
+        "origin": "kde", "package_name": "ktuberling", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "A simple constructor game
+        suitable for children and adults alike", "title": "ktuberling"}, {"apps":
+        ["kgoldrunner"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kgoldrunner_m4iRUVR.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kgoldrunner_m4iRUVR.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kgoldrunner.png"}],
+        "origin": "kde", "package_name": "kgoldrunner", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "A game of action and puzzle-solving",
+        "title": "kgoldrunner"}, {"apps": ["kmplot"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_15.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_15.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/kmplot.png"}],
+        "origin": "kde", "package_name": "kmplot", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "science"}], "summary": "Mathematical Function
+        Plotter", "title": "kmplot"}, {"apps": ["blinken"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/blinken.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/blinken.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/blinken1_orig.png"}],
+        "origin": "kde", "package_name": "blinken", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Memory Enhancement Game",
+        "title": "blinken"}, {"apps": ["kpat"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/kpat.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/kpat.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/kpatience.png"}],
+        "origin": "kde", "package_name": "kpat", "publisher": "KDE", "sections": [{"featured":
+        false, "name": "games"}], "summary": "Solitaire card game", "title": "KPatience"},
+        {"apps": ["ksquares"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/ksquares.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/ksquares.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/ksquares-standard.png"}],
+        "origin": "kde", "package_name": "ksquares", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Connect the dots to create
+        squares", "title": "ksquares"}, {"apps": ["spectacle"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/spectacle_D3KcUk7.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/spectacle_D3KcUk7.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/spectacle.png"}],
+        "origin": "kde", "package_name": "spectacle", "publisher": "KDE", "sections":
+        [], "summary": "Screenshot capture utility, replaces KSnapshot", "title":
+        "spectacle"}, {"apps": ["kate"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/kate.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/kate.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kate.png"}],
+        "origin": "kde", "package_name": "kate", "publisher": "KDE", "sections": [],
+        "summary": "KDE Advanced Text Editor", "title": "kate"}, {"apps": ["katomic"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_20.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_20.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/katomic.png"}],
+        "origin": "kde", "package_name": "katomic", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Sokoban-like Logic Game",
+        "title": "katomic"}, {"apps": ["kblocks"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/10/kblocks.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/10/kblocks.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kblocks.png"}],
+        "origin": "kde", "package_name": "kblocks", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Falling Blocks Game",
+        "title": "kblocks"}, {"apps": ["kgraphviewer"], "developer_validation": "verified",
+        "icon_url": "", "media": [], "origin": "kde", "package_name": "kgraphviewer",
+        "publisher": "KDE", "sections": [], "summary": "A Graphviz DOT graph viewer",
+        "title": "kgraphviewer"}, {"apps": ["kanagram"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/kanagramicon.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/kanagramicon.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/kanagram.png"}],
+        "origin": "kde", "package_name": "kanagram", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "KDE Letter Order Game",
+        "title": "kanagram"}, {"apps": ["okteta"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/okteta.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/okteta.svg.png"}],
+        "origin": "kde", "package_name": "okteta", "publisher": "KDE", "sections":
+        [], "summary": "Hex editor", "title": "okteta"}, {"apps": ["krdc"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/krdc.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/krdc.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/krdc.png"}],
+        "origin": "kde", "package_name": "krdc", "publisher": "KDE", "sections": [],
+        "summary": "Remote Desktop Connection client", "title": "krdc"}, {"apps":
+        ["kapman"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/kapman.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/kapman.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/kapman.png"}],
+        "origin": "kde", "package_name": "kapman", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Eat pills escaping ghosts",
+        "title": "kapman"}, {"apps": ["bovo"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/bovo.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/bovo.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/bovo_eB9R0fm.png"}],
+        "origin": "kde", "package_name": "bovo", "publisher": "KDE", "sections": [{"featured":
+        false, "name": "games"}], "summary": "\"Five in a row\" board game", "title":
+        "bovo"}, {"apps": ["kteatime"], "developer_validation": "verified", "icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kteatime_e2guu9d.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kteatime_e2guu9d.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kteatime.png"}],
+        "origin": "kde", "package_name": "kteatime", "publisher": "KDE", "sections":
+        [], "summary": "Tea Cooker", "title": "kteatime"}, {"apps": ["ktouch"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_14.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_14.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/ktouch_gir0tw1.png"}],
+        "origin": "kde", "package_name": "ktouch", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "education"}], "summary": "Touch Typing Tutor",
+        "title": "KTouch"}, {"apps": ["kshisen"], "developer_validation": "verified",
+        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kshisen.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kshisen.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/kshisen_oOOoeGA.png"}],
+        "origin": "kde", "package_name": "kshisen", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Shisen-Sho Mahjongg-like
+        Tile Game", "title": "kshisen"}, {"apps": ["sweeper"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/sweeper.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/sweeper.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/sweeper_GGpZfhM.png"}],
+        "origin": "kde", "package_name": "sweeper", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "personalisation"}], "summary": "history and temporary
+        file cleaner", "title": "sweeper"}, {"apps": ["granatier"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/granatier.svg.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/granatier.svg.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/12/granatier.png"}],
+        "origin": "kde", "package_name": "granatier", "publisher": "KDE", "sections":
+        [{"featured": false, "name": "games"}], "summary": "Bomberman clone", "title":
+        "granatier"}]}, "_links": {"self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?q=publisher%3A2rsYZu6kqYVFsSejExu4YENdXQEO40Xb&size=500&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections"}}}'
+    headers:
+      Content-Length:
+      - '52592'
+      Content-Type:
+      - application/hal+json
+      Date:
+      - Thu, 19 Dec 2019 14:49:18 GMT
+      Server:
+      - gunicorn/19.7.1
+      Snap-Store-Version:
+      - '17'
+      Vary:
+      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
+      Via:
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1374 (squid/3.5.27)
+      X-Cache:
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1374
+      X-Cache-Lookup:
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1374:3128
+      X-Request-Id:
+      - 5BBD5DB690DC0A325C7F01BB5DFB8DECE8D5FB8
+      X-VCS-Revision:
+      - 7adc6b1
+      X-View-Name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+version: 1
