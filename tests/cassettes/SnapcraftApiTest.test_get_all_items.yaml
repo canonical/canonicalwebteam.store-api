@@ -57,9 +57,9 @@ interactions:
         "TWwObnuGiM3Urabc9hR2Xg2bJs6J8f2Y", "summary": "Your private diary, journal
         & companion.", "support_url": "", "title": "Journey - Diary, Journal", "version":
         "2.14.0", "website": "https://journey.cloud"}, {"aliases": null, "anon_download_url":
-        "https://api.snapcraft.io/api/v1/snaps/download/XC73ux8XOHjoahd9keAyvM3LVkPBLTzy_3640.snap",
-        "apps": ["remmina", "winpr-makecert", "winpr-hash"], "architecture": ["amd64"],
-        "base": "core18", "binary_filesize": 15421440, "channel": "stable", "common_ids":
+        "https://api.snapcraft.io/api/v1/snaps/download/XC73ux8XOHjoahd9keAyvM3LVkPBLTzy_3810.snap",
+        "apps": ["winpr-makecert", "remmina", "winpr-hash"], "architecture": ["amd64"],
+        "base": "core18", "binary_filesize": 15417344, "channel": "stable", "common_ids":
         ["org.remmina.Remmina.desktop"], "confinement": "strict", "contact": "https://gitlab.com/Remmina/Remmina/issues",
         "content": "application", "date_published": "2017-01-19T16:07:31.561979Z",
         "deltas": [], "description": "Remmina is a remote desktop client written in
@@ -70,14 +70,14 @@ interactions:
         and WWW are supported.\n\nRemmina is free and open-source software, released
         under GNU GPL license.", "developer_id": "FJvMKvFilDxPfnKUsSN2YuBVPAWSAMLK",
         "developer_name": "Remmina Upstream Developers", "developer_validation": "verified",
-        "download_sha3_384": "c47d413961e95166bea7fc4613329b82899fcc555b3da247c6b05c4d2b1341f6db181a5493ba8183fabea1f604128c9d",
-        "download_sha512": "0fd7409de8619854f2787e5b43faff8010a8afc18a94cea625aef9b380f2b1e96a420c6cdfcdec155810bf93d23eb526a80951d8d4ca352da4d9f61cf68aedcd",
-        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/XC73ux8XOHjoahd9keAyvM3LVkPBLTzy_3640.snap",
+        "download_sha3_384": "31a6136f44424c9b474eb18980649d003575203891bb1bc3cea00e8aba555de3e17feba264a25b9aa5a455e66f3c2919",
+        "download_sha512": "9124573295a5328ab1ca91479bb6714ff9d3f0b89f14d58035c2126591e17e80b6fcf98b8294a618d8073a3a5c0a487383b1409b04e81eeb5568b53683920668",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/XC73ux8XOHjoahd9keAyvM3LVkPBLTzy_3810.snap",
         "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/org.remmina.Remmina.png",
-        "last_updated": "2019-12-05T21:55:13.775744+00:00", "license": "GPL-2.0",
+        "last_updated": "2020-01-08T16:24:43.952744+00:00", "license": "GPL-2.0",
         "name": "remmina.remmina", "origin": "remmina", "package_name": "remmina",
         "prices": {}, "private": false, "publisher": "Remmina Upstream Developers",
-        "ratings_average": 0.0, "release": ["16"], "revision": 3640, "screenshot_urls":
+        "ratings_average": 0.0, "release": ["16"], "revision": 3810, "screenshot_urls":
         ["https://dashboard.snapcraft.io/site_media/appmedia/2018/02/Remmina_Screenshot.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Remmina-Main-Window.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Arch-Spice-Fedora.jpg",
@@ -86,8 +86,9 @@ interactions:
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/screenshot_banner.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Arch-Spice-Fedora.png"],
         "snap_id": "XC73ux8XOHjoahd9keAyvM3LVkPBLTzy", "summary": "Remote Desktop
-        Client", "support_url": "", "title": "remmina", "version": "v1.3.7", "website":
-        "https://www.remmina.org"}, {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/pOBIoZ2LrCB3rDohMxoYGnbN14EHOgD7_36.snap",
+        Client", "support_url": "", "title": "remmina", "version": "v1.3.10+git1.4dc89d74",
+        "website": "https://www.remmina.org"}, {"aliases": null, "anon_download_url":
+        "https://api.snapcraft.io/api/v1/snaps/download/pOBIoZ2LrCB3rDohMxoYGnbN14EHOgD7_36.snap",
         "apps": ["spotify"], "architecture": ["amd64"], "binary_filesize": 189870080,
         "channel": "stable", "common_ids": [], "confinement": "strict", "contact":
         "https://community.spotify.com/t5/Desktop-Linux/bd-p/desktop_linux", "content":
@@ -220,9 +221,9 @@ interactions:
         [], "snap_id": "vVm1tLohxIvkFkTxz9z7C9MJGqLXkZ9Z", "summary": "GnuCash is
         personal and small-business financial-accounting software", "support_url":
         "", "title": "gnucash-jz", "version": "2.6.21a", "website": null}, {"aliases":
-        null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/9BTClmjz31r0UltmbJ5nnGe0Xm1AzfMp_111.snap",
+        null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/9BTClmjz31r0UltmbJ5nnGe0Xm1AzfMp_123.snap",
         "apps": ["gnome-system-monitor"], "architecture": ["amd64"], "base": "core18",
-        "binary_filesize": 3821568, "channel": "stable", "common_ids": [], "confinement":
+        "binary_filesize": 3825664, "channel": "stable", "common_ids": [], "confinement":
         "strict", "contact": "https://bugs.launchpad.net/ubuntu/+source/gnome-system-monitor/+bugs?field.tag=snap",
         "content": "application", "date_published": "2017-08-29T19:55:24.947049Z",
         "deltas": [], "description": "GNOME System Monitor is a GNOME process viewer
@@ -232,14 +233,14 @@ interactions:
         usage, the ability to kill/renice processes needing root\naccess, as well
         as the standard features that you might expect from a\nprocess viewer.", "developer_id":
         "canonical", "developer_name": "Canonical", "developer_validation": "verified",
-        "download_sha3_384": "14749f2766e2db5ef9a57a020416c55447b70f39e3a816cef81ad602d77f4e2045401e285e1e0b85ab1df3584dbc5b0e",
-        "download_sha512": "121dc92c6c725f2adb13b8df2f61afcc936c9b73ffca766837c3643f26d98af0f682bc184d95915ffe82edb2f8580ce35266a981c69deeedc8c3e7f5d22fb396",
-        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/9BTClmjz31r0UltmbJ5nnGe0Xm1AzfMp_111.snap",
+        "download_sha3_384": "217e1588df9cb2919f20bb3802a3c09797a8066d053f2ac90232485dae36d9ad0c2f6fe2883bab7154750084737e4860",
+        "download_sha512": "acb11ea26878fbd42e19c3317eb65784b7c22bcf8f12581bdb5a0546cb680a8f6a8792eaf657c28881809921c073574e3b387a83998b280345b12b06761baf34",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/9BTClmjz31r0UltmbJ5nnGe0Xm1AzfMp_123.snap",
         "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/08/utilities-system-monitor.png",
-        "last_updated": "2019-11-14T07:12:47.722368+00:00", "license": "GPL-3.0+",
+        "last_updated": "2019-12-19T20:54:19.530913+00:00", "license": "GPL-3.0+",
         "name": "gnome-system-monitor.canonical", "origin": "canonical", "package_name":
         "gnome-system-monitor", "prices": {}, "private": false, "publisher": "Canonical",
-        "ratings_average": 0.0, "release": ["16"], "revision": 111, "screenshot_urls":
+        "ratings_average": 0.0, "release": ["16"], "revision": 123, "screenshot_urls":
         ["https://dashboard.snapcraft.io/site_media/appmedia/2017/08/Screenshot_from_2017-08-25_16-47-48.png"],
         "snap_id": "9BTClmjz31r0UltmbJ5nnGe0Xm1AzfMp", "summary": "System Monitor",
         "support_url": "", "title": "GNOME System Monitor", "version": "3.32.1-3-g0ea89b4922",
@@ -293,36 +294,10 @@ interactions:
         "snap_id": "XKEcBqPM06H1Z7zGOdG5fbICuf8NWK5R", "summary": "Chromium web browser,
         open-source version of Chrome", "support_url": "", "title": "Chromium", "version":
         "79.0.3945.79", "website": "https://code.launchpad.net/~chromium-team/chromium-browser/+git/snap-from-source"},
-        {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/fFcOtEEF4EdyYb95IUE5Isy28tICYMLf_97.snap",
-        "apps": ["postman"], "architecture": ["amd64"], "binary_filesize": 151769088,
-        "channel": "stable", "common_ids": [], "confinement": "strict", "contact":
-        "https://github.com/postmanlabs/postman-app-support/issues", "content": "application",
-        "date_published": "2018-06-05T16:10:19.832077Z", "deltas": [], "description":
-        "Postman is the collaboration platform for API development, used by 8 million
-        developers and 400,000 companies worldwide. Postman is an elegant, flexible
-        tool for building connected software via APIs quickly, easily, and accurately.
-        Postman is a global company with headquarters in San Francisco, a large office
-        in Bangalore (where the company was founded), and distributed team members
-        on four continents. Postman is privately held, with funding from Nexus Venture
-        Partners and CRV.", "developer_id": "XoCRjdDV97FglcaHqDPg6sM7aUzZMIg6", "developer_name":
-        "Postman, Inc.", "developer_validation": "verified", "download_sha3_384":
-        "a5be8c7d9fd7fc0403d4debefebfad6df225161ee787f11d9a68831710cd9dab70793579c9eda52e6e660a1d1a25c503",
-        "download_sha512": "db10ab403ec905554855dea2d01f7afe433044221f7142562d53e957f903c3b4a385a771217fe0893ab5d989980da75c640e82215a2015f41a79b23795d79d8a",
-        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/fFcOtEEF4EdyYb95IUE5Isy28tICYMLf_97.snap",
-        "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/logo-mark.png",
-        "last_updated": "2019-12-06T10:26:37.513645+00:00", "license": "Proprietary",
-        "name": "postman.postman-inc", "origin": "postman-inc", "package_name": "postman",
-        "prices": {}, "private": false, "publisher": "Postman, Inc.", "ratings_average":
-        0.0, "release": ["16"], "revision": 97, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2018/06/Screenshot_from_2018-03-21_17-24-01.png",
-        "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Light-1.png",
-        "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Dark-4.png", "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Dark-1.png"],
-        "snap_id": "fFcOtEEF4EdyYb95IUE5Isy28tICYMLf", "summary": "API Development
-        Environment", "support_url": "", "title": "Postman", "version": "7.13.0",
-        "website": "https://www.getpostman.com/"}, {"aliases": null, "anon_download_url":
-        "https://api.snapcraft.io/api/v1/snaps/download/njObIbGQEaVx1H4nyWxchk1i8opy4h54_16739.snap",
-        "apps": ["enable-https", "import", "occ", "mysqldump", "disable-https", "mysql-client",
-        "manual-install", "export"], "architecture": ["amd64"], "binary_filesize":
-        221966336, "channel": "stable", "common_ids": [], "confinement": "strict",
+        {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/njObIbGQEaVx1H4nyWxchk1i8opy4h54_18019.snap",
+        "apps": ["import", "occ", "export", "enable-https", "mysqldump", "mysql-client",
+        "manual-install", "disable-https"], "architecture": ["amd64"], "binary_filesize":
+        222629888, "channel": "stable", "common_ids": [], "confinement": "strict",
         "contact": "https://github.com/nextcloud/nextcloud-snap", "content": "application",
         "date_published": "2016-06-14T18:42:19.938486Z", "deltas": [], "description":
         "Where are your photos and documents? With Nextcloud you pick a server of
@@ -332,18 +307,18 @@ interactions:
         also access, sync and share your existing data on that FTP drive at school,
         a Dropbox or a NAS you have at home.", "developer_id": "lBnslZGp88VvX4EJSAvS2AG2Iryb1MNU",
         "developer_name": "Nextcloud", "developer_validation": "verified", "download_sha3_384":
-        "80ae6982a966cb4ee87ad2060f2e96022e0f1115a193accb0b07b9c68e2ba8a270d1fc1cc57a26af3ddb006dfd405e58",
-        "download_sha512": "8575da79efdbd4a85659e7d7f44119e5e06ae83fd8a8dd43fdb715071a7b69f5c92ea95ee13a5c9adaa2150e549bb518135c2371c4c321612b3c9ccbfa53efef",
-        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/njObIbGQEaVx1H4nyWxchk1i8opy4h54_16739.snap",
+        "d578472bb090b72c7b8e0f561940c08423b2dd260bf21eb9e7f17a2e406816d8c18e3c242c07bd204d31521a025399b6",
+        "download_sha512": "46e211cbcd9ee6ff86163212481200d373e6e5a1c6210b240c62094f2893b1f9036484ce9868126650fde56653eb301ae0f43c192c187643426876af0b6353e3",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/njObIbGQEaVx1H4nyWxchk1i8opy4h54_18019.snap",
         "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/06/icon.svg_1.png",
-        "last_updated": "2019-10-25T17:40:48.081590+00:00", "license": "AGPL-3.0+",
+        "last_updated": "2020-01-06T23:42:59.768366+00:00", "license": "AGPL-3.0+",
         "name": "nextcloud.nextcloud", "origin": "nextcloud", "package_name": "nextcloud",
         "prices": {}, "private": false, "publisher": "Nextcloud", "ratings_average":
-        0.0, "release": ["16"], "revision": 16739, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2018/10/Screenshot_from_2018-10-26_09-49-46.png",
+        0.0, "release": ["16"], "revision": 18019, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2018/10/Screenshot_from_2018-10-26_09-49-46.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/10/Screenshot_from_2018-10-26_09-48-50.png"],
         "snap_id": "njObIbGQEaVx1H4nyWxchk1i8opy4h54", "summary": "Nextcloud Server
         - A safe home for all your data", "support_url": "", "title": "Nextcloud",
-        "version": "16.0.5snap3", "website": "https://github.com/nextcloud/nextcloud-snap"},
+        "version": "16.0.5snap4", "website": "https://github.com/nextcloud/nextcloud-snap"},
         {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/KTe2wdAu5JKdRDUgYBuXXGjDXyzobvFI_532.snap",
         "apps": ["audacity"], "architecture": ["amd64"], "base": "core18", "binary_filesize":
         77344768, "channel": "stable", "common_ids": ["org.audacityteam.Audacity"],
@@ -396,9 +371,9 @@ interactions:
         "snap_id": "jTBnCMtrkc7KysHZKE28UiBaRlCbasc1", "summary": "PIVX (Private \u2013
         Instant \u2013 Verified \u2013 Transaction)", "support_url": "", "title":
         "pivx", "version": "v3.1.1", "website": "http://www.pivx.org/"}, {"aliases":
-        null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/ogcav3zrjqBXdDx8ofgJYMEPSLVRs9ID_405.snap",
+        null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/ogcav3zrjqBXdDx8ofgJYMEPSLVRs9ID_440.snap",
         "apps": ["dosbox-x"], "architecture": ["amd64"], "base": "core18", "binary_filesize":
-        71409664, "channel": "stable", "common_ids": [], "confinement": "strict",
+        71417856, "channel": "stable", "common_ids": [], "confinement": "strict",
         "contact": "https://github.com/snapcrafters/dosbox-x/issues", "content": "application",
         "date_published": "2018-03-30T14:35:36.256772Z", "deltas": [], "description":
         "DOSBox-X is a x86 emulator with Tandy/Hercules/CGA/EGA/VGA/SVGA graphics\nsound
@@ -406,18 +381,18 @@ interactions:
         support it.\n\nThis snap is maintained by the Snapcrafters community, and
         is not necessarily endorsed or officially maintained by the upstream developers.",
         "developer_id": "eEoV9TnaNkCzfJBu9SRhr2678vzyYV43", "developer_name": "Snapcrafters",
-        "developer_validation": "unproven", "download_sha3_384": "7291a1dc728ab69245c5f292b5d0a6ab92774d0ca235b314820968e26eec0843368c62ae9a1a58369da4b91bfc1f62e3",
-        "download_sha512": "44b11b44c29221db96bb80397381aa6a9803784359ff5b1b5ed26a4085f2fbd01d15aa2b3d37779b976e671b1065984b8b9c8e62ad93ad9b6a9038e5709ea622",
-        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/ogcav3zrjqBXdDx8ofgJYMEPSLVRs9ID_405.snap",
+        "developer_validation": "unproven", "download_sha3_384": "2e22310fe270e03301ccc4335571fdb0dd127b836394dc763ff6a984fd2f5239c344744717bf8e1721b42a18aefd62b0",
+        "download_sha512": "e9f063d36fce5b18a3862a3f8c6e7f9b10ef411cd5021b8e6182632ac4731806cc840b272646c57edf08af0795579d68ac0e50f3c4439c4890599b3c387bb5cc",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/ogcav3zrjqBXdDx8ofgJYMEPSLVRs9ID_440.snap",
         "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/03/dosbox-x.png",
-        "last_updated": "2019-12-01T11:08:21.143177+00:00", "license": "GPL-2.0",
+        "last_updated": "2020-01-04T00:21:46.094646+00:00", "license": "GPL-2.0",
         "name": "dosbox-x.snapcrafters", "origin": "snapcrafters", "package_name":
         "dosbox-x", "prices": {}, "private": false, "publisher": "Snapcrafters", "ratings_average":
-        0.0, "release": ["16"], "revision": 405, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2018/04/Screenshot_from_2018-04-06_13-55-46.png",
+        0.0, "release": ["16"], "revision": 440, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2018/04/Screenshot_from_2018-04-06_13-55-46.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/Screenshot_from_2018-04-06_13-55-20.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/Screenshot_from_2018-04-06_13-55-06.png"],
         "snap_id": "ogcav3zrjqBXdDx8ofgJYMEPSLVRs9ID", "summary": "DOSBox-X fork of
-        the DOSBox project", "support_url": "", "title": "DOSBox-X", "version": "0.82.24",
+        the DOSBox project", "support_url": "", "title": "DOSBox-X", "version": "0.82.26",
         "website": ""}, {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/b96UJ4vttpNhpbaCWctVzfduQcPwQ5wn_90.snap",
         "apps": ["canonical-livepatch"], "architecture": ["amd64"], "binary_filesize":
         8945664, "channel": "stable", "common_ids": [], "confinement": "strict", "contact":
@@ -458,22 +433,51 @@ interactions:
         "private": false, "publisher": "KDE", "ratings_average": 0.0, "release": ["16"],
         "revision": 44, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2018/12/kcalc_sznv9pJ.png"],
         "snap_id": "yUnRIACvPcaHjEasN7enV9PYXgrXVdML", "summary": "Scientific Calculator",
-        "support_url": "", "title": "KCalc", "version": "19.08.0", "website": "https://www.kde.org"}]},
-        "_links": {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=16&page=223"},
+        "support_url": "", "title": "KCalc", "version": "19.08.0", "website": "https://www.kde.org"},
+        {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/2OjKSNHeG48Zvxoj8dGmSVeRo9Rih1UT_283.snap",
+        "apps": ["foobar2000"], "architecture": ["i386", "amd64"], "base": "core18",
+        "binary_filesize": 4796416, "channel": "stable", "common_ids": [], "confinement":
+        "strict", "contact": "https://github.com/mmtrt/foobar2000/wiki", "content":
+        "application", "date_published": "2018-01-24T07:32:52.028957Z", "deltas":
+        [], "description": "Features\n\n\u2022 Supported audio formats are MP3, MP4,
+        AAC, CD Audio, WMA, Vorbis, Opus, FLAC, WavPack, WAV, AIFF, Musepack, Speex,
+        AU, SND and more with additional components.\n\n\u2022 Gapless playback.\n\n\u2022
+        Easily customizable user interface layout.\n\n\u2022 Advanced tagging capabilities.\n\n\u2022
+        Support for ripping Audio CDs as well as transcoding all supported audio formats
+        using the Converter component.\n\n\u2022 Full ReplayGain support.\n\n\u2022
+        Customizable keyboard shortcuts.\n\n\u2022 Open component architecture allowing
+        third-party developers to extend functionality of the player.\n\n* Support
+        me: https://bit.ly/2XkT2bl", "developer_id": "KRgbKnuP84JrBW80vVPiDjACCj8PvBX3",
+        "developer_name": "Taqi Raza", "developer_validation": "unproven", "download_sha3_384":
+        "9510bd614ab7fc0248a011b2e298aa56fef9676c7716fbe661a933ce539611b0bb72c6f999bdc5faed0c3bf65836a7bc",
+        "download_sha512": "13c71422c88f39161610d1a15c8ab6d36be0bb28c995183747bf0f7ae020c299a8feb88568b58cc9d8f85fec14dddb51f88245a800c4c29bc541e1e6ebd3c0b6",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/2OjKSNHeG48Zvxoj8dGmSVeRo9Rih1UT_283.snap",
+        "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/foobar2000.png",
+        "last_updated": "2020-01-01T05:23:12.618434+00:00", "license": "Apache-2.0
+        OR LGPL-2.1", "name": "foobar2000.mmtrt", "origin": "mmtrt", "package_name":
+        "foobar2000", "prices": {}, "private": false, "publisher": "Taqi Raza", "ratings_average":
+        0.0, "release": ["16"], "revision": 283, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2018/01/screenshot_fuxTX8I.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/screenshot1.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/screenshot2.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/screenshot3.png"],
+        "snap_id": "2OjKSNHeG48Zvxoj8dGmSVeRo9Rih1UT", "summary": "foobar2000 is an
+        advanced freeware audio player.", "support_url": "", "title": "foobar2000
+        (WINE)", "version": "1.5.1", "website": ""}]}, "_links": {"last": {"href":
+        "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=16&page=225"},
         "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=16&page=2"},
         "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=16"}},
-        "total": 3557}'
+        "total": 3590}'
     headers:
       Content-Length:
-      - '40382'
+      - '40575'
       Content-Type:
       - application/hal+json
       Date:
-      - Thu, 19 Dec 2019 14:49:14 GMT
+      - Fri, 10 Jan 2020 10:29:13 GMT
       Server:
       - gunicorn/19.7.1
       Snap-Store-Version:
-      - '17'
+      - '18'
       Vary:
       - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
       Via:
@@ -483,9 +487,9 @@ interactions:
       X-Cache-Lookup:
       - HIT from juju-7794b8-prod-ols-snap-store-indep-1374:3128
       X-Request-Id:
-      - 5BBD5DB68E1E0A325C8501BB5DFB8DE9E9E3B78
+      - 5BBD5DB6A1300A325DDF01BB5E1851F82D09AD5
       X-VCS-Revision:
-      - 7adc6b1
+      - efcec7e
       X-View-Name:
       - snapdevicegw.webapi_search.snap_search
     status:
@@ -549,9 +553,9 @@ interactions:
         "TWwObnuGiM3Urabc9hR2Xg2bJs6J8f2Y", "summary": "Your private diary, journal
         & companion.", "support_url": "", "title": "Journey - Diary, Journal", "version":
         "2.14.0", "website": "https://journey.cloud"}, {"aliases": null, "anon_download_url":
-        "https://api.snapcraft.io/api/v1/snaps/download/XC73ux8XOHjoahd9keAyvM3LVkPBLTzy_3640.snap",
-        "apps": ["remmina", "winpr-makecert", "winpr-hash"], "architecture": ["amd64"],
-        "base": "core18", "binary_filesize": 15421440, "channel": "stable", "common_ids":
+        "https://api.snapcraft.io/api/v1/snaps/download/XC73ux8XOHjoahd9keAyvM3LVkPBLTzy_3810.snap",
+        "apps": ["winpr-makecert", "remmina", "winpr-hash"], "architecture": ["amd64"],
+        "base": "core18", "binary_filesize": 15417344, "channel": "stable", "common_ids":
         ["org.remmina.Remmina.desktop"], "confinement": "strict", "contact": "https://gitlab.com/Remmina/Remmina/issues",
         "content": "application", "date_published": "2017-01-19T16:07:31.561979Z",
         "deltas": [], "description": "Remmina is a remote desktop client written in
@@ -562,14 +566,14 @@ interactions:
         and WWW are supported.\n\nRemmina is free and open-source software, released
         under GNU GPL license.", "developer_id": "FJvMKvFilDxPfnKUsSN2YuBVPAWSAMLK",
         "developer_name": "Remmina Upstream Developers", "developer_validation": "verified",
-        "download_sha3_384": "c47d413961e95166bea7fc4613329b82899fcc555b3da247c6b05c4d2b1341f6db181a5493ba8183fabea1f604128c9d",
-        "download_sha512": "0fd7409de8619854f2787e5b43faff8010a8afc18a94cea625aef9b380f2b1e96a420c6cdfcdec155810bf93d23eb526a80951d8d4ca352da4d9f61cf68aedcd",
-        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/XC73ux8XOHjoahd9keAyvM3LVkPBLTzy_3640.snap",
+        "download_sha3_384": "31a6136f44424c9b474eb18980649d003575203891bb1bc3cea00e8aba555de3e17feba264a25b9aa5a455e66f3c2919",
+        "download_sha512": "9124573295a5328ab1ca91479bb6714ff9d3f0b89f14d58035c2126591e17e80b6fcf98b8294a618d8073a3a5c0a487383b1409b04e81eeb5568b53683920668",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/XC73ux8XOHjoahd9keAyvM3LVkPBLTzy_3810.snap",
         "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/org.remmina.Remmina.png",
-        "last_updated": "2019-12-05T21:55:13.775744+00:00", "license": "GPL-2.0",
+        "last_updated": "2020-01-08T16:24:43.952744+00:00", "license": "GPL-2.0",
         "name": "remmina.remmina", "origin": "remmina", "package_name": "remmina",
         "prices": {}, "private": false, "publisher": "Remmina Upstream Developers",
-        "ratings_average": 0.0, "release": ["16"], "revision": 3640, "screenshot_urls":
+        "ratings_average": 0.0, "release": ["16"], "revision": 3810, "screenshot_urls":
         ["https://dashboard.snapcraft.io/site_media/appmedia/2018/02/Remmina_Screenshot.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Remmina-Main-Window.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Arch-Spice-Fedora.jpg",
@@ -578,8 +582,9 @@ interactions:
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/screenshot_banner.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Arch-Spice-Fedora.png"],
         "snap_id": "XC73ux8XOHjoahd9keAyvM3LVkPBLTzy", "summary": "Remote Desktop
-        Client", "support_url": "", "title": "remmina", "version": "v1.3.7", "website":
-        "https://www.remmina.org"}, {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/pOBIoZ2LrCB3rDohMxoYGnbN14EHOgD7_36.snap",
+        Client", "support_url": "", "title": "remmina", "version": "v1.3.10+git1.4dc89d74",
+        "website": "https://www.remmina.org"}, {"aliases": null, "anon_download_url":
+        "https://api.snapcraft.io/api/v1/snaps/download/pOBIoZ2LrCB3rDohMxoYGnbN14EHOgD7_36.snap",
         "apps": ["spotify"], "architecture": ["amd64"], "binary_filesize": 189870080,
         "channel": "stable", "common_ids": [], "confinement": "strict", "contact":
         "https://community.spotify.com/t5/Desktop-Linux/bd-p/desktop_linux", "content":
@@ -645,35 +650,33 @@ interactions:
         "snap_id": "LPDZP2jWsSizNHoWrJnckPzVuNm8p2Ur", "summary": "Real-time strategy
         game of ancient warfare", "support_url": "", "title": "0 A.D.", "version":
         "0.0.23b-alpha", "website": "https://code.wildfiregames.com"}]}, "_links":
-        {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=4&page=889"},
+        {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=4&page=898"},
         "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=4&page=2"},
         "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=4"}},
-        "total": 3556}'
+        "total": 3590}'
     headers:
-      Age:
-      - '709'
       Content-Length:
-      - '12382'
+      - '12397'
       Content-Type:
       - application/hal+json
       Date:
-      - Thu, 19 Dec 2019 14:37:26 GMT
+      - Fri, 10 Jan 2020 10:29:13 GMT
       Server:
       - gunicorn/19.7.1
       Snap-Store-Version:
-      - '17'
+      - '18'
       Vary:
       - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
       Via:
-      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1375 (squid/3.5.27)
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1656 (squid/3.5.27)
       X-Cache:
-      - HIT from juju-7794b8-prod-ols-snap-store-indep-1375
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1656
       X-Cache-Lookup:
-      - HIT from juju-7794b8-prod-ols-snap-store-indep-1375:3128
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1656:3128
       X-Request-Id:
-      - 5BBD5DB686DA0A325C7F01BB5DFB8B25E81AAC0
+      - 5BBD5DB6A1300A325DDF01BB5E1851F92D09D4D
       X-VCS-Revision:
-      - 7adc6b1
+      - efcec7e
       X-View-Name:
       - snapdevicegw.webapi_search.snap_search
     status:
