@@ -16,106 +16,113 @@ interactions:
     uri: https://api.snapcraft.io/api/v1/snaps/search?q=&size=10&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured
   response:
     body:
-      string: '{"_embedded": {"clickindex:package": [{"apps": ["postman"], "developer_validation":
-        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/logo-mark.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/logo-mark.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/Screenshot_from_2018-03-21_17-24-01.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Light-1.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Dark-4.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Dark-1.png"}],
-        "origin": "postman-inc", "package_name": "postman", "publisher": "Postman,
-        Inc.", "sections": [{"featured": true, "name": "development"}, {"featured":
-        true, "name": "featured"}], "summary": "API Development Environment", "title":
-        "Postman"}, {"apps": ["color-picker"], "developer_validation": "unproven",
-        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/app.png",
-        "media": [{"height": 512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/app.png",
-        "width": 512}, {"height": 708, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/pic_1.png",
-        "width": 530}, {"height": 705, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/pic_2.png",
-        "width": 929}], "origin": "keshavnrj", "package_name": "color-picker", "publisher":
-        "keshavbhatt", "sections": [{"featured": false, "name": "development"}, {"featured":
-        true, "name": "featured"}, {"featured": false, "name": "utilities"}], "summary":
-        "A colour picker and colour editor for web designers and digital artists",
-        "title": "Color Picker"}, {"apps": ["powershell"], "developer_validation":
-        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/09/Powershell_black.ico.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/09/Powershell_black.ico.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/UbuntuSnap_b7yOPlK.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/UbuntuSnapWithGetHelp.png"}],
-        "origin": "microsoft-powershell", "package_name": "powershell", "publisher":
-        "Microsoft PowerShell", "sections": [{"featured": true, "name": "development"},
-        {"featured": true, "name": "featured"}], "summary": "PowerShell for every
-        system!", "title": "powershell"}, {"apps": ["atom", "apm"], "developer_validation":
-        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/04/atom-256px.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/04/atom-256px.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/09/Screenshot_from_2017-09-05_11-04-21.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/09/Screenshot_from_2017-09-05_11-10-55.png"}],
-        "origin": "snapcrafters", "package_name": "atom", "publisher": "Snapcrafters",
-        "sections": [{"featured": true, "name": "development"}, {"featured": true,
-        "name": "featured"}], "summary": "A hackable text editor for the 21st Century.",
-        "title": "Atom"}, {"apps": ["canonical-livepatch"], "developer_validation":
-        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/08/pictogram-upgrade-orange-hex.svg.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/08/pictogram-upgrade-orange-hex.svg.png"}],
-        "origin": "canonical", "package_name": "canonical-livepatch", "publisher":
-        "Canonical", "sections": [{"featured": true, "name": "featured"}, {"featured":
-        true, "name": "security"}, {"featured": true, "name": "server-and-cloud"}],
-        "summary": "Canonical Livepatch Client", "title": "canonical-livepatch"},
-        {"apps": ["skype"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/Skype.png",
-        "media": [{"height": 256, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/Skype.png",
-        "width": 256}, {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/Linux_Screenshare-01.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/Linux_GVC-01.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/Linux_Group_Chat-01.png"},
-        {"height": 240, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/banner.png",
-        "width": 1218}, {"height": 240, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/banner-icon_aoySIJJ.png",
-        "width": 240}], "origin": "skype", "package_name": "skype", "publisher": "Skype",
-        "sections": [{"featured": true, "name": "featured"}, {"featured": false, "name":
-        "productivity"}, {"featured": true, "name": "social"}], "summary": "One Skype
-        for all your devices. New features. New look. All Skype.", "title": "Skype"},
-        {"apps": ["mailspring"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/256.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/256.png"},
-        {"height": 500, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/10/1500x500.jpg",
-        "width": 1500}, {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/screenshot-linux.png"}],
-        "origin": "foundry376", "package_name": "mailspring", "publisher": "Mailspring",
-        "sections": [{"featured": true, "name": "featured"}, {"featured": true, "name":
-        "productivity"}], "summary": "The best email app for people and teams at work",
-        "title": "Mailspring"}, {"apps": ["wormhole"], "developer_validation": "unproven",
-        "icon_url": "", "media": [{"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/07/Screenshot_from_2018-07-02_14-23-15.png"}],
-        "origin": "snapcrafters", "package_name": "wormhole", "publisher": "Snapcrafters",
-        "sections": [{"featured": true, "name": "featured"}, {"featured": true, "name":
-        "utilities"}], "summary": "get things from one computer to another, safely",
-        "title": "wormhole"}, {"apps": ["ffprobe", "melt", "qmelt", "ffmpeg", "ffplay",
-        "shotcut"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/02/shotcut-logo-256x256_1.png",
-        "media": [{"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/02/snapshot-1409.png"},
-        {"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/02/shotcut-logo-256x256_1.png"}],
-        "origin": "meltytech", "package_name": "shotcut", "publisher": "Meltytech,
-        LLC", "sections": [{"featured": true, "name": "featured"}, {"featured": true,
-        "name": "photo-and-video"}], "summary": "Free, cross-platform, open source
-        video editor", "title": "Shotcut"}, {"apps": ["makemkvcon", "makemkv"], "developer_validation":
-        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/makemkv-256.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/makemkv-256.png"},
-        {"height": 640, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/makemkv-banner.png",
-        "width": 1920}, {"height": 1352, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/Screenshot_at_2019-09-16_15-20-39.png",
-        "width": 1198}, {"height": 1352, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/Screenshot_at_2019-09-16_15-22-22.png",
-        "width": 1198}, {"height": 1352, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/Screenshot_at_2019-09-16_15-23-19.png",
-        "width": 1198}, {"height": 1352, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/Screenshot_at_2019-09-16_15-23-44.png",
-        "width": 1198}, {"height": 1352, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/Screenshot_at_2019-09-16_15-27-20.png",
-        "width": 1198}], "origin": "diddledan", "package_name": "makemkv", "publisher":
-        "Daniel Llewellyn", "sections": [{"featured": true, "name": "featured"}, {"featured":
-        false, "name": "photo-and-video"}, {"featured": false, "name": "utilities"}],
-        "summary": "Backup your DVD and Bluray discs", "title": "MakeMKV"}]}, "_links":
-        {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=3&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured"},
+      string: '{"_embedded": {"clickindex:package": [{"apps": ["vlc"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/07/vlc.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/07/vlc.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/07/vlc-2.0-poney.jpg"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/banner_32i5K4c.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/banner-icon.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/2018-04-26-161203_1126x899_scrot_yBFL55L.png"}],
+        "origin": "videolan", "package_name": "vlc", "publisher": "VideoLAN", "sections":
+        [{"featured": true, "name": "featured"}, {"featured": true, "name": "photo-and-video"}],
+        "summary": "The ultimate media player", "title": "VLC"}, {"apps": ["standard-notes"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Blue-Rounded-512.png",
+        "media": [{"height": 512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Blue-Rounded-512.png",
+        "width": 512}, {"height": 1060, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Banner.png",
+        "width": 3180}, {"height": 658, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Screenshot_1.png",
+        "width": 1170}, {"height": 658, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Screenshot_2.png",
+        "width": 1170}, {"height": 658, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Screenshot_3.png",
+        "width": 1170}, {"height": 658, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Screenshot_4.png",
+        "width": 1170}], "origin": "standardnotes", "package_name": "standard-notes",
+        "publisher": "Standard Notes", "sections": [{"featured": true, "name": "featured"},
+        {"featured": false, "name": "productivity"}], "summary": "Encrypted note-taking
+        for all your devices.", "title": "Standard Notes"}, {"apps": ["blender"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/07/blender.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/07/blender.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/07/blender_screenshot_1.jpg"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/07/blender_screenshot_2.jpg"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/07/blender_screenshot_3.jpg"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/07/blender_screenshot_4.jpg"}],
+        "origin": "blenderfoundation", "package_name": "blender", "publisher": "Blender
+        Foundation", "sections": [{"featured": true, "name": "art-and-design"}, {"featured":
+        true, "name": "featured"}], "summary": "Blender is the free and open source
+        3D creation suite.", "title": "Blender"}, {"apps": ["krita"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/unnamed.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/unnamed.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/2018-03-17_screenshot_002.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/2018-03-17_screenshot_004.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/2018-03-17_screenshot_005.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/banner-icon_abTlRlO.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/banner_9amc47d.png"}],
+        "origin": "krita", "package_name": "krita", "publisher": "Stichting Krita
+        Foundation", "sections": [{"featured": false, "name": "art-and-design"}, {"featured":
+        true, "name": "featured"}], "summary": "Digital Painting, Creative Freedom",
+        "title": "Krita"}, {"apps": ["inkscape", "viewer"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/08/inkscape.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/08/inkscape.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/08/Voronoi-and-dulaney.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/08/Symbols_in_0-91.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/08/inkscape-0.48-webdesign-text_1.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/08/inkscape-0.48-multipath.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/08/inkscape-0.48-moonlight-views.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/08/inkscape-0.48-ferrari.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/08/inkscape-0.48-blur.png"}],
+        "origin": "inkscape", "package_name": "inkscape", "publisher": "Inkscape Project",
+        "sections": [{"featured": true, "name": "art-and-design"}, {"featured": true,
+        "name": "featured"}], "summary": "Vector Graphics Editor", "title": "Inkscape"},
+        {"apps": ["drawing"], "developer_validation": "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/com.github.maoschanz.drawing.png",
+        "media": [{"height": 512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/com.github.maoschanz.drawing.png",
+        "width": 512}, {"height": 547, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/gnome_new.png",
+        "width": 900}, {"height": 547, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/gnome_menu.png",
+        "width": 900}, {"height": 547, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/gnome_selection.png",
+        "width": 900}, {"height": 547, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/gnome_tools_preview.png",
+        "width": 900}], "origin": "ken-vandine", "package_name": "drawing", "publisher":
+        "Ken VanDine", "sections": [{"featured": true, "name": "featured"}, {"featured":
+        false, "name": "utilities"}], "summary": "A drawing application for the GNOME
+        desktop", "title": "Drawing"}, {"apps": ["konversation"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_22.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/01/icon_22.png"}],
+        "origin": "kde", "package_name": "konversation", "publisher": "KDE", "sections":
+        [{"featured": true, "name": "featured"}, {"featured": true, "name": "social"}],
+        "summary": "IRC client", "title": "konversation"}, {"apps": ["glimpse-editor"],
+        "developer_validation": "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/org.glimpse_editor.Glimpse.png",
+        "media": [{"height": 840, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/10/glimpse-banner.png",
+        "width": 2520}, {"height": 256, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/org.glimpse_editor.Glimpse.png",
+        "width": 256}, {"height": 841, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/glimpse2.png",
+        "width": 1271}, {"height": 952, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/glimpse1.png",
+        "width": 1200}], "origin": "hellsworth", "package_name": "glimpse-editor",
+        "publisher": "Heather Ellsworth", "sections": [{"featured": false, "name":
+        "art-and-design"}, {"featured": true, "name": "featured"}], "summary": "Glimpse
+        is a downstream fork of the GNU Image Manipulation Program.", "title": "Glimpse"},
+        {"apps": ["firefox"], "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/firefox256.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/firefox256.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/03/Screenshot_from_2018-03-12_13-32-44.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/03/banner-icon_azaWnkv.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/03/banner_SnScNQI.png"}],
+        "origin": "mozilla", "package_name": "firefox", "publisher": "Mozilla", "sections":
+        [{"featured": true, "name": "featured"}, {"featured": true, "name": "productivity"}],
+        "summary": "Mozilla Firefox web browser", "title": "Firefox"}, {"apps": ["kdenlive"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/10/icon_12.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/10/icon_12.png"},
+        {"height": 1327, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/10/19-08.png",
+        "width": 1974}], "origin": "kde", "package_name": "kdenlive", "publisher":
+        "KDE", "sections": [{"featured": true, "name": "featured"}, {"featured": false,
+        "name": "photo-and-video"}], "summary": "Kdenlive video editor", "title":
+        "kdenlive"}]}, "_links": {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=3&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured"},
         "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=2&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured"},
         "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured"}},
-        "total": 27}'
+        "total": 28}'
     headers:
       Content-Length:
-      - '9548'
+      - '10661'
       Content-Type:
       - application/hal+json
       Date:
-      - Thu, 19 Dec 2019 14:49:15 GMT
+      - Fri, 10 Jan 2020 10:29:15 GMT
       Server:
       - gunicorn/19.7.1
       Snap-Store-Version:
-      - '17'
+      - '18'
       Vary:
       - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
       Via:
@@ -123,11 +130,11 @@ interactions:
       X-Cache:
       - MISS from juju-7794b8-prod-ols-snap-store-indep-1656
       X-Cache-Lookup:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1656:3128
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1656:3128
       X-Request-Id:
-      - 5BBD5DB690D60A325C7F01BB5DFB8DEBE8D58B7
+      - 5BBD5DB6AB800A325C8101BB5E1851FA2D942F6
       X-VCS-Revision:
-      - 7adc6b1
+      - efcec7e
       X-View-Name:
       - snapdevicegw.webapi_search.snap_search
     status:
@@ -150,60 +157,63 @@ interactions:
     uri: https://api.snapcraft.io/api/v1/snaps/search?q=&size=3&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured
   response:
     body:
-      string: '{"_embedded": {"clickindex:package": [{"apps": ["postman"], "developer_validation":
-        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/logo-mark.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/logo-mark.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/Screenshot_from_2018-03-21_17-24-01.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Light-1.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Dark-4.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Dark-1.png"}],
-        "origin": "postman-inc", "package_name": "postman", "publisher": "Postman,
-        Inc.", "sections": [{"featured": true, "name": "development"}, {"featured":
-        true, "name": "featured"}], "summary": "API Development Environment", "title":
-        "Postman"}, {"apps": ["color-picker"], "developer_validation": "unproven",
-        "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/app.png",
-        "media": [{"height": 512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/app.png",
-        "width": 512}, {"height": 708, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/pic_1.png",
-        "width": 530}, {"height": 705, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/pic_2.png",
-        "width": 929}], "origin": "keshavnrj", "package_name": "color-picker", "publisher":
-        "keshavbhatt", "sections": [{"featured": false, "name": "development"}, {"featured":
-        true, "name": "featured"}, {"featured": false, "name": "utilities"}], "summary":
-        "A colour picker and colour editor for web designers and digital artists",
-        "title": "Color Picker"}, {"apps": ["powershell"], "developer_validation":
-        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/09/Powershell_black.ico.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/09/Powershell_black.ico.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/UbuntuSnap_b7yOPlK.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/UbuntuSnapWithGetHelp.png"}],
-        "origin": "microsoft-powershell", "package_name": "powershell", "publisher":
-        "Microsoft PowerShell", "sections": [{"featured": true, "name": "development"},
-        {"featured": true, "name": "featured"}], "summary": "PowerShell for every
-        system!", "title": "powershell"}]}, "_links": {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=9&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured"},
+      string: '{"_embedded": {"clickindex:package": [{"apps": ["vlc"], "developer_validation":
+        "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/07/vlc.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/07/vlc.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/07/vlc-2.0-poney.jpg"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/banner_32i5K4c.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/banner-icon.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/2018-04-26-161203_1126x899_scrot_yBFL55L.png"}],
+        "origin": "videolan", "package_name": "vlc", "publisher": "VideoLAN", "sections":
+        [{"featured": true, "name": "featured"}, {"featured": true, "name": "photo-and-video"}],
+        "summary": "The ultimate media player", "title": "VLC"}, {"apps": ["standard-notes"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Blue-Rounded-512.png",
+        "media": [{"height": 512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Blue-Rounded-512.png",
+        "width": 512}, {"height": 1060, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Banner.png",
+        "width": 3180}, {"height": 658, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Screenshot_1.png",
+        "width": 1170}, {"height": 658, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Screenshot_2.png",
+        "width": 1170}, {"height": 658, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Screenshot_3.png",
+        "width": 1170}, {"height": 658, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Screenshot_4.png",
+        "width": 1170}], "origin": "standardnotes", "package_name": "standard-notes",
+        "publisher": "Standard Notes", "sections": [{"featured": true, "name": "featured"},
+        {"featured": false, "name": "productivity"}], "summary": "Encrypted note-taking
+        for all your devices.", "title": "Standard Notes"}, {"apps": ["blender"],
+        "developer_validation": "verified", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/07/blender.png",
+        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/07/blender.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/07/blender_screenshot_1.jpg"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/07/blender_screenshot_2.jpg"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/07/blender_screenshot_3.jpg"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/07/blender_screenshot_4.jpg"}],
+        "origin": "blenderfoundation", "package_name": "blender", "publisher": "Blender
+        Foundation", "sections": [{"featured": true, "name": "art-and-design"}, {"featured":
+        true, "name": "featured"}], "summary": "Blender is the free and open source
+        3D creation suite.", "title": "Blender"}]}, "_links": {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=10&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured"},
         "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=2&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured"},
         "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=1&scope=wide&arch=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&section=featured"}},
-        "total": 27}'
+        "total": 28}'
     headers:
       Content-Length:
-      - '3470'
+      - '4088'
       Content-Type:
       - application/hal+json
       Date:
-      - Thu, 19 Dec 2019 14:49:15 GMT
+      - Fri, 10 Jan 2020 10:29:15 GMT
       Server:
       - gunicorn/19.7.1
       Snap-Store-Version:
-      - '17'
+      - '18'
       Vary:
       - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
       Via:
-      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1374 (squid/3.5.27)
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1655 (squid/3.5.27)
       X-Cache:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1374
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1655
       X-Cache-Lookup:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1374:3128
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1655:3128
       X-Request-Id:
-      - 5BBD5DB690D60A325C7F01BB5DFB8DEBE8D5A86
+      - 5BBD5DB6AB800A325C8101BB5E1851FB2D9444B
       X-VCS-Revision:
-      - 7adc6b1
+      - efcec7e
       X-View-Name:
       - snapdevicegw.webapi_search.snap_search
     status:

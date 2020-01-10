@@ -139,6 +139,7 @@ class StoreApi:
                     "confinement",
                     "categories",
                     "trending",
+                    "unlisted",
                 ]
             )
         }
