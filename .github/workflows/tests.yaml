@@ -50,7 +50,10 @@ jobs:
       run: poetry install
 
     - name: Test Python with Coverage
-      run: poetry run coverage run --source=. -m unittest discover tests
+      run: |
+        poetry run coverage run --source=. -m unittest discover tests
+        poetry run coverage xml
 
-    - name: Upload coverage results to Codecov.io
-      run: bash <(curl -s https://codecov.io/bash) -cF python
+    - uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
