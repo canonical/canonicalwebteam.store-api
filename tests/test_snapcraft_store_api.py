@@ -8,6 +8,46 @@ class SnapcraftApiTest(VCRTestCase):
         self.client = SnapcraftStoreApi()
         return super(SnapcraftApiTest, self).setUp()
 
+    def test_search_size(self):
+        """
+        Check we can specify the number of search results
+        """
+
+        result_default = self.client.search("code")
+        result_10 = self.client.search("code", size=10)
+        result_100 = self.client.search("code", size=100)
+        result_300 = self.client.search("code", size=300)
+
+        self.assertEqual(result_default["total"], 287)
+        self.assertEqual(result_10["total"], 287)
+        self.assertEqual(result_100["total"], 287)
+        self.assertEqual(result_300["total"], 287)
+
+        snaps_default = result_default["_embedded"]["clickindex:package"]
+        snaps_10 = result_10["_embedded"]["clickindex:package"]
+        snaps_100 = result_100["_embedded"]["clickindex:package"]
+        snaps_300 = result_300["_embedded"]["clickindex:package"]
+
+        self.assertEqual(len(snaps_default), 100)
+        self.assertEqual(len(snaps_10), 10)
+        self.assertEqual(len(snaps_100), 100)
+        self.assertEqual(len(snaps_300), 250)
+
+    def test_search_by_arch(self):
+        """
+        Check we can search for snaps and filter by architecture
+        """
+
+        result_default = self.client.search("toto", 10, 1)
+        result_amd64 = self.client.search("toto", 10, 1, arch="amd64")
+        result_wide = self.client.search("toto", 10, 1, arch="wide")
+        result_i386 = self.client.search("toto", 10, 1, arch="i386")
+
+        self.assertEqual(result_amd64["total"], 6)
+        self.assertEqual(result_default["total"], 7)
+        self.assertEqual(result_wide["total"], 7)
+        self.assertEqual(result_i386["total"], 3)
+
     def test_get_all_items(self):
         result = self.client.get_all_items(size=16, api_version=1)
         snaps = result["_embedded"]["clickindex:package"]
