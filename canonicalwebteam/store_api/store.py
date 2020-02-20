@@ -44,15 +44,23 @@ class StoreApi:
         base_url = self.config[api_version]["base_url"]
         return f"{base_url}{endpoint}"
 
-    def search(self, search, size, page, category=None, api_version=1):
+    def search(
+        self,
+        search,
+        size=100,
+        page=1,
+        category=None,
+        arch="wide",
+        api_version=1,
+    ):
         url = self.get_endpoint_url("search", api_version)
+        headers = self.config[api_version].get("headers")
 
         params = {
             "q": search,
             "size": size,
             "page": page,
             "scope": "wide",
-            "arch": "wide",
             "confinement": "strict,classic",
             "fields": ",".join(
                 [
@@ -70,15 +78,21 @@ class StoreApi:
             ),
         }
 
+        # Arch behaves a bit oddly, but these two together should cover
+        # all bases. That is: "X-Ubuntu-Architecture" header will be used
+        # if present, and "arch" will be ignored *unless* "arch" == "wide".
+        # "wide" doesn't work in "X-Ubuntu-Architecture", but it doesn't
+        # matter because if "arch" == "wide" then "X-Ubuntu-Architecture"
+        # is ignored and all architectures are returned
+        # See: https://api.snapcraft.io/docs/search.html#snap_search
+        headers["X-Ubuntu-Architecture"] = arch
+        params["arch"] = arch
+
         if category:
             params["section"] = category
 
         return self.process_response(
-            self.session.get(
-                url,
-                params=params,
-                headers=self.config[api_version].get("headers"),
-            )
+            self.session.get(url, params=params, headers=headers)
         )
 
     def get_all_items(self, size, api_version=1):
