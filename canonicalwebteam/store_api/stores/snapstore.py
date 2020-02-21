@@ -1,9 +1,9 @@
 import requests
 
-from canonicalwebteam.store_api.store import StoreApi
+from canonicalwebteam.store_api.store import Store
 
 
-class SnapcraftStoreApi(StoreApi):
+class SnapStore(Store):
     def __init__(self, session=requests.Session(), store=None):
         super().__init__(session, store)
 
