@@ -1,12 +1,12 @@
 from vcr_unittest import VCRTestCase
-from canonicalwebteam.store_api.stores.snapcraft import SnapcraftStoreApi
+from canonicalwebteam.store_api.stores.snapstore import SnapStore
 
 
-class SnapcraftApiTest(VCRTestCase):
+class SnapStoreTest(VCRTestCase):
     def setUp(self):
         # configure self.attribute
-        self.client = SnapcraftStoreApi()
-        return super(SnapcraftApiTest, self).setUp()
+        self.client = SnapStore()
+        return super(SnapStoreTest, self).setUp()
 
     def test_search_size(self):
         """

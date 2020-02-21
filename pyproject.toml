@@ -1,6 +1,6 @@
 [tool.poetry]
 name = 'canonicalwebteam.store-api'
-version = '1.0.5'
+version = '2.0.0'
 description = ''
 authors = ['Canonical Web Team <webteam@canonical.com>']
 license = 'LGPL-3.0'
@@ -14,7 +14,6 @@ python = '^3.6'
 requests = '^2.22'
 vcrpy-unittest = '^0.1.7'
 coverage = '^5.0'
-semver = '^2.9'
 
 [tool.poetry.dev-dependencies]
 pytest = '^5.3'
