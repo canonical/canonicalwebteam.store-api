@@ -18,10 +18,8 @@ class SnapcraftApiTest(VCRTestCase):
         result_100 = self.client.search("code", size=100)
         result_300 = self.client.search("code", size=300)
 
-        self.assertEqual(result_default["total"], 287)
-        self.assertEqual(result_10["total"], 287)
-        self.assertEqual(result_100["total"], 287)
-        self.assertEqual(result_300["total"], 287)
+        # The total should be always the same
+        self.assertEqual(result_300["total"], result_10["total"])
 
         snaps_default = result_default["_embedded"]["clickindex:package"]
         snaps_10 = result_10["_embedded"]["clickindex:package"]
@@ -31,6 +29,7 @@ class SnapcraftApiTest(VCRTestCase):
         self.assertEqual(len(snaps_default), 100)
         self.assertEqual(len(snaps_10), 10)
         self.assertEqual(len(snaps_100), 100)
+        # 250 is the maximum the API return
         self.assertEqual(len(snaps_300), 250)
 
     def test_search_by_arch(self):
