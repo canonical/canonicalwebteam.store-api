@@ -5,7 +5,7 @@ from canonicalwebteam.store_api.exceptions import (
 )
 
 
-class StoreApi:
+class Store:
     def __init__(self, session, store=None):
         self.config = {1: {"base_url": "", "headers": {}}}
         self.session = session
