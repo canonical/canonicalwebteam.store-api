@@ -1,6 +1,10 @@
+from os import getenv
+
 import requests
 
 from canonicalwebteam.store_api.store import Store
+
+SNAPSTORE_API_URL = getenv("SNAPSTORE_API_URL", "https://api.snapcraft.io/")
 
 
 class SnapStore(Store):
@@ -9,11 +13,11 @@ class SnapStore(Store):
 
         self.config = {
             1: {
-                "base_url": "https://api.snapcraft.io/api/v1/snaps/",
+                "base_url": f"{SNAPSTORE_API_URL}api/v1/snaps/",
                 "headers": {"X-Ubuntu-Series": "16"},
             },
             2: {
-                "base_url": "https://api.snapcraft.io/v2/snaps/",
+                "base_url": f"{SNAPSTORE_API_URL}v2/snaps/",
                 "headers": {"Snap-Device-Series": "16"},
             },
         }
