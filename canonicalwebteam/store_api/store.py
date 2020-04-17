@@ -44,6 +44,25 @@ class Store:
         base_url = self.config[api_version]["base_url"]
         return f"{base_url}{endpoint}"
 
+    def find(self, query="", category="", fields=[]):
+        """
+        Given a search term, return an array of matching search results.
+        v2 API only.
+        """
+        url = self.get_endpoint_url("find", 2)
+        headers = self.config[2].get("headers")
+
+        params = {
+            "q": query,
+        }
+
+        if fields:
+            params["fields"] = ",".join(fields)
+
+        return self.process_response(
+            self.session.get(url, params=params, headers=headers)
+        )
+
     def search(
         self,
         search,
@@ -132,31 +151,10 @@ class Store:
             api_version=api_version,
         )
 
-    def get_item_details(self, name, api_version=1):
+    def get_item_details(self, name, fields=[], api_version=2):
         url = self.get_endpoint_url("info/" + name, api_version)
 
-        params = {
-            "fields": ",".join(
-                [
-                    "title",
-                    "summary",
-                    "description",
-                    "license",
-                    "contact",
-                    "website",
-                    "publisher",
-                    "prices",
-                    "media",
-                    "download",
-                    "version",
-                    "created-at",
-                    "confinement",
-                    "categories",
-                    "trending",
-                    "unlisted",
-                ]
-            )
-        }
+        params = {"fields": ",".join(fields)}
 
         return self.process_response(
             self.session.get(

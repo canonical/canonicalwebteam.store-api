@@ -25,3 +25,30 @@ class SnapStore(Store):
         if store:
             self.config[1]["headers"].update({"X-Ubuntu-Store": store})
             self.config[2]["headers"].update({"Snap-Device-Store": store})
+
+    def get_item_details(
+        self,
+        name,
+        fields=[
+            "title",
+            "summary",
+            "description",
+            "license",
+            "contact",
+            "website",
+            "publisher",
+            "prices",
+            "media",
+            "download",
+            "version",
+            "created-at",
+            "confinement",
+            "categories",
+            "trending",
+            "unlisted",
+        ],
+        api_version=1,
+    ):
+        return super(SnapStore, self).get_item_details(
+            name, fields, api_version
+        )
