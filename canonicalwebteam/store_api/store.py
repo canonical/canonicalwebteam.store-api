@@ -52,9 +52,7 @@ class Store:
         url = self.get_endpoint_url("find", 2)
         headers = self.config[2].get("headers")
 
-        params = {
-            "q": query,
-        }
+        params = {"q": query}
 
         if fields:
             params["fields"] = ",".join(fields)
@@ -87,6 +85,7 @@ class Store:
                     "title",
                     "summary",
                     "icon_url",
+                    "architecture",
                     "media",
                     "publisher",
                     "developer_validation",
