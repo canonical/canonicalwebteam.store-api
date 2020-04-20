@@ -42,10 +42,10 @@ class SnapStoreTest(VCRTestCase):
         result_wide = self.client.search("toto", 10, 1, arch="wide")
         result_i386 = self.client.search("toto", 10, 1, arch="i386")
 
-        self.assertEqual(result_amd64["total"], 6)
-        self.assertEqual(result_default["total"], 7)
-        self.assertEqual(result_wide["total"], 7)
-        self.assertEqual(result_i386["total"], 3)
+        self.assertEqual(result_amd64["total"], 5)
+        self.assertEqual(result_default["total"], 6)
+        self.assertEqual(result_wide["total"], 6)
+        self.assertEqual(result_i386["total"], 2)
 
     def test_get_all_items(self):
         result = self.client.get_all_items(size=16, api_version=1)

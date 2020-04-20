@@ -11,33 +11,33 @@ interactions:
       Snap-Device-Series:
       - '16'
       User-Agent:
-      - python-requests/2.22.0
+      - python-requests/2.23.0
     method: GET
     uri: https://api.snapcraft.io/v2/snaps/info/toto?fields=title%2Csummary%2Cdescription%2Clicense%2Ccontact%2Cwebsite%2Cpublisher%2Cprices%2Cmedia%2Cdownload%2Cversion%2Ccreated-at%2Cconfinement%2Ccategories%2Ctrending%2Cunlisted
   response:
     body:
-      string: '{"channel-map":[{"channel":{"architecture":"amd64","name":"stable","released-at":"2019-09-09T12:21:28.024543+00:00","risk":"stable","track":"latest"},"confinement":"strict","created-at":"2019-09-09T12:20:41.196608+00:00","download":{"deltas":[],"sha3-384":"76ff148aac32bbf13f3462bae6eaadf7f68cef6e4f7f856fa9242068a7dabce41a95bc2bacd39dacd4555b0980b44a07","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_11.snap"},"version":"giant-quarter"},{"channel":{"architecture":"armhf","name":"stable","released-at":"2018-09-11T10:55:16.586335+00:00","risk":"stable","track":"latest"},"confinement":"strict","created-at":"2018-02-08T16:12:11.263686+00:00","download":{"deltas":[],"sha3-384":"0404600b3d6d460ffe0194a073eec25827273e77a98b58e1f58bb1e8b8809eac4b63f53ebb2edc6a9b547eff907dd996","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_3.snap"},"version":"0.1"},{"channel":{"architecture":"i386","name":"stable","released-at":"2018-09-11T10:55:35.069588+00:00","risk":"stable","track":"latest"},"confinement":"strict","created-at":"2018-02-08T21:06:10.904194+00:00","download":{"deltas":[],"sha3-384":"58c8747083e9f142d9880f42b5935b093199e95b4f98b2cf95786cee648a6df52f3fc110856cb7be817a8e646af5f8d2","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_5.snap"},"version":"0.1"},{"channel":{"architecture":"amd64","name":"candidate","released-at":"2019-08-08T14:49:22.569434+00:00","risk":"candidate","track":"latest"},"confinement":"strict","created-at":"2019-02-20T10:30:04.777030+00:00","download":{"deltas":[],"sha3-384":"edddaffd18bbd5b7527b45b3c6f59f0bdb7181bb986b038eb3300cded866dadad2afb4826d4875957b73e39e5ccf6aab","size":469504000,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_9.snap"},"version":"wheelbarrow"},{"channel":{"architecture":"armhf","name":"candidate","released-at":"2018-09-11T10:54:41.937549+00:00","risk":"candidate","track":"latest"},"confinement":"strict","created-at":"2018-02-08T16:12:11.263686+00:00","download":{"deltas":[],"sha3-384":"0404600b3d6d460ffe0194a073eec25827273e77a98b58e1f58bb1e8b8809eac4b63f53ebb2edc6a9b547eff907dd996","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_3.snap"},"version":"0.1"},{"channel":{"architecture":"i386","name":"candidate","released-at":"2018-09-11T10:55:28.842887+00:00","risk":"candidate","track":"latest"},"confinement":"strict","created-at":"2018-02-08T21:06:10.904194+00:00","download":{"deltas":[],"sha3-384":"58c8747083e9f142d9880f42b5935b093199e95b4f98b2cf95786cee648a6df52f3fc110856cb7be817a8e646af5f8d2","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_5.snap"},"version":"0.1"},{"channel":{"architecture":"amd64","name":"beta","released-at":"2019-08-08T14:50:56.040496+00:00","risk":"beta","track":"latest"},"confinement":"strict","created-at":"2019-02-20T10:30:04.777030+00:00","download":{"deltas":[],"sha3-384":"edddaffd18bbd5b7527b45b3c6f59f0bdb7181bb986b038eb3300cded866dadad2afb4826d4875957b73e39e5ccf6aab","size":469504000,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_9.snap"},"version":"wheelbarrow"},{"channel":{"architecture":"armhf","name":"beta","released-at":"2018-10-16T13:17:46.563541+00:00","risk":"beta","track":"latest"},"confinement":"strict","created-at":"2018-02-08T16:12:11.263686+00:00","download":{"deltas":[],"sha3-384":"0404600b3d6d460ffe0194a073eec25827273e77a98b58e1f58bb1e8b8809eac4b63f53ebb2edc6a9b547eff907dd996","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_3.snap"},"version":"0.1"},{"channel":{"architecture":"i386","name":"beta","released-at":"2018-10-16T13:53:26.120683+00:00","risk":"beta","track":"latest"},"confinement":"strict","created-at":"2018-02-08T21:06:10.904194+00:00","download":{"deltas":[],"sha3-384":"58c8747083e9f142d9880f42b5935b093199e95b4f98b2cf95786cee648a6df52f3fc110856cb7be817a8e646af5f8d2","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_5.snap"},"version":"0.1"}],"default-track":null,"name":"toto","snap":{"categories":[{"featured":false,"name":"social"}],"contact":"","description":"This
+      string: '{"channel-map":[{"channel":{"architecture":"amd64","name":"stable","released-at":"2019-09-09T12:21:28.024543+00:00","risk":"stable","track":"latest"},"confinement":"strict","created-at":"2019-09-09T12:20:41.196608+00:00","download":{"deltas":[],"sha3-384":"76ff148aac32bbf13f3462bae6eaadf7f68cef6e4f7f856fa9242068a7dabce41a95bc2bacd39dacd4555b0980b44a07","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_11.snap"},"version":"giant-quarter"},{"channel":{"architecture":"armhf","name":"stable","released-at":"2018-09-11T10:55:16.586335+00:00","risk":"stable","track":"latest"},"confinement":"strict","created-at":"2018-02-08T16:12:11.263686+00:00","download":{"deltas":[],"sha3-384":"0404600b3d6d460ffe0194a073eec25827273e77a98b58e1f58bb1e8b8809eac4b63f53ebb2edc6a9b547eff907dd996","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_3.snap"},"version":"0.1"},{"channel":{"architecture":"i386","name":"stable","released-at":"2018-09-11T10:55:35.069588+00:00","risk":"stable","track":"latest"},"confinement":"strict","created-at":"2018-02-08T21:06:10.904194+00:00","download":{"deltas":[],"sha3-384":"58c8747083e9f142d9880f42b5935b093199e95b4f98b2cf95786cee648a6df52f3fc110856cb7be817a8e646af5f8d2","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_5.snap"},"version":"0.1"},{"channel":{"architecture":"amd64","name":"candidate","released-at":"2019-08-08T14:49:22.569434+00:00","risk":"candidate","track":"latest"},"confinement":"strict","created-at":"2019-02-20T10:30:04.777030+00:00","download":{"deltas":[],"sha3-384":"edddaffd18bbd5b7527b45b3c6f59f0bdb7181bb986b038eb3300cded866dadad2afb4826d4875957b73e39e5ccf6aab","size":469504000,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_9.snap"},"version":"wheelbarrow"},{"channel":{"architecture":"armhf","name":"candidate","released-at":"2018-09-11T10:54:41.937549+00:00","risk":"candidate","track":"latest"},"confinement":"strict","created-at":"2018-02-08T16:12:11.263686+00:00","download":{"deltas":[],"sha3-384":"0404600b3d6d460ffe0194a073eec25827273e77a98b58e1f58bb1e8b8809eac4b63f53ebb2edc6a9b547eff907dd996","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_3.snap"},"version":"0.1"},{"channel":{"architecture":"i386","name":"candidate","released-at":"2018-09-11T10:55:28.842887+00:00","risk":"candidate","track":"latest"},"confinement":"strict","created-at":"2018-02-08T21:06:10.904194+00:00","download":{"deltas":[],"sha3-384":"58c8747083e9f142d9880f42b5935b093199e95b4f98b2cf95786cee648a6df52f3fc110856cb7be817a8e646af5f8d2","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_5.snap"},"version":"0.1"},{"channel":{"architecture":"amd64","name":"beta","released-at":"2019-08-08T14:50:56.040496+00:00","risk":"beta","track":"latest"},"confinement":"strict","created-at":"2019-02-20T10:30:04.777030+00:00","download":{"deltas":[],"sha3-384":"edddaffd18bbd5b7527b45b3c6f59f0bdb7181bb986b038eb3300cded866dadad2afb4826d4875957b73e39e5ccf6aab","size":469504000,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_9.snap"},"version":"wheelbarrow"},{"channel":{"architecture":"armhf","name":"beta","released-at":"2018-10-16T13:17:46.563541+00:00","risk":"beta","track":"latest"},"confinement":"strict","created-at":"2018-02-08T16:12:11.263686+00:00","download":{"deltas":[],"sha3-384":"0404600b3d6d460ffe0194a073eec25827273e77a98b58e1f58bb1e8b8809eac4b63f53ebb2edc6a9b547eff907dd996","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_3.snap"},"version":"0.1"},{"channel":{"architecture":"i386","name":"beta","released-at":"2018-10-16T13:53:26.120683+00:00","risk":"beta","track":"latest"},"confinement":"strict","created-at":"2018-02-08T21:06:10.904194+00:00","download":{"deltas":[],"sha3-384":"58c8747083e9f142d9880f42b5935b093199e95b4f98b2cf95786cee648a6df52f3fc110856cb7be817a8e646af5f8d2","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_5.snap"},"version":"0.1"},{"channel":{"architecture":"amd64","name":"edge","released-at":"2020-02-21T09:30:25.512038+00:00","risk":"edge","track":"latest"},"confinement":"strict","created-at":"2020-02-21T09:30:20.737023+00:00","download":{"deltas":[],"sha3-384":"6e0249c4cf1c387e1a4b48a797a9e580397f4d5633b945310ccb19028a8d826674c448c496b2a460adcb6aab8a068339","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_24.snap"},"version":"0.1"},{"channel":{"architecture":"arm64","name":"edge","released-at":"2020-02-21T10:14:18.924133+00:00","risk":"edge","track":"latest"},"confinement":"strict","created-at":"2020-02-21T10:14:14.854097+00:00","download":{"deltas":[],"sha3-384":"da4b8bb32e4c517a6ffe39694c2ea6e267004f5bfc908df39c11d16293e8d72649485a993d5e000c79a36d3624396f90","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_29.snap"},"version":"0.1"},{"channel":{"architecture":"armhf","name":"edge","released-at":"2020-02-21T10:14:17.713411+00:00","risk":"edge","track":"latest"},"confinement":"strict","created-at":"2020-02-21T10:14:13.993583+00:00","download":{"deltas":[],"sha3-384":"5f7c578cbe8c53d79ef2ff55199da2c6c1bd4fe298b6336e242dae0d51b66b23b469169ea55a5838f00ecb92dd34c12a","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_28.snap"},"version":"0.1"},{"channel":{"architecture":"i386","name":"edge","released-at":"2020-02-21T09:30:26.753200+00:00","risk":"edge","track":"latest"},"confinement":"strict","created-at":"2020-02-21T09:30:21.446939+00:00","download":{"deltas":[],"sha3-384":"b9d150ee0b0c4a8465fd997c0cc65c0d3a13a312ee933dd0110103f6a95fdb86b4db41123f825554d20dd76bb51179b9","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_25.snap"},"version":"0.1"},{"channel":{"architecture":"ppc64el","name":"edge","released-at":"2020-02-21T10:07:25.551392+00:00","risk":"edge","track":"latest"},"confinement":"strict","created-at":"2020-02-21T10:07:21.342713+00:00","download":{"deltas":[],"sha3-384":"4e47da98bcc4192049a9ae273afb8c629d06e366a1e8d31304f2ff648dff91ac84624c5a304559e002de50824cef8929","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_26.snap"},"version":"0.1"},{"channel":{"architecture":"s390x","name":"edge","released-at":"2020-02-21T10:08:01.734199+00:00","risk":"edge","track":"latest"},"confinement":"strict","created-at":"2020-02-21T10:07:57.177610+00:00","download":{"deltas":[],"sha3-384":"5f2b66db5b0111e514af01802cb7fde8bd338ed655001479f93efcd5c41647dca78367b06348ffed22dbc067df41ae20","size":4096,"url":"https://api.snapcraft.io/api/v1/snaps/download/kJWM6jE26DiyziWpGNKtedvNlmC1mbIi_27.snap"},"version":"0.1"}],"default-track":null,"name":"toto","snap":{"categories":[{"featured":false,"name":"social"}],"contact":"https://toto.space","description":"This
         is a command line tool to make your life happier.\n\nfor more information
         click on this link: https://toto.space/","license":"AGPL-3.0","media":[{"height":null,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/06/Artboard_0gjcICX.png","width":null},{"height":null,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/03/Artboard_fNArkm1.png","width":null},{"height":null,"type":"video","url":"https://youtu.be/WznLv41fOL0","width":null}],"prices":{},"publisher":{"display-name":"Thomas
         Bille","id":"YB37ytC2fSCv2o7tx8aHXucGkuTJmSnF","username":"tbmb","validation":"unproven"},"summary":"Cool
         tool for happy people","title":"toto","trending":false,"unlisted":false,"website":"https://toto.space"},"snap-id":"kJWM6jE26DiyziWpGNKtedvNlmC1mbIi"}
 
-'
+        '
     headers:
       Content-Length:
-      - '5158'
+      - '7943'
       Content-Type:
       - application/json
       Date:
-      - Fri, 10 Jan 2020 10:29:15 GMT
+      - Mon, 20 Apr 2020 14:10:16 GMT
       Server:
       - gunicorn/19.7.1
       Snap-Store-Version:
-      - '18'
+      - '22'
       X-Request-Id:
-      - 5BBD5DB6AB8A0A325C8101BB5E1851FB2D9453C
+      - 0AACC466C1200A325DCD01BB5E9DAD473EC6C3A2
       X-VCS-Revision:
-      - efcec7e
+      - 0bf41e1
       X-View-Name:
       - snapdevicegw.webapi_info.snap_info
     status:
@@ -55,7 +55,7 @@ interactions:
       Snap-Device-Series:
       - '16'
       User-Agent:
-      - python-requests/2.22.0
+      - python-requests/2.23.0
     method: GET
     uri: https://api.snapcraft.io/v2/snaps/info/hello?fields=title%2Csummary%2Cdescription%2Clicense%2Ccontact%2Cwebsite%2Cpublisher%2Cprices%2Cmedia%2Cdownload%2Cversion%2Ccreated-at%2Cconfinement%2Ccategories%2Ctrending%2Cunlisted
   response:
@@ -64,22 +64,22 @@ interactions:
         hello prints a friendly greeting. This is part of the snapcraft tour at https://snapcraft.io/","license":"GPL-3.0","media":[],"prices":{},"publisher":{"display-name":"Canonical","id":"canonical","username":"canonical","validation":"verified"},"summary":"GNU
         Hello, the \"hello world\" snap","title":"hello","trending":false,"unlisted":false,"website":null},"snap-id":"mVyGrEwiqSi5PugCwyH7WgpoQLemtTd6"}
 
-'
+        '
     headers:
       Content-Length:
       - '10365'
       Content-Type:
       - application/json
       Date:
-      - Fri, 10 Jan 2020 10:29:15 GMT
+      - Mon, 20 Apr 2020 14:10:16 GMT
       Server:
       - gunicorn/19.7.1
       Snap-Store-Version:
-      - '18'
+      - '22'
       X-Request-Id:
-      - 5BBD5DB6AB8A0A325C8101BB5E1851FB2D945E9
+      - 0AACC466C1200A325DCD01BB5E9DAD483EC6C531
       X-VCS-Revision:
-      - efcec7e
+      - 0bf41e1
       X-View-Name:
       - snapdevicegw.webapi_info.snap_info
     status:
