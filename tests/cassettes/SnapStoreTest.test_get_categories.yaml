@@ -9,7 +9,7 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.22.0
+      - python-requests/2.23.0
       X-Ubuntu-Series:
       - '16'
     method: GET
@@ -25,7 +25,7 @@ interactions:
         {"name": "entertainment"}, {"name": "photo-and-video"}, {"name": "art-and-design"}]}}'
     headers:
       Age:
-      - '3384'
+      - '2414'
       Cache-Control:
       - public, max-age=3600
       Content-Length:
@@ -33,23 +33,23 @@ interactions:
       Content-Type:
       - application/hal+json
       Date:
-      - Fri, 10 Jan 2020 09:32:49 GMT
+      - Mon, 20 Apr 2020 13:29:57 GMT
       Server:
       - gunicorn/19.7.1
       Snap-Store-Version:
-      - '18'
+      - '22'
       Vary:
       - X-Ubuntu-Series
       Via:
-      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1374 (squid/3.5.27)
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1656 (squid/3.5.27)
       X-Cache:
-      - HIT from juju-7794b8-prod-ols-snap-store-indep-1374
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1656
       X-Cache-Lookup:
-      - HIT from juju-7794b8-prod-ols-snap-store-indep-1374:3128
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1656:3128
       X-Request-Id:
-      - D46731A492940A325C8501BB5E1844C02A0D9D9
+      - 12D80C50D2680A325C8501BB5E9DA3CFA230660
       X-VCS-Revision:
-      - efcec7e
+      - 0bf41e1
       X-View-Name:
       - snapdevicegw.webapi_search.section_listing
     status:
