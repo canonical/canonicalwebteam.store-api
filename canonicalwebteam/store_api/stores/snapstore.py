@@ -33,7 +33,6 @@ class SnapStore(Store):
             "title",
             "summary",
             "description",
-            "architecture",
             "license",
             "contact",
             "website",
