@@ -37,15 +37,25 @@ class SnapStoreTest(VCRTestCase):
         Check we can search for snaps and filter by architecture
         """
 
-        result_default = self.client.search("toto", 10, 1)
-        result_amd64 = self.client.search("toto", 10, 1, arch="amd64")
-        result_wide = self.client.search("toto", 10, 1, arch="wide")
-        result_i386 = self.client.search("toto", 10, 1, arch="i386")
+        # Test default behaviour to be arch="wide"
+        result_default = self.client.search("test-snap-amd64")
+        result_wide = self.client.search("test-snap-amd64", arch="wide")
 
-        self.assertEqual(result_amd64["total"], 5)
-        self.assertEqual(result_default["total"], 6)
-        self.assertEqual(result_wide["total"], 6)
-        self.assertEqual(result_i386["total"], 2)
+        self.assertEqual(result_default["total"], result_wide["total"])
+
+        # "test-snap-amd64" is only found in amd64
+        result_amd64 = self.client.search("test-snap-amd64", 1, arch="amd64")
+        result_i386 = self.client.search("test-snap-amd64", 1, arch="i386")
+
+        self.assertEqual(result_amd64["total"], 1)
+        self.assertEqual(result_i386["total"], 0)
+
+        # "test-snap-i386" is only found in i386
+        result_amd64 = self.client.search("test-snap-i386", 1, arch="amd64")
+        result_i386 = self.client.search("test-snap-i386", 1, arch="i386")
+
+        self.assertEqual(result_amd64["total"], 0)
+        self.assertEqual(result_i386["total"], 1)
 
     def test_get_all_items(self):
         result = self.client.get_all_items(size=16, api_version=1)
