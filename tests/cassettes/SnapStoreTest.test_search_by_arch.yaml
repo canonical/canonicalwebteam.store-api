@@ -15,53 +15,23 @@ interactions:
       X-Ubuntu-Series:
       - '16'
     method: GET
-    uri: https://api.snapcraft.io/api/v1/snaps/search?q=toto&size=10&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=100&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide
   response:
     body:
-      string: '{"_embedded": {"clickindex:package": [{"apps": ["toto"], "architecture":
-        ["amd64"], "developer_validation": "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/06/Artboard_0gjcICX.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/06/Artboard_0gjcICX.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/03/Artboard_fNArkm1.png"}],
-        "origin": "tbmb", "package_name": "toto", "publisher": "Thomas Bille", "sections":
-        [{"featured": false, "name": "social"}], "summary": "Cool tool for happy people",
-        "title": "toto"}, {"apps": [], "architecture": ["amd64"], "developer_validation":
-        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/07/snpicon.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/07/snpicon.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/05/02.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/05/03.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/05/04.png"}],
-        "origin": "testtesttest", "package_name": "gregatronic", "publisher": "Greg
-        Hale", "sections": [], "summary": "This snap is 4x better than toto''s", "title":
-        "gregatronic"}, {"apps": ["autoskola-free6"], "architecture": ["amd64"], "developer_validation":
-        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/02/ikona_K2Sqemd.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/02/ikona_K2Sqemd.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/Sn%C3%ADmka_obrazovky_z_2019-01-10_18-08-29.png"}],
-        "origin": "lesna.vevericka", "package_name": "autoskola-free6", "publisher":
-        "Lesn\u00e1 Veveri\u010dka", "sections": [{"featured": false, "name": "utilities"}],
-        "summary": "autoskola-free6", "title": "autoskola-free6"}, {"apps": ["otot"],
-        "architecture": ["amd64"], "developer_validation": "unproven", "icon_url":
-        "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/icon_copy_1.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/icon_copy_1.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/red_copy_1.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/blue_copy_1.png"}],
-        "origin": "tbmb", "package_name": "otot", "publisher": "Thomas Bille", "sections":
-        [], "summary": "!!!esrevinu pans eht fo pans tnatropmi tsom ehT!", "title":
-        "otot"}, {"apps": ["beautiful-dog"], "architecture": ["amd64"], "developer_validation":
-        "unproven", "icon_url": "", "media": [], "origin": "totoqa", "package_name":
-        "beautiful-dog", "publisher": "Toto qa", "sections": [], "summary": "GNU Hello,
-        the \"beautiful-dog world\" snap", "title": "beautiful-dog"}, {"apps": ["test-toto"],
-        "architecture": ["i386"], "developer_validation": "unproven", "icon_url":
-        "", "media": [], "origin": "totoqa", "package_name": "test-toto", "publisher":
-        "Toto qa", "sections": [], "summary": "GNU Hello, the \"test-toto world\"
-        snap", "title": "test-toto"}]}, "_links": {"self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?q=toto&size=10&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide"}},
-        "total": 6}'
+      string: '{"_embedded": {"clickindex:package": [{"apps": [], "architecture":
+        ["amd64"], "developer_validation": "unproven", "icon_url": "", "media": [],
+        "origin": "jkfran", "package_name": "test-snap-amd64", "publisher": "Francisco
+        Jim\u00e9nez Cabrera", "sections": [], "summary": "The most important snap
+        of the snap universe", "title": "test-snap-amd64"}]}, "_links": {"self": {"href":
+        "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=100&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide"}},
+        "total": 1}'
     headers:
       Content-Length:
-      - '3586'
+      - '658'
       Content-Type:
       - application/hal+json
       Date:
-      - Mon, 20 Apr 2020 14:10:20 GMT
+      - Fri, 24 Apr 2020 15:55:41 GMT
       Server:
       - gunicorn/19.7.1
       Snap-Store-Version:
@@ -75,90 +45,9 @@ interactions:
       X-Cache-Lookup:
       - MISS from juju-7794b8-prod-ols-snap-store-indep-1375:3128
       X-Request-Id:
-      - 0AACC466C1260A325DCD01BB5E9DAD4B3EC6DB0A
+      - 56996BA9EDA00A325D4201BB5EA30BFCA32D7
       X-VCS-Revision:
-      - 0bf41e1
-      X-View-Name:
-      - snapdevicegw.webapi_search.snap_search
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - python-requests/2.23.0
-      X-Ubuntu-Architecture:
-      - amd64
-      X-Ubuntu-Series:
-      - '16'
-    method: GET
-    uri: https://api.snapcraft.io/api/v1/snaps/search?q=toto&size=10&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=amd64
-  response:
-    body:
-      string: '{"_embedded": {"clickindex:package": [{"apps": ["toto"], "architecture":
-        ["amd64"], "developer_validation": "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/06/Artboard_0gjcICX.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/06/Artboard_0gjcICX.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/03/Artboard_fNArkm1.png"}],
-        "origin": "tbmb", "package_name": "toto", "publisher": "Thomas Bille", "sections":
-        [{"featured": false, "name": "social"}], "summary": "Cool tool for happy people",
-        "title": "toto"}, {"apps": [], "architecture": ["amd64"], "developer_validation":
-        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/07/snpicon.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/07/snpicon.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/05/02.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/05/03.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/05/04.png"}],
-        "origin": "testtesttest", "package_name": "gregatronic", "publisher": "Greg
-        Hale", "sections": [], "summary": "This snap is 4x better than toto''s", "title":
-        "gregatronic"}, {"apps": ["autoskola-free6"], "architecture": ["amd64"], "developer_validation":
-        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/02/ikona_K2Sqemd.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/02/ikona_K2Sqemd.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/Sn%C3%ADmka_obrazovky_z_2019-01-10_18-08-29.png"}],
-        "origin": "lesna.vevericka", "package_name": "autoskola-free6", "publisher":
-        "Lesn\u00e1 Veveri\u010dka", "sections": [{"featured": false, "name": "utilities"}],
-        "summary": "autoskola-free6", "title": "autoskola-free6"}, {"apps": ["otot"],
-        "architecture": ["amd64"], "developer_validation": "unproven", "icon_url":
-        "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/icon_copy_1.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/icon_copy_1.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/red_copy_1.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/blue_copy_1.png"}],
-        "origin": "tbmb", "package_name": "otot", "publisher": "Thomas Bille", "sections":
-        [], "summary": "!!!esrevinu pans eht fo pans tnatropmi tsom ehT!", "title":
-        "otot"}, {"apps": ["beautiful-dog"], "architecture": ["amd64"], "developer_validation":
-        "unproven", "icon_url": "", "media": [], "origin": "totoqa", "package_name":
-        "beautiful-dog", "publisher": "Toto qa", "sections": [], "summary": "GNU Hello,
-        the \"beautiful-dog world\" snap", "title": "beautiful-dog"}]}, "_links":
-        {"self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?q=toto&size=10&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=amd64"}},
-        "total": 5}'
-    headers:
-      Content-Length:
-      - '3306'
-      Content-Type:
-      - application/hal+json
-      Date:
-      - Mon, 20 Apr 2020 14:10:21 GMT
-      Server:
-      - gunicorn/19.7.1
-      Snap-Store-Version:
-      - '22'
-      Vary:
-      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
-      Via:
-      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1375 (squid/3.5.27)
-      X-Cache:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1375
-      X-Cache-Lookup:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1375:3128
-      X-Request-Id:
-      - 0AACC466C1260A325DCD01BB5E9DAD4C3EC6E0E3
-      X-VCS-Revision:
-      - 0bf41e1
+      - 1fe9217
       X-View-Name:
       - snapdevicegw.webapi_search.snap_search
     status:
@@ -180,55 +69,25 @@ interactions:
       X-Ubuntu-Series:
       - '16'
     method: GET
-    uri: https://api.snapcraft.io/api/v1/snaps/search?q=toto&size=10&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=100&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide
   response:
     body:
-      string: '{"_embedded": {"clickindex:package": [{"apps": ["toto"], "architecture":
-        ["amd64"], "developer_validation": "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/06/Artboard_0gjcICX.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/06/Artboard_0gjcICX.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/03/Artboard_fNArkm1.png"}],
-        "origin": "tbmb", "package_name": "toto", "publisher": "Thomas Bille", "sections":
-        [{"featured": false, "name": "social"}], "summary": "Cool tool for happy people",
-        "title": "toto"}, {"apps": [], "architecture": ["amd64"], "developer_validation":
-        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/07/snpicon.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/07/snpicon.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/05/02.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/05/03.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/05/04.png"}],
-        "origin": "testtesttest", "package_name": "gregatronic", "publisher": "Greg
-        Hale", "sections": [], "summary": "This snap is 4x better than toto''s", "title":
-        "gregatronic"}, {"apps": ["autoskola-free6"], "architecture": ["amd64"], "developer_validation":
-        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/02/ikona_K2Sqemd.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/02/ikona_K2Sqemd.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/Sn%C3%ADmka_obrazovky_z_2019-01-10_18-08-29.png"}],
-        "origin": "lesna.vevericka", "package_name": "autoskola-free6", "publisher":
-        "Lesn\u00e1 Veveri\u010dka", "sections": [{"featured": false, "name": "utilities"}],
-        "summary": "autoskola-free6", "title": "autoskola-free6"}, {"apps": ["otot"],
-        "architecture": ["amd64"], "developer_validation": "unproven", "icon_url":
-        "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/icon_copy_1.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/icon_copy_1.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/red_copy_1.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/blue_copy_1.png"}],
-        "origin": "tbmb", "package_name": "otot", "publisher": "Thomas Bille", "sections":
-        [], "summary": "!!!esrevinu pans eht fo pans tnatropmi tsom ehT!", "title":
-        "otot"}, {"apps": ["beautiful-dog"], "architecture": ["amd64"], "developer_validation":
-        "unproven", "icon_url": "", "media": [], "origin": "totoqa", "package_name":
-        "beautiful-dog", "publisher": "Toto qa", "sections": [], "summary": "GNU Hello,
-        the \"beautiful-dog world\" snap", "title": "beautiful-dog"}, {"apps": ["test-toto"],
-        "architecture": ["i386"], "developer_validation": "unproven", "icon_url":
-        "", "media": [], "origin": "totoqa", "package_name": "test-toto", "publisher":
-        "Toto qa", "sections": [], "summary": "GNU Hello, the \"test-toto world\"
-        snap", "title": "test-toto"}]}, "_links": {"self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?q=toto&size=10&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide"}},
-        "total": 6}'
+      string: '{"_embedded": {"clickindex:package": [{"apps": [], "architecture":
+        ["amd64"], "developer_validation": "unproven", "icon_url": "", "media": [],
+        "origin": "jkfran", "package_name": "test-snap-amd64", "publisher": "Francisco
+        Jim\u00e9nez Cabrera", "sections": [], "summary": "The most important snap
+        of the snap universe", "title": "test-snap-amd64"}]}, "_links": {"self": {"href":
+        "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=100&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide"}},
+        "total": 1}'
     headers:
       Age:
-      - '2'
+      - '42'
       Content-Length:
-      - '3586'
+      - '658'
       Content-Type:
       - application/hal+json
       Date:
-      - Mon, 20 Apr 2020 14:10:20 GMT
+      - Fri, 24 Apr 2020 15:54:59 GMT
       Server:
       - gunicorn/19.7.1
       Snap-Store-Version:
@@ -236,15 +95,69 @@ interactions:
       Vary:
       - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
       Via:
-      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1375 (squid/3.5.27)
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1655 (squid/3.5.27)
       X-Cache:
-      - HIT from juju-7794b8-prod-ols-snap-store-indep-1375
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1655
       X-Cache-Lookup:
-      - HIT from juju-7794b8-prod-ols-snap-store-indep-1375:3128
+      - HIT from juju-7794b8-prod-ols-snap-store-indep-1655:3128
       X-Request-Id:
-      - 0AACC466C1260A325DCD01BB5E9DAD4B3EC6DB0A
+      - 56996BA9ED980A325D4201BB5EA30BD39412D
       X-VCS-Revision:
-      - 0bf41e1
+      - 1fe9217
+      X-View-Name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.23.0
+      X-Ubuntu-Architecture:
+      - amd64
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=amd64
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"apps": [], "architecture":
+        ["amd64"], "developer_validation": "unproven", "icon_url": "", "media": [],
+        "origin": "jkfran", "package_name": "test-snap-amd64", "publisher": "Francisco
+        Jim\u00e9nez Cabrera", "sections": [], "summary": "The most important snap
+        of the snap universe", "title": "test-snap-amd64"}]}, "_links": {"self": {"href":
+        "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=amd64"}},
+        "total": 1}'
+    headers:
+      Content-Length:
+      - '657'
+      Content-Type:
+      - application/hal+json
+      Date:
+      - Fri, 24 Apr 2020 15:55:42 GMT
+      Server:
+      - gunicorn/19.7.1
+      Snap-Store-Version:
+      - '22'
+      Vary:
+      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
+      Via:
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1656 (squid/3.5.27)
+      X-Cache:
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1656
+      X-Cache-Lookup:
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1656:3128
+      X-Request-Id:
+      - 56996BA9EDA00A325D4201BB5EA30BFDA365E
+      X-VCS-Revision:
+      - 1fe9217
       X-View-Name:
       - snapdevicegw.webapi_search.snap_search
     status:
@@ -266,28 +179,19 @@ interactions:
       X-Ubuntu-Series:
       - '16'
     method: GET
-    uri: https://api.snapcraft.io/api/v1/snaps/search?q=toto&size=10&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=i386
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=i386
   response:
     body:
-      string: '{"_embedded": {"clickindex:package": [{"apps": [], "architecture":
-        ["i386"], "developer_validation": "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/06/Artboard_0gjcICX.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/06/Artboard_0gjcICX.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/03/Artboard_fNArkm1.png"}],
-        "origin": "tbmb", "package_name": "toto", "publisher": "Thomas Bille", "sections":
-        [{"featured": false, "name": "social"}], "summary": "Cool tool for happy people",
-        "title": "toto"}, {"apps": ["test-toto"], "architecture": ["i386"], "developer_validation":
-        "unproven", "icon_url": "", "media": [], "origin": "totoqa", "package_name":
-        "test-toto", "publisher": "Toto qa", "sections": [], "summary": "GNU Hello,
-        the \"test-toto world\" snap", "title": "test-toto"}]}, "_links": {"self":
-        {"href": "https://api.snapcraft.io/api/v1/snaps/search?q=toto&size=10&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=i386"}},
-        "total": 2}'
+      string: '{"_embedded": {"clickindex:package": []}, "_links": {"self": {"href":
+        "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=i386"}},
+        "total": 0}'
     headers:
       Content-Length:
-      - '1202'
+      - '347'
       Content-Type:
       - application/hal+json
       Date:
-      - Mon, 20 Apr 2020 14:10:22 GMT
+      - Fri, 24 Apr 2020 15:55:43 GMT
       Server:
       - gunicorn/19.7.1
       Snap-Store-Version:
@@ -295,15 +199,119 @@ interactions:
       Vary:
       - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
       Via:
-      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1374 (squid/3.5.27)
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1655 (squid/3.5.27)
       X-Cache:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1374
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1655
       X-Cache-Lookup:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1374:3128
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1655:3128
       X-Request-Id:
-      - 0AACC466C1260A325DCD01BB5E9DAD4D3EC6E92C
+      - 56996BA9EDA00A325D4201BB5EA30BFEA3B16
       X-VCS-Revision:
-      - 0bf41e1
+      - 1fe9217
+      X-View-Name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.23.0
+      X-Ubuntu-Architecture:
+      - amd64
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-i386&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=amd64
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": []}, "_links": {"self": {"href":
+        "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-i386&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=amd64"}},
+        "total": 0}'
+    headers:
+      Content-Length:
+      - '347'
+      Content-Type:
+      - application/hal+json
+      Date:
+      - Fri, 24 Apr 2020 15:55:43 GMT
+      Server:
+      - gunicorn/19.7.1
+      Snap-Store-Version:
+      - '22'
+      Vary:
+      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
+      Via:
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1656 (squid/3.5.27)
+      X-Cache:
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1656
+      X-Cache-Lookup:
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1656:3128
+      X-Request-Id:
+      - 56996BA9EDA00A325D4201BB5EA30BFFA3EEB
+      X-VCS-Revision:
+      - 1fe9217
+      X-View-Name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.23.0
+      X-Ubuntu-Architecture:
+      - i386
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-i386&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=i386
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"apps": [], "architecture":
+        ["i386"], "developer_validation": "unproven", "icon_url": "", "media": [],
+        "origin": "jkfran", "package_name": "test-snap-i386", "publisher": "Francisco
+        Jim\u00e9nez Cabrera", "sections": [], "summary": "The most important snap
+        of the snap universe", "title": "test-snap-i386"}]}, "_links": {"self": {"href":
+        "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-i386&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=i386"}},
+        "total": 1}'
+    headers:
+      Content-Length:
+      - '652'
+      Content-Type:
+      - application/hal+json
+      Date:
+      - Fri, 24 Apr 2020 15:55:44 GMT
+      Server:
+      - gunicorn/19.7.1
+      Snap-Store-Version:
+      - '22'
+      Vary:
+      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
+      Via:
+      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1375 (squid/3.5.27)
+      X-Cache:
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1375
+      X-Cache-Lookup:
+      - MISS from juju-7794b8-prod-ols-snap-store-indep-1375:3128
+      X-Request-Id:
+      - 56996BA9EDA00A325D4201BB5EA30BFFA4208
+      X-VCS-Revision:
+      - 1fe9217
       X-View-Name:
       - snapdevicegw.webapi_search.snap_search
     status:
