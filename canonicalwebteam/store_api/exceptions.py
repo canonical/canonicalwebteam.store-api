@@ -53,3 +53,27 @@ class StoreApiResponseErrorList(StoreApiResponseError):
 
 class StoreApiCircuitBreaker(StoreApiError):
     pass
+
+
+class PublisherAgreementNotSigned(StoreApiError):
+    """
+    The user needs to sign the agreement
+    """
+
+    pass
+
+
+class PublisherMissingUsername(StoreApiError):
+    """
+    The user hasn't registed a username
+    """
+
+    pass
+
+
+class PublisherMacaroonRefreshRequired(StoreApiError):
+    """
+    The macaroon needs to be refreshed
+    """
+
+    pass
