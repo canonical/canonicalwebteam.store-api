@@ -3,8 +3,12 @@ from os import getenv
 import requests
 
 from canonicalwebteam.store_api.store import Store
+from canonicalwebteam.store_api.publisher import Publisher
 
 SNAPSTORE_API_URL = getenv("SNAPSTORE_API_URL", "https://api.snapcraft.io/")
+SNAPSTORE_DASHBOARD_API_URL = getenv(
+    "SNAPSTORE_API_URL", "https://dashboard.snapcraft.io/"
+)
 
 
 class SnapStore(Store):
@@ -52,3 +56,13 @@ class SnapStore(Store):
         return super(SnapStore, self).get_item_details(
             name, fields, api_version
         )
+
+
+class SnapPublisher(Publisher):
+    def __init__(self, session=requests.Session()):
+        super().__init__(session)
+
+        self.config = {
+            1: {"base_url": f"{SNAPSTORE_DASHBOARD_API_URL}dev/api/"},
+            2: {"base_url": f"{SNAPSTORE_API_URL}api/v2/"},
+        }
