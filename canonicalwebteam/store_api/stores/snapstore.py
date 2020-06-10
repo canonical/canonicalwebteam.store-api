@@ -64,5 +64,5 @@ class SnapPublisher(Publisher):
 
         self.config = {
             1: {"base_url": f"{SNAPSTORE_DASHBOARD_API_URL}dev/api/"},
-            2: {"base_url": f"{SNAPSTORE_API_URL}api/v2/"},
+            2: {"base_url": f"{SNAPSTORE_DASHBOARD_API_URL}api/v2/"},
         }

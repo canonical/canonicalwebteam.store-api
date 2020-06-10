@@ -253,6 +253,7 @@ class Publisher:
     def snap_release_history(self, session, snap_name, page=1):
         response = self.session.get(
             url=self.get_endpoint_url(f"snaps/{snap_name}/releases", 2),
+            params={"page": page},
             headers=self._get_authorization_header(session),
         )
 
