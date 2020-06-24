@@ -242,6 +242,16 @@ class Publisher:
 
         return self.process_response(screenshot_response)
 
+    def get_snap_revision(self, session, snap_id, revision_id):
+        response = self.session.get(
+            url=self.get_endpoint_url(
+                f"snaps/{snap_id}/revisions/{revision_id}", 2
+            ),
+            headers=self._get_authorization_header(session),
+        )
+
+        return self.process_response(response)
+
     def snap_revision_history(self, session, snap_id):
         response = self.session.get(
             url=self.get_endpoint_url(f"snaps/{snap_id}/history"),
