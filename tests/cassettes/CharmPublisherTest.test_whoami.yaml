@@ -1,0 +1,40 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.23.0
+    method: GET
+    uri: https://api.staging.snapcraft.io/publisher/api/v1/whoami
+  response:
+    body:
+      string: '{"display-name":"Francisco Jim\u00e9nez Cabrera","id":"mGOTZu7OjyCKQxEL7kO7JKkTrHiKDrne","username":"jkfran"}
+
+        '
+    headers:
+      Content-Length:
+      - '110'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 25 Jun 2020 12:55:33 GMT
+      PublisherGW-Version:
+      - '1'
+      Server:
+      - gunicorn/19.7.1
+      X-Request-Id:
+      - 93941A71B9700A324F5701BB5EF49EC5F8C2
+      X-VCS-Revision:
+      - 01f8e99
+      X-View-Name:
+      - publishergw.webapi.whoami
+    status:
+      code: 200
+      message: OK
+version: 1
