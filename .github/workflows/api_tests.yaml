@@ -21,8 +21,8 @@ jobs:
     - name: Install poetry dependencies
       run: poetry install
 
-    - name: Remove VCR cassettes
-      run: rm -rf tests/cassettes
+    - name: Remove only consumer VCR cassettes
+      run: rm -rf tests/cassettes/SnapStoreTest.*
 
     - name: Test Python with Coverage
       run: poetry run coverage run --source=. -m unittest discover tests
