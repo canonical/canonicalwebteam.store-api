@@ -1,0 +1,46 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Bakery-Protocol-Version:
+      - '2'
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.23.0
+    method: GET
+    uri: https://api.staging.charmhub.io/publisher/api/v1/tokens
+  response:
+    body:
+      string: '{"macaroon":"{\"c\": [{\"i\": \"time-before 2021-07-15T15:33:12.630288Z\"},
+        {\"i64\": \"AuWOi6ByBY_WtcjYxKSgZBeNanbYiL_wbAxUFCz5-lj8nOZtD3nR48YnIBdqrSY3NpsHes_nzyENe4KipSvVokTACYoOGJLYJlU1fdFIycWzE1FFjLSTPmxfEmQlnGzGk1RjqiKtMAYhYMqktcn2eQmXan1mZ6AIxRYJZGKhueByYC6aOZZ03BDFw3aUEf1GNkUs\",
+        \"v64\": \"FshZODRhX_u3LGvcJvBYnfV1NO4pbTcmMhF2EAnjWnPpXbwRmr1pWyWZHQ31CBIfwwvO4oyq5pJKNOj2YCxtkJLF6D2H3-mX\",
+        \"l\": \"https://api.staging.jujucharms.com/identity/\"}], \"i64\": \"AwoQygV7FRA5a5sYLab3R4ObvBIBMBoOCgVsb2dpbhIFbG9naW4\",
+        \"s64\": \"MpIbSNT45giizaFJZl2r-vwTNCH66ZGO-rF0NR6rbrc\", \"l\": \"api.staging.snapcraft.io\"}"}
+
+        '
+    headers:
+      Content-Length:
+      - '621'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 15 Jul 2020 15:33:12 GMT
+      PublisherGW-Version:
+      - '1'
+      Server:
+      - gunicorn/19.7.1
+      X-Request-Id:
+      - 4F93641C89540A324F3001BB5F0F21B80264
+      X-VCS-Revision:
+      - 45dc73d
+      X-View-Name:
+      - publishergw.webapi.get_macaroon
+    status:
+      code: 200
+      message: OK
+version: 1

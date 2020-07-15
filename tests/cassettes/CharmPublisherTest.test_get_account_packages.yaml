@@ -11,7 +11,7 @@ interactions:
       User-Agent:
       - python-requests/2.23.0
     method: GET
-    uri: https://api.staging.snapcraft.io/publisher/api/v1/charm
+    uri: https://api.staging.charmhub.io/publisher/api/v1/charm
   response:
     body:
       string: '{"charms":[{"authority":null,"charm-id":"a6GFYhMtbwKHgtft5bJfUUMscY1Be2CF","contact":null,"description":null,"name":"fran-test","package-type":"charm","private":false,"publisher":{"display-name":null,"id":"mGOTZu7OjyCKQxEL7kO7JKkTrHiKDrne","username":null,"validation":"unproven"},"status":"registered","store":"ubuntu","summary":null,"title":null,"website":null}]}
