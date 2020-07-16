@@ -7,7 +7,7 @@ from canonicalwebteam.store_api.publisher import Publisher
 
 CHARMSTORE_API_URL = getenv("CHARMSTORE_API_URL", "https://api.snapcraft.io/")
 CHARMSTORE_PUBLISHER_API_URL = getenv(
-    "CHARMSTORE_PUBLISHER_API_URL", "https://api.snapcraft.io/"
+    "CHARMSTORE_PUBLISHER_API_URL", "https://api.charmhub.io/"
 )
 
 
@@ -30,23 +30,31 @@ class CharmPublisher(Publisher):
             },
         }
 
-    def _get_authorization_header(self, session):
-        return {"Cookie": session["publisher-macaroon"]}
+        self.session.headers.update({"Bakery-Protocol-Version": "2"})
 
-    def whoami(self, session):
-        headers = self._get_authorization_header(session)
+    def _get_authorization_header(self, publisher_auth):
+        return {"Macaroons": publisher_auth}
 
+    def get_macaroon(self):
+        """
+        Return a bakery v2 macaroon from the publisher API to be discharged
+        """
+        response = self.session.get(url=self.get_endpoint_url("tokens"))
+
+        return self.process_response(response)["macaroon"]
+
+    def whoami(self, publisher_auth):
         response = self.session.get(
-            url=self.get_endpoint_url("whoami"), headers=headers
+            url=self.get_endpoint_url("whoami"),
+            headers=self._get_authorization_header(publisher_auth),
         )
 
         return self.process_response(response)
 
-    def get_account_packages(self, session):
-        headers = self._get_authorization_header(session)
-
+    def get_account_packages(self, publisher_auth):
         response = self.session.get(
-            url=self.get_endpoint_url("charm"), headers=headers
+            url=self.get_endpoint_url("charm"),
+            headers=self._get_authorization_header(publisher_auth),
         )
 
         return self.process_response(response)
