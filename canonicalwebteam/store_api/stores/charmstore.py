@@ -25,9 +25,7 @@ class CharmPublisher(Publisher):
         super().__init__(session)
 
         self.config = {
-            1: {
-                "base_url": f"{CHARMSTORE_PUBLISHER_API_URL}publisher/api/v1/"
-            },
+            1: {"base_url": f"{CHARMSTORE_PUBLISHER_API_URL}v1/"},
         }
 
         self.session.headers.update({"Bakery-Protocol-Version": "2"})
