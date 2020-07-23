@@ -6,6 +6,8 @@ on:
 
 jobs:
   test-api:
+    if: github.repository == 'canonical-web-and-design/canonicalwebteam.store-api'
+
     runs-on: ubuntu-latest
 
     env:
