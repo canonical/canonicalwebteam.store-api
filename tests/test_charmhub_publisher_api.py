@@ -29,11 +29,23 @@ class CharmPublisherTest(VCRTestCase):
         response = self.client.whoami(publisher_auth)
         self.assertEqual(response["username"], "jkfran")
 
-    def test_get_account_packages(self):
-        """
-        Check get_account_packages response
-        """
-        response = self.client.get_account_packages(publisher_auth)
-        test_charm = response["charms"][0]
-        self.assertEqual(test_charm["name"], "fran-test")
-        self.assertEqual(test_charm["package-type"], "charm")
+    def test_get_account_packages_all_charms(self):
+        charms = self.client.get_account_packages(publisher_auth, "charm")
+        for charm in charms:
+            self.assertEqual(charm["package-type"], "charm")
+
+    def test_get_account_packages_registered_charms(self):
+        registered_charms = self.client.get_account_packages(
+            publisher_auth, "charm", "registered"
+        )
+        for charm in registered_charms:
+            self.assertEqual(charm["package-type"], "charm")
+            self.assertEqual(charm["status"], "registered")
+
+    def test_get_account_packages_published_charms(self):
+        published_charms = self.client.get_account_packages(
+            publisher_auth, "charm", "published"
+        )
+        for charm in published_charms:
+            self.assertEqual(charm["package-type"], "charm")
+            self.assertEqual(charm["status"], "published")
