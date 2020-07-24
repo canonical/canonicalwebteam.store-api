@@ -9,6 +9,7 @@ CHARMSTORE_API_URL = getenv("CHARMSTORE_API_URL", "https://api.snapcraft.io/")
 CHARMSTORE_PUBLISHER_API_URL = getenv(
     "CHARMSTORE_PUBLISHER_API_URL", "https://api.charmhub.io/"
 )
+CHARMSTORE_VALID_PACKAGE_TYPES = ["charm", "bundle"]
 
 
 class CharmStore(Store):
@@ -49,10 +50,32 @@ class CharmPublisher(Publisher):
 
         return self.process_response(response)
 
-    def get_account_packages(self, publisher_auth):
+    def get_account_packages(self, publisher_auth, package_type, status=None):
+        """
+        Return publisher packages
+
+        Args:
+            publisher_auth: Serialized macaroon to consume the API.
+            package_type: Type of packages to obtain.
+            status (optional): Only packages with the given status
+
+        Returns:
+            A list of packages
+        """
+
+        if package_type not in CHARMSTORE_VALID_PACKAGE_TYPES:
+            raise ValueError(
+                "Invalid package type. Expected one of: %s"
+                % CHARMSTORE_VALID_PACKAGE_TYPES
+            )
+
         response = self.session.get(
-            url=self.get_endpoint_url("charm"),
+            url=self.get_endpoint_url(package_type),
             headers=self._get_authorization_header(publisher_auth),
         )
+        packages = self.process_response(response)[f"{package_type}s"]
 
-        return self.process_response(response)
+        if status:
+            packages = [p for p in packages if p["status"] == status]
+
+        return packages

@@ -1,0 +1,47 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Bakery-Protocol-Version:
+      - '2'
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.23.0
+    method: GET
+    uri: https://api.staging.charmhub.io/v1/charm
+  response:
+    body:
+      string: '{"charms":[{"authority":null,"charm-id":"1omXKR8ONGv5ZasymeAt9D1x1s0uflVg","contact":null,"description":null,"name":"francharm","package-type":"charm","private":false,"publisher":{"display-name":null,"id":"mGOTZu7OjyCKQxEL7kO7JKkTrHiKDrne","username":null,"validation":"unproven"},"status":"registered","store":"ubuntu","summary":null,"title":null,"website":null},{"authority":null,"charm-id":"EGnGTopcr5EUo2gvHZcCm7wZU66aHEDA","contact":"Francisco
+        Jimenez <francisco.jimenez.cabrera@canonical.com>","description":"This will
+        install and setup WordPress optimized to run in the cloud. By default it will
+        \nplace Ngnix and php-fpm configured to scale horizontally with Nginx''s reverse
+        proxy.\n","name":"fran-wordpress","package-type":"charm","private":false,"publisher":{"display-name":null,"id":"mGOTZu7OjyCKQxEL7kO7JKkTrHiKDrne","username":null,"validation":"unproven"},"status":"published","store":"ubuntu","summary":"WordPress
+        is a full featured web blogging tool, this charm deploys it.","title":null,"website":null},{"authority":null,"charm-id":"a6GFYhMtbwKHgtft5bJfUUMscY1Be2CF","contact":null,"description":null,"name":"fran-test","package-type":"charm","private":false,"publisher":{"display-name":null,"id":"mGOTZu7OjyCKQxEL7kO7JKkTrHiKDrne","username":null,"validation":"unproven"},"status":"registered","store":"ubuntu","summary":null,"title":null,"website":null}]}
+
+        '
+    headers:
+      Content-Length:
+      - '1375'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 23 Jul 2020 21:34:02 GMT
+      PublisherGW-Version:
+      - '1'
+      Server:
+      - gunicorn/19.7.1
+      X-Request-Id:
+      - 0289F916E56A0A324F5701BB5F1A024A01E7
+      X-VCS-Revision:
+      - 515c955
+      X-View-Name:
+      - publishergw.webapi.list_registered_names
+    status:
+      code: 200
+      message: OK
+version: 1
