@@ -35,9 +35,6 @@ jobs:
 
   test-python:
     runs-on: ubuntu-latest
-    env:
-      # We are using the staging API for now:
-      CHARMSTORE_PUBLISHER_API_URL: https://api.staging.charmhub.io/
     steps:
     - uses: actions/checkout@v1
     - uses: dschep/install-poetry-action@v1.2
