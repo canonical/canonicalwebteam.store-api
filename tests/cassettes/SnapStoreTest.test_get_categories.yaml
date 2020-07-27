@@ -8,50 +8,38 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      User-Agent:
-      - python-requests/2.23.0
-      X-Ubuntu-Series:
+      Snap-Device-Series:
       - '16'
+      User-Agent:
+      - python-requests/2.24.0
     method: GET
-    uri: https://api.snapcraft.io/api/v1/snaps/sections
+    uri: https://api.snapcraft.io/v2/snaps/categories?type=shared
   response:
     body:
-      string: '{"_embedded": {"clickindex:sections": [{"name": "featured"}, {"name":
-        "games"}, {"name": "finance"}, {"name": "productivity"}, {"name": "utilities"},
-        {"name": "news-and-weather"}, {"name": "science"}, {"name": "health-and-fitness"},
-        {"name": "education"}, {"name": "personalisation"}, {"name": "devices-and-iot"},
-        {"name": "books-and-reference"}, {"name": "security"}, {"name": "music-and-audio"},
-        {"name": "social"}, {"name": "server-and-cloud"}, {"name": "development"},
-        {"name": "entertainment"}, {"name": "photo-and-video"}, {"name": "art-and-design"}]}}'
+      string: '{"categories":[{"name":"art-and-design"},{"name":"books-and-reference"},{"name":"development"},{"name":"devices-and-iot"},{"name":"education"},{"name":"entertainment"},{"name":"featured"},{"name":"finance"},{"name":"games"},{"name":"health-and-fitness"},{"name":"music-and-audio"},{"name":"news-and-weather"},{"name":"personalisation"},{"name":"photo-and-video"},{"name":"productivity"},{"name":"science"},{"name":"security"},{"name":"server-and-cloud"},{"name":"social"},{"name":"utilities"}]}
+
+        '
     headers:
-      Age:
-      - '2414'
       Cache-Control:
       - public, max-age=3600
       Content-Length:
-      - '558'
+      - '495'
       Content-Type:
-      - application/hal+json
+      - application/json
       Date:
-      - Mon, 20 Apr 2020 13:29:57 GMT
+      - Mon, 27 Jul 2020 17:06:36 GMT
       Server:
       - gunicorn/19.7.1
       Snap-Store-Version:
-      - '22'
+      - '23'
       Vary:
-      - X-Ubuntu-Series
-      Via:
-      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1656 (squid/3.5.27)
-      X-Cache:
-      - HIT from juju-7794b8-prod-ols-snap-store-indep-1656
-      X-Cache-Lookup:
-      - HIT from juju-7794b8-prod-ols-snap-store-indep-1656:3128
+      - Snap-Device-Store
       X-Request-Id:
-      - 12D80C50D2680A325C8501BB5E9DA3CFA230660
+      - 0289F916DB680A325D3A01BB5F1F099C18DD238A
       X-VCS-Revision:
-      - 0bf41e1
+      - c7d9af9
       X-View-Name:
-      - snapdevicegw.webapi_search.section_listing
+      - snapdevicegw.webapi_categories.snaps_categories
     status:
       code: 200
       message: OK
