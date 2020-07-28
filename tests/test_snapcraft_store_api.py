@@ -181,8 +181,7 @@ class SnapStoreTest(VCRTestCase):
         self.assertEqual("2019-12-01", result[0]["buckets"][0])
 
     def test_get_categories(self):
-        result = self.client.get_categories(api_version=1)
-        categories = result["_embedded"]["clickindex:sections"]
+        categories = self.client.get_categories(api_version=2)["categories"]
 
         for category in categories:
             self.assertIn("name", category)

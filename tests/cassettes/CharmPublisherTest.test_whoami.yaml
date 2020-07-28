@@ -11,7 +11,7 @@ interactions:
       User-Agent:
       - python-requests/2.23.0
     method: GET
-    uri: https://api.staging.charmhub.io/v1/whoami
+    uri: https://api.charmhub.io/v1/whoami
   response:
     body:
       string: '{"display-name":"Francisco Jim\u00e9nez Cabrera","id":"mGOTZu7OjyCKQxEL7kO7JKkTrHiKDrne","username":"jkfran"}

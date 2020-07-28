@@ -173,11 +173,13 @@ class Store:
             self.session.post(url, headers=headers, json=json)
         )
 
-    def get_categories(self, api_version=1):
-        url = self.get_endpoint_url("sections")
+    def get_categories(self, api_version=2, type="shared"):
+        url = self.get_endpoint_url("categories", api_version)
 
         return self.process_response(
             self.session.get(
-                url, headers=self.config[api_version].get("headers")
+                url,
+                headers=self.config[api_version].get("headers"),
+                params={"type": type},
             )
         )

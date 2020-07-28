@@ -13,7 +13,7 @@ interactions:
       User-Agent:
       - python-requests/2.23.0
     method: GET
-    uri: https://api.staging.charmhub.io/v1/charm
+    uri: https://api.charmhub.io/v1/charm
   response:
     body:
       string: '{"charms":[{"authority":null,"charm-id":"1omXKR8ONGv5ZasymeAt9D1x1s0uflVg","contact":null,"description":null,"name":"francharm","package-type":"charm","private":false,"publisher":{"display-name":null,"id":"mGOTZu7OjyCKQxEL7kO7JKkTrHiKDrne","username":null,"validation":"unproven"},"status":"registered","store":"ubuntu","summary":null,"title":null,"website":null},{"authority":null,"charm-id":"EGnGTopcr5EUo2gvHZcCm7wZU66aHEDA","contact":"Francisco
