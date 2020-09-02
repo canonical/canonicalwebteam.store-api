@@ -34,7 +34,7 @@ class CharmPublisherTest(VCRTestCase):
             publisher_auth=publisher_auth, package_type="charm"
         )
         for charm in charms:
-            self.assertEqual(charm["package-type"], "charm")
+            self.assertEqual(charm["type"], "charm")
 
     def test_get_account_packages_registered_charms(self):
         registered_charms = self.client.get_account_packages(
@@ -43,7 +43,7 @@ class CharmPublisherTest(VCRTestCase):
             status="registered",
         )
         for charm in registered_charms:
-            self.assertEqual(charm["package-type"], "charm")
+            self.assertEqual(charm["type"], "charm")
             self.assertEqual(charm["status"], "registered")
 
     def test_get_account_packages_published_charms(self):
@@ -53,5 +53,5 @@ class CharmPublisherTest(VCRTestCase):
             status="published",
         )
         for charm in published_charms:
-            self.assertEqual(charm["package-type"], "charm")
+            self.assertEqual(charm["type"], "charm")
             self.assertEqual(charm["status"], "published")
