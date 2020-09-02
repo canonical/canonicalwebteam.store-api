@@ -73,7 +73,7 @@ class CharmPublisher(Publisher):
             url=self.get_endpoint_url(package_type),
             headers=self._get_authorization_header(publisher_auth),
         )
-        packages = self.process_response(response)[f"{package_type}s"]
+        packages = self.process_response(response)["results"]
 
         if status:
             packages = [p for p in packages if p["status"] == status]
