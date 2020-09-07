@@ -27,8 +27,13 @@ class Publisher:
             raise PublisherMacaroonRefreshRequired
 
         if not response.ok:
-            if "error_list" in body:
-                for error in body["error_list"]:
+            error_list = (
+                body["error_list"]
+                if "error_list" in body
+                else body.get("error-list")
+            )
+            if error_list:
+                for error in error_list:
                     if error["code"] == "user-not-ready":
                         if "has not signed agreement" in error["message"]:
                             raise PublisherAgreementNotSigned
@@ -38,7 +43,7 @@ class Publisher:
                 raise StoreApiResponseErrorList(
                     "The api returned a list of errors",
                     response.status_code,
-                    body["error_list"],
+                    error_list,
                 )
             elif not body:
                 raise StoreApiResponseError(
