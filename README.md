@@ -21,4 +21,6 @@ The package leverages [poetry](https://poetry.eustace.io/) for dependency manage
 
 ## Testing
 
-All tests can be run with `poetry run pytest`.
+All tests can be run with `poetry run python3 -m unittest discover tests`.
+
+Note: You might have to do `poetry install` before runnning the command above.
