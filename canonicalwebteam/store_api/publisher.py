@@ -32,7 +32,7 @@ class Publisher:
                 if "error_list" in body
                 else body.get("error-list")
             )
-            if error_list:
+            if "error_list" in body or "error-list" in body:
                 for error in error_list:
                     if error["code"] == "user-not-ready":
                         if "has not signed agreement" in error["message"]:
