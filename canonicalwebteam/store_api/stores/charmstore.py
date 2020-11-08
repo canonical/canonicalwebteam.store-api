@@ -79,3 +79,26 @@ class CharmPublisher(Publisher):
             packages = [p for p in packages if p["status"] == status]
 
         return packages
+
+    def get_charm_libraries(self, charm_name):
+        response = self.session.post(
+            url=self.get_endpoint_url("charm/libraries/bulk"),
+            json=[{"charm-name": charm_name}],
+        )
+
+        return self.process_response(response)
+
+    def get_charm_library(self, charm_name, library_id, api_version=None):
+        params = {}
+
+        if api_version is not None:
+            params["api"] = api_version
+
+        response = self.session.get(
+            url=self.get_endpoint_url(
+                f"charm/libraries/{charm_name}/{library_id}"
+            ),
+            params=params,
+        )
+
+        return self.process_response(response)
