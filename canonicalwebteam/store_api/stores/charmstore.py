@@ -80,6 +80,31 @@ class CharmPublisher(Publisher):
 
         return packages
 
+    def get_package_metadata(self, publisher_auth, package_type, name):
+        """
+        Get general metadata for a package.
+
+        Args:
+            publisher_auth: Serialized macaroon to consume the API.
+            package_type: Type of packages to obtain.
+
+        Returns:
+            Package general metadata
+        """
+
+        if package_type not in CHARMSTORE_VALID_PACKAGE_TYPES:
+            raise ValueError(
+                "Invalid package type. Expected one of: %s"
+                % CHARMSTORE_VALID_PACKAGE_TYPES
+            )
+
+        response = self.session.get(
+            url=self.get_endpoint_url(f"{package_type}/{name}"),
+            headers=self._get_authorization_header(publisher_auth),
+        )
+
+        return self.process_response(response)["metadata"]
+
     def get_charm_libraries(self, charm_name):
         response = self.session.post(
             url=self.get_endpoint_url("charm/libraries/bulk"),
