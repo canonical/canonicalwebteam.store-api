@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: dschep/install-poetry-action@v1.2
+    - uses: dschep/install-poetry-action@v1.3
 
     - name: Install dependencies
       run: sudo apt update && sudo apt install -y --no-install-recommends python3-venv
@@ -33,7 +33,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: dschep/install-poetry-action@v1.2
+    - uses: dschep/install-poetry-action@v1.3
 
     - name: Install dependencies
       run: sudo apt update && sudo apt install -y --no-install-recommends python3-venv
