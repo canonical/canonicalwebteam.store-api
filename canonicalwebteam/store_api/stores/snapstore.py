@@ -152,7 +152,7 @@ class SnapStoreAdmin(SnapPublisher):
         headers = self._get_authorization_header(session)
 
         response = self.session.put(
-            url=self.get_endpoint_url(f"{store_id}/invites"),
+            url=self.get_endpoint_url(f"{store_id}/settings"),
             headers=headers,
             json=settings,
         )
