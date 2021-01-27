@@ -21,16 +21,11 @@ class SnapStoreTest(VCRTestCase):
         # The total should be always the same
         self.assertEqual(result_300["total"], result_10["total"])
 
-        snaps_default = result_default["_embedded"]["clickindex:package"]
-        snaps_10 = result_10["_embedded"]["clickindex:package"]
-        snaps_100 = result_100["_embedded"]["clickindex:package"]
-        snaps_300 = result_300["_embedded"]["clickindex:package"]
-
-        self.assertEqual(len(snaps_default), 100)
-        self.assertEqual(len(snaps_10), 10)
-        self.assertEqual(len(snaps_100), 100)
+        self.assertEqual(len(result_default["results"]), 100)
+        self.assertEqual(len(result_10["results"]), 10)
+        self.assertEqual(len(result_100["results"]), 100)
         # 250 is the maximum the API return
-        self.assertEqual(len(snaps_300), 250)
+        self.assertEqual(len(result_300["results"]), 250)
 
     def test_search_by_arch(self):
         """
@@ -59,25 +54,22 @@ class SnapStoreTest(VCRTestCase):
 
     def test_get_all_items(self):
         result = self.client.get_all_items(size=16, api_version=1)
-        snaps = result["_embedded"]["clickindex:package"]
-        self.assertEqual(len(snaps), 16)
-        [self.assertIn("snap_id", snap) for snap in snaps]
+        self.assertEqual(len(result["results"]), 16)
+        [self.assertIn("snap_id", snap) for snap in result["results"]]
 
         # Test different size
         result = self.client.get_all_items(size=4, api_version=1)
-        snaps = result["_embedded"]["clickindex:package"]
-        self.assertEqual(len(snaps), 4)
-        [self.assertIn("snap_id", snap) for snap in snaps]
+        self.assertEqual(len(result["results"]), 4)
+        [self.assertIn("snap_id", snap) for snap in result["results"]]
 
     def test_get_category_items(self):
         result = self.client.get_category_items(
             category="security", size=10, page=1, api_version=1
         )
-        snaps = result["_embedded"]["clickindex:package"]
 
-        self.assertEqual(len(snaps), 10)
+        self.assertEqual(len(result["results"]), 10)
 
-        for snap in snaps:
+        for snap in result["results"]:
             sections = [i["name"] for i in snap["sections"]]
             self.assertIn("security", sections)
 
@@ -85,26 +77,23 @@ class SnapStoreTest(VCRTestCase):
         result = self.client.get_category_items(
             category="server-and-cloud", size=2, page=1, api_version=1
         )
-        snaps = result["_embedded"]["clickindex:package"]
 
-        self.assertEqual(len(snaps), 2)
+        self.assertEqual(len(result["results"]), 2)
 
-        for snap in snaps:
+        for snap in result["results"]:
             sections = [i["name"] for i in snap["sections"]]
             self.assertIn("server-and-cloud", sections)
 
     def test_get_featured_items(self):
         result = self.client.get_featured_items(size=10, page=1, api_version=1)
-        snaps = result["_embedded"]["clickindex:package"]
-        self.assertEqual(len(snaps), 10)
+        self.assertEqual(len(result["results"]), 10)
 
         # Test different size
         result = self.client.get_featured_items(size=3, page=1, api_version=1)
-        snaps = result["_embedded"]["clickindex:package"]
-        self.assertEqual(len(snaps), 3)
+        self.assertEqual(len(result["results"]), 3)
 
         # Test that snaps are featured
-        for snap in snaps:
+        for snap in result["results"]:
             sections = [i["name"] for i in snap["sections"]]
             self.assertIn("featured", sections)
 
@@ -112,15 +101,17 @@ class SnapStoreTest(VCRTestCase):
         result = self.client.get_publisher_items(
             publisher="28zEonXNoBLvIB7xneRbltOsp0Nf7DwS", api_version=1
         )
-        snaps = result["_embedded"]["clickindex:package"]
-        [self.assertEqual("jetbrains", snap["publisher"]) for snap in snaps]
+
+        for snap in result["results"]:
+            self.assertEqual("jetbrains", snap["publisher"])
 
         # Test different publisher
         result = self.client.get_publisher_items(
             publisher="2rsYZu6kqYVFsSejExu4YENdXQEO40Xb", api_version=1
         )
-        snaps = result["_embedded"]["clickindex:package"]
-        [self.assertEqual("KDE", snap["publisher"]) for snap in snaps]
+
+        for snap in result["results"]:
+            self.assertEqual("KDE", snap["publisher"])
 
     def test_get_item_details(self):
         snap = self.client.get_item_details(name="toto", api_version=2)
