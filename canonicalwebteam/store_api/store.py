@@ -38,6 +38,10 @@ class Store:
                     "Unknown error from API", response.status_code
                 )
 
+        if "_embedded" in body:
+            body["results"] = body["_embedded"]["clickindex:package"]
+            del body["_embedded"]
+
         return body
 
     def get_endpoint_url(self, endpoint, api_version=1):
