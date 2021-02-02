@@ -158,3 +158,14 @@ class SnapStoreAdmin(SnapPublisher):
         )
 
         return self.process_response(response)
+
+    def update_store_snaps(self, session, store_id, snaps):
+        headers = self._get_authorization_header(session)
+
+        response = self.session.post(
+            url=self.get_endpoint_url(f"{store_id}/snaps"),
+            headers=headers,
+            json=snaps,
+        )
+
+        return self.process_response(response)
