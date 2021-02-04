@@ -1,0 +1,54 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Snap-Device-Series:
+      - '16'
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: https://api.snapcraft.io/v2/snaps/find?q=&category=featured
+  response:
+    body:
+      string: '{"results":[{"name":"eks","snap":{},"snap-id":"xKFtlGimGVPMhubDmVct38AOzAA4j0qh"},{"name":"thunderbird","snap":{},"snap-id":"k1Ml1O9GzSO2QftV0ZlWSbUfQ78nN460"},{"name":"sc-controller","snap":{},"snap-id":"3zt5UqFg7pE3avJvT9XbZQJY64Ix3Y4C"},{"name":"netbeans","snap":{},"snap-id":"JyXqEgtoFceo2Ppmyr1XrbqOoRIkNRrS"},{"name":"geforcenow","snap":{},"snap-id":"D0GhSSTbJyx4LV9sjd12L0qRaG4nbWDN"},{"name":"argos-translate","snap":{},"snap-id":"zBLv2JUGUIIcGFXThPtU3mcSNJo7CZgW"},{"name":"parsec","snap":{},"snap-id":"i91m6pQornK3VI0Uy9iDihP8OMxcK16u"},{"name":"glow","snap":{},"snap-id":"BDiLHLZUf65hITQ34wOjTH2IBIm7jIrf"},{"name":"termius-app","snap":{},"snap-id":"WkTBXwoX81rBe3s3OTt3EiiLKBx2QhuS"},{"name":"camus","snap":{},"snap-id":"ObYVGGGHqjTePNnT4jdYjdMgRURVHyVL"},{"name":"freecad","snap":{},"snap-id":"6gjU50q0lEDaMTtSUxYoVDSmjR5fERpB"},{"name":"flameshot","snap":{},"snap-id":"zu6wU07bp76WpXA1NZhzV0hu2UnoS63R"},{"name":"signal-desktop","snap":{},"snap-id":"r4LxMVp7zWramXsJQAKdamxy6TAWlaDD"},{"name":"stellarium-daily","snap":{},"snap-id":"EH3bnfcLLy6CafqNtXyQgvfCYBix4Ptt"},{"name":"shutter","snap":{},"snap-id":"vVJRIimdn7euFb5bpoddZscFl7ZNXsjT"},{"name":"video-downloader","snap":{},"snap-id":"4qIOUqXVjsMokMAzzlIcP7lrUUdwtKS3"},{"name":"vimix","snap":{},"snap-id":"RG1xH86tIIEKVZnFJ4mCsPJpNEM3GdJL"},{"name":"alfacast","snap":{},"snap-id":"xt64fKyB5pyxpDdwETS3Cof54RVXpPM1"},{"name":"uno-calculator","snap":{},"snap-id":"ZZjSue7jjdQXHsNz5RI9BH3Pf3UnRo0V"},{"name":"netcalc","snap":{},"snap-id":"DpvSZdwGSIWEEtGk8wA3r1spVninODvn"},{"name":"opera","snap":{},"snap-id":"AljMvoQbHtnnrka00lIoxHJ6Qhfn0X8m"},{"name":"blender","snap":{},"snap-id":"ZWyHJJiPBBfMKpaaKKrpSgAcupWkHWPz"},{"name":"krop","snap":{},"snap-id":"nFlrABRZmqSkMfSxHALszyY5nPLjfMrJ"},{"name":"icloud-for-linux","snap":{},"snap-id":"HTbqvMiPyiMShkmshHnyEP2euCn0Uohq"},{"name":"gitkraken","snap":{},"snap-id":"aWUrHnWTzA1R71VuWsBG5v8S0ibIxmjR"},{"name":"konversation","snap":{},"snap-id":"BY0kc7ovfLfEmprwpEIToIOatcNj8KfV"},{"name":"mattermost-desktop","snap":{},"snap-id":"ed0pxJoDHrgmAWHH7baX5nryAHy1UNj0"},{"name":"forkstat","snap":{},"snap-id":"8WVGSM5EfcMfWhH2hQa3J3AlhFrLYHxa"},{"name":"vlc","snap":{},"snap-id":"RT9mcUhVsRYrDLG8qnvGiy26NKvv6Qkd"}]}
+
+        '
+    headers:
+      Age:
+      - '166'
+      Cache-Control:
+      - public, max-age=300
+      Content-Length:
+      - '2228'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 02 Feb 2021 21:06:40 GMT
+      Server:
+      - gunicorn/19.7.1
+      Snap-Store-Version:
+      - '33'
+      Vary:
+      - Snap-Device-Store, Snap-Device-Series
+      Via:
+      - 1.1 juju-f25c99-prod-ols-snap-store-773 (squid/3.5.27)
+      X-Cache:
+      - HIT from juju-f25c99-prod-ols-snap-store-773
+      X-Cache-Lookup:
+      - HIT from juju-f25c99-prod-ols-snap-store-773:3128
+      X-Request-Id:
+      - 28460E5004000A325C3901BB6019BEE0A25D3F
+      X-VCS-Revision:
+      - 9abd4b0
+      X-View-Name:
+      - snapdevicegw.webapi_search_v2.snaps_find
+    status:
+      code: 200
+      message: OK
+version: 1

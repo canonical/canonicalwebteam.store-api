@@ -176,3 +176,11 @@ class SnapStoreTest(VCRTestCase):
 
         for category in categories:
             self.assertIn("name", category)
+
+    def test_get_featured_results(self):
+        results = self.client.find(category="featured")["results"]
+        self.assertIn("featured", self.cassette.requests[0].query[0])
+
+        # there is no specific field that shows the category at the moment
+        # so just testing if the returned number of results is greater than 0
+        self.assertGreater(len(results), 0)
