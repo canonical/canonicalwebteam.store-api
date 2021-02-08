@@ -169,3 +169,24 @@ class SnapStoreAdmin(SnapPublisher):
         )
 
         return self.process_response(response)
+
+    def update_store_invites(self, session, store_id, invites):
+        headers = self._get_authorization_header(session)
+
+        response = self.session.put(
+            url=self.get_endpoint_url(f"{store_id}/invites"),
+            headers=headers,
+            json=invites,
+        )
+
+        return self.process_response(response)
+
+    def get_store_invites(self, session, store_id):
+        headers = self._get_authorization_header(session)
+
+        response = self.session.get(
+            url=self.get_endpoint_url(f"{store_id}"),
+            headers=headers,
+        )
+
+        return self.process_response(response).get("invites", [])
