@@ -54,7 +54,7 @@ class SnapStore(Store):
         api_version=1,
     ):
         return super(SnapStore, self).get_item_details(
-            name, fields, api_version
+            name, None, fields, api_version
         )
 
 

@@ -154,10 +154,13 @@ class Store:
             api_version=api_version,
         )
 
-    def get_item_details(self, name, fields=[], api_version=2):
+    def get_item_details(self, name, channel=None, fields=[], api_version=2):
         url = self.get_endpoint_url("info/" + name, api_version)
 
         params = {"fields": ",".join(fields)}
+
+        if channel:
+            params["channel"] = channel
 
         return self.process_response(
             self.session.get(
