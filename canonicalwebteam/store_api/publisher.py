@@ -34,6 +34,8 @@ class Publisher:
             )
             if "error_list" in body or "error-list" in body:
                 for error in error_list:
+                    if error["code"] == "user-missing-latest-tos":
+                        raise PublisherAgreementNotSigned
                     if error["code"] == "user-not-ready":
                         if "has not signed agreement" in error["message"]:
                             raise PublisherAgreementNotSigned
@@ -60,16 +62,22 @@ class Publisher:
         """
         Bind root and discharge macaroons and return the authorization header.
         """
-        root = session["macaroon_root"]
-        discharge = session["macaroon_discharge"]
+        if "macaroon_root" in session:
+            root = session["macaroon_root"]
+            discharge = session["macaroon_discharge"]
 
-        bound = (
-            Macaroon.deserialize(root)
-            .prepare_for_request(Macaroon.deserialize(discharge))
-            .serialize()
-        )
+            bound = (
+                Macaroon.deserialize(root)
+                .prepare_for_request(Macaroon.deserialize(discharge))
+                .serialize()
+            )
 
-        return {"Authorization": f"Macaroon root={root}, discharge={bound}"}
+            return {
+                "Authorization": f"Macaroon root={root}, discharge={bound}"
+            }
+        # With Candid the header is Macaroons
+        elif "macaroons" in session:
+            return {"Macaroons": session["macaroons"]}
 
     def _is_macaroon_expired(self, headers):
         """
