@@ -67,6 +67,17 @@ class SnapPublisher(Publisher):
             2: {"base_url": f"{SNAPSTORE_DASHBOARD_API_URL}api/v2/"},
         }
 
+    def get_macaroon(self, permissions):
+        """
+        Return a bakery v2 macaroon from the publisher API to be discharged
+        """
+        response = self.session.post(
+            url=self.get_endpoint_url("tokens", 2),
+            json={"permissions": permissions},
+        )
+
+        return self.process_response(response)["macaroon"]
+
 
 class SnapStoreAdmin(SnapPublisher):
     def get_endpoint_url(self, endpoint, api_version=2):
