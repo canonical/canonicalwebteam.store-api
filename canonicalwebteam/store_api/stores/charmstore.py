@@ -5,7 +5,7 @@ import requests
 from canonicalwebteam.store_api.store import Store
 from canonicalwebteam.store_api.publisher import Publisher
 
-CHARMSTORE_API_URL = getenv("CHARMSTORE_API_URL", "https://api.snapcraft.io/")
+CHARMSTORE_API_URL = getenv("CHARMSTORE_API_URL", "https://api.charmhub.io/")
 CHARMSTORE_PUBLISHER_API_URL = getenv(
     "CHARMSTORE_PUBLISHER_API_URL", "https://api.charmhub.io/"
 )
