@@ -78,6 +78,14 @@ class SnapPublisher(Publisher):
 
         return self.process_response(response)["macaroon"]
 
+    def whoami(self, session):
+        response = self.session.get(
+            url=self.get_endpoint_url("tokens/whoami", 2),
+            headers=self._get_authorization_header(session),
+        )
+
+        return self.process_response(response)
+
 
 class SnapStoreAdmin(SnapPublisher):
     def get_endpoint_url(self, endpoint, api_version=2):
