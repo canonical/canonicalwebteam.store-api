@@ -1,4 +1,5 @@
 from canonicalwebteam.store_api.exceptions import (
+    StoreApiConnectionError,
     StoreApiResponseDecodeError,
     StoreApiResponseError,
     StoreApiResponseErrorList,
@@ -11,13 +12,16 @@ class Store:
         self.session = session
 
     def process_response(self, response):
+        # 5xx responses are not in JSON format
+        if response.status_code >= 500:
+            raise StoreApiConnectionError("Service Unavailable")
+
         try:
             body = response.json()
         except ValueError as decode_error:
-            api_error_exception = StoreApiResponseDecodeError(
+            raise StoreApiResponseDecodeError(
                 "JSON decoding failed: {}".format(decode_error)
             )
-            raise api_error_exception
 
         if not response.ok:
             if "error_list" in body or "error-list" in body:
@@ -27,12 +31,11 @@ class Store:
                     if "error_list" in body
                     else body["error-list"]
                 )
-                api_error_exception = StoreApiResponseErrorList(
+                raise StoreApiResponseErrorList(
                     "The API returned a list of errors",
                     response.status_code,
                     error_body,
                 )
-                raise api_error_exception
             else:
                 raise StoreApiResponseError(
                     "Unknown error from API", response.status_code
