@@ -1,4 +1,5 @@
 from canonicalwebteam.store_api.exceptions import (
+    StoreApiConnectionError,
     StoreApiResponseDecodeError,
     StoreApiResponseError,
     StoreApiResponseErrorList,
@@ -15,6 +16,10 @@ class Publisher:
         self.session = session
 
     def process_response(self, response):
+        # 5xx responses are not in JSON format
+        if response.status_code >= 500:
+            raise StoreApiConnectionError("Service Unavailable")
+
         try:
             body = response.json()
         except ValueError as decode_error:
