@@ -135,6 +135,26 @@ class CharmPublisher(Publisher):
 
         return self.process_response(response)["metadata"]
 
+    def register_package_name(self, publisher_auth, data):
+        """
+        Register a package name.
+
+        Args:
+            publisher_auth: Serialized macaroon to consume the API.
+            data: Dict with name, type and visibility of the package
+
+        Returns:
+            Newly registered name id
+        """
+
+        response = self.session.post(
+            url=self.get_endpoint_url("charm"),
+            headers=self._get_authorization_header(publisher_auth),
+            json=data,
+        )
+
+        return self.process_response(response)
+
     def get_charm_libraries(self, charm_name):
         response = self.session.post(
             url=self.get_endpoint_url("charm/libraries/bulk"),
