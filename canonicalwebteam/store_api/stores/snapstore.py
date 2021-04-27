@@ -209,3 +209,13 @@ class SnapStoreAdmin(SnapPublisher):
         )
 
         return self.process_response(response).get("invites", [])
+
+    def get_store_data(self, session, store_id):
+        headers = self._get_authorization_header(session)
+
+        response = self.session.get(
+            url=self.get_endpoint_url(f"/stores/{store_id}"),
+            headers=headers,
+        )
+
+        return self.process_response(response).get("stores", [])
