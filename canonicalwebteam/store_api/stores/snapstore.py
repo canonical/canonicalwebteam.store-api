@@ -125,11 +125,16 @@ class SnapStoreAdmin(SnapPublisher):
 
         return self.process_response(response)["store"]
 
-    def get_store_snaps(self, session, store_id):
+    def get_store_snaps(self, session, store_id, query=None):
         headers = self._get_authorization_header(session)
+        params = {}
+
+        if query:
+            params = {"q": query}
 
         response = self.session.get(
             url=self.get_endpoint_url(f"{store_id}/snaps"),
+            params=params,
             headers=headers,
         )
 
