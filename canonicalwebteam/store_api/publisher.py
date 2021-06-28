@@ -44,7 +44,7 @@ class Publisher:
                     if error["code"] == "user-not-ready":
                         if "has not signed agreement" in error["message"]:
                             raise PublisherAgreementNotSigned
-                        elif "missing store username" in error["message"]:
+                        elif "username" in error["message"]:
                             raise PublisherMissingUsername
 
                 raise StoreApiResponseErrorList(
