@@ -50,13 +50,20 @@ class CharmPublisher(Publisher):
 
         return self.process_response(response)
 
-    def get_account_packages(self, publisher_auth, package_type, status=None):
+    def get_account_packages(
+        self,
+        publisher_auth,
+        package_type,
+        include_collaborations=False,
+        status=None,
+    ):
         """
         Return publisher packages
 
         Args:
             publisher_auth: Serialized macaroon to consume the API.
             package_type: Type of packages to obtain.
+            include_collaborations (optional): Include shared charms
             status (optional): Only packages with the given status
 
         Returns:
@@ -69,9 +76,15 @@ class CharmPublisher(Publisher):
                 % CHARMSTORE_VALID_PACKAGE_TYPES
             )
 
+        params = {}
+
+        if include_collaborations:
+            params["include-collaborations"] = "true"
+
         response = self.session.get(
             url=self.get_endpoint_url(package_type),
             headers=self._get_authorization_header(publisher_auth),
+            params=params,
         )
         packages = self.process_response(response)["results"]
 
