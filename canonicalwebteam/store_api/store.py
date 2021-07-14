@@ -193,3 +193,15 @@ class Store:
                 params={"type": type},
             )
         )
+
+    def get_resource_revisions(self, name, resource_name, api_version=2):
+        url = self.get_endpoint_url(
+            f"resources/{name}/{resource_name}/revisions", api_version
+        )
+
+        return self.process_response(
+            self.session.get(
+                url,
+                headers=self.config[api_version].get("headers"),
+            )
+        )["revisions"]
