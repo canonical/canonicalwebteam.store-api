@@ -32,13 +32,45 @@ class CharmPublisher(Publisher):
         self.session.headers.update({"Bakery-Protocol-Version": "2"})
 
     def _get_authorization_header(self, publisher_auth):
-        return {"Macaroons": publisher_auth}
+        return {"Authorization": f"Macaroon {publisher_auth}"}
 
     def get_macaroon(self):
         """
         Return a bakery v2 macaroon from the publisher API to be discharged
         """
         response = self.session.get(url=self.get_endpoint_url("tokens"))
+
+        return self.process_response(response)["macaroon"]
+
+    def issue_macaroon(self, description=None, ttl=None):
+        """
+        Return a bakery v2 macaroon from the publisher API to be discharged
+        """
+        data = {}
+
+        if description:
+            data["description"] = description
+
+        if ttl:
+            data["ttl"] = ttl
+
+        response = self.session.post(
+            url=self.get_endpoint_url("tokens"),
+            json=data,
+        )
+
+        return self.process_response(response)["macaroon"]
+
+    def exchange_macaroons(self, issued_macaroon):
+        """
+        Return an exchanged snapstore-only authentication macaroon.
+        """
+
+        response = self.session.post(
+            url=self.get_endpoint_url("tokens/exchange"),
+            headers={"Macaroons": issued_macaroon},
+            json={},
+        )
 
         return self.process_response(response)["macaroon"]
 
