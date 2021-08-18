@@ -91,8 +91,8 @@ class SnapStoreAdmin(SnapPublisher):
     def get_endpoint_url(self, endpoint, api_version=2):
         return super().get_endpoint_url(f"stores/{endpoint}", api_version)
 
-    def get_stores(self, session):
-        """Return a list a stores where the user is an admin
+    def get_stores(self, session, roles=["admin", "review", "view"]):
+        """Return a list a stores with the given roles
 
         :return: A list of stores
         """
@@ -104,13 +104,13 @@ class SnapStoreAdmin(SnapPublisher):
 
         account_info = self.process_response(response)
         stores = account_info.get("stores", [])
-        admin_stores = []
+        user_stores = []
 
         for store in stores:
-            if "admin" in store["roles"]:
-                admin_stores.append(store)
+            if not set(roles).isdisjoint(store["roles"]):
+                user_stores.append(store)
 
-        return admin_stores
+        return user_stores
 
     def get_store(self, session, store_id):
         """Return a store where the user is an admin
