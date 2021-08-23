@@ -42,11 +42,11 @@ class CharmPublisher(Publisher):
 
         return self.process_response(response)["macaroon"]
 
-    def issue_macaroon(self, description=None, ttl=None):
+    def issue_macaroon(self, permissions, description=None, ttl=None):
         """
         Return a bakery v2 macaroon from the publisher API to be discharged
         """
-        data = {}
+        data = {"permissions": permissions}
 
         if description:
             data["description"] = description
