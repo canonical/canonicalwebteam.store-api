@@ -80,6 +80,9 @@ class Store:
         url = self.get_endpoint_url("search", api_version)
         headers = self.config[api_version].get("headers")
 
+        if "publisher:" not in search:
+            search = search.replace(":", " ")
+
         params = {
             "q": search,
             "size": size,
