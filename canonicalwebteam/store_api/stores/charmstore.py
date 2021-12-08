@@ -74,6 +74,17 @@ class CharmPublisher(Publisher):
 
         return self.process_response(response)["macaroon"]
 
+    def macaroon_info(self, publisher_auth):
+        """
+        Return information about the authenticated macaroon token.
+        """
+        response = self.session.get(
+            url=self.get_endpoint_url("tokens/whoami"),
+            headers=self._get_authorization_header(publisher_auth),
+        )
+
+        return self.process_response(response)
+
     def whoami(self, publisher_auth):
         response = self.session.get(
             url=self.get_endpoint_url("whoami"),
