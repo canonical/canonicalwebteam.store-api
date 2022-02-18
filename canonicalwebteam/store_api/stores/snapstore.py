@@ -91,7 +91,7 @@ class SnapStoreAdmin(SnapPublisher):
     def get_endpoint_url(self, endpoint, api_version=2):
         return super().get_endpoint_url(f"stores/{endpoint}", api_version)
 
-    def get_stores(self, session, roles=["admin", "review", "view"]):
+    def get_stores(self, session, roles=["admin", "review", "view", "access"]):
         """Return a list a stores with the given roles
 
         :return: A list of stores
