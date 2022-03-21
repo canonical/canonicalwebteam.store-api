@@ -1,5 +1,6 @@
 from canonicalwebteam.store_api.exceptions import (
     StoreApiConnectionError,
+    StoreApiResourceNotFound,
     StoreApiResponseDecodeError,
     StoreApiResponseError,
     StoreApiResponseErrorList,
@@ -46,6 +47,8 @@ class Publisher:
                             raise PublisherAgreementNotSigned
                         elif "username" in error["message"]:
                             raise PublisherMissingUsername
+                    if error["code"] == "resource-not-found":
+                        raise StoreApiResourceNotFound
 
                 raise StoreApiResponseErrorList(
                     "The api returned a list of errors",
