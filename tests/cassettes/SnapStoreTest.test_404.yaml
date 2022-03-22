@@ -1,0 +1,43 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Snap-Device-Series:
+      - '16'
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: https://api.snapcraft.io/v2/snaps/info/four-o-four?fields=title%2Csummary%2Cdescription%2Clicense%2Ccontact%2Cwebsite%2Cpublisher%2Cprices%2Cmedia%2Cdownload%2Cversion%2Ccreated-at%2Cconfinement%2Ccategories%2Ctrending%2Cunlisted
+  response:
+    body:
+      string: '{"error-list":[{"code":"resource-not-found","message":"No snap named
+        ''four-o-four'' found in series ''16''."}]}
+
+        '
+    headers:
+      content-length:
+      - '109'
+      content-type:
+      - application/json
+      date:
+      - Tue, 22 Mar 2022 16:21:52 GMT
+      server:
+      - gunicorn/20.0.4
+      snap-store-version:
+      - '47'
+      x-request-id:
+      - 5440001E902C0A8325F301BB6239F7A093D8222
+      x-vcs-revision:
+      - ff64ea31
+      x-view-name:
+      - snapdevicegw.webapi_info.snap_info
+    status:
+      code: 404
+      message: NOT FOUND
+version: 1
