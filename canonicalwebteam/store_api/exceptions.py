@@ -14,6 +14,14 @@ class StoreApiConnectionError(StoreApiError):
     pass
 
 
+class StoreApiResourceNotFound(StoreApiError):
+    """
+    The requested resource is not found
+    """
+
+    pass
+
+
 class StoreApiTimeoutError(StoreApiError):
     """
     Communication with the API timed out

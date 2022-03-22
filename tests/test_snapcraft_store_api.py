@@ -1,5 +1,6 @@
 from vcr_unittest import VCRTestCase
 from canonicalwebteam.store_api.stores.snapstore import SnapStore
+from canonicalwebteam.store_api.exceptions import StoreApiResourceNotFound
 
 
 class SnapStoreTest(VCRTestCase):
@@ -184,3 +185,7 @@ class SnapStoreTest(VCRTestCase):
         # there is no specific field that shows the category at the moment
         # so just testing if the returned number of results is greater than 0
         self.assertGreater(len(results), 0)
+
+    def test_404(self):
+        with self.assertRaises(StoreApiResourceNotFound):
+            self.client.get_item_details(name="four-o-four", api_version=2)

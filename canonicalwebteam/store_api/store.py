@@ -1,5 +1,6 @@
 from canonicalwebteam.store_api.exceptions import (
     StoreApiConnectionError,
+    StoreApiResourceNotFound,
     StoreApiResponseDecodeError,
     StoreApiResponseError,
     StoreApiResponseErrorList,
@@ -26,15 +27,20 @@ class Store:
         if not response.ok:
             if "error_list" in body or "error-list" in body:
                 # V1 and V2 error handling
-                error_body = (
+                error_list = (
                     body["error_list"]
                     if "error_list" in body
                     else body["error-list"]
                 )
+
+                for error in error_list:
+                    if error["code"] == "resource-not-found":
+                        raise StoreApiResourceNotFound
+
                 raise StoreApiResponseErrorList(
                     "The API returned a list of errors",
                     response.status_code,
-                    error_body,
+                    error_list,
                 )
             else:
                 raise StoreApiResponseError(
