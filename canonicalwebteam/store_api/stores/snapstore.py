@@ -9,6 +9,9 @@ SNAPSTORE_API_URL = getenv("SNAPSTORE_API_URL", "https://api.snapcraft.io/")
 SNAPSTORE_DASHBOARD_API_URL = getenv(
     "SNAPSTORE_DASHBOARD_API_URL", "https://dashboard.snapcraft.io/"
 )
+SNAPSTORE_PUBLISHERWG_API_URL = getenv(
+    "SNAPSTORE_PUBLISHERWG_API_URL", "https://api.charmhub.io/"
+)
 
 
 class SnapStore(Store):
@@ -85,6 +88,24 @@ class SnapPublisher(Publisher):
         )
 
         return self.process_response(response)
+
+    def get_publisherwg_endpoint_url(self, endpoint):
+        return f"{SNAPSTORE_PUBLISHERWG_API_URL}v1/{endpoint}"
+
+    def _get_publisherwg_authorization_header(self, publisher_auth):
+        return {"Authorization": f"Macaroon {publisher_auth}"}
+
+    def exchange_dashboard_macaroons(self, session):
+        """
+        Exchange dashboard.snapcraft.io SSO discharged macaroons
+        """
+        response = self.session.post(
+            url=self.get_publisherwg_endpoint_url("tokens/dashboard/exchange"),
+            headers=self._get_authorization_header(session),
+            json={},
+        )
+
+        return self.process_response(response)["macaroon"]
 
 
 class SnapStoreAdmin(SnapPublisher):
