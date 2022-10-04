@@ -107,6 +107,92 @@ class SnapPublisher(Publisher):
 
         return self.process_response(response)["macaroon"]
 
+    def get_collaborators(self, session, name):
+        """
+        Get collaborators (accepted invites) for the given package.
+        """
+        response = self.session.get(
+            url=self.get_publisherwg_endpoint_url(
+                f"snap/{name}/collaborators"
+            ),
+            headers=self._get_publisherwg_authorization_header(session),
+        )
+        return self.process_response(response)
+
+    def get_pending_invites(self, session, name):
+        """
+        Get pending collaborator invites for the given package.
+        """
+        response = self.session.get(
+            url=self.get_publisherwg_endpoint_url(
+                f"snap/{name}/collaborators/invites"
+            ),
+            headers=self._get_publisherwg_authorization_header(session),
+        )
+        return self.process_response(response)
+
+    def invite_collaborators(self, session, name, emails):
+        """
+        Invite one or more collaborators for a package.
+        """
+        payload = {"invites": []}
+
+        for email in emails:
+            payload["invites"].append({"email": email})
+
+        response = self.session.post(
+            url=self.get_publisherwg_endpoint_url(
+                f"snap/{name}/collaborators/invites"
+            ),
+            headers=self._get_publisherwg_authorization_header(session),
+            json=payload,
+        )
+        return self.process_response(response)
+
+    def revoke_invites(self, session, name, emails):
+        """
+        Revoke invites to the specified emails for the package.
+        """
+        payload = {"invites": []}
+
+        for email in emails:
+            payload["invites"].append({"email": email})
+
+        response = self.session.post(
+            url=self.get_publisherwg_endpoint_url(
+                f"snap/{name}/collaborators/invites/revoke"
+            ),
+            headers=self._get_publisherwg_authorization_header(session),
+            json=payload,
+        )
+        return self.process_response(response)
+
+    def accept_invite(self, session, name, token):
+        """
+        Accept a collaborator invite.
+        """
+        response = self.session.post(
+            url=self.get_publisherwg_endpoint_url(
+                f"snap/{name}/collaborators/invites/accept"
+            ),
+            headers=self._get_publisherwg_authorization_header(session),
+            json={"token": token},
+        )
+        return self.process_response(response)
+
+    def reject_invite(self, session, name, token):
+        """
+        Reject a collaborator invite.
+        """
+        response = self.session.post(
+            url=self.get_publisherwg_endpoint_url(
+                f"snap/{name}/collaborators/invites/reject"
+            ),
+            headers=self._get_publisherwg_authorization_header(session),
+            json={"token": token},
+        )
+        return self.process_response(response)
+
 
 class SnapStoreAdmin(SnapPublisher):
     def get_endpoint_url(self, endpoint, api_version=2):

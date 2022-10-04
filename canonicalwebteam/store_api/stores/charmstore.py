@@ -233,3 +233,83 @@ class CharmPublisher(Publisher):
         )
 
         return self.process_response(response)
+
+    def get_collaborators(self, publisher_auth, name):
+        """
+        Get collaborators (accepted invites) for the given package.
+        """
+        response = self.session.get(
+            url=self.get_endpoint_url(f"charm/{name}/collaborators"),
+            headers=self._get_authorization_header(publisher_auth),
+        )
+        return self.process_response(response)
+
+    def get_pending_invites(self, publisher_auth, name):
+        """
+        Get pending collaborator invites for the given package.
+        """
+        response = self.session.get(
+            url=self.get_endpoint_url(f"charm/{name}/collaborators/invites"),
+            headers=self._get_authorization_header(publisher_auth),
+        )
+        return self.process_response(response)
+
+    def invite_collaborators(self, publisher_auth, name, emails):
+        """
+        Invite one or more collaborators for a package.
+        """
+        payload = {"invites": []}
+
+        for email in emails:
+            payload["invites"].append({"email": email})
+
+        response = self.session.post(
+            url=self.get_endpoint_url(f"charm/{name}/collaborators/invites"),
+            headers=self._get_authorization_header(publisher_auth),
+            json=payload,
+        )
+        return self.process_response(response)
+
+    def revoke_invites(self, publisher_auth, name, emails):
+        """
+        Revoke invites to the specified emails for the package.
+        """
+        payload = {"invites": []}
+
+        for email in emails:
+            payload["invites"].append({"email": email})
+
+        response = self.session.post(
+            url=self.get_endpoint_url(
+                f"charm/{name}/collaborators/invites/revoke"
+            ),
+            headers=self._get_authorization_header(publisher_auth),
+            json=payload,
+        )
+        return self.process_response(response)
+
+    def accept_invite(self, publisher_auth, name, token):
+        """
+        Accept a collaborator invite.
+        """
+        response = self.session.post(
+            url=self.get_endpoint_url(
+                f"charm/{name}/collaborators/invites/accept"
+            ),
+            headers=self._get_authorization_header(publisher_auth),
+            json={"token": token},
+        )
+        return self.process_response(response)
+
+    def reject_invite(self, publisher_auth, name, token):
+        """
+        Reject a collaborator invite.
+        """
+        response = self.session.post(
+            url=self.get_endpoint_url(
+                f"charm/{name}/collaborators/invites/reject"
+            ),
+            headers=self._get_authorization_header(publisher_auth),
+            json={"token": token},
+        )
+        return self.process_response(response)
