@@ -66,9 +66,9 @@ class Store:
         headers = self.config[2].get("headers")
 
         params = {
-            "q": query, 
-            "category": category, 
-            "provides": provides, 
+            "q": query,
+            "category": category,
+            "provides": provides,
             "requires": requires
         }
 
