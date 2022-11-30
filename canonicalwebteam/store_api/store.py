@@ -65,7 +65,12 @@ class Store:
         url = self.get_endpoint_url("find", 2)
         headers = self.config[2].get("headers")
 
-        params = {"q": query, "category": category, "provides": provides, "requires": requires}
+        params = {
+            "q": query, 
+            "category": category, 
+            "provides": provides, 
+            "requires": requires
+        }
 
         if fields:
             params["fields"] = ",".join(fields)
