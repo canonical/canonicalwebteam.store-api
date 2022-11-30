@@ -69,7 +69,7 @@ class Store:
             "q": query,
             "category": category,
             "provides": provides,
-            "requires": requires
+            "requires": requires,
         }
 
         if fields:
