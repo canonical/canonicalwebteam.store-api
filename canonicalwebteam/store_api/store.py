@@ -68,8 +68,6 @@ class Store:
         params = {
             "q": query,
             "category": category,
-            "provides": provides,
-            "requires": requires,
         }
 
         if fields:
