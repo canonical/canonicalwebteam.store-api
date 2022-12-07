@@ -9,46 +9,47 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.23.0
+      - python-requests/2.24.0
       X-Ubuntu-Architecture:
       - wide
       X-Ubuntu-Series:
       - '16'
     method: GET
-    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=100&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=100&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide
   response:
     body:
       string: '{"_embedded": {"clickindex:package": [{"apps": [], "architecture":
-        ["amd64"], "developer_validation": "unproven", "icon_url": "", "media": [],
-        "origin": "jkfran", "package_name": "test-snap-amd64", "publisher": "Francisco
-        Jim\u00e9nez Cabrera", "sections": [], "summary": "The most important snap
-        of the snap universe", "title": "test-snap-amd64"}]}, "_links": {"self": {"href":
-        "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=100&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide"}},
+        ["amd64"], "developer_id": "Iimg6NMbgnrsyCTMUvWHRSiAnLkCV4tP", "developer_name":
+        "Francisco Jim\u00e9nez Cabrera", "developer_validation": "unproven", "media":
+        [{"height": 40, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2021/08/test222_dt8pe8d.png",
+        "width": 40}], "origin": "jkfran", "package_name": "test-snap-amd64", "sections":
+        [], "summary": "The most important snap of the snap universe", "title": "test-snap-amd64"}]},
+        "_links": {"self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=100&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide"}},
         "total": 1}'
     headers:
-      Content-Length:
-      - '658'
-      Content-Type:
+      age:
+      - '33'
+      content-length:
+      - '840'
+      content-type:
       - application/hal+json
-      Date:
-      - Fri, 24 Apr 2020 15:55:41 GMT
-      Server:
-      - gunicorn/19.7.1
-      Snap-Store-Version:
-      - '22'
-      Vary:
-      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
-      Via:
-      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1375 (squid/3.5.27)
-      X-Cache:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1375
-      X-Cache-Lookup:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1375:3128
-      X-Request-Id:
-      - 56996BA9EDA00A325D4201BB5EA30BFCA32D7
-      X-VCS-Revision:
-      - 1fe9217
-      X-View-Name:
+      date:
+      - Wed, 07 Dec 2022 15:53:02 GMT
+      server:
+      - gunicorn/20.0.4
+      snap-store-version:
+      - '52'
+      via:
+      - 1.1 juju-c7799c-prod-snap-store-137 (squid/4.10)
+      x-cache:
+      - HIT from juju-c7799c-prod-snap-store-137
+      x-cache-lookup:
+      - HIT from juju-c7799c-prod-snap-store-137:3128
+      x-request-id:
+      - 143A3E7704040A8325F301BB6390B6D833761A9
+      x-vcs-revision:
+      - c113a817
+      x-view-name:
       - snapdevicegw.webapi_search.snap_search
     status:
       code: 200
@@ -63,48 +64,47 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.23.0
+      - python-requests/2.24.0
       X-Ubuntu-Architecture:
       - wide
       X-Ubuntu-Series:
       - '16'
     method: GET
-    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=100&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=100&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide
   response:
     body:
       string: '{"_embedded": {"clickindex:package": [{"apps": [], "architecture":
-        ["amd64"], "developer_validation": "unproven", "icon_url": "", "media": [],
-        "origin": "jkfran", "package_name": "test-snap-amd64", "publisher": "Francisco
-        Jim\u00e9nez Cabrera", "sections": [], "summary": "The most important snap
-        of the snap universe", "title": "test-snap-amd64"}]}, "_links": {"self": {"href":
-        "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=100&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide"}},
+        ["amd64"], "developer_id": "Iimg6NMbgnrsyCTMUvWHRSiAnLkCV4tP", "developer_name":
+        "Francisco Jim\u00e9nez Cabrera", "developer_validation": "unproven", "media":
+        [{"height": 40, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2021/08/test222_dt8pe8d.png",
+        "width": 40}], "origin": "jkfran", "package_name": "test-snap-amd64", "sections":
+        [], "summary": "The most important snap of the snap universe", "title": "test-snap-amd64"}]},
+        "_links": {"self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=100&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide"}},
         "total": 1}'
     headers:
-      Age:
-      - '42'
-      Content-Length:
-      - '658'
-      Content-Type:
+      age:
+      - '33'
+      content-length:
+      - '840'
+      content-type:
       - application/hal+json
-      Date:
-      - Fri, 24 Apr 2020 15:54:59 GMT
-      Server:
-      - gunicorn/19.7.1
-      Snap-Store-Version:
-      - '22'
-      Vary:
-      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
-      Via:
-      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1655 (squid/3.5.27)
-      X-Cache:
-      - HIT from juju-7794b8-prod-ols-snap-store-indep-1655
-      X-Cache-Lookup:
-      - HIT from juju-7794b8-prod-ols-snap-store-indep-1655:3128
-      X-Request-Id:
-      - 56996BA9ED980A325D4201BB5EA30BD39412D
-      X-VCS-Revision:
-      - 1fe9217
-      X-View-Name:
+      date:
+      - Wed, 07 Dec 2022 15:53:02 GMT
+      server:
+      - gunicorn/20.0.4
+      snap-store-version:
+      - '52'
+      via:
+      - 1.1 juju-c7799c-prod-snap-store-137 (squid/4.10)
+      x-cache:
+      - HIT from juju-c7799c-prod-snap-store-137
+      x-cache-lookup:
+      - HIT from juju-c7799c-prod-snap-store-137:3128
+      x-request-id:
+      - 143A3E7704040A8325F301BB6390B6D833761A9
+      x-vcs-revision:
+      - c113a817
+      x-view-name:
       - snapdevicegw.webapi_search.snap_search
     status:
       code: 200
@@ -119,46 +119,47 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.23.0
+      - python-requests/2.24.0
       X-Ubuntu-Architecture:
       - amd64
       X-Ubuntu-Series:
       - '16'
     method: GET
-    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=amd64
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=amd64
   response:
     body:
       string: '{"_embedded": {"clickindex:package": [{"apps": [], "architecture":
-        ["amd64"], "developer_validation": "unproven", "icon_url": "", "media": [],
-        "origin": "jkfran", "package_name": "test-snap-amd64", "publisher": "Francisco
-        Jim\u00e9nez Cabrera", "sections": [], "summary": "The most important snap
-        of the snap universe", "title": "test-snap-amd64"}]}, "_links": {"self": {"href":
-        "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=amd64"}},
+        ["amd64"], "developer_id": "Iimg6NMbgnrsyCTMUvWHRSiAnLkCV4tP", "developer_name":
+        "Francisco Jim\u00e9nez Cabrera", "developer_validation": "unproven", "media":
+        [{"height": 40, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2021/08/test222_dt8pe8d.png",
+        "width": 40}], "origin": "jkfran", "package_name": "test-snap-amd64", "sections":
+        [], "summary": "The most important snap of the snap universe", "title": "test-snap-amd64"}]},
+        "_links": {"self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=amd64"}},
         "total": 1}'
     headers:
-      Content-Length:
-      - '657'
-      Content-Type:
+      age:
+      - '125'
+      content-length:
+      - '839'
+      content-type:
       - application/hal+json
-      Date:
-      - Fri, 24 Apr 2020 15:55:42 GMT
-      Server:
-      - gunicorn/19.7.1
-      Snap-Store-Version:
-      - '22'
-      Vary:
-      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
-      Via:
-      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1656 (squid/3.5.27)
-      X-Cache:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1656
-      X-Cache-Lookup:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1656:3128
-      X-Request-Id:
-      - 56996BA9EDA00A325D4201BB5EA30BFDA365E
-      X-VCS-Revision:
-      - 1fe9217
-      X-View-Name:
+      date:
+      - Wed, 07 Dec 2022 15:51:25 GMT
+      server:
+      - gunicorn/20.0.4
+      snap-store-version:
+      - '52'
+      via:
+      - 1.1 juju-c7799c-prod-snap-store-99 (squid/4.10)
+      x-cache:
+      - HIT from juju-c7799c-prod-snap-store-99
+      x-cache-lookup:
+      - HIT from juju-c7799c-prod-snap-store-99:3128
+      x-request-id:
+      - 143A3E7704090A8325B201BB6390B67D330D16B
+      x-vcs-revision:
+      - c113a817
+      x-view-name:
       - snapdevicegw.webapi_search.snap_search
     status:
       code: 200
@@ -173,42 +174,40 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.23.0
+      - python-requests/2.24.0
       X-Ubuntu-Architecture:
       - i386
       X-Ubuntu-Series:
       - '16'
     method: GET
-    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=i386
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=i386
   response:
     body:
       string: '{"_embedded": {"clickindex:package": []}, "_links": {"self": {"href":
-        "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=i386"}},
+        "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-amd64&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=i386"}},
         "total": 0}'
     headers:
-      Content-Length:
-      - '347'
-      Content-Type:
+      content-length:
+      - '356'
+      content-type:
       - application/hal+json
-      Date:
-      - Fri, 24 Apr 2020 15:55:43 GMT
-      Server:
-      - gunicorn/19.7.1
-      Snap-Store-Version:
-      - '22'
-      Vary:
-      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
-      Via:
-      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1655 (squid/3.5.27)
-      X-Cache:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1655
-      X-Cache-Lookup:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1655:3128
-      X-Request-Id:
-      - 56996BA9EDA00A325D4201BB5EA30BFEA3B16
-      X-VCS-Revision:
-      - 1fe9217
-      X-View-Name:
+      date:
+      - Wed, 07 Dec 2022 15:53:30 GMT
+      server:
+      - gunicorn/20.0.4
+      snap-store-version:
+      - '52'
+      via:
+      - 1.1 juju-c7799c-prod-snap-store-137 (squid/4.10)
+      x-cache:
+      - MISS from juju-c7799c-prod-snap-store-137
+      x-cache-lookup:
+      - MISS from juju-c7799c-prod-snap-store-137:3128
+      x-request-id:
+      - 143A3E7704080A83255C01BB6390B6FA32BD5E5
+      x-vcs-revision:
+      - c113a817
+      x-view-name:
       - snapdevicegw.webapi_search.snap_search
     status:
       code: 200
@@ -223,42 +222,42 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.23.0
+      - python-requests/2.24.0
       X-Ubuntu-Architecture:
       - amd64
       X-Ubuntu-Series:
       - '16'
     method: GET
-    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-i386&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=amd64
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-i386&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=amd64
   response:
     body:
       string: '{"_embedded": {"clickindex:package": []}, "_links": {"self": {"href":
-        "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-i386&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=amd64"}},
+        "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-i386&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=amd64"}},
         "total": 0}'
     headers:
-      Content-Length:
-      - '347'
-      Content-Type:
+      age:
+      - '125'
+      content-length:
+      - '356'
+      content-type:
       - application/hal+json
-      Date:
-      - Fri, 24 Apr 2020 15:55:43 GMT
-      Server:
-      - gunicorn/19.7.1
-      Snap-Store-Version:
-      - '22'
-      Vary:
-      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
-      Via:
-      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1656 (squid/3.5.27)
-      X-Cache:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1656
-      X-Cache-Lookup:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1656:3128
-      X-Request-Id:
-      - 56996BA9EDA00A325D4201BB5EA30BFFA3EEB
-      X-VCS-Revision:
-      - 1fe9217
-      X-View-Name:
+      date:
+      - Wed, 07 Dec 2022 15:51:25 GMT
+      server:
+      - gunicorn/20.0.4
+      snap-store-version:
+      - '52'
+      via:
+      - 1.1 juju-c7799c-prod-snap-store-137 (squid/4.10)
+      x-cache:
+      - HIT from juju-c7799c-prod-snap-store-137
+      x-cache-lookup:
+      - HIT from juju-c7799c-prod-snap-store-137:3128
+      x-request-id:
+      - 143A3E7704090A8325B201BB6390B67D330D6D5
+      x-vcs-revision:
+      - c113a817
+      x-view-name:
       - snapdevicegw.webapi_search.snap_search
     status:
       code: 200
@@ -273,46 +272,46 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.23.0
+      - python-requests/2.24.0
       X-Ubuntu-Architecture:
       - i386
       X-Ubuntu-Series:
       - '16'
     method: GET
-    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-i386&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=i386
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-i386&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=i386
   response:
     body:
       string: '{"_embedded": {"clickindex:package": [{"apps": [], "architecture":
-        ["i386"], "developer_validation": "unproven", "icon_url": "", "media": [],
-        "origin": "jkfran", "package_name": "test-snap-i386", "publisher": "Francisco
-        Jim\u00e9nez Cabrera", "sections": [], "summary": "The most important snap
-        of the snap universe", "title": "test-snap-i386"}]}, "_links": {"self": {"href":
-        "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-i386&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=i386"}},
+        ["i386"], "developer_id": "Iimg6NMbgnrsyCTMUvWHRSiAnLkCV4tP", "developer_name":
+        "Francisco Jim\u00e9nez Cabrera", "developer_validation": "unproven", "media":
+        [], "origin": "jkfran", "package_name": "test-snap-i386", "sections": [],
+        "summary": "The most important snap of the snap universe", "title": "test-snap-i386"}]},
+        "_links": {"self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?q=test-snap-i386&size=1&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=i386"}},
         "total": 1}'
     headers:
-      Content-Length:
-      - '652'
-      Content-Type:
+      age:
+      - '124'
+      content-length:
+      - '702'
+      content-type:
       - application/hal+json
-      Date:
-      - Fri, 24 Apr 2020 15:55:44 GMT
-      Server:
-      - gunicorn/19.7.1
-      Snap-Store-Version:
-      - '22'
-      Vary:
-      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
-      Via:
-      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1375 (squid/3.5.27)
-      X-Cache:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1375
-      X-Cache-Lookup:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1375:3128
-      X-Request-Id:
-      - 56996BA9EDA00A325D4201BB5EA30BFFA4208
-      X-VCS-Revision:
-      - 1fe9217
-      X-View-Name:
+      date:
+      - Wed, 07 Dec 2022 15:51:26 GMT
+      server:
+      - gunicorn/20.0.4
+      snap-store-version:
+      - '52'
+      via:
+      - 1.1 juju-c7799c-prod-snap-store-135 (squid/4.10)
+      x-cache:
+      - HIT from juju-c7799c-prod-snap-store-135
+      x-cache-lookup:
+      - HIT from juju-c7799c-prod-snap-store-135:3128
+      x-request-id:
+      - 143A3E7704090A8325B201BB6390B67D330D766
+      x-vcs-revision:
+      - c113a817
+      x-view-name:
       - snapdevicegw.webapi_search.snap_search
     status:
       code: 200
