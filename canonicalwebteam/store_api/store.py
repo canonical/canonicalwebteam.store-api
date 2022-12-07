@@ -127,7 +127,7 @@ class Store:
                     "apps",
                     "sections",
                 ]
-            )
+            ),
         }
 
         # Arch behaves a bit oddly, but these two together should cover
