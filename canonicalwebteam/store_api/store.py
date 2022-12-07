@@ -64,7 +64,7 @@ class Store:
         publisher="",
         provides=[],
         requires=[],
-        fields=[]
+        fields=[],
     ):
         """
         Given a search term, return an array of matching search results.
