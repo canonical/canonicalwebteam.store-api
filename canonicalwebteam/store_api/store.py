@@ -57,7 +57,15 @@ class Store:
         base_url = self.config[api_version]["base_url"]
         return f"{base_url}{endpoint}"
 
-    def find(self, query="", category="", publisher="", provides=[], requires=[], fields=[]):
+    def find(
+        self,
+        query="",
+        category="",
+        publisher="",
+        provides=[],
+        requires=[],
+        fields=[]
+    ):
         """
         Given a search term, return an array of matching search results.
         v2 API only.
