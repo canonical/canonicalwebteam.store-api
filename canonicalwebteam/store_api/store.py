@@ -118,16 +118,15 @@ class Store:
                     "package_name",
                     "title",
                     "summary",
-                    "icon_url",
                     "architecture",
                     "media",
-                    "publisher",
+                    "developer_name",
+                    "developer_id",
                     "developer_validation",
                     "origin",
                     "apps",
                     "sections",
                 ]
-            ),
         }
 
         # Arch behaves a bit oddly, but these two together should cover
