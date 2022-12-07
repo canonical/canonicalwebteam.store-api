@@ -9,140 +9,145 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.23.0
+      - python-requests/2.24.0
       X-Ubuntu-Architecture:
       - wide
       X-Ubuntu-Series:
       - '16'
     method: GET
-    uri: https://api.snapcraft.io/api/v1/snaps/search?q=&size=10&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=&size=10&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured
   response:
     body:
-      string: '{"_embedded": {"clickindex:package": [{"apps": ["minetest"], "architecture":
-        ["amd64"], "developer_validation": "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/minetest.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/minetest.png"},
-        {"height": 640, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/04/minetestheader.png",
-        "width": 1920}, {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/Screenshot_from_2018-01-14_18-33-13.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/Screenshot_from_2018-01-14_18-38-01.png"}],
-        "origin": "snapcrafters", "package_name": "minetest", "publisher": "Snapcrafters",
-        "sections": [{"featured": true, "name": "featured"}, {"featured": false, "name":
-        "games"}], "summary": "Minetest", "title": "Minetest"}, {"apps": ["rpi-imager"],
-        "architecture": ["amd64"], "developer_validation": "unproven", "icon_url":
-        "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/rpi-imager.png",
-        "media": [{"height": 128, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/rpi-imager.png",
-        "width": 128}, {"height": 505, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/04/1_.png",
-        "width": 750}, {"height": 505, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/04/2_.png",
-        "width": 750}, {"height": 505, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/04/3_.png",
-        "width": 750}, {"height": 505, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/04/4_.png",
-        "width": 750}], "origin": "popey", "package_name": "rpi-imager", "publisher":
-        "Alan Pope", "sections": [{"featured": false, "name": "devices-and-iot"},
-        {"featured": true, "name": "featured"}, {"featured": false, "name": "utilities"}],
-        "summary": "Raspberry Pi Imaging Utility", "title": "Raspberry Pi Imager"},
-        {"apps": ["zoom-client"], "architecture": ["amd64"], "developer_validation":
-        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/icon.png",
-        "media": [{"height": 512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/icon.png",
-        "width": 512}, {"height": 965, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-tray.png",
-        "width": 551}, {"height": 909, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-perm.png",
-        "width": 1312}, {"height": 1174, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-login.png",
-        "width": 1786}, {"height": 1162, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-account.png",
-        "width": 1774}, {"height": 1720, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-settings.png",
-        "width": 2628}], "origin": "ogra", "package_name": "zoom-client", "publisher":
-        "Oliver Grawert", "sections": [{"featured": true, "name": "featured"}, {"featured":
-        false, "name": "social"}, {"featured": false, "name": "utilities"}], "summary":
-        "ZOOM Cloud Meetings", "title": "zoom-client"}, {"apps": ["notepad-plus-plus"],
-        "architecture": ["amd64"], "developer_validation": "unproven", "icon_url":
-        "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/notepad-plus-plus.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/notepad-plus-plus.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/04/screenshot.png"}],
-        "origin": "mmtrt", "package_name": "notepad-plus-plus", "publisher": "Taqi
-        Raza", "sections": [{"featured": true, "name": "development"}, {"featured":
-        true, "name": "featured"}], "summary": "Notepad-Plus-Plus is a free source
-        code editor.", "title": "Notepad-Plus-Plus (WINE)"}, {"apps": ["pms-web"],
-        "architecture": ["amd64"], "developer_validation": "verified", "icon_url":
-        "https://dashboard.snapcraft.io/site_media/appmedia/2018/10/plex-pms-icon.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/10/plex-pms-icon.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/10/Plex-Devices.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/10/Plex-Lifestyle-iOS_wcMEJcN.jpg"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/10/Plex-Grid-Guide_UCrJV7W.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/10/Plex-News_Qm4FP7X.jpg"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/10/Plex-Photos_1W8fhH0.jpg"}],
-        "origin": "plexinc", "package_name": "plexmediaserver", "publisher": "Plex,
-        Inc.", "sections": [{"featured": true, "name": "entertainment"}, {"featured":
-        true, "name": "featured"}], "summary": "Plex magically organizes your media
-        libraries and streams them to any device", "title": "Plex Media Server"},
-        {"apps": ["cherrytree"], "architecture": ["amd64"], "developer_validation":
-        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/01/cherrytree.png",
-        "media": [{"height": 96, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/01/cherrytree.png",
-        "width": 96}, {"height": 625, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/01/ct-banner.png",
-        "width": 1875}, {"height": 685, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/01/cherrytree-light.png",
-        "width": 983}, {"height": 685, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/01/cherrytree-dark.png",
-        "width": 983}], "origin": "hellsworth", "package_name": "cherrytree", "publisher":
-        "Heather Ellsworth", "sections": [{"featured": true, "name": "featured"},
-        {"featured": false, "name": "productivity"}], "summary": "Hierarchical note
-        taking application", "title": "cherrytree"}, {"apps": ["natron"], "architecture":
-        ["amd64"], "developer_validation": "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/natron.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/natron.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/05/Screenshot_20190511_000841.png"}],
-        "origin": "popey", "package_name": "natron", "publisher": "Alan Pope", "sections":
-        [{"featured": false, "name": "art-and-design"}, {"featured": false, "name":
-        "development"}, {"featured": true, "name": "featured"}], "summary": "Natron",
-        "title": "Natron"}, {"apps": ["scummvm"], "architecture": ["amd64"], "developer_validation":
-        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/02/scummvm_icon_512.png",
-        "media": [{"height": 512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/02/scummvm_icon_512.png",
-        "width": 512}, {"height": 640, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/04/scummvm-banner_7A9ueNA.png",
-        "width": 1920}, {"height": 878, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/01/scummvm1.png",
-        "width": 1284}, {"height": 878, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/01/scummvm2.png",
-        "width": 1284}, {"height": 878, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/01/scummvm3.png",
-        "width": 1284}], "origin": "snapcrafters", "package_name": "scummvm", "publisher":
-        "Snapcrafters", "sections": [{"featured": true, "name": "featured"}, {"featured":
-        true, "name": "games"}], "summary": "ScummVM is a program which allows you
-        to run numerous classic graphical point-and-click adventure games and role-playing
-        games", "title": "ScummVM"}, {"apps": ["glimpse-editor"], "architecture":
-        ["amd64"], "developer_validation": "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/org.glimpse_editor.Glimpse.png",
-        "media": [{"height": 256, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/org.glimpse_editor.Glimpse.png",
-        "width": 256}, {"height": 500, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/glimpse-snapcraft-banner.png",
-        "width": 1500}, {"height": 841, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/glimpse2.png",
-        "width": 1271}, {"height": 952, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/glimpse1.png",
-        "width": 1200}], "origin": "hellsworth", "package_name": "glimpse-editor",
-        "publisher": "Heather Ellsworth", "sections": [{"featured": true, "name":
-        "featured"}, {"featured": false, "name": "photo-and-video"}], "summary": "Glimpse
-        Image Editor is a usability-focused free software application capable of expert
-        level image manipulation.", "title": "Glimpse"}, {"apps": ["mqttx"], "architecture":
-        ["amd64"], "developer_validation": "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/app.png",
-        "media": [{"height": 512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/app.png",
-        "width": 512}, {"height": 1592, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/mqttx-preview.png",
-        "width": 2150}], "origin": "emqx", "package_name": "mqttx", "publisher": "emqx",
-        "sections": [{"featured": false, "name": "devices-and-iot"}, {"featured":
-        true, "name": "featured"}, {"featured": false, "name": "utilities"}], "summary":
-        "MQTT X - Cross-platform MQTT 5 desktop test client", "title": "MQTT X"}]},
-        "_links": {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=3&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured"},
-        "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=2&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured"},
-        "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured"}},
-        "total": 28}'
+      string: '{"_embedded": {"clickindex:package": [{"apps": ["jami"], "architecture":
+        ["amd64"], "developer_id": "pl5fgH1OQJko6pVorMq2gZ7lzJxZYrrS", "developer_name":
+        "Savoir-faire Linux", "developer_validation": "unproven", "media": [{"height":
+        512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
+        "width": 512}, {"height": 640, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/jami-qt-gnulinux-banner-20220504.png",
+        "width": 1920}, {"height": 920, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/01-jami-gnulinux-video-call.jpg",
+        "width": 1638}, {"height": 920, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/02-jami-gnulinux-video-conference.jpg",
+        "width": 1638}, {"height": 920, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/03-jami-gnulinux-chat.jpg",
+        "width": 1638}, {"height": 920, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/04-jami-mobile_bAKuKuW.jpg",
+        "width": 1638}, {"height": 920, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/05-jami-gnulinux-sip.jpg",
+        "width": 1638}], "origin": "sfljami", "package_name": "jami", "sections":
+        [{"featured": true, "name": "featured"}, {"featured": false, "name": "photo-and-video"},
+        {"featured": false, "name": "social"}], "summary": "Privacy-oriented voice,
+        video, chat, and conference platform and SIP phone", "title": "Jami"}, {"apps":
+        ["krita"], "architecture": ["amd64"], "developer_id": "RjmEPUNNh0j9SKha5UfIuEurgGR82h9l",
+        "developer_name": "Stichting Krita Foundation", "developer_validation": "verified",
+        "media": [{"height": 256, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/unnamed.png",
+        "width": 256}, {"height": 1363, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/2018-03-17_screenshot_002.png",
+        "width": 2560}, {"height": 1363, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/2018-03-17_screenshot_004.png",
+        "width": 2560}, {"height": 1397, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/2018-03-17_screenshot_005.png",
+        "width": 2556}, {"height": 240, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/banner-icon_abTlRlO.png",
+        "width": 240}, {"height": 240, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/banner_9amc47d.png",
+        "width": 1218}], "origin": "krita", "package_name": "krita", "sections": [{"featured":
+        false, "name": "art-and-design"}, {"featured": true, "name": "featured"}],
+        "summary": "Digital Painting, Creative Freedom", "title": "Krita"}, {"apps":
+        ["thunderbird"], "architecture": ["amd64"], "developer_id": "canonical", "developer_name":
+        "Canonical", "developer_validation": "verified", "media": [{"height": 256,
+        "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/10/thunderbird.png",
+        "width": 256}, {"height": 873, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/01/thunderbird.png",
+        "width": 1024}], "origin": "canonical", "package_name": "thunderbird", "sections":
+        [{"featured": true, "name": "featured"}, {"featured": false, "name": "productivity"},
+        {"featured": false, "name": "social"}], "summary": "Mozilla Thunderbird email
+        application", "title": "Thunderbird"}, {"apps": ["notepadqq"], "architecture":
+        ["amd64"], "developer_id": "dJjKMdErgW5tnpyZ0kUq9S2CrcpGM6Ro", "developer_name":
+        "Daniele Di Sarli", "developer_validation": "unproven", "media": [{"height":
+        256, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/icon.svg_7Eenexu.png",
+        "width": 256}, {"height": 462, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/screen_edited.png",
+        "width": 757}], "origin": "danieleds", "package_name": "notepadqq", "sections":
+        [{"featured": true, "name": "development"}, {"featured": true, "name": "featured"},
+        {"featured": false, "name": "productivity"}], "summary": "A Notepad++-like
+        editor for Linux.", "title": "notepadqq"}, {"apps": ["postman"], "architecture":
+        ["amd64"], "developer_id": "XoCRjdDV97FglcaHqDPg6sM7aUzZMIg6", "developer_name":
+        "Postman, Inc.", "developer_validation": "verified", "media": [{"height":
+        256, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/logo-mark.png",
+        "width": 256}, {"height": 800, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/Screenshot_from_2018-03-21_17-24-01.png",
+        "width": 1280}, {"height": 1824, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Light-1.png",
+        "width": 2784}, {"height": 1824, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Dark-4.png",
+        "width": 2784}, {"height": 1824, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Dark-1.png",
+        "width": 2784}], "origin": "postman-inc", "package_name": "postman", "sections":
+        [{"featured": true, "name": "development"}, {"featured": true, "name": "featured"}],
+        "summary": "API Development Environment", "title": "postman"}, {"apps": ["mailspring"],
+        "architecture": ["amd64"], "developer_id": "1ywuswSNhAIWhCyIS26NAHtUt6ro0KWG",
+        "developer_name": "Mailspring", "developer_validation": "verified", "media":
+        [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/256.png"},
+        {"height": 500, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/10/1500x500.jpg",
+        "width": 1500}, {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/screenshot-linux.png"}],
+        "origin": "foundry376", "package_name": "mailspring", "sections": [{"featured":
+        true, "name": "featured"}, {"featured": true, "name": "productivity"}], "summary":
+        "The best email app for people and teams at work", "title": "Mailspring"},
+        {"apps": ["spotify"], "architecture": ["amd64"], "developer_id": "Z7emHVerQzTDQrOcaLJ8wO1ir1NPl3fG",
+        "developer_name": "Spotify", "developer_validation": "verified", "media":
+        [{"height": 256, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/spotify-linux-256.png",
+        "width": 256}, {"height": 787, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screenshot_from_2017-12-18_12-07-06.png",
+        "width": 1399}, {"height": 787, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screenshot_from_2017-12-18_12-09-22.png",
+        "width": 1399}, {"height": 787, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screenshot_from_2017-12-18_12-18-27.png",
+        "width": 1399}, {"height": 787, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screenshot_from_2017-12-18_12-20-23.png",
+        "width": 1399}, {"height": 240, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/banner_dSwF9EF.png",
+        "width": 1218}, {"height": 200, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/banner-icon_WaLCF17.png",
+        "width": 387}], "origin": "spotify", "package_name": "spotify", "sections":
+        [{"featured": true, "name": "featured"}, {"featured": true, "name": "music-and-audio"}],
+        "summary": "Music for everyone", "title": "spotify"}, {"apps": ["slack"],
+        "architecture": ["amd64"], "developer_id": "GKq9csPRQp1E5kUglZG9QTqDEBLrcszO",
+        "developer_name": "Slack", "developer_validation": "verified", "media": [{"height":
+        256, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/Snapcraft_256x256.png",
+        "width": 256}, {"height": 768, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/1-slack-snap-overview.png",
+        "width": 1366}, {"height": 768, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/2-slack-snap-integrations.png",
+        "width": 1366}, {"height": 768, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/3-slack-snap-search.jpg",
+        "width": 1366}, {"height": 768, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/4-slack-snap-teams.png",
+        "width": 1366}], "origin": "slack", "package_name": "slack", "sections": [{"featured":
+        true, "name": "featured"}, {"featured": false, "name": "productivity"}, {"featured":
+        true, "name": "social"}], "summary": "Team communication for the 21st century.",
+        "title": "Slack"}, {"apps": ["foobar2000", "wine", "winetricks"], "architecture":
+        ["amd64"], "developer_id": "KRgbKnuP84JrBW80vVPiDjACCj8PvBX3", "developer_name":
+        "Taqi Raza", "developer_validation": "unproven", "media": [{"height": 256,
+        "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/foobar2000.png",
+        "width": 256}, {"height": 634, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/screenshot_fuxTX8I.png",
+        "width": 1078}, {"height": 634, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/screenshot1.png",
+        "width": 1078}, {"height": 634, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/screenshot2.png",
+        "width": 1078}, {"height": 634, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/screenshot3.png",
+        "width": 1078}], "origin": "mmtrt", "package_name": "foobar2000", "sections":
+        [{"featured": true, "name": "featured"}, {"featured": true, "name": "music-and-audio"}],
+        "summary": "foobar2000 is an advanced freeware audio player.", "title": "foobar2000
+        (WINE)"}, {"apps": ["gimp"], "architecture": ["amd64"], "developer_id": "eEoV9TnaNkCzfJBu9SRhr2678vzyYV43",
+        "developer_name": "Snapcrafters", "developer_validation": "unproven", "media":
+        [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/07/gimp.png"},
+        {"height": 640, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/10/gimp-splash-fs8.png",
+        "width": 1920}, {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/05/Screenshot_from_2018-05-09_15-25-10.png"},
+        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/05/Screenshot_from_2018-05-09_15-24-36.png"}],
+        "origin": "snapcrafters", "package_name": "gimp", "sections": [{"featured":
+        true, "name": "art-and-design"}, {"featured": true, "name": "featured"}, {"featured":
+        false, "name": "photo-and-video"}], "summary": "GNU Image Manipulation Program",
+        "title": "GNU Image Manipulation Program"}]}, "_links": {"last": {"href":
+        "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=3&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured"},
+        "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=2&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured"},
+        "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=10&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured"}},
+        "total": 27}'
     headers:
-      Content-Length:
-      - '10833'
-      Content-Type:
+      age:
+      - '50'
+      content-length:
+      - '11763'
+      content-type:
       - application/hal+json
-      Date:
-      - Mon, 20 Apr 2020 14:10:15 GMT
-      Server:
-      - gunicorn/19.7.1
-      Snap-Store-Version:
-      - '22'
-      Vary:
-      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
-      Via:
-      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1656 (squid/3.5.27)
-      X-Cache:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1656
-      X-Cache-Lookup:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1656:3128
-      X-Request-Id:
-      - 0AACC466C11E0A325DCD01BB5E9DAD463EC6BB1C
-      X-VCS-Revision:
-      - 0bf41e1
-      X-View-Name:
+      date:
+      - Wed, 07 Dec 2022 15:52:42 GMT
+      server:
+      - gunicorn/20.0.4
+      snap-store-version:
+      - '52'
+      via:
+      - 1.1 juju-c7799c-prod-snap-store-135 (squid/4.10)
+      x-cache:
+      - HIT from juju-c7799c-prod-snap-store-135
+      x-cache-lookup:
+      - HIT from juju-c7799c-prod-snap-store-135:3128
+      x-request-id:
+      - 143A3E7704070A8325F301BB6390B6C5336AFEF
+      x-vcs-revision:
+      - c113a817
+      x-view-name:
       - snapdevicegw.webapi_search.snap_search
     status:
       code: 200
@@ -157,75 +162,73 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.23.0
+      - python-requests/2.24.0
       X-Ubuntu-Architecture:
       - wide
       X-Ubuntu-Series:
       - '16'
     method: GET
-    uri: https://api.snapcraft.io/api/v1/snaps/search?q=&size=3&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=&size=3&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured
   response:
     body:
-      string: '{"_embedded": {"clickindex:package": [{"apps": ["minetest"], "architecture":
-        ["amd64"], "developer_validation": "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/minetest.png",
-        "media": [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/minetest.png"},
-        {"height": 640, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/04/minetestheader.png",
-        "width": 1920}, {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/Screenshot_from_2018-01-14_18-33-13.png"},
-        {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/Screenshot_from_2018-01-14_18-38-01.png"}],
-        "origin": "snapcrafters", "package_name": "minetest", "publisher": "Snapcrafters",
-        "sections": [{"featured": true, "name": "featured"}, {"featured": false, "name":
-        "games"}], "summary": "Minetest", "title": "Minetest"}, {"apps": ["rpi-imager"],
-        "architecture": ["amd64"], "developer_validation": "unproven", "icon_url":
-        "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/rpi-imager.png",
-        "media": [{"height": 128, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/rpi-imager.png",
-        "width": 128}, {"height": 505, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/04/1_.png",
-        "width": 750}, {"height": 505, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/04/2_.png",
-        "width": 750}, {"height": 505, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/04/3_.png",
-        "width": 750}, {"height": 505, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/04/4_.png",
-        "width": 750}], "origin": "popey", "package_name": "rpi-imager", "publisher":
-        "Alan Pope", "sections": [{"featured": false, "name": "devices-and-iot"},
-        {"featured": true, "name": "featured"}, {"featured": false, "name": "utilities"}],
-        "summary": "Raspberry Pi Imaging Utility", "title": "Raspberry Pi Imager"},
-        {"apps": ["zoom-client"], "architecture": ["amd64"], "developer_validation":
-        "unproven", "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/icon.png",
-        "media": [{"height": 512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/icon.png",
-        "width": 512}, {"height": 965, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-tray.png",
-        "width": 551}, {"height": 909, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-perm.png",
-        "width": 1312}, {"height": 1174, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-login.png",
-        "width": 1786}, {"height": 1162, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-account.png",
-        "width": 1774}, {"height": 1720, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-settings.png",
-        "width": 2628}], "origin": "ogra", "package_name": "zoom-client", "publisher":
-        "Oliver Grawert", "sections": [{"featured": true, "name": "featured"}, {"featured":
-        false, "name": "social"}, {"featured": false, "name": "utilities"}], "summary":
-        "ZOOM Cloud Meetings", "title": "zoom-client"}]}, "_links": {"last": {"href":
-        "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=10&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured"},
-        "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=2&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured"},
-        "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Cicon_url%2Carchitecture%2Cmedia%2Cpublisher%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured"}},
-        "total": 28}'
+      string: '{"_embedded": {"clickindex:package": [{"apps": ["jami"], "architecture":
+        ["amd64"], "developer_id": "pl5fgH1OQJko6pVorMq2gZ7lzJxZYrrS", "developer_name":
+        "Savoir-faire Linux", "developer_validation": "unproven", "media": [{"height":
+        512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
+        "width": 512}, {"height": 640, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/jami-qt-gnulinux-banner-20220504.png",
+        "width": 1920}, {"height": 920, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/01-jami-gnulinux-video-call.jpg",
+        "width": 1638}, {"height": 920, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/02-jami-gnulinux-video-conference.jpg",
+        "width": 1638}, {"height": 920, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/03-jami-gnulinux-chat.jpg",
+        "width": 1638}, {"height": 920, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/04-jami-mobile_bAKuKuW.jpg",
+        "width": 1638}, {"height": 920, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/05-jami-gnulinux-sip.jpg",
+        "width": 1638}], "origin": "sfljami", "package_name": "jami", "sections":
+        [{"featured": true, "name": "featured"}, {"featured": false, "name": "photo-and-video"},
+        {"featured": false, "name": "social"}], "summary": "Privacy-oriented voice,
+        video, chat, and conference platform and SIP phone", "title": "Jami"}, {"apps":
+        ["krita"], "architecture": ["amd64"], "developer_id": "RjmEPUNNh0j9SKha5UfIuEurgGR82h9l",
+        "developer_name": "Stichting Krita Foundation", "developer_validation": "verified",
+        "media": [{"height": 256, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/unnamed.png",
+        "width": 256}, {"height": 1363, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/2018-03-17_screenshot_002.png",
+        "width": 2560}, {"height": 1363, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/2018-03-17_screenshot_004.png",
+        "width": 2560}, {"height": 1397, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/2018-03-17_screenshot_005.png",
+        "width": 2556}, {"height": 240, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/banner-icon_abTlRlO.png",
+        "width": 240}, {"height": 240, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/04/banner_9amc47d.png",
+        "width": 1218}], "origin": "krita", "package_name": "krita", "sections": [{"featured":
+        false, "name": "art-and-design"}, {"featured": true, "name": "featured"}],
+        "summary": "Digital Painting, Creative Freedom", "title": "Krita"}, {"apps":
+        ["thunderbird"], "architecture": ["amd64"], "developer_id": "canonical", "developer_name":
+        "Canonical", "developer_validation": "verified", "media": [{"height": 256,
+        "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/10/thunderbird.png",
+        "width": 256}, {"height": 873, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/01/thunderbird.png",
+        "width": 1024}], "origin": "canonical", "package_name": "thunderbird", "sections":
+        [{"featured": true, "name": "featured"}, {"featured": false, "name": "productivity"},
+        {"featured": false, "name": "social"}], "summary": "Mozilla Thunderbird email
+        application", "title": "Thunderbird"}]}, "_links": {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=9&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured"},
+        "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=2&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured"},
+        "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured"}},
+        "total": 27}'
     headers:
-      Content-Length:
-      - '4223'
-      Content-Type:
+      content-length:
+      - '4445'
+      content-type:
       - application/hal+json
-      Date:
-      - Mon, 20 Apr 2020 14:10:15 GMT
-      Server:
-      - gunicorn/19.7.1
-      Snap-Store-Version:
-      - '22'
-      Vary:
-      - X-Ubuntu-Store, X-Ubuntu-Series, X-Ubuntu-Architecture
-      Via:
-      - 1.1 juju-7794b8-prod-ols-snap-store-indep-1374 (squid/3.5.27)
-      X-Cache:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1374
-      X-Cache-Lookup:
-      - MISS from juju-7794b8-prod-ols-snap-store-indep-1374:3128
-      X-Request-Id:
-      - 0AACC466C11E0A325DCD01BB5E9DAD473EC6BEE6
-      X-VCS-Revision:
-      - 0bf41e1
-      X-View-Name:
+      date:
+      - Wed, 07 Dec 2022 15:53:28 GMT
+      server:
+      - gunicorn/20.0.4
+      snap-store-version:
+      - '52'
+      via:
+      - 1.1 juju-c7799c-prod-snap-store-137 (squid/4.10)
+      x-cache:
+      - MISS from juju-c7799c-prod-snap-store-137
+      x-cache-lookup:
+      - MISS from juju-c7799c-prod-snap-store-137:3128
+      x-request-id:
+      - 143A3E7704030A83255C01BB6390B6F832BCA94
+      x-vcs-revision:
+      - c113a817
+      x-view-name:
       - snapdevicegw.webapi_search.snap_search
     status:
       code: 200

@@ -104,7 +104,7 @@ class SnapStoreTest(VCRTestCase):
         )
 
         for snap in result["results"]:
-            self.assertEqual("jetbrains", snap["publisher"])
+            self.assertEqual("jetbrains", snap["developer_name"])
 
         # Test different publisher
         result = self.client.get_publisher_items(
@@ -112,7 +112,7 @@ class SnapStoreTest(VCRTestCase):
         )
 
         for snap in result["results"]:
-            self.assertEqual("KDE", snap["publisher"])
+            self.assertEqual("KDE", snap["developer_name"])
 
     def test_get_item_details(self):
         snap = self.client.get_item_details(name="toto", api_version=2)
