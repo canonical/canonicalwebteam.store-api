@@ -53,6 +53,7 @@ class SnapStore(Store):
             "categories",
             "trending",
             "unlisted",
+            "links",
         ],
         api_version=1,
     ):
