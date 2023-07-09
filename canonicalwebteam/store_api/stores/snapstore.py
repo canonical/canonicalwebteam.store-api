@@ -327,3 +327,94 @@ class SnapStoreAdmin(SnapPublisher):
         )
 
         return self.process_response(response).get("invites", [])
+
+    # MODEL SERVICE ADMIN
+    def get_store_models(self, session, store_id):
+        response = self.session.get(
+            url=self.get_publisherwg_endpoint_url(f"brand/{store_id}/model"),
+            headers=self._get_publisherwg_authorization_header(session),
+        )
+
+        return self.process_response(response)
+
+    def create_store_model(self, session, store_id, name, api_key):
+        response = self.session.post(
+            url=self.get_publisherwg_endpoint_url(f"brand/{store_id}/model"),
+            headers=self._get_publisherwg_authorization_header(session),
+            json={"name": name, "api-key": api_key, "series": "16"},
+        )
+
+        return self.process_response(response)
+
+    def update_store_model(self, session, store_id, model_name, api_key):
+        response = self.session.patch(
+            url=self.get_publisherwg_endpoint_url(
+                f"brand/{store_id}/model/{model_name}"
+            ),
+            headers=self._get_publisherwg_authorization_header(session),
+            json={"api-key": api_key},
+        )
+
+        return self.process_response(response)
+
+    def get_store_model_policies(self, session, store_id, model_name):
+        response = self.session.get(
+            url=self.get_publisherwg_endpoint_url(
+                f"brand/{store_id}/model/{model_name}/serial_policy"
+            ),
+            headers=self._get_publisherwg_authorization_header(session),
+        )
+
+        return self.process_response(response)
+
+    def create_store_model_policy(
+        self, session, store_id, model_name, signing_key
+    ):
+        response = self.session.post(
+            url=self.get_publisherwg_endpoint_url(
+                f"brand/{store_id}/model/{model_name}/serial_policy"
+            ),
+            headers=self._get_publisherwg_authorization_header(session),
+            json={"signing-key-sha3-384": signing_key},
+        )
+
+        return self.process_response(response)
+
+    def get_store_signing_keys(self, session, store_id):
+        headers = self._get_publisherwg_authorization_header(session)
+        url = self.get_publisherwg_endpoint_url(
+            f"brand/{store_id}/signing_key"
+        )
+        response = self.session.get(
+            url=url,
+            headers=headers,
+        )
+
+        return self.process_response(response)
+
+    def create_store_signing_key(self, session, store_id, name):
+        headers = self._get_publisherwg_authorization_header(session)
+        url = self.get_publisherwg_endpoint_url(
+            f"brand/{store_id}/signing_key"
+        )
+        response = self.session.post(
+            url=url,
+            headers=headers,
+            json={"name": name},
+        )
+
+        return self.process_response(response)
+
+    def delete_store_signing_key(
+        self, session, store_id, signing_key_sha3_384
+    ):
+        headers = self._get_publisherwg_authorization_header(session)
+        url = self.get_publisherwg_endpoint_url(
+            f"brand/{store_id}/signing_key/{signing_key_sha3_384}"
+        )
+        response = self.session.delete(
+            url=url,
+            headers=headers,
+        )
+
+        return self.process_response(response)
