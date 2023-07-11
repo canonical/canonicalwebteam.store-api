@@ -93,8 +93,8 @@ class SnapPublisher(Publisher):
     def get_publisherwg_endpoint_url(self, endpoint):
         return f"{SNAPSTORE_PUBLISHERWG_API_URL}v1/{endpoint}"
 
-    def _get_publisherwg_authorization_header(self, publisher_auth):
-        return {"Authorization": f"Macaroon {publisher_auth}"}
+    def _get_publisherwg_authorization_header(self, session):
+        return {"Authorization": f"Macaroon {session['developer_token']}"}
 
     def exchange_dashboard_macaroons(self, session):
         """
