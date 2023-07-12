@@ -44,7 +44,6 @@ class SnapStore(Store):
             "contact",
             "website",
             "publisher",
-            "prices",
             "media",
             "download",
             "version",
