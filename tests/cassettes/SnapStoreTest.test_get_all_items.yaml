@@ -31,7 +31,7 @@ interactions:
         "last_updated": "2022-11-21T02:59:01.647514+00:00", "license": "MIT", "links":
         {"contact": ["mailto:matthew@rathbonelabs.com"], "website": ["https://beekeeperstudio.io"]},
         "name": "beekeeper-studio.matthew-rathbone", "origin": "matthew-rathbone",
-        "package_name": "beekeeper-studio", "prices": {}, "private": false, "publisher":
+        "package_name": "beekeeper-studio", "private": false, "publisher":
         "Beekeeper Studio", "ratings_average": 0.0, "release": ["16"], "revision":
         180, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2021/09/main-dark.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2021/09/main-light.png",
@@ -61,7 +61,7 @@ interactions:
         "last_updated": "2022-12-02T14:10:23.737844+00:00", "license": "GPL-2.0",
         "links": {"contact": ["https://gitlab.com/Remmina/Remmina/issues"], "website":
         ["https://www.remmina.org"]}, "name": "remmina.remmina", "origin": "remmina",
-        "package_name": "remmina", "prices": {}, "private": false, "publisher": "Remmina
+        "package_name": "remmina", "private": false, "publisher": "Remmina
         Upstream Developers", "ratings_average": 0.0, "release": ["16"], "revision":
         5570, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2018/02/Remmina_Screenshot.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Remmina-Main-Window.png",
@@ -90,7 +90,7 @@ interactions:
         "last_updated": "2022-11-09T08:17:37.555290+00:00", "license": "Proprietary",
         "links": {"contact": ["mailto:ogra@ubuntu.com?subject=zoom-client"], "website":
         ["https://zoom.us"]}, "name": "zoom-client.ogra", "origin": "ogra", "package_name":
-        "zoom-client", "prices": {}, "private": false, "publisher": "Oliver Grawert",
+        "zoom-client", "private": false, "publisher": "Oliver Grawert",
         "ratings_average": 0.0, "release": ["16"], "revision": 193, "screenshot_urls":
         ["https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-tray.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-perm.png",
@@ -118,7 +118,7 @@ interactions:
         "last_updated": "2022-08-13T00:07:21.110898+00:00", "license": "GPL-3.0+",
         "links": {"contact": ["https://bugs.launchpad.net/ubuntu/+source/gnome-system-monitor/+bugs?field.tag=snap"]},
         "name": "gnome-system-monitor.canonical", "origin": "canonical", "package_name":
-        "gnome-system-monitor", "prices": {}, "private": false, "publisher": "Canonical",
+        "gnome-system-monitor", "private": false, "publisher": "Canonical",
         "ratings_average": 0.0, "release": ["16"], "revision": 181, "screenshot_urls":
         ["https://dashboard.snapcraft.io/site_media/appmedia/2017/08/Screenshot_from_2017-08-25_16-47-48.png"],
         "snap_id": "9BTClmjz31r0UltmbJ5nnGe0Xm1AzfMp", "summary": "System Monitor",
@@ -155,7 +155,7 @@ interactions:
         "last_updated": "2022-12-07T07:20:41.997375+00:00", "license": "GPL-2.0+",
         "links": {"contact": ["https://play0ad.com/community/support/"], "website":
         ["https://code.wildfiregames.com"]}, "name": "0ad.play0ad", "origin": "play0ad",
-        "package_name": "0ad", "prices": {}, "private": false, "publisher": "Wildfire
+        "package_name": "0ad", "private": false, "publisher": "Wildfire
         Games", "ratings_average": 0.0, "release": ["16"], "revision": 588, "screenshot_urls":
         ["https://dashboard.snapcraft.io/site_media/appmedia/2019/11/CarthaginianTown.jpg",
         "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/BritsAbroad.jpg",
@@ -181,7 +181,7 @@ interactions:
         "last_updated": "2022-11-26T19:38:35.313921+00:00", "license": "AGPL-3.0+",
         "links": {"contact": ["https://github.com/nextcloud/nextcloud-snap"], "website":
         ["https://github.com/nextcloud/nextcloud-snap"]}, "name": "nextcloud.nextcloud",
-        "origin": "nextcloud", "package_name": "nextcloud", "prices": {}, "private":
+        "origin": "nextcloud", "package_name": "nextcloud", "private":
         false, "publisher": "Nextcloud", "ratings_average": 0.0, "release": ["16"],
         "revision": 32537, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2020/06/sidebar_and_new_share_dialog.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2020/06/talk-promoted-view.png",
@@ -219,7 +219,7 @@ interactions:
         "last_updated": "2022-04-24T06:21:04.953448+00:00", "license": "Proprietary",
         "links": {"contact": ["https://community.spotify.com/t5/Desktop-Linux/bd-p/desktop_linux"]},
         "name": "spotify.spotify", "origin": "spotify", "package_name": "spotify",
-        "prices": {}, "private": false, "publisher": "Spotify", "ratings_average":
+        "private": false, "publisher": "Spotify", "ratings_average":
         0.0, "release": ["16"], "revision": 60, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screenshot_from_2017-12-18_12-07-06.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screenshot_from_2017-12-18_12-09-22.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screenshot_from_2017-12-18_12-18-27.png",
@@ -250,8 +250,8 @@ interactions:
         "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/Snapcraft_256x256.png",
         "last_updated": "2022-11-28T22:45:05.600800+00:00", "license": "Proprietary",
         "links": {"contact": ["https://get.slack.help/hc/en-us"], "website": ["https://slack.com"]},
-        "name": "slack.slack", "origin": "slack", "package_name": "slack", "prices":
-        {}, "private": false, "publisher": "Slack", "ratings_average": 0.0, "release":
+        "name": "slack.slack", "origin": "slack", "package_name": "slack",
+        "private": false, "publisher": "Slack", "ratings_average": 0.0, "release":
         ["16"], "revision": 68, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2019/01/1-slack-snap-overview.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/2-slack-snap-integrations.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/3-slack-snap-search.jpg",
@@ -291,7 +291,7 @@ interactions:
         "last_updated": "2021-03-07T07:05:29.721314+00:00", "license": "Proprietary",
         "links": {"contact": ["https://help.journey.cloud"], "website": ["https://journey.cloud"]},
         "name": "journey.2appstudio", "origin": "2appstudio", "package_name": "journey",
-        "prices": {}, "private": false, "publisher": "Two App Studio Pte. Ltd.", "ratings_average":
+        "private": false, "publisher": "Two App Studio Pte. Ltd.", "ratings_average":
         0.0, "release": ["16"], "revision": 23, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2018/09/0.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/09/1.png", "https://dashboard.snapcraft.io/site_media/appmedia/2018/09/2_kLvfNdY.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/09/3_RwVxPZm.png",
@@ -316,7 +316,7 @@ interactions:
         "last_updated": "2022-11-28T06:11:22.760842+00:00", "license": "GPL-2.0",
         "links": {"contact": ["https://github.com/snapcrafters/dosbox-x/issues"]},
         "name": "dosbox-x.snapcrafters", "origin": "snapcrafters", "package_name":
-        "dosbox-x", "prices": {}, "private": false, "publisher": "Snapcrafters", "ratings_average":
+        "dosbox-x","private": false, "publisher": "Snapcrafters", "ratings_average":
         0.0, "release": ["16"], "revision": 1110, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2022/10/01-msword.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2022/10/02-tomb3d.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2022/10/03-win98guest.png",
@@ -354,8 +354,8 @@ interactions:
         "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
         "last_updated": "2022-11-01T19:26:02.505287+00:00", "license": "GPL-3.0+",
         "links": {"contact": ["https://forum.jami.net"], "website": ["https://jami.net"]},
-        "name": "jami.sfljami", "origin": "sfljami", "package_name": "jami", "prices":
-        {}, "private": false, "publisher": "Savoir-faire Linux", "ratings_average":
+        "name": "jami.sfljami", "origin": "sfljami", "package_name": "jami",
+        "private": false, "publisher": "Savoir-faire Linux", "ratings_average":
         0.0, "release": ["16"], "revision": 255, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2022/05/01-jami-gnulinux-video-call.jpg",
         "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/02-jami-gnulinux-video-conference.jpg",
         "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/03-jami-gnulinux-chat.jpg",
@@ -385,7 +385,7 @@ interactions:
         "last_updated": "2021-02-22T12:38:32.710350+00:00", "license": "BSD-3-Clause",
         "links": {"contact": ["https://github.com/snapcrafters/mumble/issues"]}, "name":
         "mumble.snapcrafters", "origin": "snapcrafters", "package_name": "mumble",
-        "prices": {}, "private": false, "publisher": "Snapcrafters", "ratings_average":
+        "private": false, "publisher": "Snapcrafters", "ratings_average":
         0.0, "release": ["16"], "revision": 1675, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2019/09/Screenshot_from_2019-09-08_13-35-26_9Khz8lH.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/Screenshot_from_2019-09-08_13-38-03_G45ykG8.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/Screenshot_from_2019-09-08_13-35-59_NGvCCXY.png"],
@@ -409,7 +409,7 @@ interactions:
         OR LGPL-2.1+ OR MPL-1.1)", "links": {"contact": ["https://bugs.launchpad.net/ubuntu/+source/chromium-browser/+bugs?field.tag=snap"],
         "website": ["https://code.launchpad.net/~chromium-team/chromium-browser/+git/snap-from-source"]},
         "name": "chromium.canonical", "origin": "canonical", "package_name": "chromium",
-        "prices": {}, "private": false, "publisher": "Canonical", "ratings_average":
+        "private": false, "publisher": "Canonical", "ratings_average":
         0.0, "release": ["16"], "revision": 2238, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2022/05/Screenshot_from_2022-05-19_18-11-22.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/Screenshot_from_2022-05-19_18-16-04.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2022/05/Screenshot_from_2022-05-19_18-14-56.png"],
@@ -433,7 +433,7 @@ interactions:
         "last_updated": "2022-09-13T08:21:47.058184+00:00", "license": "Proprietary",
         "links": {"contact": ["https://www.postman.com/contact-us"], "website": ["https://www.postman.com"]},
         "name": "postman.postman-inc", "origin": "postman-inc", "package_name": "postman",
-        "prices": {}, "private": false, "publisher": "Postman, Inc.", "ratings_average":
+        "private": false, "publisher": "Postman, Inc.", "ratings_average":
         0.0, "release": ["16"], "revision": 184, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2018/06/Screenshot_from_2018-03-21_17-24-01.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Light-1.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Dark-4.png", "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Dark-1.png"],
@@ -461,7 +461,7 @@ interactions:
         "last_updated": "2022-08-16T15:05:15.727962+00:00", "license": "BSD-3-Clause
         OR EPL-2.0", "links": {"contact": ["https://mosquitto.org/"], "website": ["https://mosquitto.org/"]},
         "name": "mosquitto.mosquitto", "origin": "mosquitto", "package_name": "mosquitto",
-        "prices": {}, "private": false, "publisher": "Mosquitto Team", "ratings_average":
+        "private": false, "publisher": "Mosquitto Team", "ratings_average":
         0.0, "release": ["16"], "revision": 776, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2018/06/mosquitto_dbIlbAp.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/06/mosquitto_sub_d1aBoJH.png"],
         "snap_id": "mDxT0cGOHKSs62MOHSK5Ype0Na5UU2LB", "summary": "Eclipse Mosquitto
@@ -488,7 +488,7 @@ interactions:
         "last_updated": "2022-09-14T22:06:40.315926+00:00", "license": "GPL-3.0",
         "links": {"contact": ["https://krita.org/en/get-involved/overview/"], "website":
         ["https://krita.org"]}, "name": "krita.krita", "origin": "krita", "package_name":
-        "krita", "prices": {}, "private": false, "publisher": "Stichting Krita Foundation",
+        "krita", "private": false, "publisher": "Stichting Krita Foundation",
         "ratings_average": 0.0, "release": ["16"], "revision": 77, "screenshot_urls":
         ["https://dashboard.snapcraft.io/site_media/appmedia/2019/01/2018-03-17_screenshot_002.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/2018-03-17_screenshot_004.png",
@@ -559,7 +559,7 @@ interactions:
         "last_updated": "2022-11-21T02:59:01.647514+00:00", "license": "MIT", "links":
         {"contact": ["mailto:matthew@rathbonelabs.com"], "website": ["https://beekeeperstudio.io"]},
         "name": "beekeeper-studio.matthew-rathbone", "origin": "matthew-rathbone",
-        "package_name": "beekeeper-studio", "prices": {}, "private": false, "publisher":
+        "package_name": "beekeeper-studio", "private": false, "publisher":
         "Beekeeper Studio", "ratings_average": 0.0, "release": ["16"], "revision":
         180, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2021/09/main-dark.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2021/09/main-light.png",
@@ -589,7 +589,7 @@ interactions:
         "last_updated": "2022-12-02T14:10:23.737844+00:00", "license": "GPL-2.0",
         "links": {"contact": ["https://gitlab.com/Remmina/Remmina/issues"], "website":
         ["https://www.remmina.org"]}, "name": "remmina.remmina", "origin": "remmina",
-        "package_name": "remmina", "prices": {}, "private": false, "publisher": "Remmina
+        "package_name": "remmina", "private": false, "publisher": "Remmina
         Upstream Developers", "ratings_average": 0.0, "release": ["16"], "revision":
         5570, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2018/02/Remmina_Screenshot.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/Remmina-Main-Window.png",
@@ -618,7 +618,7 @@ interactions:
         "last_updated": "2022-11-09T08:17:37.555290+00:00", "license": "Proprietary",
         "links": {"contact": ["mailto:ogra@ubuntu.com?subject=zoom-client"], "website":
         ["https://zoom.us"]}, "name": "zoom-client.ogra", "origin": "ogra", "package_name":
-        "zoom-client", "prices": {}, "private": false, "publisher": "Oliver Grawert",
+        "zoom-client", "private": false, "publisher": "Oliver Grawert",
         "ratings_average": 0.0, "release": ["16"], "revision": 193, "screenshot_urls":
         ["https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-tray.png",
         "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-perm.png",
@@ -646,7 +646,7 @@ interactions:
         "last_updated": "2022-08-13T00:07:21.110898+00:00", "license": "GPL-3.0+",
         "links": {"contact": ["https://bugs.launchpad.net/ubuntu/+source/gnome-system-monitor/+bugs?field.tag=snap"]},
         "name": "gnome-system-monitor.canonical", "origin": "canonical", "package_name":
-        "gnome-system-monitor", "prices": {}, "private": false, "publisher": "Canonical",
+        "gnome-system-monitor", "private": false, "publisher": "Canonical",
         "ratings_average": 0.0, "release": ["16"], "revision": 181, "screenshot_urls":
         ["https://dashboard.snapcraft.io/site_media/appmedia/2017/08/Screenshot_from_2017-08-25_16-47-48.png"],
         "snap_id": "9BTClmjz31r0UltmbJ5nnGe0Xm1AzfMp", "summary": "System Monitor",

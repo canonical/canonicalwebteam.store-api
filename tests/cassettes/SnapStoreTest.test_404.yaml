@@ -13,7 +13,7 @@ interactions:
         User-Agent:
           - python-requests/2.24.0
       method: GET
-      uri: https://api.snapcraft.io/v2/snaps/info/four-o-four?fields=title%2Csummary%2Cdescription%2Clicense%2Ccontact%2Cwebsite%2Cpublisher%2Cprices%2Cmedia%2Cdownload%2Cversion%2Ccreated-at%2Cconfinement%2Ccategories%2Ctrending%2Cunlisted%2Clinks
+      uri: https://api.snapcraft.io/v2/snaps/info/four-o-four?fields=title%2Csummary%2Cdescription%2Clicense%2Ccontact%2Cwebsite%2Cpublisher%2Cmedia%2Cdownload%2Cversion%2Ccreated-at%2Cconfinement%2Ccategories%2Ctrending%2Cunlisted%2Clinks
     response:
       body:
         string:
