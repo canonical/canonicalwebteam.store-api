@@ -336,11 +336,15 @@ class SnapStoreAdmin(SnapPublisher):
 
         return self.process_response(response)
 
-    def create_store_model(self, session, store_id, name, api_key):
+    def create_store_model(self, session, store_id, name, api_key=None):
+        if api_key:
+            payload = {"name": name, "api-key": api_key, "series": "16"}
+        else:
+            payload = {"name": name, "series": "16"}
         response = self.session.post(
             url=self.get_publisherwg_endpoint_url(f"brand/{store_id}/model"),
             headers=self._get_publisherwg_authorization_header(session),
-            json={"name": name, "api-key": api_key, "series": "16"},
+            json=payload,
         )
 
         return self.process_response(response)
@@ -416,4 +420,4 @@ class SnapStoreAdmin(SnapPublisher):
             headers=headers,
         )
 
-        return self.process_response(response)
+        return response
