@@ -382,8 +382,10 @@ class SnapStoreAdmin(SnapPublisher):
         )
 
         return self.process_response(response)
-    
-    def delete_store_model_policy(self, session, store_id, model_name, revision):
+
+    def delete_store_model_policy(
+        self, session, store_id, model_name, revision
+    ):
         response = self.session.delete(
             url=self.get_publisherwg_endpoint_url(
                 f"brand/{store_id}/model/{model_name}/serial_policy/{revision}"
@@ -392,7 +394,6 @@ class SnapStoreAdmin(SnapPublisher):
         )
 
         return response
-        
 
     def get_store_signing_keys(self, session, store_id):
         headers = self._get_publisherwg_authorization_header(session)
