@@ -431,3 +431,13 @@ class SnapStoreAdmin(SnapPublisher):
         )
 
         return response
+
+    def get_brand(self, session, store_id):
+        headers = self._get_publisherwg_authorization_header(session)
+        url = self.get_publisherwg_endpoint_url(f"brand/{store_id}")
+        response = self.session.get(
+            url=url,
+            headers=headers,
+        )
+
+        return self.process_response(response)
