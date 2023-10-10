@@ -228,6 +228,7 @@ class CharmPublisher(Publisher):
             headers=self._get_authorization_header(publisher_auth),
         )
         return response
+
     def get_charm_libraries(self, charm_name):
         response = self.session.post(
             url=self.get_endpoint_url("charm/libraries/bulk"),
