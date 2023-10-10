@@ -383,6 +383,18 @@ class SnapStoreAdmin(SnapPublisher):
 
         return self.process_response(response)
 
+    def delete_store_model_policy(
+        self, session, store_id, model_name, revision
+    ):
+        response = self.session.delete(
+            url=self.get_publisherwg_endpoint_url(
+                f"brand/{store_id}/model/{model_name}/serial_policy/{revision}"
+            ),
+            headers=self._get_publisherwg_authorization_header(session),
+        )
+
+        return response
+
     def get_store_signing_keys(self, session, store_id):
         headers = self._get_publisherwg_authorization_header(session)
         url = self.get_publisherwg_endpoint_url(
@@ -392,7 +404,6 @@ class SnapStoreAdmin(SnapPublisher):
             url=url,
             headers=headers,
         )
-
         return self.process_response(response)
 
     def create_store_signing_key(self, session, store_id, name):
@@ -405,7 +416,6 @@ class SnapStoreAdmin(SnapPublisher):
             headers=headers,
             json={"name": name},
         )
-
         return self.process_response(response)
 
     def delete_store_signing_key(
@@ -421,3 +431,13 @@ class SnapStoreAdmin(SnapPublisher):
         )
 
         return response
+
+    def get_brand(self, session, store_id):
+        headers = self._get_publisherwg_authorization_header(session)
+        url = self.get_publisherwg_endpoint_url(f"brand/{store_id}")
+        response = self.session.get(
+            url=url,
+            headers=headers,
+        )
+
+        return self.process_response(response)
