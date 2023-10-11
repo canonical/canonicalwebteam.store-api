@@ -211,6 +211,24 @@ class CharmPublisher(Publisher):
 
         return self.process_response(response)
 
+    def unregister_package_name(self, publisher_auth, name):
+        """
+        Unregister a package name.
+
+        Args:
+            publisher_auth: Serialized macaroon to consume the API.
+            name: Name of the package to unregister
+        Returns:
+            The package name ID if successful
+            Otherwise, returns an error list
+        """
+        url = self.get_endpoint_url(f"charm/{name}")
+        response = self.session.delete(
+            url=url,
+            headers=self._get_authorization_header(publisher_auth),
+        )
+        return response
+
     def get_charm_libraries(self, charm_name):
         response = self.session.post(
             url=self.get_endpoint_url("charm/libraries/bulk"),
