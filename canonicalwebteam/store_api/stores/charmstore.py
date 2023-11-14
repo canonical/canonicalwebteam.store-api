@@ -331,3 +331,14 @@ class CharmPublisher(Publisher):
             json={"token": token},
         )
         return self.process_response(response)
+
+    def create_track(self, publisher_auth, charm_name, track_name):
+        """
+        Create a track for a charm base on the charm's guardrail pattern.
+        """
+        response = self.session.post(
+            url=self.get_endpoint_url(f"charm/{charm_name}/tracks"),
+            headers=self._get_authorization_header(publisher_auth),
+            json=[{"name": track_name}],
+        )
+        return self.process_response(response)
