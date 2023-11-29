@@ -341,4 +341,4 @@ class CharmPublisher(Publisher):
             headers=self._get_authorization_header(publisher_auth),
             json=[{"name": track_name}],
         )
-        return self.process_response(response)
+        return response
