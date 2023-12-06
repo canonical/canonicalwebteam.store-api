@@ -57,41 +57,6 @@ class Store:
         base_url = self.config[api_version]["base_url"]
         return f"{base_url}{endpoint}"
 
-    def find(
-        self,
-        query="",
-        category="",
-        publisher="",
-        provides=[],
-        requires=[],
-        fields=[],
-    ):
-        """
-        Given a search term, return an array of matching search results.
-        v2 API only.
-        """
-        url = self.get_endpoint_url("find", 2)
-        headers = self.config[2].get("headers")
-
-        params = {
-            "q": query,
-            "category": category,
-            "publisher": publisher,
-        }
-
-        if fields:
-            params["fields"] = ",".join(fields)
-
-        if provides:
-            params["provides"] = ",".join(provides)
-
-        if requires:
-            params["requires"] = ",".join(requires)
-
-        return self.process_response(
-            self.session.get(url, params=params, headers=headers)
-        )
-
     def search(
         self,
         search,

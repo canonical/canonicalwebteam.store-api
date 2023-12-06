@@ -20,6 +20,41 @@ class CharmStore(Store):
             2: {"base_url": f"{CHARMSTORE_API_URL}v2/charms/"},
         }
 
+    def find(
+        self,
+        query="",
+        category="",
+        publisher="",
+        type=None,
+        provides=[],
+        requires=[],
+        fields=[],
+    ):
+        """
+        Given a search term, return an array of matching search results.
+        v2 API only.
+        """
+        url = self.get_endpoint_url("find", 2)
+        headers = self.config[2].get("headers")
+        params = {
+            "q": query,
+            "category": category,
+            "publisher": publisher,
+            "type": type,
+        }
+        if fields:
+            params["fields"] = ",".join(fields)
+
+        if provides:
+            params["provides"] = ",".join(provides)
+
+        if requires:
+            params["requires"] = ",".join(requires)
+
+        return self.process_response(
+            self.session.get(url, params=params, headers=headers)
+        )
+
 
 class CharmPublisher(Publisher):
     def __init__(self, session=requests.Session()):
