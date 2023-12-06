@@ -178,9 +178,9 @@ class SnapStoreTest(VCRTestCase):
         for category in categories:
             self.assertIn("name", category)
 
-# NOTE: this is comment out temporarily to make the tests pass,
-# It will be added back when the find method in snapstore.py is implemented
-# (IN A SEPARATE PR)
+    # NOTE: this is comment out temporarily to make the tests pass,
+    # It will be added back when the find method in snapstore.py is implemented
+    # (IN A SEPARATE PR)
     # def test_get_featured_results(self):
     #     results = self.client.find(category="featured")["results"]
     #     self.assertIn("featured", self.cassette.requests[0].query[0])
