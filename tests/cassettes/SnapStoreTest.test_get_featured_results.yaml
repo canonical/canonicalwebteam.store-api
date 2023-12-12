@@ -20,12 +20,8 @@ interactions:
 
         '
     headers:
-      cache-control:
-      - public, max-age=300
-      content-encoding:
-      - gzip, deflate
       content-length:
-      - '587'
+      - '1680'
       content-type:
       - application/json
       date:
