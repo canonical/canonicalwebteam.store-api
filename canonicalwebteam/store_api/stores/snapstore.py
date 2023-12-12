@@ -60,6 +60,28 @@ class SnapStore(Store):
             name, None, fields, api_version
         )
 
+    def find(
+        self,
+        query="",
+        category="",
+        architecture="",
+        publisher="",
+        featured="false",
+        fields=[],
+    ):
+        url = self.get_endpoint_url("find", 2)
+        headers = self.config[2].get("headers")
+        params = {
+            "q": query,
+            "category": category,
+            "architecture": architecture,
+            "publisher": publisher,
+            "featured": featured,
+        }
+        if fields:
+            params["fields"] = ",".join(fields)
+        response = self.session.get(url, params=params, headers=headers)
+        return self.process_response(response)
 
 class SnapPublisher(Publisher):
     def __init__(self, session=requests.Session()):
