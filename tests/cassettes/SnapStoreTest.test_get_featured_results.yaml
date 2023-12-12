@@ -23,7 +23,7 @@ interactions:
       cache-control:
       - public, max-age=300
       content-encoding:
-      - gzip
+      - gzip, deflate
       content-length:
       - '587'
       content-type:
