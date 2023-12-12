@@ -83,6 +83,7 @@ class SnapStore(Store):
         response = self.session.get(url, params=params, headers=headers)
         return self.process_response(response)
 
+
 class SnapPublisher(Publisher):
     def __init__(self, session=requests.Session()):
         super().__init__(session)
