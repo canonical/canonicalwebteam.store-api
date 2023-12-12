@@ -11,59 +11,37 @@ interactions:
       Snap-Device-Series:
       - '16'
       User-Agent:
-      - python-requests/2.24.0
+      - python-requests/2.31.0
     method: GET
-    uri: https://api.snapcraft.io/v2/snaps/find?q=&category=featured&publisher=
+    uri: https://api.snapcraft.io/v2/snaps/find?q=&category=featured&architecture=&publisher=&featured=false
   response:
     body:
-      string: !!binary |
-        H4sIAHq2kGMA/3XVya6jOBQA0H1/RtZVEhAgpHZhSMKcMAZavWDGzBhDgNL793qtllpkwc6SpeOr
-        6zv8PsBkGCs0HH79/fvQBHVy+HUoghocfhyGJugOv35//Xf6CeLvq4mIFYmfmEv0wmvUxkxOhbVU
-        NpUHRFmzpMPXj/+ZEgIU7DiQMfPlDLCXQGHBEdkVl2dHNBVmotwk0g+2DsrHJk5gCGC8o5W4WuH6
-        +baaOvFMkYP5lWuGdvo8MY1G0thWa1qUdEHc9zsWDcbEvV7QfH4Q+nMlTdGlSRku59xiAptTtlbX
-        DqgOmh0pvUY6EoQrKcSLF54p0RYocVgIBomcpyrpVqoDUA0dBE22g2HWos3Zg34L6rGxXutSowh/
-        681UEQ9aBMUWG7oWgXTZkTqdFVufUCDHHiHf5urcercm1HBSuOsZf/qQqiAqdxzJlu5n3EniE1nE
-        pJ9JXLeqLPLCh75a1cBvnbRtwwASGIbtYIReyKZ2T24k409zWzDxrTadxGjPBshx29piGai7HUbm
-        7164jKs/lrWSgzaTgV0O7GLkL57IPGfL5GPW7jCI9laeVY9RWxOnYBK1m0LpPO3L8o2myGTdMqAp
-        hyjokj1KhNGFOcWq+13GvG5wnGFjTgdimTJZR4+2VDEW4w6TENzj3rF4as+RjLhFsoaaQsdcOwez
-        hC2f318uu+E8DV5Ii4Z0Ja+psevKy+++N3xfPJ2C91P4SFAFEEogGPbKO6Lm6wWbjItxed4NK8UL
-        CitgJjnz2X6Z3Ed5j0MyRC3cC+tWy7TL6b083ANXecng1ZPpY3TEvhWx5mp8NHDyHsI2QDtUDJ9+
-        P9dY+aiO30/G9KX2jdVn82Lh2GH6yFQZJ00Fpr2oHMmhMd/MXpN+fxrv3CINJW7krMM5rM/ojwbu
-        23fz72jZyxbmD0T45JITQforewWqd/EEc87zmaHyAnO3FkwQbAMY5TvWaVYfAVCPCztjTWfKD220
-        PC1fXXIWzxxfbq1gjIMIoL1hIFsJ8Y4vIyXJscHbmceOr9et4F/L2obTVdxSIUDvAH6nbMfSppK5
-        +pYHL95Vfmkn8k0pSIeNngtHJrWZrdWGw88BjTHYa0F6VGxClWrWNlJFW0lYK6RrEVyNHFsRiPFz
-        IKASBuVuYIFrw3vjWusFN064M7oDe6MmxsRAKM518VFdZfK9HYZhjnasIiXug0HhsEpRYAjRO0cz
-        ECI+OtGZQur01pqqPcWwznVk585geJBXbkzfTDewELQmTxP9LOPPJfNO4JAnVbU3iE2taaXqKPSl
-        OrrtQvFZzzzU3sdGLepAcvj65+uvP95zvhLpBwAA
+      string: '{"results":[{"name":"nextcloud","snap":{},"snap-id":"njObIbGQEaVx1H4nyWxchk1i8opy4h54"},{"name":"netbeans","snap":{},"snap-id":"JyXqEgtoFceo2Ppmyr1XrbqOoRIkNRrS"},{"name":"slack","snap":{},"snap-id":"JUJH91Ved74jd4ZgJCpzMBtYbPOzTlsD"},{"name":"remmina","snap":{},"snap-id":"XC73ux8XOHjoahd9keAyvM3LVkPBLTzy"},{"name":"telegram-desktop","snap":{},"snap-id":"jpdoHqMd90M39DdH2JSZbeQxipqHtwLo"},{"name":"kdevelop","snap":{},"snap-id":"vF7qHQJ3SMpORQX952464X4FQhbnh6gu"},{"name":"alacritty","snap":{},"snap-id":"CPA6L7h6dWM7VAmIPTHX14eMgKEZqMJw"},{"name":"pokemmo","snap":{},"snap-id":"Fz9u2eIIv3gtgFDLBaiN41DTTJm8lC0v"},{"name":"v2raya","snap":{},"snap-id":"P99RvhgFdb2e0dN2DuvzWzoUrS12dNvu"},{"name":"intellij-idea-community","snap":{},"snap-id":"KSPcSedMkvhgEjkg3Ki1PdjX2Ylm2aOy"},{"name":"zoom-client","snap":{},"snap-id":"76rrD7USwCJrZgepbRk7UdFEWON3tVKX"},{"name":"bluemail","snap":{},"snap-id":"ZVlj0qw0GOFd5JgTfL8kk2Y5eIG1IpiH"},{"name":"lunacy","snap":{},"snap-id":"uqxbt5DB99PhHoMkjIitfqp8B7TS9wnK"},{"name":"logisim-evolution","snap":{},"snap-id":"CzzfrpKG7K0IJ6YYGToEYHOA7pTNpLue"}]}
+
+        '
     headers:
-      age:
-      - '127'
-      cache-control:
-      - public, max-age=300
-      content-encoding:
-      - gzip
       content-length:
-      - '999'
+      - '1680'
       content-type:
       - application/json
       date:
-      - Wed, 07 Dec 2022 15:51:22 GMT
+      - Tue, 12 Dec 2023 12:46:09 GMT
       server:
       - gunicorn/20.0.4
       snap-store-version:
-      - '52'
+      - '56'
       vary:
       - Snap-Device-Store, Snap-Device-Series, Accept-Encoding
       via:
-      - 1.1 juju-c7799c-prod-snap-store-99 (squid/4.10)
+      - 1.1 juju-c7799c-prod-snap-store-137 (squid/4.10)
       x-cache:
-      - HIT from juju-c7799c-prod-snap-store-99
+      - MISS from juju-c7799c-prod-snap-store-137
       x-cache-lookup:
-      - HIT from juju-c7799c-prod-snap-store-99:3128
+      - MISS from juju-c7799c-prod-snap-store-137:3128
       x-request-id:
-      - 143A3E7704050A8325B201BB6390B67A330BEB5
+      - 6DABC721BA800A8325F301BB6578561141B77805
       x-vcs-revision:
-      - c113a817
+      - 372bb852e11d8e1656821b87610dbbfbce7a87cc
       x-view-name:
       - snapdevicegw.webapi_search_v2.snaps_find
     status:
