@@ -339,7 +339,7 @@ class CharmPublisher(Publisher):
             headers=self._get_authorization_header(publisher_auth),
             json=payload,
         )
-        return self.process_response(response)
+        return response
 
     def accept_invite(self, publisher_auth, name, token):
         """
