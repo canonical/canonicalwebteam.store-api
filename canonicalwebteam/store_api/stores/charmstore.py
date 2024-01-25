@@ -352,7 +352,7 @@ class CharmPublisher(Publisher):
             headers=self._get_authorization_header(publisher_auth),
             json={"token": token},
         )
-        return self.process_response(response)
+        return response
 
     def reject_invite(self, publisher_auth, name, token):
         """
@@ -365,7 +365,7 @@ class CharmPublisher(Publisher):
             headers=self._get_authorization_header(publisher_auth),
             json={"token": token},
         )
-        return self.process_response(response)
+        return response
 
     def create_track(self, publisher_auth, charm_name, track_name):
         """
