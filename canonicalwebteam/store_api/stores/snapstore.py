@@ -465,7 +465,7 @@ class SnapStoreAdmin(SnapPublisher):
 
         return self.process_response(response)
 
-# FEATURED SNAPS AUTOMATION
+    # FEATURED SNAPS AUTOMATION
     def delete_featured_snaps(self, session, snaps):
         headers = self._get_publisherwg_authorization_header(session)
         url = self.get_publisherwg_endpoint_url("snap/featured")
@@ -485,7 +485,7 @@ class SnapStoreAdmin(SnapPublisher):
             json=snaps,
         )
         return self.process_response(response)
-    
+
     def get_featured_snaps(self, session, api_version=1):
         url = "https://api.staging.snapcraft.io/api/v1/snaps/search"
         headers = self.config[api_version].get("headers")
@@ -501,4 +501,3 @@ class SnapStoreAdmin(SnapPublisher):
         return self.process_response(
             self.session.get(url, params=params, headers=headers)
         )
-    
