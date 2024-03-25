@@ -215,6 +215,18 @@ class SnapPublisher(Publisher):
             json={"token": token},
         )
         return self.process_response(response)
+    
+    def create_track(self, publisher_auth, snap_name, track_name):
+        """
+        Create a track for a snap base on the snap's guardrail pattern.
+        """
+        response = self.session.post(
+            url=self.get_publisherwg_endpoint_url(f"snap/{snap_name}/tracks"),
+            headers=self._get_publisherwg_authorization_header(self.session),
+            json=[{"name": track_name}],
+        )
+        return response
+
 
 
 class SnapStoreAdmin(SnapPublisher):
