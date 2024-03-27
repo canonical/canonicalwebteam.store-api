@@ -1,0 +1,54 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.31.0
+    method: GET
+    uri: https://api.staging.snapcraft.io/api/v1/snaps/search?scope=wide&arch=wide&confinement=strict%2Cclassic%2Cdevmode&fields=snap_id&section=featured
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"package_name": "telegram-sergiusens",
+        "snap_id": "6L8TKPBCcxI7HkPi59rT0q5pFjgzPl1R"}, {"package_name": "no", "snap_id":
+        "LpkY6BuU0Kicpi1UIZ7qLdZWk3p2hdbt"}, {"package_name": "bluez", "snap_id":
+        "NkPqmIELjn1idQNJ9rTXTVF3vUoMjAQc"}, {"package_name": "hello-noise2", "snap_id":
+        "YQNoWHQzvtu9BxzBZmGr0ucXAlsUOLNw"}, {"package_name": "thisonenessita", "snap_id":
+        "n9CkqzmSWCVQwgJNgkREK0JYmYHRAyI9"}, {"package_name": "jhartley-one", "snap_id":
+        "tUQF6wzfF2AII0K9HWzbBM06EJrj6MK5"}, {"package_name": "surl", "snap_id": "wKFeK2U7Y2CB53vRJwg9MeR9bqfPvtZK"},
+        {"package_name": "busybox2", "snap_id": "yFH5uuDe8tcegB8cF0tTqhXgQGXTHTEV"},
+        {"package_name": "shanepelletier-staging-hessdalen-coi", "snap_id": "1QFdLndOtrGJk85yXG0QLhqkVCf1n1eG"}]},
+        "_links": {"self": {"href": "https://api.staging.snapcraft.io/api/v1/snaps/search?scope=wide&arch=wide&confinement=strict%2Cclassic%2Cdevmode&fields=snap_id&section=featured"}},
+        "total": 9}'
+    headers:
+      content-length:
+      - '962'
+      content-type:
+      - application/hal+json
+      date:
+      - Wed, 27 Mar 2024 11:12:36 GMT
+      server:
+      - gunicorn/20.0.4
+      snap-store-version:
+      - '56'
+      via:
+      - 1.1 juju-8e2604-stg-snap-store-bis-6 (squid/4.10)
+      x-cache:
+      - MISS from juju-8e2604-stg-snap-store-bis-6
+      x-cache-lookup:
+      - HIT from juju-8e2604-stg-snap-store-bis-6:3128
+      x-request-id:
+      - 6DABFA75B9700A843A7701BB6603FF21035B
+      x-vcs-revision:
+      - 205680c16919223a58b016c07b476e80cd60b460
+      x-view-name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+version: 1
