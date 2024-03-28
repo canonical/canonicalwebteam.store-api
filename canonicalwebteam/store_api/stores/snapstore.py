@@ -489,13 +489,13 @@ class SnapStoreAdmin(SnapPublisher):
 
     def update_featured_snaps(self, session, snaps):
         headers = self._get_publisherwg_authorization_header(session)
-        url = self.get_publisherwg_endpoint_url("/snap/featured")
+        url = self.get_publisherwg_endpoint_url("snap/featured")
         response = self.session.put(
             url=url,
             headers=headers,
             json=snaps,
         )
-        return self.process_response(response)
+        return response
 
     def get_featured_snaps(self, session, api_version=1):
         url = "https://api.staging.snapcraft.io/api/v1/snaps/search"
