@@ -227,6 +227,24 @@ class SnapPublisher(Publisher):
         )
         return response
 
+    def unregister_package_name(self, publisher_auth, snap_name):
+        """
+        Unregister a package name.
+
+        Args:
+            publisher_auth: Serialized macaroon to consume the API.
+            name: Name of the package to unregister
+        Returns:
+            The package name ID if successful
+            Otherwise, returns an error list
+        """
+        url = self.get_publisherwg_endpoint_url(f"snap/{snap_name}")
+        response = self.session.delete(
+            url=url,
+            headers=self._get_authorization_header(publisher_auth),
+        )
+        return response
+
 
 class SnapStoreAdmin(SnapPublisher):
     def get_endpoint_url(self, endpoint, api_version=2):
