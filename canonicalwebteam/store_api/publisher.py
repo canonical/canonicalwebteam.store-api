@@ -81,7 +81,7 @@ class Publisher:
             )
 
             return {
-                "Authorization": f"Macaroon root={root}, discharge={bound}"
+                "Authorization": f"macaroon root={root}, discharge={bound}"
             }
         # With Candid the header is Macaroons
         elif "macaroons" in session:
