@@ -1,4 +1,5 @@
 from os import getenv
+import pprint
 
 import requests
 
@@ -226,6 +227,25 @@ class SnapPublisher(Publisher):
             json=[{"name": track_name}],
         )
         return response
+    
+    def get_package_metadata(self, publisher_auth, package_type, snap_name):
+        """
+        Get general metadata for a package.
+
+        Args:
+            publisher_auth: Serialized macaroon to consume the API.
+            package_type: Type of packages to obtain.
+
+        Returns:
+            Package general metadata
+        """
+        response = self.session.get(
+            url=self.get_publisherwg_endpoint_url(f"{package_type}/{snap_name}"),
+            headers=self._get_publisherwg_authorization_header(publisher_auth),
+        )
+
+        pprint.pprint(response.json())
+        return self.process_response(response)["metadata"]
 
     def unregister_package_name(self, publisher_auth, snap_name):
         """
