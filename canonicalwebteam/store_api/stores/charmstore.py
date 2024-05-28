@@ -67,11 +67,16 @@ class CharmPublisher(Publisher):
         self.session.headers.update({"Bakery-Protocol-Version": "2"})
 
     def _get_authorization_header(self, publisher_auth):
+        """
+        Return the formatted Authorization header for the publisher API.
+        """
         return {"Authorization": f"Macaroon {publisher_auth}"}
 
     def get_macaroon(self):
         """
         Return a bakery v2 macaroon from the publisher API to be discharged
+        Documentation: https://api.charmhub.io/docs/default.html#get_macaroon
+        Endpoint URL: [GET] https://api.charmhub.io/v1/tokens
         """
         response = self.session.get(url=self.get_endpoint_url("tokens"))
 
@@ -80,6 +85,8 @@ class CharmPublisher(Publisher):
     def issue_macaroon(self, permissions, description=None, ttl=None):
         """
         Return a bakery v2 macaroon from the publisher API to be discharged
+        Documentation: https://api.charmhub.io/docs/default.html#issue_macaroon
+        Endpoint URL: [POST] https://api.charmhub.io/v1/tokens
         """
         data = {"permissions": permissions}
 
@@ -99,6 +106,9 @@ class CharmPublisher(Publisher):
     def exchange_macaroons(self, issued_macaroon):
         """
         Return an exchanged snapstore-only authentication macaroon.
+        Documentation:
+            https://api.charmhub.io/docs/default.html#exchange_macaroons
+        Endpoint URL: [POST] https://api.charmhub.io/v1/tokens/exchange
         """
 
         response = self.session.post(
@@ -112,6 +122,8 @@ class CharmPublisher(Publisher):
     def macaroon_info(self, publisher_auth):
         """
         Return information about the authenticated macaroon token.
+        Documentation: https://api.charmhub.io/docs/default.html#macaroon_info
+        Endpoint URL: [GET] https://api.charmhub.io/v1/tokens/whoami
         """
         response = self.session.get(
             url=self.get_endpoint_url("tokens/whoami"),
@@ -121,6 +133,11 @@ class CharmPublisher(Publisher):
         return self.process_response(response)
 
     def whoami(self, publisher_auth):
+        """
+        Return information about the authenticated macaroon token.
+        Documentation: 'DEPRECATED'
+        Endpoint URL: [GET] https://api.charmhub.io/v1/whoami
+        """
         response = self.session.get(
             url=self.get_endpoint_url("whoami"),
             headers=self._get_authorization_header(publisher_auth),
@@ -137,6 +154,8 @@ class CharmPublisher(Publisher):
     ):
         """
         Return publisher packages
+        Documentation: https://api.charmhub.io/docs/default.html
+        Endpoint URL: [GET] https://api.charmhub.io/v1/charm
 
         Args:
             publisher_auth: Serialized macaroon to consume the API.
@@ -174,6 +193,11 @@ class CharmPublisher(Publisher):
     def get_package_metadata(self, publisher_auth, package_type, name):
         """
         Get general metadata for a package.
+        Documentation:
+            https://api.charmhub.io/docs/default.html#package_metadata
+        Endpoint URL: [GET] https://api.charmhub.io/v1/charm/<name>
+        namespace: charm for both charms and bundles
+        name: Package name
 
         Args:
             publisher_auth: Serialized macaroon to consume the API.
@@ -201,6 +225,12 @@ class CharmPublisher(Publisher):
     ):
         """
         Update general metadata for a package.
+        Documentation:
+            https://api.charmhub.io/docs/default.html#update_package_metadata
+        Endpoint URL: [PATCH]
+            https://api.charmhub.io/v1/charm/<name>
+        namespace: charm for both charms and bundles
+        name: Package name
 
         Args:
             publisher_auth: Serialized macaroon to consume the API.
@@ -229,6 +259,8 @@ class CharmPublisher(Publisher):
     def register_package_name(self, publisher_auth, data):
         """
         Register a package name.
+        Documentation: https://api.charmhub.io/docs/default.html#register_name
+        Endpoint URL: [POST] https://api.charmhub.io/v1/charm
 
         Args:
             publisher_auth: Serialized macaroon to consume the API.
@@ -249,6 +281,9 @@ class CharmPublisher(Publisher):
     def unregister_package_name(self, publisher_auth, name):
         """
         Unregister a package name.
+        Documentation:
+            https://api.charmhub.io/docs/default.html#unregister_package
+        Endpoint URL: [DELETE] https://api.charmhub.io/v1/charm/<name>
 
         Args:
             publisher_auth: Serialized macaroon to consume the API.
@@ -265,6 +300,12 @@ class CharmPublisher(Publisher):
         return response
 
     def get_charm_libraries(self, charm_name):
+        """
+        Get libraries for a charm.
+        Documentation:
+            https://api.charmhub.io/docs/libraries.html#fetch_libraries
+        Endpoint URL: [POST] https://api.charmhub.io/v1/charm/libraries/bulk
+        """
         response = self.session.post(
             url=self.get_endpoint_url("charm/libraries/bulk"),
             json=[{"charm-name": charm_name}],
@@ -273,6 +314,18 @@ class CharmPublisher(Publisher):
         return self.process_response(response)
 
     def get_charm_library(self, charm_name, library_id, api_version=None):
+        """
+        Get library metadata and content
+        Documentation:
+            https://api.charmhub.io/docs/libraries.html#fetch_library
+        Endpoint URL: [GET]
+        https://api.charmhub.io/v1/charm/libraries/<charm_name>/<library_id>
+
+        Args:
+            charm_name: Name of the charm
+            library_id: ID of the library
+            api_version: API version to use
+        """
         params = {}
 
         if api_version is not None:
@@ -290,6 +343,14 @@ class CharmPublisher(Publisher):
     def get_collaborators(self, publisher_auth, name):
         """
         Get collaborators (accepted invites) for the given package.
+        Documentation:
+            https://api.charmhub.io/docs/collaborator.html#get_collaborators
+        Endpoint URL: [GET]
+            https://api.charmhub.io/v1/charm/<name>/collaborators
+
+        Args:
+            publisher_auth: Serialized macaroon to consume the API.
+            name: Name of the package
         """
         response = self.session.get(
             url=self.get_endpoint_url(f"charm/{name}/collaborators"),
@@ -300,6 +361,14 @@ class CharmPublisher(Publisher):
     def get_pending_invites(self, publisher_auth, name):
         """
         Get pending collaborator invites for the given package.
+        Documentation:
+            https://api.charmhub.io/docs/collaborator.html#get_pending_invites
+        Endpoint URL: [GET]
+            https://api.charmhub.io/v1/charm/<name>/collaborators/invites
+
+        Args:
+            publisher_auth: Serialized macaroon to consume the API.
+            name: Name of the package
         """
         response = self.session.get(
             url=self.get_endpoint_url(f"charm/{name}/collaborators/invites"),
@@ -310,6 +379,15 @@ class CharmPublisher(Publisher):
     def invite_collaborators(self, publisher_auth, name, emails):
         """
         Invite one or more collaborators for a package.
+        Documentation:
+            https://api.charmhub.io/docs/collaborator.html#invite_collaborators
+        Endpoint URL: [POST]
+            https://api.charmhub.io/v1/charm/<name>/collaborators/invites
+
+        Args:
+            publisher_auth: Serialized macaroon to consume the API.
+            name: Name of the package
+            emails: List of emails to invite
         """
         payload = {"invites": []}
 
@@ -326,6 +404,15 @@ class CharmPublisher(Publisher):
     def revoke_invites(self, publisher_auth, name, emails):
         """
         Revoke invites to the specified emails for the package.
+        Documentation:
+            https://api.charmhub.io/docs/collaborator.html#revoke_invites
+        Endpoint URL: [POST]
+            https://api.charmhub.io/v1/charm/<name>/collaborators/invites/revoke
+
+        Args:
+            publisher_auth: Serialized macaroon to consume the API.
+            name: Name of the package
+            emails: List of emails to revoke
         """
         payload = {"invites": []}
 
@@ -344,6 +431,15 @@ class CharmPublisher(Publisher):
     def accept_invite(self, publisher_auth, name, token):
         """
         Accept a collaborator invite.
+        Documentation:
+            https://api.charmhub.io/docs/collaborator.html#accept_invite
+        Endpoint URL: [POST]
+            https://api.charmhub.io/v1/charm/<name>/collaborators/invites/accept
+
+        Args:
+            publisher_auth: Serialized macaroon to consume the API.
+            name: Name of the package
+            token: Invite token
         """
         response = self.session.post(
             url=self.get_endpoint_url(
@@ -357,6 +453,15 @@ class CharmPublisher(Publisher):
     def reject_invite(self, publisher_auth, name, token):
         """
         Reject a collaborator invite.
+        Documentation:
+            https://api.charmhub.io/docs/collaborator.html#reject_invite
+        Endpoint URL: [POST]
+            https://api.charmhub.io/v1/charm/<name>/collaborators/invites/reject
+
+        Args:
+            publisher_auth: Serialized macaroon to consume the API.
+            name: Name of the package
+            token: Invite token
         """
         response = self.session.post(
             url=self.get_endpoint_url(
@@ -370,6 +475,14 @@ class CharmPublisher(Publisher):
     def create_track(self, publisher_auth, charm_name, track_name):
         """
         Create a track for a charm base on the charm's guardrail pattern.
+        Documentation: https://api.charmhub.io/docs/default.html#create_tracks
+        Endpoint URL: [POST]
+            https://api.charmhub.io/v1/charm/<charm_name>/tracks
+
+        Args:
+            publisher_auth: Serialized macaroon to consume the API.
+            charm_name: Name of the charm
+            track_name: Name of the track
         """
         response = self.session.post(
             url=self.get_endpoint_url(f"charm/{charm_name}/tracks"),
