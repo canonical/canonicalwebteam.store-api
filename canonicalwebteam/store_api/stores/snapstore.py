@@ -104,9 +104,8 @@ class SnapPublisher(Publisher):
             https://dashboard.snapcraft.io/docs/reference/v1/macaroon.html
         Endpoint: [POST] https://dashboard.snapcraft.iodev/api/acl
         """
-        url = self.get_endpoint_url("tokens", 2)
         response = self.session.post(
-            url=url,
+            url=self.get_endpoint_url("tokens", 2),
             json={"permissions": permissions},
         )
 
