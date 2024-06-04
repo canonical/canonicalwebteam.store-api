@@ -1,4 +1,3 @@
-from pprint import pprint
 from canonicalwebteam.store_api.exceptions import (
     StoreApiConnectionError,
     StoreApiResourceNotFound,
@@ -195,7 +194,6 @@ class Publisher:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#register-a-snap-name
         Endpoint: [POST] https://dashboard.snapcraft.io/dev/api/register-name/
         """
-        pprint(self.get_endpoint_url("register-name/"))
         json = {"snap_name": snap_name}
 
         if registrant_comment:
