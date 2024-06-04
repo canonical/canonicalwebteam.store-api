@@ -1,3 +1,4 @@
+from pprint import pprint
 from canonicalwebteam.store_api.exceptions import (
     StoreApiConnectionError,
     StoreApiResourceNotFound,
@@ -95,8 +96,12 @@ class Publisher:
         return headers.get("WWW-Authenticate") == ("Macaroon needs_refresh=1")
 
     def get_account(self, session):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/account.html#get--dev-api-account
+        Endpoint: [GET] https://dashboard.snapcraft.io/dev/api/account
+        """
         headers = self._get_authorization_header(session)
-
         response = self.session.get(
             url=self.get_endpoint_url("account"), headers=headers
         )
@@ -104,11 +109,21 @@ class Publisher:
         return self.process_response(response)
 
     def get_account_snaps(self, session):
+        """
+        Returns the snaps associated with a user account
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/account.html#get--dev-api-account
+        Endpoint: [GET] https://dashboard.snapcraft.io/dev/api/account
+        """
         return self.get_account(session).get("snaps", {}).get("16", {})
 
     def get_agreement(self, session):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/snap.html#release-a-snap-build-to-a-channel
+        Endpoint: [GET] https://dashboard.snapcraft.io/dev/api/agreement
+        """
         headers = self._get_authorization_header(session)
-
         agreement_response = self.session.get(
             url=self.get_endpoint_url("agreement/"), headers=headers
         )
@@ -119,6 +134,11 @@ class Publisher:
         return agreement_response.json()
 
     def post_agreement(self, session, agreed):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/snap.html#release-a-snap-build-to-a-channel
+        Endpoint: [POST] https://dashboard.snapcraft.io/dev/api/agreement
+        """
         headers = self._get_authorization_header(session)
 
         json = {"latest_tos_accepted": agreed}
@@ -129,6 +149,11 @@ class Publisher:
         return self.process_response(agreement_response)
 
     def post_username(self, session, username):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/account.html#get--dev-api-account
+        Endpoint: [PATCH] https://dashboard.snapcraft.io/dev/api/account
+        """
         headers = self._get_authorization_header(session)
         json = {"short_namespace": username}
         username_response = self.session.patch(
@@ -141,6 +166,11 @@ class Publisher:
             return self.process_response(username_response)
 
     def get_publisher_metrics(self, session, json):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/snap.html#fetch-metrics-for-snaps
+        Endpoint: [POST] https://dashboard.snapcraft.io/dev/api/snaps/metrics
+        """
         headers = self._get_authorization_header(session)
         headers["Content-Type"] = "application/json"
 
@@ -160,6 +190,12 @@ class Publisher:
         is_private=False,
         store=None,
     ):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/snap.html#register-a-snap-name
+        Endpoint: [POST] https://dashboard.snapcraft.io/dev/api/register-name/
+        """
+        pprint(self.get_endpoint_url("register-name/"))
         json = {"snap_name": snap_name}
 
         if registrant_comment:
@@ -180,6 +216,12 @@ class Publisher:
         return self.process_response(response)
 
     def post_register_name_dispute(self, session, snap_name, claim_comment):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/snap.html#register-a-snap-name-dispute
+        Endpoint: [POST]
+            https://dashboard.snapcraft.io/dev/api/register-name-dispute
+        """
         json = {"snap_name": snap_name, "comment": claim_comment}
 
         response = self.session.post(
@@ -191,6 +233,12 @@ class Publisher:
         return self.process_response(response)
 
     def get_snap_info(self, snap_name, session):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/snap.html#obtaining-information-about-a-snap
+        Endpoint: [GET]
+            https://dashboard.snapcraft.io/dev/api/snaps/info/{snap_name}
+        """
         response = self.session.get(
             url=self.get_endpoint_url(f"snaps/info/{snap_name}"),
             headers=self._get_authorization_header(session),
@@ -199,6 +247,11 @@ class Publisher:
         return self.process_response(response)
 
     def get_package_upload_macaroon(self, session, snap_name, channels):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/macaroon.html#request-a-macaroon
+        Endpoint: [POST] https://dashboard.snapcraft.io/dev/api/acl/
+        """
         json = {
             "packages": [{"name": snap_name, "series": "16"}],
             "permissions": ["package_upload"],
@@ -214,11 +267,22 @@ class Publisher:
         return self.process_response(response)
 
     def get_snap_id(self, snap_name, session):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/snap.html#obtaining-information-about-a-snap
+        Endpoint: https://dashboard.snapcraft.io/dev/api/snaps/info/{snap_name}
+        """
         snap_info = self.get_snap_info(snap_name, session)
 
         return snap_info["snap_id"]
 
     def snap_metadata(self, snap_id, session, json=None):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/snap.html#managing-snap-metadata
+        Endpoint: [PUT]
+            https://dashboard.snapcraft.io/dev/api/snaps/{snap_id}/metadata
+        """
         method = "PUT" if json is not None else None
 
         metadata_response = self.session.request(
@@ -232,6 +296,12 @@ class Publisher:
         return self.process_response(metadata_response)
 
     def snap_screenshots(self, snap_id, session, data=None, files=None):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/snap.html#managing-snap-metadata
+        Endpoint: [GET, PUT]
+            https://dashboard.snapcraft.io/dev/api/snaps/{snap_id}/binary-metadata
+        """
         method = "GET"
         files_array = None
         headers = self._get_authorization_header(session)
@@ -264,6 +334,12 @@ class Publisher:
         return self.process_response(screenshot_response)
 
     def get_snap_revision(self, session, snap_id, revision_id):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/macaroon.html#request-a-macaroon
+        Endpoint: [GET]
+            https://dashboard.snapcraft.io/api/v2/snaps/{snap_id}/revisions/{revision_id}
+        """
         response = self.session.get(
             url=self.get_endpoint_url(
                 f"snaps/{snap_id}/revisions/{revision_id}", 2
@@ -274,6 +350,12 @@ class Publisher:
         return self.process_response(response)
 
     def snap_revision_history(self, session, snap_id):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/snap.html#list-all-revisions-of-a-snap
+        Endpoint: [GET]
+            https://dashboard.snapcraft.io/dev/api/snaps/{snap_id}/history
+        """
         response = self.session.get(
             url=self.get_endpoint_url(f"snaps/{snap_id}/history"),
             headers=self._get_authorization_header(session),
@@ -282,6 +364,12 @@ class Publisher:
         return self.process_response(response)
 
     def snap_release_history(self, session, snap_name, page=1):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/snaps.html#snap-releases
+        Endpoint: [GET]
+            https://dashboard.snapcraft.io/api/v2/snaps/{snap_name}/releases
+        """
         response = self.session.get(
             url=self.get_endpoint_url(f"snaps/{snap_name}/releases", 2),
             params={"page": page},
@@ -291,6 +379,12 @@ class Publisher:
         return self.process_response(response)
 
     def snap_channel_map(self, session, snap_name):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/snaps.html#snap-channel-map
+        Endpoint: [GET]
+            https://dashboard.snapcraft.io/api/v2/snaps/{snap_name}/channel-map
+        """
         response = self.session.get(
             url=self.get_endpoint_url(f"snaps/{snap_name}/channel-map", 2),
             headers=self._get_authorization_header(session),
@@ -299,6 +393,11 @@ class Publisher:
         return self.process_response(response)
 
     def post_snap_release(self, session, snap_name, json):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/snap.html#release-a-snap-build-to-a-channel
+        Endpoint: [POST] https://dashboard.snapcraft.io/dev/api/snap-release
+        """
         response = self.session.post(
             url=self.get_endpoint_url("snap-release/"),
             headers=self._get_authorization_header(session),
@@ -308,6 +407,12 @@ class Publisher:
         return self.process_response(response)
 
     def post_close_channel(self, session, snap_id, json):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/snap.html#close-a-channel-for-a-snap-package
+        Endpoint: [POST]
+            https://dashboard.snapcraft.io/dev/api/snaps/{snap_id}/close
+        """
         response = self.session.post(
             url=self.get_endpoint_url(f"snaps/{snap_id}/close"),
             headers=self._get_authorization_header(session),
