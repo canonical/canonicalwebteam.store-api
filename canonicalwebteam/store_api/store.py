@@ -1,4 +1,3 @@
-from pprint import pprint
 from canonicalwebteam.store_api.exceptions import (
     StoreApiConnectionError,
     StoreApiResourceNotFound,
@@ -173,7 +172,8 @@ class Store:
     def get_item_details(self, name, channel=None, fields=[], api_version=2):
         """
         Documentation: https://api.snapcraft.io/docs/info.html
-        Endpoint: [GET] https://api.snapcraft.io/api/v2/{name_space}/info/{package_name}
+        Endpoint: [GET]
+            https://api.snapcraft.io/api/v2/{name_space}/info/{package_name}
         """
         url = self.get_endpoint_url("info/" + name, api_version)
         params = {"fields": ",".join(fields)}
@@ -219,8 +219,10 @@ class Store:
 
     def get_resource_revisions(self, name, resource_name, api_version=2):
         """
-        Documentation: https://api.snapcraft.io/docs/charms.html#list_resource_revisions
-        Endpoint: https://api.snapcraft.io/api/v2/charms/resources/{package_name}/{resource_name}/revisions
+        Documentation:
+            https://api.snapcraft.io/docs/charms.html#list_resource_revisions
+        Endpoint:
+            https://api.snapcraft.io/api/v2/charms/resources/{package_name}/{resource_name}/revisions
         """
         url = self.get_endpoint_url(
             f"resources/{name}/{resource_name}/revisions", api_version
