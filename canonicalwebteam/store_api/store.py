@@ -66,6 +66,10 @@ class Store:
         arch="wide",
         api_version=1,
     ):
+        """
+        Documentation: https://api.snapcraft.io/docs/search.html#snap_search
+        Endpoint:  https://api.snapcraft.io/api/v1/snaps/search
+        """
         url = self.get_endpoint_url("search", api_version)
         headers = self.config[api_version].get("headers")
 
@@ -113,6 +117,10 @@ class Store:
         )
 
     def get_all_items(self, size, api_version=1):
+        """
+        Documentation: https://api.snapcraft.io/docs/search.html#snap_search
+        Endpoint:  https://api.snapcraft.io/api/v1/snaps/search
+        """
         url = self.get_endpoint_url("search", api_version)
 
         return self.process_response(
@@ -124,6 +132,10 @@ class Store:
         )
 
     def get_category_items(self, category, size=10, page=1, api_version=1):
+        """
+        Documentation: https://api.snapcraft.io/docs/search.html#snap_search
+        Endpoint:  https://api.snapcraft.io/api/v1/snaps/search
+        """
         return self.search(
             search="",
             category=category,
@@ -133,6 +145,10 @@ class Store:
         )
 
     def get_featured_items(self, size=10, page=1, api_version=1):
+        """
+        Documentation: https://api.snapcraft.io/docs/search.html#snap_search
+        Endpoint:  https://api.snapcraft.io/api/v1/snaps/search
+        """
         return self.search(
             search="",
             category="featured",
@@ -142,6 +158,10 @@ class Store:
         )
 
     def get_publisher_items(self, publisher, size=500, page=1, api_version=1):
+        """
+        Documentation: https://api.snapcraft.io/docs/search.html#snap_search
+        Endpoint:  https://api.snapcraft.io/api/v1/snaps/search
+        """
         return self.search(
             search="publisher:" + publisher,
             size=size,
@@ -150,8 +170,12 @@ class Store:
         )
 
     def get_item_details(self, name, channel=None, fields=[], api_version=2):
+        """
+        Documentation: https://api.snapcraft.io/docs/info.html
+        Endpoint: [GET]
+            https://api.snapcraft.io/api/v2/{name_space}/info/{package_name}
+        """
         url = self.get_endpoint_url("info/" + name, api_version)
-
         params = {"fields": ",".join(fields)}
 
         if channel:
@@ -166,6 +190,10 @@ class Store:
         )
 
     def get_public_metrics(self, json, api_version=1):
+        """
+        Documentation: https://api.snapcraft.io/docs/metrics.html
+        Endpoint: https://api.snapcraft.io/api/v1/snaps/metrics
+        """
         url = self.get_endpoint_url("metrics")
 
         headers = self.config[api_version].get("headers", {})
@@ -176,8 +204,11 @@ class Store:
         )
 
     def get_categories(self, api_version=2, type="shared"):
+        """
+        Documentation: https://api.snapcraft.io/docs/categories.html
+        Endpoint: https://api.snapcraft.io/api/v2/{name_space}/categories
+        """
         url = self.get_endpoint_url("categories", api_version)
-
         return self.process_response(
             self.session.get(
                 url,
@@ -187,6 +218,12 @@ class Store:
         )
 
     def get_resource_revisions(self, name, resource_name, api_version=2):
+        """
+        Documentation:
+            https://api.snapcraft.io/docs/charms.html#list_resource_revisions
+        Endpoint:
+            https://api.snapcraft.io/api/v2/charms/resources/{package_name}/{resource_name}/revisions
+        """
         url = self.get_endpoint_url(
             f"resources/{name}/{resource_name}/revisions", api_version
         )
