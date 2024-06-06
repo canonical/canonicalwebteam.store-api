@@ -678,20 +678,20 @@ class SnapStoreAdmin(SnapPublisher):
         )
         return response
 
-    def get_featured_snaps(self, session, api_version=1):
+    def get_featured_snaps(self, session, api_version=1, fields="snap_id"):
         """
         Documentation: (link to spec)
             https://docs.google.com/document/d/1UAybxuZyErh3ayqb4nzL3T4BbvMtnmKKEPu-ixcCj_8/edit
-        Endpoint: https://api.staging.snapcraft.io/api/v1/snaps/search
+        Endpoint: https://api.snapcraft.io/api/v1/snaps/search
         """
-        url = "https://api.staging.snapcraft.io/api/v1/snaps/search"
+        url = f"{SNAPSTORE_API_URL}api/v1/snaps/search"
         headers = self.config[api_version].get("headers")
 
         params = {
             "scope": "wide",
             "arch": "wide",
             "confinement": "strict,classic,devmode",
-            "fields": "snap_id",
+            "fields": fields,
             "section": "featured",
         }
 
