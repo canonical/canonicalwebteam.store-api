@@ -11,7 +11,7 @@ interactions:
       User-Agent:
       - python-requests/2.31.0
     method: GET
-    uri: https://api.staging.snapcraft.io/api/v1/snaps/search?scope=wide&arch=wide&confinement=strict%2Cclassic%2Cdevmode&fields=snap_id&section=featured
+    uri: https://api.snapcraft.io/api/v1/snaps/search?scope=wide&arch=wide&confinement=strict%2Cclassic%2Cdevmode&fields=snap_id&section=featured
   response:
     body:
       string: '{"_embedded": {"clickindex:package": [{"package_name": "telegram-sergiusens",
