@@ -340,6 +340,24 @@ class CharmPublisher(Publisher):
 
         return self.process_response(response)
 
+    def get_releases(self, publisher_auth, name):
+        """
+        List of all releases for a package.
+        Documentation:
+            https://api.charmhub.io/docs/default.html#list_releases
+        Endpoint URL: [GET]
+            https://api.charmhub.io/v1/charm/<name>/releases
+
+        Args:
+            publisher_auth: Serialized macaroon to consume the API.
+            name: Name of the package
+        """
+        response = self.session.get(
+            url=self.get_endpoint_url(f"charm/{name}/releases"),
+            headers=self._get_authorization_header(publisher_auth),
+        )
+        return self.process_response(response)
+
     def get_collaborators(self, publisher_auth, name):
         """
         Get collaborators (accepted invites) for the given package.
