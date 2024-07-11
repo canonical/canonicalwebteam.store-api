@@ -272,8 +272,6 @@ class SnapPublisher(Publisher):
     def get_package_metadata(self, publisher_auth, package_type, snap_name):
         """
         Get general metadata for a package.
-        Documentation: https://api.charmhub.io/docs/default.html#package_metadata
-        Endpoint: [GET] https://api.charmhub.io/v1/{package_type}/{snap_name}
         Args:
             publisher_auth: Serialized macaroon to consume the API.
             package_type: Type of packages to obtain.
@@ -286,7 +284,8 @@ class SnapPublisher(Publisher):
             ),
             headers=self._get_publisherwg_authorization_header(publisher_auth),
         )
-        return response.json()
+
+        return self.process_response(response)["metadata"]
 
     def unregister_package_name(self, publisher_auth, snap_name):
         """
