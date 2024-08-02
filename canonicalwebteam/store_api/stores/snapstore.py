@@ -256,16 +256,34 @@ class SnapPublisher(Publisher):
         )
         return self.process_response(response)
 
-    def create_track(self, session, snap_name, track_name):
+    def create_track(
+        self,
+        session,
+        snap_name,
+        track_name,
+        version_pattern=None,
+        auto_phasing_percentage=None,
+    ):
         """
         Create a track for a snap base on the snap's guardrail pattern.
         Documentation: https://api.charmhub.io/docs/default.html#create_tracks
         Endpoint: [POST]  https://api.charmhub.io/v1/snap/{snap_name}/tracks
+        Args:
+            publisher_auth: Serialized macaroon to consume the API.
+            snap_name: Name of the snap
+            track_name: Name of the track
+            version_pattern: Version pattern for the track (optional)
+            auto_phasing_percentage: phasing percentage for track (optional)
         """
+        payload = {
+            "name": track_name,
+            "version-pattern": version_pattern,
+            "automatic-phasing-percentage": auto_phasing_percentage,
+        }
         response = self.session.post(
             url=self.get_publisherwg_endpoint_url(f"snap/{snap_name}/tracks"),
             headers=self._get_publisherwg_authorization_header(session),
-            json=[{"name": track_name}],
+            json=[payload],
         )
         return response
 
