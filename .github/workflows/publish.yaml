@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: snok/install-poetry@v1.3.0
+    - uses: snok/install-poetry@v1.4.1
 
     - name: Install dependencies
       run: sudo apt update && sudo apt install -y --no-install-recommends python3-venv
@@ -23,7 +23,7 @@ jobs:
       run: poetry build
 
     - name: Publish to PyPI
-      uses: pypa/gh-action-pypi-publish@bea5cda687c2b79989126d589ef4411bedce0195
+      uses: pypa/gh-action-pypi-publish@fb9fc6a4e67ca27a7a76b17bbf90be83c2d3c716
       with:
         user: __token__
         password: ${{ secrets.pypi_password }}
@@ -33,7 +33,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: snok/install-poetry@v1.3.0
+    - uses: snok/install-poetry@v1.4.1
 
     - name: Install dependencies
       run: sudo apt update && sudo apt install -y --no-install-recommends python3-venv
