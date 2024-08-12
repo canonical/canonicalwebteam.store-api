@@ -125,6 +125,9 @@ class SnapPublisher(Publisher):
 
         return self.process_response(response)
 
+    def get_dashboard_endpoint_url(self, endpoint):
+        return f"{SNAPSTORE_DASHBOARD_API_URL}api/v2/{endpoint}"
+
     def get_publisherwg_endpoint_url(self, endpoint):
         return f"{SNAPSTORE_PUBLISHERWG_API_URL}v1/{endpoint}"
 
@@ -324,6 +327,35 @@ class SnapPublisher(Publisher):
         response = self.session.delete(
             url=url,
             headers=self._get_authorization_header(publisher_auth),
+        )
+        return response
+
+    def get_validation_sets(self, publisher_auth):
+        """
+        Return a list of validation sets for the current account
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/validation-sets.html
+        Endpoint: [GET] https://dashboard.snapcraft.io/api/v2/validation-sets
+        """
+        url = self.get_dashboard_endpoint_url("validation-sets")
+        response = self.session.get(
+            url, headers=self._get_authorization_header(publisher_auth)
+        )
+        return response
+
+    def get_validation_set(self, publisher_auth, validation_set_id):
+        """
+        Return a validation set for the current account
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/validation-sets.html
+        Endpoint:
+            [GET] https://dashboard.snapcraft.io/api/v2/validation-sets/{id}
+        """
+        url = self.get_dashboard_endpoint_url(
+            f"validation-sets/{validation_set_id}"
+        )
+        response = self.session.get(
+            url, headers=self._get_authorization_header(publisher_auth)
         )
         return response
 
