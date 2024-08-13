@@ -341,7 +341,7 @@ class SnapPublisher(Publisher):
         response = self.session.get(
             url, headers=self._get_authorization_header(publisher_auth)
         )
-        return response
+        return self.process_response(response)
 
     def get_validation_set(self, publisher_auth, validation_set_id):
         """
@@ -357,7 +357,7 @@ class SnapPublisher(Publisher):
         response = self.session.get(
             url, headers=self._get_authorization_header(publisher_auth)
         )
-        return response
+        return self.process_response(response)
 
 
 class SnapStoreAdmin(SnapPublisher):
