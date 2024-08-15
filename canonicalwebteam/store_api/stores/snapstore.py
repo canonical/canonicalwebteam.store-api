@@ -352,7 +352,7 @@ class SnapPublisher(Publisher):
             [GET] https://dashboard.snapcraft.io/api/v2/validation-sets/{id}
         """
         url = self.get_dashboard_endpoint_url(
-            f"validation-sets/{validation_set_id}"
+            f"validation-sets/{validation_set_id}?sequence=all"
         )
         response = self.session.get(
             url, headers=self._get_authorization_header(publisher_auth)
