@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: snok/install-poetry@v1.3.0
 
     - name: Install dependencies
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Install dependencies
       run: |
@@ -36,7 +36,7 @@ jobs:
   test-python:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: snok/install-poetry@v1.3.0
 
     - name: Install dependencies
@@ -53,7 +53,7 @@ jobs:
         poetry run coverage run --source=. -m unittest discover tests
         poetry run coverage xml
 
-    - uses: codecov/codecov-action@v1
+    - uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
     
@@ -62,7 +62,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Check inclusive naming
         uses: canonical-web-and-design/inclusive-naming@main
