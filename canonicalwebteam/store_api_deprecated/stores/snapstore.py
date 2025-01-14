@@ -357,23 +357,7 @@ class SnapPublisher(Publisher):
         response = self.session.get(
             url, headers=self._get_authorization_header(publisher_auth)
         )
-        return self.process_response(response)    # merge into 1
-    def get_collaborators(self, session, name):
-        """
-        Get collaborators (accepted invites) for the given package.
-        Documentation:
-            https://api.charmhub.io/docs/collaborator.html#get_collaborators
-        Endpoint: [GET]
-            https://api.charmhub.io/v1/snap/{snap_name}/collaborators
-        """
-        response = self.session.get(
-            url=self.get_publisherwg_endpoint_url(
-                f"snap/{name}/collaborators"
-            ),
-            headers=self._get_publisherwg_authorization_header(session),
-        )
         return self.process_response(response)
-
 
 
 class SnapStoreAdmin(SnapPublisher):

@@ -9,21 +9,24 @@ PUBLISHERGW_URL = getenv("PUBLISHERGW_URL", "https://api.charmhub.io")
 VALID_NAMESPACE = ["charms", "snaps"]
 CHARMSTORE_VALID_PACKAGE_TYPES = ["charm", "bundle"]
 
+
 class PublisherGW(Base):
     def __init__(self, name_space: str, session=Session()):
         super().__init__(session)
-        self.name_space = name_space #for urls that has namespace
+        self.name_space = name_space
         self.config = {
             1: {"base_url": f"{PUBLISHERGW_URL}/v1"},
             2: {"base_url": f"{PUBLISHERGW_URL}/v2"},
         }
 
-    def get_endpoint_url(self, endpoint: str, version: int = 1, has_name_space=True):
+    def get_endpoint_url(
+        self, endpoint: str, version: int = 1, has_name_space=True
+    ):
         base_url = self.config[version]["base_url"]
         if has_name_space:
             return f"{base_url}/{self.name_space}/{endpoint}"
         return f"{base_url}/{endpoint}"
-        
+
     # SEARCH
     def find(
         self,
@@ -70,9 +73,6 @@ class PublisherGW(Base):
         Endpoint: https://api.charmhub.io/v2/{name_space}/categories
         """
         url = self.get_endpoint_url("categories", api_version)
-        pprint("inside_device")
-        x = self.session.get(url, headers=self.config[api_version].get("headers"), params={"type": type})
-        pprint(x)
         return self.process_response(
             self.session.get(
                 url,
@@ -133,8 +133,7 @@ class PublisherGW(Base):
         )
 
         return self.process_response(response)["macaroon"]
-    
-    # nyt
+
     def exchange_dashboard_macaroons(self, publisher_auth):
         """
         Exchange dashboard.snapcraft.io SSO discharged macaroons
@@ -162,8 +161,7 @@ class PublisherGW(Base):
         )
 
         return self.process_response(response)
-    
-    # nyt
+
     def whoami(self, publisher_auth):
         """
         Return information about the authenticated macaroon token.
@@ -176,7 +174,7 @@ class PublisherGW(Base):
         )
 
         return self.process_response(response)
-    
+
     # PACKAGES MANAGEMENT
     def get_account_packages(
         self,
@@ -200,8 +198,11 @@ class PublisherGW(Base):
             A list of packages
         """
 
-        if self.name_space == "charms" and package_type not in CHARMSTORE_VALID_PACKAGE_TYPES:
-            raise ValueError( 
+        if (
+            self.name_space == "charms"
+            and package_type not in CHARMSTORE_VALID_PACKAGE_TYPES
+        ):
+            raise ValueError(
                 "Invalid package type. Expected one of: %s"
                 % CHARMSTORE_VALID_PACKAGE_TYPES
             )
@@ -227,7 +228,8 @@ class PublisherGW(Base):
         Get general metadata for a package.
         Documentation:
             https://api.charmhub.io/docs/default.html#package_metadata
-        Endpoint URL: [GET] https://api.charmhub.io/v1/{namespace}/{package_name}
+        Endpoint URL: [GET]
+        https://api.charmhub.io/v1/{namespace}/{package_name}
         namespace: charm for both charms and bundles
         package_name: Package name
 
@@ -267,7 +269,10 @@ class PublisherGW(Base):
             Package general metadata with changes applied
         """
 
-        if self.name_space == "charm" and package_type not in CHARMSTORE_VALID_PACKAGE_TYPES:
+        if (
+            self.name_space == "charm"
+            and package_type not in CHARMSTORE_VALID_PACKAGE_TYPES
+        ):
             raise ValueError(
                 "Invalid package type. Expected one of: %s"
                 % CHARMSTORE_VALID_PACKAGE_TYPES
@@ -296,7 +301,9 @@ class PublisherGW(Base):
         """
 
         response = self.session.post(
-            url=self.get_endpoint_url(f"{self.name_space}", has_name_space=False),
+            url=self.get_endpoint_url(
+                f"{self.name_space}", has_name_space=False
+            ),
             headers=self._get_authorization_header(publisher_auth),
             json=data,
         )
@@ -329,12 +336,17 @@ class PublisherGW(Base):
         Get libraries for a charm.
         Documentation:
             https://api.charmhub.io/docs/libraries.html#fetch_libraries
-        Endpoint URL: [POST] https://api.charmhub.io/v1/{package_type}/libraries/bulk
+        Endpoint URL: [POST]
+        https://api.charmhub.io/v1/{package_type}/libraries/bulk
         """
-        ur = self.get_endpoint_url(f"{package_type}/libraries/bulk", has_name_space=False)
+        ur = self.get_endpoint_url(
+            f"{package_type}/libraries/bulk", has_name_space=False
+        )
         pprint(ur)
         response = self.session.post(
-            url=self.get_endpoint_url(f"{package_type}/libraries/bulk", has_name_space=False),
+            url=self.get_endpoint_url(
+                f"{package_type}/libraries/bulk", has_name_space=False
+            ),
             json=[{"charm-name": package_name}],
         )
 
@@ -359,7 +371,8 @@ class PublisherGW(Base):
             params["api"] = api_version
         response = self.session.get(
             url=self.get_endpoint_url(
-                f"charm/libraries/{charm_name}/{library_id}", has_name_space=False
+                f"charm/libraries/{charm_name}/{library_id}",
+                has_name_space=False,
             ),
             params=params,
         )
@@ -550,7 +563,8 @@ class PublisherGW(Base):
         auto_phasing_percentage=None,
     ):
         """
-        Create a track for an artefact base on the artefact's guardrail pattern.
+        Create a track for an artefact base on the artefact's guardrail
+        pattern.
         Documentation: https://api.charmhub.io/docs/default.html#create_tracks
         Endpoint URL: [POST]
             https://api.charmhub.io/v1/charm/{package_name}/tracks
@@ -583,7 +597,9 @@ class PublisherGW(Base):
         Endpoint: [GET] https://api.charmhub.io/v1/brand/{store_id}/model
         """
         response = self.session.get(
-            url=self.get_endpoint_url(f"brand/{store_id}/model", has_name_space=False),
+            url=self.get_endpoint_url(
+                f"brand/{store_id}/model", has_name_space=False
+            ),
             headers=self._get_authorization_header(publisher_auth),
         )
 
@@ -600,14 +616,18 @@ class PublisherGW(Base):
         else:
             payload = {"name": name, "series": "16"}
         response = self.session.post(
-            url=self.get_endpoint_url(f"brand/{store_id}/model", has_name_space=False),
+            url=self.get_endpoint_url(
+                f"brand/{store_id}/model", has_name_space=False
+            ),
             headers=self._get_authorization_header(publisher_auth),
             json=payload,
         )
 
         return self.process_response(response)
 
-    def update_store_model(self, publisher_auth, store_id, model_name, api_key):
+    def update_store_model(
+        self, publisher_auth, store_id, model_name, api_key
+    ):
         """
         Doucumentation:
             https://api.charmhub.io/docs/model-service-admin.html#update_model
@@ -633,7 +653,8 @@ class PublisherGW(Base):
         """
         response = self.session.get(
             url=self.get_endpoint_url(
-                f"brand/{store_id}/model/{model_name}/serial_policy", has_name_space=False
+                f"brand/{store_id}/model/{model_name}/serial_policy",
+                has_name_space=False,
             ),
             headers=self._get_authorization_header(publisher_auth),
         )
@@ -651,7 +672,8 @@ class PublisherGW(Base):
         """
         response = self.session.post(
             url=self.get_endpoint_url(
-                f"brand/{store_id}/model/{model_name}/serial_policy", has_name_space=False
+                f"brand/{store_id}/model/{model_name}/serial_policy",
+                has_name_space=False,
             ),
             headers=self._get_authorization_header(publisher_auth),
             json={"signing-key-sha3-384": signing_key},
@@ -660,7 +682,7 @@ class PublisherGW(Base):
         return self.process_response(response)
 
     def delete_store_model_policy(
-        self, publisher_auth, store_id, model_name, revision
+        self, publisher_auth, store_id, model_name, rev
     ):
         """
         Documentation:
@@ -668,10 +690,12 @@ class PublisherGW(Base):
         Endpoint: [DELETE]
             https://api.charmhub.io/v1/brand/{store_id}/model/{model_name}/serial_policy/{serial_policy_revision}
         """
+        url = self.get_endpoint_url(
+            f"brand/{store_id}/model/{model_name}/serial_policy/{rev}",
+            has_name_space=False,
+        )
         response = self.session.delete(
-            url=self.get_endpoint_url(
-                f"brand/{store_id}/model/{model_name}/serial_policy/{revision}", has_name_space=False
-            ),
+            url=url,
             headers=self._get_authorization_header(publisher_auth),
         )
 
@@ -722,7 +746,8 @@ class PublisherGW(Base):
         """
         headers = self._get_authorization_header(publisher_auth)
         url = self.get_endpoint_url(
-            f"brand/{store_id}/signing_key/{signing_key_sha3_384}", has_name_space=False
+            f"brand/{store_id}/signing_key/{signing_key_sha3_384}",
+            has_name_space=False,
         )
         response = self.session.delete(
             url=url,
@@ -755,11 +780,7 @@ class PublisherGW(Base):
         """
         headers = self._get_authorization_header(publisher_auth)
         url = self.get_endpoint_url("featured")
-        response = self.session.delete(
-            url=url,
-            headers=headers,
-            json=packages
-        )
+        response = self.session.delete(url=url, headers=headers, json=packages)
         return response
 
     def update_featured_snaps(self, publisher_auth, snaps):
@@ -776,4 +797,3 @@ class PublisherGW(Base):
             json=snaps,
         )
         return response
-

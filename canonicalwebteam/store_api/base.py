@@ -9,6 +9,7 @@ from canonicalwebteam.store_api_deprecated.exceptions import (
     PublisherMissingUsername,
 )
 
+
 class Base:
     def __init__(self, session):
         self.session = session
