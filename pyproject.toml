@@ -10,7 +10,7 @@ readme = 'README.md'
 include = 'canonicalwebteam'
 
 [tool.poetry.dependencies]
-python = '^3.6'
+python = '^3.8'
 coverage = '^5.4'
 pymacaroons = '0.13.0'
 requests = '^2.24.0'
