@@ -17,6 +17,6 @@ Therefore, there is need to refactor and restructure the codebase in such a way 
 The scope of the project is to:
 - Move all endpoints hitting the api.charmhub.io to `publishergw.py`
 - Move all endpoints hitting the dashboard.snapcraft.io to `dashboard.py`
-- Move all endpoints hitting api.sbapcraft.io to `devicegw.py`
+- Move all endpoints hitting api.snapcraft.io to `devicegw.py`
 - Refactor Charmhub and snapcraft to use the refcatored module
 - Document all changes made
