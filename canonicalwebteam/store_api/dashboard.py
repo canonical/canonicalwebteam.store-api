@@ -1,5 +1,4 @@
 from os import getenv
-from pprint import pprint
 from requests import Session
 from pymacaroons import Macaroon
 
@@ -98,7 +97,6 @@ class Dashboard(Base):
             https://dashboard.snapcraft.io/docs/reference/v1/account.html#get--dev-api-account
         Endpoint: [GET] https://dashboard.snapcraft.io/dev/api/account
         """
-        pprint(self.get_account(session).get("snaps", {}).get("16", {}))
         return self.get_account(session).get("snaps", {}).get("16", {})
 
     def get_agreement(self, session):
@@ -178,7 +176,6 @@ class Dashboard(Base):
             headers=self._get_authorization_header(session),
             json=json,
         )
-        pprint(response.json())
 
         return self.process_response(response)
 
