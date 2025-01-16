@@ -1,6 +1,8 @@
 from vcr_unittest import VCRTestCase
-from canonicalwebteam.store_api.stores.snapstore import SnapStore
-from canonicalwebteam.store_api.exceptions import StoreApiResourceNotFound
+from canonicalwebteam.store_api_deprecated.stores.snapstore import SnapStore
+from canonicalwebteam.store_api_deprecated.exceptions import (
+    StoreApiResourceNotFound,
+)
 
 
 class SnapStoreTest(VCRTestCase):
