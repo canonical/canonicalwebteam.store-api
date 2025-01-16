@@ -1,5 +1,4 @@
 from os import getenv
-from pprint import pprint
 from requests import Session
 
 from canonicalwebteam.store_api.base import Base
@@ -339,10 +338,7 @@ class PublisherGW(Base):
         Endpoint URL: [POST]
         https://api.charmhub.io/v1/{package_type}/libraries/bulk
         """
-        ur = self.get_endpoint_url(
-            f"{package_type}/libraries/bulk", has_name_space=False
-        )
-        pprint(ur)
+
         response = self.session.post(
             url=self.get_endpoint_url(
                 f"{package_type}/libraries/bulk", has_name_space=False

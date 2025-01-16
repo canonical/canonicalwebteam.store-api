@@ -1,7 +1,9 @@
 from os import getenv
 
 from vcr_unittest import VCRTestCase
-from canonicalwebteam.store_api.stores.charmstore import CharmPublisher
+from canonicalwebteam.store_api_deprecated.stores.charmstore import (
+    CharmPublisher,
+)
 
 publisher_auth = getenv("PUBLISHER_MACAROON", "secret")
 
