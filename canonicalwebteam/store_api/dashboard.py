@@ -1,68 +1,32 @@
-from canonicalwebteam.store_api.exceptions import (
-    StoreApiConnectionError,
-    StoreApiResourceNotFound,
-    StoreApiResponseDecodeError,
-    StoreApiResponseError,
-    StoreApiResponseErrorList,
-    PublisherAgreementNotSigned,
-    PublisherMacaroonRefreshRequired,
-    PublisherMissingUsername,
-)
+from os import getenv
+from pprint import pprint
+from requests import Session
 from pymacaroons import Macaroon
 
+from canonicalwebteam.store_api.base import Base
+from canonicalwebteam.store_api.exceptions import (
+    PublisherMacaroonRefreshRequired,
+)
 
-class Publisher:
-    def __init__(self, session):
-        self.config = {1: {"base_url": ""}}
-        self.session = session
 
-    def process_response(self, response):
-        # 5xx responses are not in JSON format
-        if response.status_code >= 500:
-            raise StoreApiConnectionError("Service Unavailable")
+DASHBOARD_API_URL = getenv(
+    "DASHBOARD_API_URL", "https://dashboard.snapcraft.io/"
+)
 
-        try:
-            body = response.json()
-        except ValueError as decode_error:
-            api_error_exception = StoreApiResponseDecodeError(
-                "JSON decoding failed: {}".format(decode_error)
-            )
-            raise api_error_exception
 
-        if self._is_macaroon_expired(response.headers):
-            raise PublisherMacaroonRefreshRequired
+class Dashboard(Base):
+    def __init__(self, session: Session):
+        super().__init__(session)
 
-        if not response.ok:
-            error_list = (
-                body["error_list"]
-                if "error_list" in body
-                else body.get("error-list")
-            )
-            if "error_list" in body or "error-list" in body:
-                for error in error_list:
-                    if error["code"] == "user-missing-latest-tos":
-                        raise PublisherAgreementNotSigned
-                    if error["code"] == "user-not-ready":
-                        if "has not signed agreement" in error["message"]:
-                            raise PublisherAgreementNotSigned
-                        elif "username" in error["message"]:
-                            raise PublisherMissingUsername
-                    if error["code"] == "resource-not-found":
-                        raise StoreApiResourceNotFound
+        self.config = {
+            1: {"base_url": f"{DASHBOARD_API_URL}dev/api/"},
+            2: {"base_url": f"{DASHBOARD_API_URL}api/v2/"},
+        }
 
-                raise StoreApiResponseErrorList(
-                    "The api returned a list of errors",
-                    response.status_code,
-                    error_list,
-                )
-            elif not body:
-                raise StoreApiResponseError(
-                    "Unknown error from api", response.status_code
-                )
-
-        return body
-
-    def get_endpoint_url(self, endpoint, api_version=1):
+    def get_endpoint_url(self, endpoint, api_version=1, is_store=False):
+        if is_store:
+            base_url = self.config[api_version]["base_url"]
+            return f"{base_url}stores/{endpoint}"
         base_url = self.config[api_version]["base_url"]
         return f"{base_url}{endpoint}"
 
@@ -87,12 +51,33 @@ class Publisher:
         elif "macaroons" in session:
             return {"Macaroons": session["macaroons"]}
 
-    def _is_macaroon_expired(self, headers):
+    def get_macaroon(self, permissions):
         """
-        Returns True if the macaroon needs to be refreshed from
-        the header response.
+        Return a bakery v2 macaroon from the publisher API to be discharged
+        Documemntation:
+            https://dashboard.snapcraft.io/docs/reference/v1/macaroon.html
+        Endpoint: [POST] https://dashboard.snapcraft.io/dev/api/acl
         """
-        return headers.get("WWW-Authenticate") == ("Macaroon needs_refresh=1")
+        response = self.session.post(
+            url=self.get_endpoint_url("tokens", 2),
+            json={"permissions": permissions},
+        )
+
+        return self.process_response(response)["macaroon"]
+
+    def whoami(self, session):
+        """
+        Get the authenticated user details.
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/tokens.html#api-tokens-whoami
+        Endpoint: [GET] https://dashboard.snapcraft.io/api/v2/tokens/whoami
+        """
+        response = self.session.get(
+            url=self.get_endpoint_url("tokens/whoami", api_version=2),
+            headers=self._get_authorization_header(session),
+        )
+
+        return self.process_response(response)
 
     def get_account(self, session):
         """
@@ -104,7 +89,6 @@ class Publisher:
         response = self.session.get(
             url=self.get_endpoint_url("account"), headers=headers
         )
-
         return self.process_response(response)
 
     def get_account_snaps(self, session):
@@ -114,6 +98,7 @@ class Publisher:
             https://dashboard.snapcraft.io/docs/reference/v1/account.html#get--dev-api-account
         Endpoint: [GET] https://dashboard.snapcraft.io/dev/api/account
         """
+        pprint(self.get_account(session).get("snaps", {}).get("16", {}))
         return self.get_account(session).get("snaps", {}).get("16", {})
 
     def get_agreement(self, session):
@@ -164,23 +149,6 @@ class Publisher:
         else:
             return self.process_response(username_response)
 
-    def get_publisher_metrics(self, session, json):
-        """
-        Documentation:
-            https://dashboard.snapcraft.io/docs/reference/v1/snap.html#fetch-metrics-for-snaps
-        Endpoint: [POST] https://dashboard.snapcraft.io/dev/api/snaps/metrics
-        """
-        headers = self._get_authorization_header(session)
-        headers["Content-Type"] = "application/json"
-
-        metrics_response = self.session.post(
-            url=self.get_endpoint_url("snaps/metrics"),
-            headers=headers,
-            json=json,
-        )
-
-        return self.process_response(metrics_response)
-
     def post_register_name(
         self,
         session,
@@ -210,6 +178,7 @@ class Publisher:
             headers=self._get_authorization_header(session),
             json=json,
         )
+        pprint(response.json())
 
         return self.process_response(response)
 
@@ -340,22 +309,8 @@ class Publisher:
         """
         response = self.session.get(
             url=self.get_endpoint_url(
-                f"snaps/{snap_id}/revisions/{revision_id}", 2
+                f"snaps/{snap_id}/revisions/{revision_id}", api_version=2
             ),
-            headers=self._get_authorization_header(session),
-        )
-
-        return self.process_response(response)
-
-    def snap_revision_history(self, session, snap_id):
-        """
-        Documentation:
-            https://dashboard.snapcraft.io/docs/reference/v1/snap.html#list-all-revisions-of-a-snap
-        Endpoint: [GET]
-            https://dashboard.snapcraft.io/dev/api/snaps/{snap_id}/history
-        """
-        response = self.session.get(
-            url=self.get_endpoint_url(f"snaps/{snap_id}/history"),
             headers=self._get_authorization_header(session),
         )
 
@@ -369,7 +324,9 @@ class Publisher:
             https://dashboard.snapcraft.io/api/v2/snaps/{snap_name}/releases
         """
         response = self.session.get(
-            url=self.get_endpoint_url(f"snaps/{snap_name}/releases", 2),
+            url=self.get_endpoint_url(
+                f"snaps/{snap_name}/releases", api_version=2
+            ),
             params={"page": page},
             headers=self._get_authorization_header(session),
         )
@@ -384,7 +341,9 @@ class Publisher:
             https://dashboard.snapcraft.io/api/v2/snaps/{snap_name}/channel-map
         """
         response = self.session.get(
-            url=self.get_endpoint_url(f"snaps/{snap_name}/channel-map", 2),
+            url=self.get_endpoint_url(
+                f"snaps/{snap_name}/channel-map", api_version=2
+            ),
             headers=self._get_authorization_header(session),
         )
 
@@ -418,3 +377,247 @@ class Publisher:
         )
 
         return self.process_response(response)
+
+    def get_publisher_metrics(self, session, json):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/snap.html#fetch-metrics-for-snaps
+        Endpoint: [POST] https://dashboard.snapcraft.io/dev/api/snaps/metrics
+        """
+        headers = self._get_authorization_header(session)
+        headers["Content-Type"] = "application/json"
+
+        metrics_response = self.session.post(
+            url=self.get_endpoint_url("snaps/metrics"),
+            headers=headers,
+            json=json,
+        )
+
+        return self.process_response(metrics_response)
+
+    def get_validation_sets(self, publisher_auth):
+        """
+        Return a list of validation sets for the current account
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/validation-sets.html
+        Endpoint: [GET] https://dashboard.snapcraft.io/api/v2/validation-sets
+        """
+        url = self.get_endpoint_url("validation-sets", api_version=2)
+        response = self.session.get(
+            url, headers=self._get_authorization_header(publisher_auth)
+        )
+        return self.process_response(response)
+
+    def get_validation_set(self, publisher_auth, validation_set_id):
+        """
+        Return a validation set for the current account
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/validation-sets.html
+        Endpoint:
+            [GET] https://dashboard.snapcraft.io/api/v2/validation-sets/{id}
+        """
+        url = self.get_endpoint_url(
+            f"validation-sets/{validation_set_id}?sequence=all", api_version=2
+        )
+        response = self.session.get(
+            url, headers=self._get_authorization_header(publisher_auth)
+        )
+        return self.process_response(response)
+
+    def get_stores(self, session, roles=["admin", "review", "view", "access"]):
+        """Return a list a stores with the given roles
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/account.html#get--dev-api-account
+        Endpoint: [GET] https://dashboard.snapcraft.io/dev/api/account
+
+        :return: A list of stores
+        """
+        headers = self._get_authorization_header(session)
+
+        response = self.session.get(
+            url=self.get_endpoint_url("account", 1), headers=headers
+        )
+
+        account_info = self.process_response(response)
+        stores = account_info.get("stores", [])
+        user_stores = []
+
+        for store in stores:
+            if not set(roles).isdisjoint(store["roles"]):
+                user_stores.append(store)
+
+        return user_stores
+
+    def get_store(self, session, store_id):
+        """Return a store where the user is an admin
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#list-the-details-of-a-brand-store
+        Endpoint:  [GET]
+            https://dashboard.snapcraft.io/api/v2/stores/{store_id}
+
+        :return: Store details
+        """
+        headers = self._get_authorization_header(session)
+
+        response = self.session.get(
+            url=self.get_endpoint_url(store_id, api_version=2, is_store=True),
+            headers=headers,
+        )
+
+        return self.process_response(response)["store"]
+
+    def get_store_snaps(
+        self, session, store_id, query=None, allowed_for_inclusion=None
+    ):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#get
+        Endpoint: [GET]
+            https://dashboard.snapcraft.io/api/v2/stores/{store_id}/snaps
+        """
+        headers = self._get_authorization_header(session)
+        params = {}
+
+        if query:
+            params["q"] = query
+
+        if allowed_for_inclusion:
+            params["allowed-for-inclusion"] = allowed_for_inclusion
+
+        response = self.session.get(
+            url=self.get_endpoint_url(
+                f"{store_id}/snaps", api_version=2, is_store=True
+            ),
+            params=params,
+            headers=headers,
+        )
+
+        return self.process_response(response).get("snaps", [])
+
+    def get_store_members(self, session, store_id):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#list-the-details-of-a-brand-store
+        Endpoint: [GET] https://dashboard.snapcraft.io/api/v2/stores/{store_id}
+        """
+        headers = self._get_authorization_header(session)
+
+        response = self.session.get(
+            url=self.get_endpoint_url(
+                f"{store_id}", api_version=2, is_store=True
+            ),
+            headers=headers,
+        )
+
+        return self.process_response(response).get("users", [])
+
+    def update_store_members(self, session, store_id, members):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#add-remove-or-edit-users-roles
+        Endpoint: [POST]
+            https://dashboard.snapcraft.io/api/v2/stores/{store_id}/users
+        """
+        headers = self._get_authorization_header(session)
+
+        response = self.session.post(
+            url=self.get_endpoint_url(
+                f"{store_id}/users", api_version=2, is_store=True
+            ),
+            headers=headers,
+            json=members,
+        )
+
+        return self.process_response(response)
+
+    def invite_store_members(self, session, store_id, members):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#manage-store-invitations
+        Endpoint: [POST]
+            https://dashboard.snapcraft.io/api/v2/stores/{store_id}/invites
+        """
+        headers = self._get_authorization_header(session)
+
+        response = self.session.post(
+            url=self.get_endpoint_url(
+                f"{store_id}/invites", api_version=2, is_store=True
+            ),
+            headers=headers,
+            json=members,
+        )
+
+        return self.process_response(response)
+
+    def change_store_settings(self, session, store_id, settings):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#change-store-settings
+        Endpoint: [PUT]
+            https://dashboard.snapcraft.io/api/v2/stores/{store_id}/settings
+        """
+        headers = self._get_authorization_header(session)
+
+        response = self.session.put(
+            url=self.get_endpoint_url(
+                f"{store_id}/settings", api_version=2, is_store=True
+            ),
+            headers=headers,
+            json=settings,
+        )
+
+        return self.process_response(response)
+
+    def update_store_snaps(self, session, store_id, snaps):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#post
+        Endpoint: [POST]
+            https://dashboard.snapcraft.io/api/v2/stores/{store_id}/snaps
+        """
+        headers = self._get_authorization_header(session)
+
+        response = self.session.post(
+            url=self.get_endpoint_url(
+                f"{store_id}/snaps", api_version=2, is_store=True
+            ),
+            headers=headers,
+            json=snaps,
+        )
+
+        return self.process_response(response)
+
+    def update_store_invites(self, session, store_id, invites):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#manage-store-invitations
+        Endpoint: [PUT]
+            https://dashboard.snapcraft.io/api/v2/stores/{store_id}/invites
+        """
+        headers = self._get_authorization_header(session)
+
+        response = self.session.put(
+            url=self.get_endpoint_url(
+                f"{store_id}/invites", api_version=2, is_store=True
+            ),
+            headers=headers,
+            json=invites,
+        )
+
+        return self.process_response(response)
+
+    def get_store_invites(self, session, store_id):
+        """
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#list-the-details-of-a-brand-store
+        Endpoint: [GET] https://dashboard.snapcraft.io/api/v2/stores/{store_id}
+        """
+        headers = self._get_authorization_header(session)
+
+        response = self.session.get(
+            url=self.get_endpoint_url(
+                f"{store_id}", api_version=2, is_store=True
+            ),
+            headers=headers,
+        )
+        return self.process_response(response).get("invites", [])
