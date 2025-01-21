@@ -7,7 +7,7 @@
 
 ## Introduction
 
-The Device Gateway is a crucial component of the store API that facilitates communication between the stores and the endpoints exposed at [devicegw](https://api.snapcraft.io/docs). These endpoints were initially grouped based on the stores consuming them which makes it hard to find and also scale the module. With this refactor, all endpoints hitting the devicer gateway will be in the [devicegw](./devicegw.py) file.
+The Device Gateway is a crucial component of the store API that facilitates communication between the stores and the endpoints exposed at [devicegw](https://api.snapcraft.io/docs). These endpoints were initially grouped based on the stores consuming them which makes it hard to find and also scale the module. With this refactor, all endpoints hitting the device gateway will be in the [devicegw](./devicegw.py) file.
 
 Purpose:
 - To make it easy for developers to easily find endpoints hitting device gateway.
