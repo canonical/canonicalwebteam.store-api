@@ -1,57 +1,28 @@
-from canonicalwebteam.store_api.exceptions import (
-    StoreApiConnectionError,
-    StoreApiResourceNotFound,
-    StoreApiResponseDecodeError,
-    StoreApiResponseError,
-    StoreApiResponseErrorList,
-)
+from os import getenv
+
+from canonicalwebteam.store_api.base import Base
 
 
-class Store:
+DEVICEGW_URL = getenv("DEVICEGW_URL", "https://api.snapcraft.io/")
+
+
+class DeviceGW(Base):
     def __init__(self, session, store=None):
-        self.config = {1: {"base_url": "", "headers": {}}}
-        self.session = session
+        super().__init__(session)
+        self.config = {
+            1: {
+                "base_url": f"{DEVICEGW_URL}api/v1/snaps/",
+                "headers": {"X-Ubuntu-Series": "16"},
+            },
+            2: {
+                "base_url": f"{DEVICEGW_URL}v2/snaps/",
+                "headers": {"Snap-Device-Series": "16"},
+            },
+        }
 
-    def process_response(self, response):
-        # 5xx responses are not in JSON format
-        if response.status_code >= 500:
-            raise StoreApiConnectionError("Service Unavailable")
-
-        try:
-            body = response.json()
-        except ValueError as decode_error:
-            raise StoreApiResponseDecodeError(
-                "JSON decoding failed: {}".format(decode_error)
-            )
-
-        if not response.ok:
-            if "error_list" in body or "error-list" in body:
-                # V1 and V2 error handling
-                error_list = (
-                    body["error_list"]
-                    if "error_list" in body
-                    else body["error-list"]
-                )
-
-                for error in error_list:
-                    if error["code"] == "resource-not-found":
-                        raise StoreApiResourceNotFound
-
-                raise StoreApiResponseErrorList(
-                    "The API returned a list of errors",
-                    response.status_code,
-                    error_list,
-                )
-            else:
-                raise StoreApiResponseError(
-                    "Unknown error from API", response.status_code
-                )
-
-        if "_embedded" in body:
-            body["results"] = body["_embedded"]["clickindex:package"]
-            del body["_embedded"]
-
-        return body
+        if store:
+            self.config[1]["headers"].update({"X-Ubuntu-Store": store})
+            self.config[2]["headers"].update({"Snap-Device-Store": store})
 
     def get_endpoint_url(self, endpoint, api_version=1):
         base_url = self.config[api_version]["base_url"]
@@ -115,6 +86,33 @@ class Store:
         return self.process_response(
             self.session.get(url, params=params, headers=headers)
         )
+
+    def find(
+        self,
+        query="",
+        category="",
+        architecture="",
+        publisher="",
+        featured="false",
+        fields=[],
+    ):
+        """
+        Documentation: https://api.snapcraft.io/docs/search.html#snaps_find
+        Endpoint: [GET] https://api.snapcraft.io/v2/snaps/find
+        """
+        url = self.get_endpoint_url("find", 2)
+        headers = self.config[2].get("headers")
+        params = {
+            "q": query,
+            "category": category,
+            "architecture": architecture,
+            "publisher": publisher,
+            "featured": featured,
+        }
+        if fields:
+            params["fields"] = ",".join(fields)
+        response = self.session.get(url, params=params, headers=headers)
+        return self.process_response(response)
 
     def get_all_items(self, size, api_version=1):
         """
@@ -234,3 +232,24 @@ class Store:
                 headers=self.config[api_version].get("headers"),
             )
         )["revisions"]
+
+    def get_featured_snaps(self, api_version=1, fields="snap_id"):
+        """
+        Documentation: (link to spec)
+            https://docs.google.com/document/d/1UAybxuZyErh3ayqb4nzL3T4BbvMtnmKKEPu-ixcCj_8/edit
+        Endpoint: https://api.snapcraft.io/api/v1/snaps/search
+        """
+        url = self.get_endpoint_url("search")
+        headers = self.config[api_version].get("headers")
+
+        params = {
+            "scope": "wide",
+            "arch": "wide",
+            "confinement": "strict,classic,devmode",
+            "fields": fields,
+            "section": "featured",
+        }
+
+        return self.process_response(
+            self.session.get(url, params=params, headers=headers)
+        )

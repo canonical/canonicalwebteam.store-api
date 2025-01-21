@@ -1,7 +1,9 @@
 from unittest.mock import Mock
 from os import getenv
 from vcr_unittest import VCRTestCase
-from canonicalwebteam.store_api.stores.snapstore import SnapStoreAdmin
+from canonicalwebteam.store_api_deprecated.stores.snapstore import (
+    SnapStoreAdmin,
+)
 
 test_session = getenv("DEVELOPER_TOKEN", {"developer_token": "secret"})
 
