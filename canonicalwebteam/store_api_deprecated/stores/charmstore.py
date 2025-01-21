@@ -1,5 +1,4 @@
 from os import getenv
-from pprint import pprint
 
 import requests
 
@@ -51,8 +50,7 @@ class CharmStore(Store):
 
         if requires:
             params["requires"] = ",".join(requires)
-        pprint("url:..............................................")
-        pprint(url)
+
         return self.process_response(
             self.session.get(url, params=params, headers=headers)
         )
