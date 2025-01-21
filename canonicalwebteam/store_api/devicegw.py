@@ -4,6 +4,8 @@ from canonicalwebteam.store_api.base import Base
 
 
 DEVICEGW_URL = getenv("DEVICEGW_URL", "https://api.snapcraft.io/")
+
+
 class DeviceGW(Base):
     def __init__(self, session, store=None):
         super().__init__(session)
@@ -230,7 +232,7 @@ class DeviceGW(Base):
                 headers=self.config[api_version].get("headers"),
             )
         )["revisions"]
-    
+
     def get_featured_snaps(self, api_version=1, fields="snap_id"):
         """
         Documentation: (link to spec)
@@ -251,4 +253,3 @@ class DeviceGW(Base):
         return self.process_response(
             self.session.get(url, params=params, headers=headers)
         )
-    
