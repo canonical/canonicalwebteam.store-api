@@ -1,5 +1,4 @@
-
-# Publisher SCA Refactor Documentation
+# Dashboard SCA Refactor Documentation
 
 ## Table of Contents
 - [Introduction](#introduction)
