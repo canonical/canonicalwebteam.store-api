@@ -176,9 +176,7 @@ class PublisherGWTest(VCRTestCase):
         response = self.client.delete_store_signing_key(
             publisher_auth=test_session,
             store_id="marketplace_test_store_id",
-            signing_key_sha3_384="""
-            h1_5lws3GBr_DXSOlLquzEN7cfq49xAGGoamO2mxq2y0g7pSyKDB_ELPB_vVe0gA
-            """,
+            signing_key_sha3_384="h1_5lws3GBr_DXSOlLquzEN7cfq49xAGG",
         )
         self.assertEqual(response.status_code, 204)
 

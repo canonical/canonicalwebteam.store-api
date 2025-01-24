@@ -13,7 +13,7 @@ interactions:
       User-Agent:
       - python-requests/2.32.3
     method: DELETE
-    uri: https://api.charmhub.io/v1/brand/marketplace_test_store_id/signing_key/h1_5lws3GBr_DXSOlLquzEN7cfq49xAGGoamO2mxq2y0g7pSyKDB_ELPB_vVe0gA
+    uri: https://api.charmhub.io/v1/brand/marketplace_test_store_id/signing_key/h1_5lws3GBr_DXSOlLquzEN7cfq49xAGG
   response:
     body:
       string: ''
