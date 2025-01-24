@@ -167,19 +167,6 @@ class PublisherGW(Base):
 
         return self.process_response(response)
 
-    # def whoami(self, publisher_auth):
-    #     """
-    #     Return information about the authenticated macaroon token.
-    #     Documentation: 'DEPRECATED'
-    #     Endpoint URL: [GET] https://api.charmhub.io/v1/whoami
-    #     """
-    #     response = self.session.get(
-    #         url=self.get_endpoint_url("whoami"),
-    #         headers=self._get_authorization_header(publisher_auth),
-    #     )
-    #     pprint(response.json())
-    #     return self.process_response(response)
-
     # PACKAGES MANAGEMENT
     def get_account_packages(
         self,
