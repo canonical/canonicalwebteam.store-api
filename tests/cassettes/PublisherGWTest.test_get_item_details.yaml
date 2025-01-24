@@ -1,0 +1,40 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.charmhub.io/v2/charms/info/marketplace-test-charm
+  response:
+    body:
+      string: '{"id":"test_charm_id","name":"marketplace-test-charm","type":"charm"}
+
+        '
+    headers:
+      content-length:
+      - '89'
+      content-type:
+      - application/json
+      date:
+      - Thu, 23 Jan 2025 23:43:43 GMT
+      server:
+      - gunicorn
+      snap-store-version:
+      - '62'
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DCDEE00000000000000000000FFFF0A83255C01BB6792D42F202B55EC
+      x-vcs-revision:
+      - c53097aa4a4f8f14a597766878e52468848697b0
+      x-view-name:
+      - snapdevicegw.webapi_info_charm.charm_info
+    status:
+      code: 200
+      message: OK
+version: 1

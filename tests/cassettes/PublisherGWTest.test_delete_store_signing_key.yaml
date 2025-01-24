@@ -1,0 +1,38 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.32.3
+    method: DELETE
+    uri: https://api.charmhub.io/v1/brand/marketplace_test_store_id/signing_key/h1_5lws3GBr_DXSOlLquzEN7cfq49xAGGoamO2mxq2y0g7pSyKDB_ELPB_vVe0gA
+  response:
+    body:
+      string: ''
+    headers:
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Fri, 24 Jan 2025 12:30:39 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DD7A600000000000000000000FFFF0A8325B201BB679387EF26FE00B2
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi_admin.delete_signing_key
+    status:
+      code: 204
+      message: NO CONTENT
+version: 1

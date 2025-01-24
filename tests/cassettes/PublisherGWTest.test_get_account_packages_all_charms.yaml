@@ -1,0 +1,42 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.charmhub.io/v1/charm
+  response:
+    body:
+      string: '{"results":[{"authority":null,"contact":null,"default-track":null,"description":"This
+        charm is for testing purposes.\n","id":"some_random_charm_id","links":{},"media":[],"name":"test-charm","private":false,"publisher":{"display-name":"Alimot Akinbode","id":"some_random_id","username":"codeempress","validation":"unproven"},"status":"published","store":"ubuntu","summary":"A
+        charm for the to test.","title":"Charm Template","type":"charm","website":null}]}
+
+        '
+    headers:
+      content-length:
+      - '2508'
+      content-type:
+      - application/json
+      date:
+      - Thu, 23 Jan 2025 22:16:20 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DA98A00000000000000000000FFFF0A8325B201BB6792BFB41F89905A
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi.list_registered_names
+    status:
+      code: 200
+      message: OK
+version: 1

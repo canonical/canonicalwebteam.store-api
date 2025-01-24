@@ -1,0 +1,47 @@
+interactions:
+- request:
+    body: '{"description": "Updated description"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '38'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.3
+    method: PATCH
+    uri: https://api.charmhub.io/v1/charm/marketplace-test-charm
+  response:
+    body:
+      string: '{"metadata":{"authority":null,"contact":null,"default-track":"latest","description":"Updated
+        description","id":"test_id","links":{},"media":[],"name":"marketplace-test-charm","private":false,"publisher":{"display-name":"Alimot
+        Akinbode","id":"test_id","username":"codeempress","validation":"unproven"},"status":"published","store":"ubuntu","summary":"A
+        charm for the Marketplace tribe to test.","title":"Charm Template","track-guardrails":[],"tracks":[],"type":"charm","website":null}}
+
+        '
+    headers:
+      content-length:
+      - '536'
+      content-type:
+      - application/json
+      date:
+      - Thu, 23 Jan 2025 22:46:25 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19D973E00000000000000000000FFFF0A8325B201BB6792C6C11FCB3FD3
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi.update_package_metadata
+    status:
+      code: 200
+      message: OK
+version: 1

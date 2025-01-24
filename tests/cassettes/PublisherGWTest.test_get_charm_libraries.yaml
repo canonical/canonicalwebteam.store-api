@@ -1,0 +1,44 @@
+interactions:
+- request:
+    body: '[{"charm-name": "marketplace-test-charm"}]'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '42'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.3
+    method: POST
+    uri: https://api.charmhub.io/v1/charm/libraries/bulk
+  response:
+    body:
+      string: '{"libraries":[]}
+
+        '
+    headers:
+      content-length:
+      - '17'
+      content-type:
+      - application/json
+      date:
+      - Thu, 23 Jan 2025 23:22:07 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19D87AC00000000000000000000FFFF0A8325F301BB6792CF1F201990F0
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi_libraries.fetch_libraries
+    status:
+      code: 200
+      message: OK
+version: 1

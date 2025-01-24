@@ -1,0 +1,38 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.32.3
+    method: DELETE
+    uri: https://api.charmhub.io/v1/brand/marketplace_test_store_id/model/test-model/serial_policy/0
+  response:
+    body:
+      string: ''
+    headers:
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Fri, 24 Jan 2025 12:24:19 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19D805600000000000000000000FFFF0A8325B201BB6793867226EF1274
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi_admin.delete_serial_policy
+    status:
+      code: 204
+      message: NO CONTENT
+version: 1

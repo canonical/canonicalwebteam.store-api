@@ -70,3 +70,6 @@ Base URL = `https://api.charmhub.io`
 | delete_featured_snaps  | /featured     | DELETE     | [delete featured](https://docs.google.com/document/d/1UAybxuZyErh3ayqb4nzL3T4BbvMtnmKKEPu-ixcCj_8)     |
 | update_featured_snaps   | /featured     | PUT     | [update featured](https://docs.google.com/document/d/1UAybxuZyErh3ayqb4nzL3T4BbvMtnmKKEPu-ixcCj_8)     | 
 
+
+
+NOte: whoami has been taken out because it's deprecated and nit in juse in any of the stores
