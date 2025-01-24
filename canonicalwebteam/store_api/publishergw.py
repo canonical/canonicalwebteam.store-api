@@ -2,10 +2,13 @@ from os import getenv
 from requests import Session
 
 from canonicalwebteam.store_api.base import Base
+from canonicalwebteam.store_api.utils import (
+    remove_trailing_slash,
+)
 
 
 PUBLISHERGW_URL = getenv("PUBLISHERGW_URL", "https://api.charmhub.io")
-VALID_NAMESPACE = ["charms", "snaps"]
+VALID_NAMESPACE = ["charm", "snap"]
 CHARMSTORE_VALID_PACKAGE_TYPES = ["charm", "bundle"]
 
 
@@ -19,12 +22,14 @@ class PublisherGW(Base):
         }
 
     def get_endpoint_url(
-        self, endpoint: str, version: int = 1, has_name_space=True
+        self, endpoint: str, version: int = 1, has_name_space=False
     ):
         base_url = self.config[version]["base_url"]
         if has_name_space:
-            return f"{base_url}/{self.name_space}/{endpoint}"
-        return f"{base_url}/{endpoint}"
+            return remove_trailing_slash(
+                f"{base_url}/{self.name_space}/{endpoint}"
+            )
+        return remove_trailing_slash(f"{base_url}/{endpoint}")
 
     # SEARCH
     def find(
@@ -94,7 +99,6 @@ class PublisherGW(Base):
         Endpoint URL: [GET] https://api.charmhub.io/v1/tokens
         """
         response = self.session.get(url=self.get_endpoint_url("tokens"))
-
         return self.process_response(response)["macaroon"]
 
     def issue_macaroon(self, permissions, description=None, ttl=None):
@@ -161,19 +165,6 @@ class PublisherGW(Base):
 
         return self.process_response(response)
 
-    def whoami(self, publisher_auth):
-        """
-        Return information about the authenticated macaroon token.
-        Documentation: 'DEPRECATED'
-        Endpoint URL: [GET] https://api.charmhub.io/v1/whoami
-        """
-        response = self.session.get(
-            url=self.get_endpoint_url("whoami"),
-            headers=self._get_authorization_header(publisher_auth),
-        )
-
-        return self.process_response(response)
-
     # PACKAGES MANAGEMENT
     def get_account_packages(
         self,
@@ -211,7 +202,7 @@ class PublisherGW(Base):
         if include_collaborations:
             params["include-collaborations"] = "true"
         response = self.session.get(
-            url=self.get_endpoint_url(package_type, has_name_space=False),
+            url=self.get_endpoint_url(package_type),
             headers=self._get_authorization_header(publisher_auth),
             params=params,
         )
@@ -240,7 +231,7 @@ class PublisherGW(Base):
             Package general metadata
         """
         response = self.session.get(
-            url=self.get_endpoint_url(package_name),
+            url=self.get_endpoint_url(f"{package_name}", has_name_space=True),
             headers=self._get_authorization_header(publisher_auth),
         )
 
@@ -300,9 +291,7 @@ class PublisherGW(Base):
         """
 
         response = self.session.post(
-            url=self.get_endpoint_url(
-                f"{self.name_space}", has_name_space=False
-            ),
+            url=self.get_endpoint_url("", has_name_space=True),
             headers=self._get_authorization_header(publisher_auth),
             json=data,
         )
@@ -323,26 +312,24 @@ class PublisherGW(Base):
             The package name ID if successful
             Otherwise, returns an error list
         """
-        url = self.get_endpoint_url(package_name)
+        url = self.get_endpoint_url(package_name, has_name_space=True)
         response = self.session.delete(
             url=url,
             headers=self._get_authorization_header(publisher_auth),
         )
         return response
 
-    def get_charm_libraries(self, package_name, package_type):
+    def get_charm_libraries(self, package_name):
         """
         Get libraries for a charm.
         Documentation:
             https://api.charmhub.io/docs/libraries.html#fetch_libraries
         Endpoint URL: [POST]
-        https://api.charmhub.io/v1/{package_type}/libraries/bulk
+        https://api.charmhub.io/v1/{name_space}/libraries/bulk
         """
 
         response = self.session.post(
-            url=self.get_endpoint_url(
-                f"{package_type}/libraries/bulk", has_name_space=False
-            ),
+            url=self.get_endpoint_url("libraries/bulk", has_name_space=True),
             json=[{"charm-name": package_name}],
         )
 
@@ -367,8 +354,7 @@ class PublisherGW(Base):
             params["api"] = api_version
         response = self.session.get(
             url=self.get_endpoint_url(
-                f"charm/libraries/{charm_name}/{library_id}",
-                has_name_space=False,
+                f"charm/libraries/{charm_name}/{library_id}"
             ),
             params=params,
         )
@@ -388,7 +374,9 @@ class PublisherGW(Base):
             name: Name of the package
         """
         response = self.session.get(
-            url=self.get_endpoint_url(f"{package_name}/releases"),
+            url=self.get_endpoint_url(
+                f"{package_name}/releases", has_name_space=True
+            ),
             headers=self._get_authorization_header(publisher_auth),
         )
         return self.process_response(response)
@@ -399,9 +387,12 @@ class PublisherGW(Base):
         Endpoint: [GET]
             https://api.charmhub.io/api/v2/{name_space}/info/{package_name}
         """
-        url = self.get_endpoint_url("info/" + name, api_version)
-        params = {"fields": ",".join(fields)}
-
+        url = self.get_endpoint_url(
+            f"{self.name_space}s/info/{name}", api_version
+        )
+        params = {}
+        if fields:
+            params["fields"] = ",".join(fields)
         if channel:
             params["channel"] = channel
 
@@ -428,7 +419,9 @@ class PublisherGW(Base):
             package_name: Name of the package
         """
         response = self.session.get(
-            url=self.get_endpoint_url(f"{package_name}/collaborators"),
+            url=self.get_endpoint_url(
+                f"{package_name}/collaborators", has_name_space=True
+            ),
             headers=self._get_authorization_header(publisher_auth),
         )
         return self.process_response(response)
@@ -447,7 +440,9 @@ class PublisherGW(Base):
             package_name: Name of the package
         """
         response = self.session.get(
-            url=self.get_endpoint_url(f"{package_name}/collaborators/invites"),
+            url=self.get_endpoint_url(
+                f"{package_name}/collaborators/invites", has_name_space=True
+            ),
             headers=self._get_authorization_header(publisher_auth),
         )
         return self.process_response(response)
@@ -472,7 +467,9 @@ class PublisherGW(Base):
             payload["invites"].append({"email": email})
 
         response = self.session.post(
-            url=self.get_endpoint_url(f"{package_name}/collaborators/invites"),
+            url=self.get_endpoint_url(
+                f"{package_name}/collaborators/invites", has_name_space=True
+            ),
             headers=self._get_authorization_header(publisher_auth),
             json=payload,
         )
@@ -498,7 +495,8 @@ class PublisherGW(Base):
 
         response = self.session.post(
             url=self.get_endpoint_url(
-                f"{package_name}/collaborators/invites/revoke"
+                f"{package_name}/collaborators/invites/revoke",
+                has_name_space=True,
             ),
             headers=self._get_authorization_header(publisher_auth),
             json=payload,
@@ -520,7 +518,8 @@ class PublisherGW(Base):
         """
         response = self.session.post(
             url=self.get_endpoint_url(
-                f"{package_name}/collaborators/invites/accept"
+                f"{package_name}/collaborators/invites/accept",
+                has_name_space=True,
             ),
             headers=self._get_authorization_header(publisher_auth),
             json={"token": token},
@@ -579,7 +578,9 @@ class PublisherGW(Base):
             "automatic-phasing-percentage": auto_phasing_percentage,
         }
         response = self.session.post(
-            url=self.get_endpoint_url(f"{package_name}/tracks"),
+            url=self.get_endpoint_url(
+                f"{package_name}/tracks", has_name_space=True
+            ),
             headers=self._get_authorization_header(publisher_auth),
             json=[payload],
         )
@@ -593,9 +594,7 @@ class PublisherGW(Base):
         Endpoint: [GET] https://api.charmhub.io/v1/brand/{store_id}/model
         """
         response = self.session.get(
-            url=self.get_endpoint_url(
-                f"brand/{store_id}/model", has_name_space=False
-            ),
+            url=self.get_endpoint_url(f"brand/{store_id}/model"),
             headers=self._get_authorization_header(publisher_auth),
         )
 
@@ -612,9 +611,7 @@ class PublisherGW(Base):
         else:
             payload = {"name": name, "series": "16"}
         response = self.session.post(
-            url=self.get_endpoint_url(
-                f"brand/{store_id}/model", has_name_space=False
-            ),
+            url=self.get_endpoint_url(f"brand/{store_id}/model"),
             headers=self._get_authorization_header(publisher_auth),
             json=payload,
         )
@@ -631,9 +628,7 @@ class PublisherGW(Base):
             https://api.charmhub.io/v1/brand/{store_id}/model/{model_name}
         """
         response = self.session.patch(
-            url=self.get_endpoint_url(
-                f"brand/{store_id}/model/{model_name}", has_name_space=False
-            ),
+            url=self.get_endpoint_url(f"brand/{store_id}/model/{model_name}"),
             headers=self._get_authorization_header(publisher_auth),
             json={"api-key": api_key},
         )
@@ -649,8 +644,7 @@ class PublisherGW(Base):
         """
         response = self.session.get(
             url=self.get_endpoint_url(
-                f"brand/{store_id}/model/{model_name}/serial_policy",
-                has_name_space=False,
+                f"brand/{store_id}/model/{model_name}/serial_policy"
             ),
             headers=self._get_authorization_header(publisher_auth),
         )
@@ -668,8 +662,7 @@ class PublisherGW(Base):
         """
         response = self.session.post(
             url=self.get_endpoint_url(
-                f"brand/{store_id}/model/{model_name}/serial_policy",
-                has_name_space=False,
+                f"brand/{store_id}/model/{model_name}/serial_policy"
             ),
             headers=self._get_authorization_header(publisher_auth),
             json={"signing-key-sha3-384": signing_key},
@@ -687,8 +680,7 @@ class PublisherGW(Base):
             https://api.charmhub.io/v1/brand/{store_id}/model/{model_name}/serial_policy/{serial_policy_revision}
         """
         url = self.get_endpoint_url(
-            f"brand/{store_id}/model/{model_name}/serial_policy/{rev}",
-            has_name_space=False,
+            f"brand/{store_id}/model/{model_name}/serial_policy/{rev}"
         )
         response = self.session.delete(
             url=url,
@@ -704,11 +696,8 @@ class PublisherGW(Base):
         Endpoint: [GET] https://api.charmhub.io/v1/brand/{store_id}/signing_key
         """
         headers = self._get_authorization_header(publisher_auth)
-        url = self.get_endpoint_url(
-            f"brand/{store_id}/signing_key", has_name_space=False
-        )
         response = self.session.get(
-            url=url,
+            url=self.get_endpoint_url(f"brand/{store_id}/signing_key"),
             headers=headers,
         )
         return self.process_response(response)
@@ -721,11 +710,8 @@ class PublisherGW(Base):
             https://api.charmhub.io/v1/brand/{store_id}/signing_key
         """
         headers = self._get_authorization_header(publisher_auth)
-        url = self.get_endpoint_url(
-            f"brand/{store_id}/signing_key", has_name_space=False
-        )
         response = self.session.post(
-            url=url,
+            url=self.get_endpoint_url(f"brand/{store_id}/signing_key"),
             headers=headers,
             json={"name": name},
         )
@@ -742,8 +728,7 @@ class PublisherGW(Base):
         """
         headers = self._get_authorization_header(publisher_auth)
         url = self.get_endpoint_url(
-            f"brand/{store_id}/signing_key/{signing_key_sha3_384}",
-            has_name_space=False,
+            f"brand/{store_id}/signing_key/{signing_key_sha3_384}"
         )
         response = self.session.delete(
             url=url,
@@ -759,7 +744,7 @@ class PublisherGW(Base):
         Endpoint: [GET] https://api.charmhub.io/v1/brand/{store_id}
         """
         headers = self._get_authorization_header(publisher_auth)
-        url = self.get_endpoint_url(f"brand/{store_id}", has_name_space=False)
+        url = self.get_endpoint_url(f"brand/{store_id}")
         response = self.session.get(
             url=url,
             headers=headers,
@@ -775,7 +760,7 @@ class PublisherGW(Base):
         Endpoint: [DELETE] https://api.charmhub.io/v1/snap/featured
         """
         headers = self._get_authorization_header(publisher_auth)
-        url = self.get_endpoint_url("featured")
+        url = self.get_endpoint_url("snap/featured")
         response = self.session.delete(url=url, headers=headers, json=packages)
         return response
 
@@ -786,7 +771,7 @@ class PublisherGW(Base):
         Endpoint: [PUT] https://api.charmhub.io/v1/{name_space}/featured
         """
         headers = self._get_authorization_header(publisher_auth)
-        url = self.get_endpoint_url("featured")
+        url = self.get_endpoint_url("snap/featured")
         response = self.session.put(
             url=url,
             headers=headers,
