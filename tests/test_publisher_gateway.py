@@ -6,7 +6,7 @@ from canonicalwebteam.store_api.publishergw import PublisherGW
 
 test_session = getenv(
     "PUBLISHER_MACAROON",
-    "AgEQYXBpLnNuYXBjcmFmdC5pbwImAwoQMcsGawXv3uFMndJ1ts8g4xIBMBoOCgVsb2dpbhIFbG9naW4AAid0aW1lLWJlZm9yZSAyMDI2LTAxLTIzVDIyOjA5OjE0LjA0MTY3NloAAiZ0aW1lLXNpbmNlIDIwMjUtMDEtMjNUMjI6MDk6MTQuMDQxNjc2WgACL3Nlc3Npb24taWQgOTMyZmJlOWYtOWE2ZC00MTU2LTlkZDQtODQyYzVjZDg5NDQzAAI5ZGVjbGFyZWQgdXNlcmlkIHVzc286aHR0cHM6Ly9sb2dpbi51YnVudHUuY29tLytpZC9uNnp0Y3lMAAJuZXh0cmEgeyJwZXJtaXNzaW9ucyI6IFsiYWNjb3VudC1yZWdpc3Rlci1wYWNrYWdlIiwgImFjY291bnQtdmlldy1wYWNrYWdlcyIsICJwYWNrYWdlLW1hbmFnZSIsICJwYWNrYWdlLXZpZXciXX0AAAYgiVi-dJIlFcOjZGV27jcx06vuATGza704uQ5-_MsFIzo",
+    "test_session",
 )
 
 
@@ -135,7 +135,7 @@ class PublisherGWTest(VCRTestCase):
         response = self.client.create_store_model(
             publisher_auth=test_session,
             store_id="marketplace_test_store_id",
-            name= "test-model",
+            name="test-model",
         )
         self.assertEqual("test-model", response["name"])
 
@@ -161,7 +161,7 @@ class PublisherGWTest(VCRTestCase):
             publisher_auth=test_session,
             store_id="marketplace_test_store_id",
             model_name="test-model",
-            rev=0
+            rev=0,
         )
         self.assertEqual(response.status_code, 204)
 
@@ -176,7 +176,9 @@ class PublisherGWTest(VCRTestCase):
         response = self.client.delete_store_signing_key(
             publisher_auth=test_session,
             store_id="marketplace_test_store_id",
-            signing_key_sha3_384="h1_5lws3GBr_DXSOlLquzEN7cfq49xAGGoamO2mxq2y0g7pSyKDB_ELPB_vVe0gA",
+            signing_key_sha3_384="""
+            h1_5lws3GBr_DXSOlLquzEN7cfq49xAGGoamO2mxq2y0g7pSyKDB_ELPB_vVe0gA
+            """,
         )
         self.assertEqual(response.status_code, 204)
 
