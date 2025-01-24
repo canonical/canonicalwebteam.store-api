@@ -1,4 +1,4 @@
-from canonicalwebteam.store_api_deprecated.exceptions import (
+from canonicalwebteam.store_api.exceptions import (
     StoreApiConnectionError,
     StoreApiResourceNotFound,
     StoreApiResponseDecodeError,
