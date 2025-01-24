@@ -1,0 +1,45 @@
+interactions:
+- request:
+    body: '{"name": "test-model", "series": "16"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '38'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.3
+    method: POST
+    uri: https://api.charmhub.io/v1/brand/marketplace_test_store_id/model
+  response:
+    body:
+      string: '{"api-key":null,"brand-account-id":"marketplace_test_store_id","created-at":"2025-01-24T07:14:19.571154","created-by":{"display-name":"Alimot
+        Akinbode","email":"ode@canonical.com","id":"test_id","username":"codeempress","validation":"unproven"},"modified-at":null,"modified-by":null,"name":"test-model","series":"16"}
+
+        '
+    headers:
+      content-length:
+      - '362'
+      content-type:
+      - application/json
+      date:
+      - Fri, 24 Jan 2025 07:14:19 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DB7E800000000000000000000FFFF0A8325B201BB67933DCB24070F34
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi_admin.create_model
+    status:
+      code: 201
+      message: CREATED
+version: 1

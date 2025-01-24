@@ -1,0 +1,45 @@
+interactions:
+- request:
+    body: '{"api-key": ""}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.3
+    method: PATCH
+    uri: https://api.charmhub.io/v1/brand/njwQYXFnS7ppo7LaGxoh7aqVZc1CPi26/model/test-model
+  response:
+    body:
+      string: '{"error-list":[{"code":"remote-service-unavailable","message":"Unable
+        to contact snapmodels. Too many retries"}]}
+
+        '
+    headers:
+      content-length:
+      - '114'
+      content-type:
+      - application/json
+      date:
+      - Fri, 24 Jan 2025 12:53:51 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19D9DBC00000000000000000000FFFF0A8325F001BB67938D5F26B020C2
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi_admin.update_model
+    status:
+      code: 503
+      message: SERVICE UNAVAILABLE
+version: 1

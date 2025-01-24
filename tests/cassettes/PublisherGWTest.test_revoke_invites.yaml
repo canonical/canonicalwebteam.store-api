@@ -1,0 +1,40 @@
+interactions:
+- request:
+    body: '{"invites": [{"email": "alimot.akinbode@test.canonical.com"}]}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '62'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.3
+    method: POST
+    uri: https://api.charmhub.io/v1/charm/marketplace-test-charm/collaborators/invites/revoke
+  response:
+    body:
+      string: ''
+    headers:
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Fri, 24 Jan 2025 06:52:36 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DDEBC00000000000000000000FFFF0A8325B201BB679338B423D423E8
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi_collab.revoke_invites
+    status:
+      code: 204
+      message: NO CONTENT
+version: 1

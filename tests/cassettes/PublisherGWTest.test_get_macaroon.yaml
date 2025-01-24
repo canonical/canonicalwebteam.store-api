@@ -1,0 +1,46 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.charmhub.io/v1/tokens
+  response:
+    body:
+      string: '{"macaroon":"{\"i64\": \"AwdfrhfjguMS_on5T3yogl9RIBMBdsfgdoOCgVsb2dpW4\",
+        \"s64\": \"eLXEwwrtyuiioppgY4asdfghj-Gu4L1LVt3h77SHO30RU\", \"l\": \"api.snapcraft.io\",
+        \"c\": [{\"i\": \"time-before 2026-01-22T16:17:16.791222Z\"}, {\"i\": \"time-since
+        2025-01-22T16:17:16.712344Z\"}, {\"i\": \"session-id 1234db1c-9955-4739-84c8-a12334559907\"},
+        {\"i64\": \"AoZh2j4VyC7NPiS2asdfghj-SF5vXyq4_C3ylWl-W4qwerD6NtE6n_i2HJmDIPZmrdAH-AJSm4zc-pSSRCWLyqweretyujXZR21z_bfqzSj-BtrlrWT8d3-PaabE1pYTyUbsAQ0YKT0-u8HYZ9yLiTTeOzh2SOfYasKVJFt2W6i3EY9YB5dwFdU8A85mhTQI3Koxa\",
+        \"v64\": \"npfi3M_V7D5rkZcehjxrqwererttRK0pNTeu6gVjqwertyuykqglJXpxtoj0YOB4qicE_GlB7fWwK0gatoIJVgcQkMiTHZOST\",
+        \"l\": \"https://api.jujucharms.com/identity/\"}]}"}
+
+        '
+    headers:
+      content-length:
+      - '720'
+      content-type:
+      - application/json
+      date:
+      - Wed, 22 Jan 2025 16:17:16 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DC52200000000000000000000FFFF0A8325F301BB67911A0CE5276FA
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi.get_macaroon
+    status:
+      code: 200
+      message: OK
+version: 1

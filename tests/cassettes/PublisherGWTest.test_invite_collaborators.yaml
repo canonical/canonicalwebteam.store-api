@@ -1,0 +1,44 @@
+interactions:
+- request:
+    body: '{"invites": [{"email": "alimot.akinbode@test.canonical.com"}]}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '62'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.3
+    method: POST
+    uri: https://api.charmhub.io/v1/charm/marketplace-test-charm/collaborators/invites
+  response:
+    body:
+      string: '{"tokens":[{"email":"alimot.akinbode@test.canonical.com","token":"test_token"}]}
+
+        '
+    headers:
+      content-length:
+      - '135'
+      content-type:
+      - application/json
+      date:
+      - Fri, 24 Jan 2025 06:43:19 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DE66A00000000000000000000FFFF0A8325F001BB6793368723467C70
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi_collab.invite_collaborators
+    status:
+      code: 201
+      message: CREATED
+version: 1

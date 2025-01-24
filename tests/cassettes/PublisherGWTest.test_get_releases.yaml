@@ -1,0 +1,40 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.charmhub.io/v1/charm/marketplace-test-charm/releases
+  response:
+    body:
+      string: '{"channel-map":[{"base":{"architecture":"amd64","channel":"22.04","name":"ubuntu"},"channel":"latest/edge","expiration-date":null,"progressive":{"paused":null,"percentage":null},"resources":[],"revision":3,"when":"2023-11-09T14:55:48Z"}],"package":{"channels":[{"branch":null,"fallback":null,"name":"latest/stable","risk":"stable","track":"latest"},{"branch":null,"fallback":"latest/stable","name":"latest/candidate","risk":"candidate","track":"latest"},{"branch":null,"fallback":"latest/candidate","name":"latest/beta","risk":"beta","track":"latest"},{"branch":null,"fallback":"latest/beta","name":"latest/edge","risk":"edge","track":"latest"},{"branch":null,"fallback":null,"name":"0.0/stable","risk":"stable","track":"0.0"},{"branch":null,"fallback":"0.0/stable","name":"0.0/candidate","risk":"candidate","track":"0.0"},{"branch":null,"fallback":"0.0/candidate","name":"0.0/beta","risk":"beta","track":"0.0"},{"branch":null,"fallback":"0.0/beta","name":"0.0/edge","risk":"edge","track":"0.0"},{"branch":null,"fallback":null,"name":"1.0/stable","risk":"stable","track":"1.0"},{"branch":null,"fallback":"1.0/stable","name":"1.0/candidate","risk":"candidate","track":"1.0"},{"branch":null,"fallback":"1.0/candidate","name":"1.0/beta","risk":"beta","track":"1.0"},{"branch":null,"fallback":"1.0/beta","name":"1.0/edge","risk":"edge","track":"1.0"},{"branch":null,"fallback":null,"name":"2.0/stable","risk":"stable","track":"2.0"},{"branch":null,"fallback":"2.0/stable","name":"2.0/candidate","risk":"candidate","track":"2.0"},{"branch":null,"fallback":"2.0/candidate","name":"2.0/beta","risk":"beta","track":"2.0"},{"branch":null,"fallback":"2.0/beta","name":"2.0/edge","risk":"edge","track":"2.0"},{"branch":null,"fallback":null,"name":"3.0/stable","risk":"stable","track":"3.0"},{"branch":null,"fallback":"3.0/stable","name":"3.0/candidate","risk":"candidate","track":"3.0"},{"branch":null,"fallback":"3.0/candidate","name":"3.0/beta","risk":"beta","track":"3.0"},{"branch":null,"fallback":"3.0/beta","name":"3.0/edge","risk":"edge","track":"3.0"},{"branch":null,"fallback":null,"name":"4.0/stable","risk":"stable","track":"4.0"},{"branch":null,"fallback":"4.0/stable","name":"4.0/candidate","risk":"candidate","track":"4.0"},{"branch":null,"fallback":"4.0/candidate","name":"4.0/beta","risk":"beta","track":"4.0"},{"branch":null,"fallback":"4.0/beta","name":"4.0/edge","risk":"edge","track":"4.0"},{"branch":null,"fallback":null,"name":"4.1/stable","risk":"stable","track":"4.1"},{"branch":null,"fallback":"4.1/stable","name":"4.1/candidate","risk":"candidate","track":"4.1"},{"branch":null,"fallback":"4.1/candidate","name":"4.1/beta","risk":"beta","track":"4.1"},{"branch":null,"fallback":"4.1/beta","name":"4.1/edge","risk":"edge","track":"4.1"},{"branch":null,"fallback":null,"name":"4.2/stable","risk":"stable","track":"4.2"},{"branch":null,"fallback":"4.2/stable","name":"4.2/candidate","risk":"candidate","track":"4.2"},{"branch":null,"fallback":"4.2/candidate","name":"4.2/beta","risk":"beta","track":"4.2"},{"branch":null,"fallback":"4.2/beta","name":"4.2/edge","risk":"edge","track":"4.2"},{"branch":null,"fallback":null,"name":"6.0/stable","risk":"stable","track":"6.0"},{"branch":null,"fallback":"6.0/stable","name":"6.0/candidate","risk":"candidate","track":"6.0"},{"branch":null,"fallback":"6.0/candidate","name":"6.0/beta","risk":"beta","track":"6.0"},{"branch":null,"fallback":"6.0/beta","name":"6.0/edge","risk":"edge","track":"6.0"},{"branch":null,"fallback":null,"name":"6.1/stable","risk":"stable","track":"6.1"},{"branch":null,"fallback":"6.1/stable","name":"6.1/candidate","risk":"candidate","track":"6.1"},{"branch":null,"fallback":"6.1/candidate","name":"6.1/beta","risk":"beta","track":"6.1"},{"branch":null,"fallback":"6.1/beta","name":"6.1/edge","risk":"edge","track":"6.1"},{"branch":null,"fallback":null,"name":"6.2/stable","risk":"stable","track":"6.2"},{"branch":null,"fallback":"6.2/stable","name":"6.2/candidate","risk":"candidate","track":"6.2"},{"branch":null,"fallback":"6.2/candidate","name":"6.2/beta","risk":"beta","track":"6.2"},{"branch":null,"fallback":"6.2/beta","name":"6.2/edge","risk":"edge","track":"6.2"},{"branch":null,"fallback":null,"name":"6.3/stable","risk":"stable","track":"6.3"},{"branch":null,"fallback":"6.3/stable","name":"6.3/candidate","risk":"candidate","track":"6.3"},{"branch":null,"fallback":"6.3/candidate","name":"6.3/beta","risk":"beta","track":"6.3"},{"branch":null,"fallback":"6.3/beta","name":"6.3/edge","risk":"edge","track":"6.3"},{"branch":null,"fallback":null,"name":"6.4/stable","risk":"stable","track":"6.4"},{"branch":null,"fallback":"6.4/stable","name":"6.4/candidate","risk":"candidate","track":"6.4"},{"branch":null,"fallback":"6.4/candidate","name":"6.4/beta","risk":"beta","track":"6.4"},{"branch":null,"fallback":"6.4/beta","name":"6.4/edge","risk":"edge","track":"6.4"},{"branch":null,"fallback":null,"name":"6.5/stable","risk":"stable","track":"6.5"},{"branch":null,"fallback":"6.5/stable","name":"6.5/candidate","risk":"candidate","track":"6.5"},{"branch":null,"fallback":"6.5/candidate","name":"6.5/beta","risk":"beta","track":"6.5"},{"branch":null,"fallback":"6.5/beta","name":"6.5/edge","risk":"edge","track":"6.5"},{"branch":null,"fallback":null,"name":"6.6/stable","risk":"stable","track":"6.6"},{"branch":null,"fallback":"6.6/stable","name":"6.6/candidate","risk":"candidate","track":"6.6"},{"branch":null,"fallback":"6.6/candidate","name":"6.6/beta","risk":"beta","track":"6.6"},{"branch":null,"fallback":"6.6/beta","name":"6.6/edge","risk":"edge","track":"6.6"},{"branch":null,"fallback":null,"name":"6.7/stable","risk":"stable","track":"6.7"},{"branch":null,"fallback":"6.7/stable","name":"6.7/candidate","risk":"candidate","track":"6.7"},{"branch":null,"fallback":"6.7/candidate","name":"6.7/beta","risk":"beta","track":"6.7"},{"branch":null,"fallback":"6.7/beta","name":"6.7/edge","risk":"edge","track":"6.7"}]},"revisions":[{"bases":[{"architecture":"amd64","channel":"22.04","name":"ubuntu"}],"created-at":"2023-11-09T14:55:37Z","errors":null,"revision":3,"sha3-384":"263be60827f1bbdb4351aa6a450c279f7448b524024e588d5cc8619bdd516374b0fc8d2630cd3ce070a908625f17084b","size":6740703,"status":"released","version":"3"}]}
+
+        '
+    headers:
+      content-length:
+      - '6220'
+      content-type:
+      - application/json
+      date:
+      - Thu, 23 Jan 2025 23:28:38 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19D826600000000000000000000FFFF0A8325F301BB6792D0A52027484B
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi.list_releases
+    status:
+      code: 200
+      message: OK
+version: 1

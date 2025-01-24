@@ -1,0 +1,42 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      User-Agent:
+      - python-requests/2.32.3
+    method: DELETE
+    uri: https://api.charmhub.io/v1/charm/marketplace-test-charm2
+  response:
+    body:
+      string: '{"package-id":"Z7HNFmVI7Rq3yGJYVAy8UWg"}
+
+        '
+    headers:
+      content-length:
+      - '50'
+      content-type:
+      - application/json
+      date:
+      - Thu, 23 Jan 2025 23:06:36 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19D8A2400000000000000000000FFFF0A8325B201BB6792CB7C1FF5AFC1
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi.unregister_package
+    status:
+      code: 200
+      message: OK
+version: 1

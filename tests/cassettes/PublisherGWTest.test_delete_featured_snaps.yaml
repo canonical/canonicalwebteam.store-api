@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"packages": ["12345"]}'
+    body: '{"snaps": "marketplace-test-charm"}'
     headers:
       Accept:
       - '*/*'
@@ -9,36 +9,37 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '23'
+      - '35'
       Content-Type:
       - application/json
       User-Agent:
-      - python-requests/2.31.0
+      - python-requests/2.32.3
     method: DELETE
     uri: https://api.charmhub.io/v1/snap/featured
   response:
     body:
-      string: '{"error-list":[{"code":"api-error","message":"Invalid macaroon"}]}
+      string: '{"error-list":[{"code":"api-error","message":"Additional properties
+        are not allowed (''snaps'' was unexpected) at /"}]}
 
         '
     headers:
       content-length:
-      - '67'
+      - '118'
       content-type:
       - application/json
       date:
-      - Wed, 27 Mar 2024 11:10:16 GMT
+      - Fri, 24 Jan 2025 12:41:42 GMT
       publishergw-version:
-      - '40'
+      - '42'
       server:
-      - gunicorn/20.0.4
+      - gunicorn
       x-request-id:
-      - 6DABFA75A0960A8325F001BB6603FE982E37AB
+      - 00000000000000000000FFFF6DABE19D8E5E00000000000000000000FFFF0A8325B201BB67938A8627184C8A
       x-vcs-revision:
-      - 91d3d4ff71a0d44f421ee0fd0cd845a9b132f3ab
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
       x-view-name:
       - publishergw.webapi.delete_featured
     status:
-      code: 201
-      message: SUCCESS
+      code: 400
+      message: BAD REQUEST
 version: 1
