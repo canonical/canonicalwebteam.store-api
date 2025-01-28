@@ -1,0 +1,118 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://dashboard.snapcraft.io/api/v2/snaps/steve-test-snap/channel-map
+  response:
+    body:
+      string: '{"channel-map": [{"architecture": "amd64", "channel": "latest/candidate",
+        "expiration-date": null, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": 100.0}, "revision": 23, "when": "2022-06-01T09:01:43Z"},
+        {"architecture": "amd64", "channel": "latest/stable", "expiration-date": null,
+        "progressive": {"paused": null, "percentage": null, "current-percentage":
+        100.0}, "revision": 23, "when": "2024-11-07T13:16:28Z"}, {"architecture":
+        "arm64", "channel": "latest/candidate", "expiration-date": null, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": 0.0}, "revision":
+        24, "when": "2023-06-06T11:44:30Z"}, {"architecture": "arm64", "channel":
+        "latest/edge", "expiration-date": null, "progressive": {"paused": null, "percentage":
+        null, "current-percentage": null}, "revision": 58, "when": "2025-01-07T15:34:15Z"},
+        {"architecture": "arm64", "channel": "latest/stable", "expiration-date": null,
+        "progressive": {"paused": null, "percentage": null, "current-percentage":
+        0.0}, "revision": 24, "when": "2024-11-07T13:16:29Z"}, {"architecture": "armhf",
+        "channel": "latest/candidate", "expiration-date": null, "progressive": {"paused":
+        null, "percentage": null, "current-percentage": 0.0}, "revision": 33, "when":
+        "2023-06-06T11:44:59Z"}, {"architecture": "armhf", "channel": "latest/stable",
+        "expiration-date": null, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": 0.0}, "revision": 33, "when": "2024-11-07T13:07:45Z"},
+        {"architecture": "ppc64el", "channel": "latest/stable", "expiration-date":
+        null, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        0.0}, "revision": 31, "when": "2024-11-07T13:07:44Z"}, {"architecture": "s390x",
+        "channel": "latest/stable", "expiration-date": null, "progressive": {"paused":
+        null, "percentage": null, "current-percentage": 0.0}, "revision": 32, "when":
+        "2024-11-07T13:07:44Z"}], "revisions": [{"architectures": ["amd64"], "attributes":
+        {}, "base": "core18", "confinement": "strict", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 23, "version": "1.0.1", "build-url":
+        null, "created-at": "2022-06-01T08:59:35Z", "sha3-384": "20c4e17fca36fddccb933b730454256e81714914f2f050996a63efe250e1aa44e5e4dc92959e9cd72cf7ef9ca918c5b6",
+        "size": 4096}, {"architectures": ["arm64"], "attributes": {}, "base": "core18",
+        "confinement": "strict", "epoch": {"read": [0], "write": [0]}, "grade": "stable",
+        "revision": 24, "version": "2.0.0", "build-url": null, "created-at": "2022-06-20T08:37:52Z",
+        "sha3-384": "ce8fc73571f5afe9ca13ed19ec0605990d78c26abb5dc273528e56e3e46a5215672adb75602a17a53a6de79288e60f5b",
+        "size": 4096}, {"architectures": ["ppc64el"], "attributes": {"build-request-id":
+        "lp-79412770", "build-request-timestamp": "2023-05-12T11:27:58Z"}, "base":
+        "bare", "confinement": "strict", "epoch": {"read": [0], "write": [0]}, "grade":
+        "stable", "revision": 31, "version": "3.0.0", "build-url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2105845",
+        "created-at": "2023-05-12T11:32:16Z", "sha3-384": "2c9f21647b78bb8d61afef0678996e451c68e8e6a4ab9c3184d3309b5a3abc9895d9021540c2e3df73ac7563bfea0d5d",
+        "size": 4096}, {"architectures": ["s390x"], "attributes": {"build-request-id":
+        "lp-79412770", "build-request-timestamp": "2023-05-12T11:27:58Z"}, "base":
+        "bare", "confinement": "strict", "epoch": {"read": [0], "write": [0]}, "grade":
+        "stable", "revision": 32, "version": "3.0.0", "build-url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2105846",
+        "created-at": "2023-05-12T11:32:18Z", "sha3-384": "061cc4297271240f8ba572b8e183a51c9924e412066d4f3fd71300d213bd133a841b5d3a9ee1a374823b92914d177f97",
+        "size": 4096}, {"architectures": ["armhf"], "attributes": {"build-request-id":
+        "lp-79412770", "build-request-timestamp": "2023-05-12T11:27:58Z"}, "base":
+        "bare", "confinement": "strict", "epoch": {"read": [0], "write": [0]}, "grade":
+        "stable", "revision": 33, "version": "3.0.0", "build-url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2105843",
+        "created-at": "2023-05-12T11:35:12Z", "sha3-384": "39157150b8dd7ffe736fd27fe143296416d6e4193412cf5a671716f13d1000804e3524d859ae0694ae01dc0e49ae8bb9",
+        "size": 4096}, {"architectures": ["arm64"], "attributes": {"build-request-id":
+        "lp-95040028", "build-request-timestamp": "2025-01-07T15:29:57Z"}, "base":
+        "bare", "confinement": "strict", "epoch": {"read": [0], "write": [0]}, "grade":
+        "stable", "revision": 58, "version": "4.0.1", "build-url": "https://launchpad.net/~build.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2698836",
+        "created-at": "2025-01-07T15:34:08Z", "sha3-384": "4a70aabbff1f275fdb8db947504a2346d22e2bbc90921f3a2e7b18752211691d10652d39f68df1b82ca40a453c28e743",
+        "size": 16384}], "snap": {"id": "bv9Q2i9CNAvTjt9wTx1cFC6SAT9YrEfG", "name":
+        "steve-test-snap", "private": false, "default-track": null, "publisher": {"id":
+        "prFvYmvaBsQbXLNaVaQFV4EAcJ8zh0Ej", "display-name": "Steve Rydz", "username":
+        "steverydz"}, "title": "steve-test-snap", "tracks": [{"name": "latest", "creation-date":
+        null, "version-pattern": null, "status": "default"}], "channels": [{"name":
+        "latest/stable", "fallback": null, "track": "latest", "risk": "stable", "branch":
+        null}, {"name": "latest/candidate", "fallback": "latest/stable", "track":
+        "latest", "risk": "candidate", "branch": null}, {"name": "latest/beta", "fallback":
+        "latest/candidate", "track": "latest", "risk": "beta", "branch": null}, {"name":
+        "latest/edge", "fallback": "latest/beta", "track": "latest", "risk": "edge",
+        "branch": null}]}}'
+    headers:
+      Connection:
+      - Keep-Alive
+      Date:
+      - Mon, 27 Jan 2025 21:10:50 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Server:
+      - gunicorn
+      Strict-Transport-Security:
+      - max-age=2592000
+      cache-control:
+      - max-age=0, no-cache, no-store, must-revalidate, private
+      content-language:
+      - en
+      content-length:
+      - '5646'
+      content-type:
+      - application/json
+      expires:
+      - Mon, 27 Jan 2025 21:10:50 GMT
+      vary:
+      - Authorization,Accept-Language
+      via:
+      - 1.1 juju-5214c0-prod-scasnap-485 (squid/3.5.27)
+      x-cache:
+      - MISS from juju-5214c0-prod-scasnap-485
+      x-cache-lookup:
+      - MISS from juju-5214c0-prod-scasnap-485:3128
+      x-request-id:
+      - Z5f2WqxHZQFpHBkbYZWd7QAAAkM1
+      x-vcs-revision:
+      - 99f3c3681c
+      x-view-name:
+      - api-snap-channel-map
+    status:
+      code: 200
+      message: OK
+version: 1

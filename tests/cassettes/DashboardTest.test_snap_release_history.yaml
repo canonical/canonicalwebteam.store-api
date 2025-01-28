@@ -1,0 +1,727 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://dashboard.snapcraft.io/api/v2/snaps/steve-test-snap/releases?page=1
+  response:
+    body:
+      string: '{"_links": {"self": "https://dashboard.snapcraft.io/api/v2/snaps/steve-test-snap/releases?page=1"},
+        "releases": [{"when": "2025-01-07T15:34:15Z", "channel": "latest/edge", "track":
+        "latest", "risk": "edge", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 58, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2024-12-17T15:16:17Z", "channel":
+        "latest/edge", "track": "latest", "risk": "edge", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 57, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2024-12-05T14:32:19Z",
+        "channel": "latest/edge", "track": "latest", "risk": "edge", "branch": null,
+        "expiration-date": null, "architecture": "arm64", "revision": 56, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2024-11-29T15:24:14Z", "channel": "latest/beta", "track": "latest", "risk":
+        "beta", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": null, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2024-11-29T15:24:14Z", "channel": "latest/beta", "track":
+        "latest", "risk": "beta", "branch": null, "expiration-date": null, "architecture":
+        "amd64", "revision": null, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2024-11-29T14:37:55Z", "channel":
+        "latest/edge", "track": "latest", "risk": "edge", "branch": null, "expiration-date":
+        null, "architecture": "s390x", "revision": null, "progressive": {"paused":
+        null, "percentage": null, "current-percentage": null}}, {"when": "2024-11-29T14:37:55Z",
+        "channel": "latest/edge", "track": "latest", "risk": "edge", "branch": null,
+        "expiration-date": null, "architecture": "ppc64el", "revision": null, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2024-11-29T14:37:55Z", "channel": "latest/edge", "track": "latest", "risk":
+        "edge", "branch": null, "expiration-date": null, "architecture": "armhf",
+        "revision": null, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2024-11-29T14:37:55Z", "channel": "latest/edge", "track":
+        "latest", "risk": "edge", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": null, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2024-11-29T14:37:55Z", "channel":
+        "latest/edge", "track": "latest", "risk": "edge", "branch": null, "expiration-date":
+        null, "architecture": "amd64", "revision": null, "progressive": {"paused":
+        null, "percentage": null, "current-percentage": null}}, {"when": "2024-11-29T13:01:46Z",
+        "channel": "latest/beta", "track": "latest", "risk": "beta", "branch": null,
+        "expiration-date": null, "architecture": "arm64", "revision": 54, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2024-11-07T13:16:29Z", "channel": "latest/stable", "track": "latest", "risk":
+        "stable", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 24, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2024-11-07T13:16:28Z", "channel": "latest/stable", "track":
+        "latest", "risk": "stable", "branch": null, "expiration-date": null, "architecture":
+        "amd64", "revision": 23, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2024-11-07T13:07:45Z", "channel":
+        "latest/stable", "track": "latest", "risk": "stable", "branch": null, "expiration-date":
+        null, "architecture": "armhf", "revision": 33, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2024-11-07T13:07:44Z",
+        "channel": "latest/stable", "track": "latest", "risk": "stable", "branch":
+        null, "expiration-date": null, "architecture": "s390x", "revision": 32, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2024-11-07T13:07:44Z", "channel": "latest/stable", "track": "latest", "risk":
+        "stable", "branch": null, "expiration-date": null, "architecture": "ppc64el",
+        "revision": 31, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2024-11-07T13:07:43Z", "channel": "latest/stable", "track":
+        "latest", "risk": "stable", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 55, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2024-11-07T13:07:42Z", "channel":
+        "latest/stable", "track": "latest", "risk": "stable", "branch": null, "expiration-date":
+        null, "architecture": "amd64", "revision": 30, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2024-10-23T09:17:19Z",
+        "channel": "latest/edge", "track": "latest", "risk": "edge", "branch": null,
+        "expiration-date": null, "architecture": "arm64", "revision": 55, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2024-10-23T08:23:17Z", "channel": "latest/edge", "track": "latest", "risk":
+        "edge", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 54, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2024-10-22T13:52:22Z", "channel": "latest/edge", "track":
+        "latest", "risk": "edge", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 53, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2024-10-22T11:06:17Z", "channel":
+        "latest/edge", "track": "latest", "risk": "edge", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 52, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2024-10-22T11:01:18Z",
+        "channel": "latest/edge", "track": "latest", "risk": "edge", "branch": null,
+        "expiration-date": null, "architecture": "arm64", "revision": 51, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2024-10-22T10:58:17Z", "channel": "latest/edge", "track": "latest", "risk":
+        "edge", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 50, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2024-10-22T09:59:57Z", "channel": "latest/edge", "track":
+        "latest", "risk": "edge", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 49, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2024-10-21T15:24:25Z", "channel":
+        "latest/edge", "track": "latest", "risk": "edge", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 48, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2024-10-21T15:24:02Z",
+        "channel": "latest/edge", "track": "latest", "risk": "edge", "branch": null,
+        "expiration-date": null, "architecture": "arm64", "revision": 47, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2024-10-21T14:47:16Z", "channel": "latest/edge", "track": "latest", "risk":
+        "edge", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 46, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2024-10-21T13:38:19Z", "channel": "latest/edge", "track":
+        "latest", "risk": "edge", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 45, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2024-10-18T14:30:19Z", "channel":
+        "latest/edge", "track": "latest", "risk": "edge", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 44, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2024-10-17T15:49:15Z",
+        "channel": "latest/edge", "track": "latest", "risk": "edge", "branch": null,
+        "expiration-date": null, "architecture": "arm64", "revision": 43, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2024-10-17T14:51:18Z", "channel": "latest/edge", "track": "latest", "risk":
+        "edge", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 42, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2024-10-07T14:50:36Z", "channel": "latest/edge", "track":
+        "latest", "risk": "edge", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 41, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2024-10-07T14:12:20Z", "channel":
+        "latest/edge", "track": "latest", "risk": "edge", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 40, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2024-08-21T13:46:16Z",
+        "channel": "latest/edge", "track": "latest", "risk": "edge", "branch": null,
+        "expiration-date": null, "architecture": "arm64", "revision": 39, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2024-08-08T13:42:11Z", "channel": "latest/edge", "track": "latest", "risk":
+        "edge", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 38, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2024-05-30T09:29:26Z", "channel": "latest/edge", "track":
+        "latest", "risk": "edge", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 37, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2024-04-11T13:34:22Z", "channel":
+        "latest/stable", "track": "latest", "risk": "stable", "branch": null, "expiration-date":
+        null, "architecture": "amd64", "revision": 23, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2024-04-11T13:02:46Z",
+        "channel": "latest/stable", "track": "latest", "risk": "stable", "branch":
+        null, "expiration-date": null, "architecture": "amd64", "revision": 30, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2023-06-12T09:47:15Z", "channel": "latest/stable", "track": "latest", "risk":
+        "stable", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 36, "progressive": {"paused": false, "percentage": 36.0, "current-percentage":
+        null}}, {"when": "2023-06-12T09:41:25Z", "channel": "latest/stable", "track":
+        "latest", "risk": "stable", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 35, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2023-06-06T11:44:59Z", "channel":
+        "latest/candidate", "track": "latest", "risk": "candidate", "branch": null,
+        "expiration-date": null, "architecture": "armhf", "revision": 33, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2023-06-06T11:44:30Z", "channel": "latest/candidate", "track": "latest",
+        "risk": "candidate", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 24, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2023-05-12T11:36:16Z", "channel":
+        "latest/edge", "track": "latest", "risk": "edge", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 34, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2023-05-12T11:35:16Z",
+        "channel": "latest/edge", "track": "latest", "risk": "edge", "branch": null,
+        "expiration-date": null, "architecture": "armhf", "revision": 33, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2023-05-12T11:32:22Z", "channel": "latest/edge", "track": "latest", "risk":
+        "edge", "branch": null, "expiration-date": null, "architecture": "s390x",
+        "revision": 32, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2023-05-12T11:32:20Z", "channel": "latest/edge", "track":
+        "latest", "risk": "edge", "branch": null, "expiration-date": null, "architecture":
+        "ppc64el", "revision": 31, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2023-05-12T11:31:18Z", "channel":
+        "latest/edge", "track": "latest", "risk": "edge", "branch": null, "expiration-date":
+        null, "architecture": "amd64", "revision": 30, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2023-02-27T14:26:32Z",
+        "channel": "latest/candidate", "track": "latest", "risk": "candidate", "branch":
+        null, "expiration-date": null, "architecture": "arm64", "revision": 29, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2023-02-27T14:26:00Z", "channel": "latest/edge", "track": "latest", "risk":
+        "edge", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 29, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2022-11-28T11:30:16Z", "channel": "latest/stable", "track":
+        "latest", "risk": "stable", "branch": null, "expiration-date": null, "architecture":
+        "amd64", "revision": 23, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2022-11-28T11:30:15Z", "channel":
+        "latest/stable", "track": "latest", "risk": "stable", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 24, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2022-10-19T09:52:37Z",
+        "channel": "latest/stable", "track": "latest", "risk": "stable", "branch":
+        null, "expiration-date": null, "architecture": "arm64", "revision": 29, "progressive":
+        {"paused": false, "percentage": 30.0, "current-percentage": null}}, {"when":
+        "2022-09-21T09:02:51Z", "channel": "latest/stable", "track": "latest", "risk":
+        "stable", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 28, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2022-09-14T12:01:13Z", "channel": "latest/stable/fix", "track":
+        "latest", "risk": "stable", "branch": "fix", "expiration-date": "2022-09-14T10:13:57Z",
+        "architecture": "arm64", "revision": null, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2022-08-15T10:13:57Z",
+        "channel": "latest/stable/fix", "track": "latest", "risk": "stable", "branch":
+        "fix", "expiration-date": "2022-09-14T10:13:57Z", "architecture": "arm64",
+        "revision": 27, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2022-07-27T09:21:24Z", "channel": "latest/stable/testing",
+        "track": "latest", "risk": "stable", "branch": "testing", "expiration-date":
+        "2022-07-27T08:58:21Z", "architecture": "arm64", "revision": null, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2022-07-20T11:25:24Z", "channel": "latest/beta/branch-test-1", "track": "latest",
+        "risk": "beta", "branch": "branch-test-1", "expiration-date": "2022-07-20T10:07:28Z",
+        "architecture": "amd64", "revision": null, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2022-07-20T11:25:24Z",
+        "channel": "latest/stable/branch-test-1", "track": "latest", "risk": "stable",
+        "branch": "branch-test-1", "expiration-date": "2022-07-20T09:54:38Z", "architecture":
+        "amd64", "revision": null, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2022-06-20T10:07:28Z", "channel":
+        "latest/beta/branch-test-1", "track": "latest", "risk": "beta", "branch":
+        "branch-test-1", "expiration-date": "2022-07-20T10:07:28Z", "architecture":
+        "amd64", "revision": 26, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2022-06-20T09:54:38Z", "channel":
+        "latest/stable/branch-test-1", "track": "latest", "risk": "stable", "branch":
+        "branch-test-1", "expiration-date": "2022-07-20T09:54:38Z", "architecture":
+        "amd64", "revision": 26, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2022-06-20T09:36:50Z", "channel":
+        "latest/stable/testing", "track": "latest", "risk": "stable", "branch": "testing",
+        "expiration-date": "2022-07-20T09:36:50Z", "architecture": "arm64", "revision":
+        25, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2022-06-20T09:00:40Z", "channel": "latest/candidate", "track":
+        "latest", "risk": "candidate", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 25, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2022-06-20T08:55:39Z", "channel":
+        "latest/stable", "track": "latest", "risk": "stable", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 25, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2022-06-20T08:37:54Z",
+        "channel": "latest/beta", "track": "latest", "risk": "beta", "branch": null,
+        "expiration-date": null, "architecture": "arm64", "revision": 24, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2022-06-01T09:02:27Z", "channel": "latest/candidate", "track": "latest",
+        "risk": "candidate", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 17, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2022-06-01T09:02:08Z", "channel":
+        "latest/beta", "track": "latest", "risk": "beta", "branch": null, "expiration-date":
+        null, "architecture": "amd64", "revision": 23, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2022-06-01T09:01:43Z",
+        "channel": "latest/candidate", "track": "latest", "risk": "candidate", "branch":
+        null, "expiration-date": null, "architecture": "amd64", "revision": 23, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2022-04-12T10:13:35Z", "channel": "latest/beta", "track": "latest", "risk":
+        "beta", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 19, "progressive": {"paused": false, "percentage": 23.0, "current-percentage":
+        null}}, {"when": "2022-04-12T10:13:21Z", "channel": "latest/candidate", "track":
+        "latest", "risk": "candidate", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": null, "progressive": {"paused": false, "percentage":
+        35.0, "current-percentage": null}}, {"when": "2022-04-12T10:13:21Z", "channel":
+        "latest/edge", "track": "latest", "risk": "edge", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": null, "progressive": {"paused":
+        false, "percentage": 35.0, "current-percentage": null}}, {"when": "2022-04-12T10:13:21Z",
+        "channel": "latest/beta", "track": "latest", "risk": "beta", "branch": null,
+        "expiration-date": null, "architecture": "arm64", "revision": null, "progressive":
+        {"paused": false, "percentage": 24.0, "current-percentage": null}}, {"when":
+        "2022-04-12T10:13:21Z", "channel": "latest/stable", "track": "latest", "risk":
+        "stable", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": null, "progressive": {"paused": false, "percentage": 56.0, "current-percentage":
+        null}}, {"when": "2022-04-11T14:14:15Z", "channel": "latest/stable", "track":
+        "latest", "risk": "stable", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 18, "progressive": {"paused": false, "percentage": 56.0,
+        "current-percentage": null}}, {"when": "2022-04-11T14:13:28Z", "channel":
+        "latest/beta", "track": "latest", "risk": "beta", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 18, "progressive": {"paused": false,
+        "percentage": 24.0, "current-percentage": null}}, {"when": "2022-04-11T11:24:35Z",
+        "channel": "latest/beta", "track": "latest", "risk": "beta", "branch": null,
+        "expiration-date": null, "architecture": "arm64", "revision": 17, "progressive":
+        {"paused": false, "percentage": 24.0, "current-percentage": null}}, {"when":
+        "2022-04-11T11:23:09Z", "channel": "latest/beta", "track": "latest", "risk":
+        "beta", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 17, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2022-04-11T11:19:35Z", "channel": "latest/beta", "track":
+        "latest", "risk": "beta", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 16, "progressive": {"paused": false, "percentage": 24.0,
+        "current-percentage": null}}, {"when": "2022-04-11T11:18:52Z", "channel":
+        "latest/beta", "track": "latest", "risk": "beta", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 16, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2022-04-11T11:16:39Z",
+        "channel": "latest/beta", "track": "latest", "risk": "beta", "branch": null,
+        "expiration-date": null, "architecture": "arm64", "revision": 15, "progressive":
+        {"paused": false, "percentage": 35.0, "current-percentage": null}}, {"when":
+        "2022-04-11T11:16:29Z", "channel": "latest/edge", "track": "latest", "risk":
+        "edge", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 15, "progressive": {"paused": false, "percentage": 35.0, "current-percentage":
+        null}}, {"when": "2022-04-11T11:16:08Z", "channel": "latest/candidate", "track":
+        "latest", "risk": "candidate", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 15, "progressive": {"paused": false, "percentage": 35.0,
+        "current-percentage": null}}, {"when": "2022-04-11T11:15:35Z", "channel":
+        "latest/beta", "track": "latest", "risk": "beta", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 15, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2022-04-11T09:39:19Z",
+        "channel": "latest/beta", "track": "latest", "risk": "beta", "branch": null,
+        "expiration-date": null, "architecture": "arm64", "revision": 14, "progressive":
+        {"paused": false, "percentage": 23.0, "current-percentage": null}}, {"when":
+        "2022-04-11T09:39:07Z", "channel": "latest/beta", "track": "latest", "risk":
+        "beta", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 13, "progressive": {"paused": false, "percentage": 23.0, "current-percentage":
+        null}}, {"when": "2022-04-11T09:38:35Z", "channel": "latest/beta", "track":
+        "latest", "risk": "beta", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 14, "progressive": {"paused": false, "percentage": 23.0,
+        "current-percentage": null}}, {"when": "2022-04-11T09:37:54Z", "channel":
+        "latest/beta", "track": "latest", "risk": "beta", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 14, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2022-04-11T08:40:16Z",
+        "channel": "latest/beta", "track": "latest", "risk": "beta", "branch": null,
+        "expiration-date": null, "architecture": "arm64", "revision": 13, "progressive":
+        {"paused": false, "percentage": 23.0, "current-percentage": null}}, {"when":
+        "2022-04-11T08:38:37Z", "channel": "latest/edge", "track": "latest", "risk":
+        "edge", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 13, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2022-04-07T14:20:16Z", "channel": "latest/stable", "track":
+        "latest", "risk": "stable", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 11, "progressive": {"paused": false, "percentage": 44.0,
+        "current-percentage": null}}, {"when": "2022-04-07T14:19:52Z", "channel":
+        "latest/beta", "track": "latest", "risk": "beta", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 6, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2022-04-07T14:19:38Z",
+        "channel": "latest/candidate", "track": "latest", "risk": "candidate", "branch":
+        null, "expiration-date": null, "architecture": "arm64", "revision": 12, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2022-04-07T14:19:15Z", "channel": "latest/stable", "track": "latest", "risk":
+        "stable", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 12, "progressive": {"paused": false, "percentage": 44.0, "current-percentage":
+        null}}, {"when": "2022-04-07T14:18:39Z", "channel": "latest/beta", "track":
+        "latest", "risk": "beta", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 12, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2022-04-07T14:12:20Z", "channel":
+        "latest/stable", "track": "latest", "risk": "stable", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 11, "progressive": {"paused": false,
+        "percentage": 44.0, "current-percentage": null}}, {"when": "2022-04-07T14:12:16Z",
+        "channel": "latest/stable", "track": "latest", "risk": "stable", "branch":
+        null, "expiration-date": null, "architecture": "arm64", "revision": 9, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2022-04-07T14:11:59Z", "channel": "latest/stable", "track": "latest", "risk":
+        "stable", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 11, "progressive": {"paused": false, "percentage": 44.0, "current-percentage":
+        null}}, {"when": "2022-04-07T14:11:47Z", "channel": "latest/stable", "track":
+        "latest", "risk": "stable", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 9, "progressive": {"paused": false, "percentage": 44.0,
+        "current-percentage": null}}, {"when": "2022-04-07T14:06:36Z", "channel":
+        "latest/stable", "track": "latest", "risk": "stable", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 11, "progressive": {"paused": false,
+        "percentage": 44.0, "current-percentage": null}}, {"when": "2022-04-07T14:06:00Z",
+        "channel": "latest/beta", "track": "latest", "risk": "beta", "branch": null,
+        "expiration-date": null, "architecture": "arm64", "revision": 11, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2022-04-07T14:03:36Z", "channel": "latest/stable", "track": "latest", "risk":
+        "stable", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 10, "progressive": {"paused": false, "percentage": 36.0, "current-percentage":
+        null}}, {"when": "2022-04-07T14:01:19Z", "channel": "latest/stable", "track":
+        "latest", "risk": "stable", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 10, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2022-04-06T08:31:37Z", "channel":
+        "latest/stable", "track": "latest", "risk": "stable", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 7, "progressive": {"paused": false,
+        "percentage": 58.0, "current-percentage": null}}, {"when": "2022-04-06T08:31:16Z",
+        "channel": "latest/candidate", "track": "latest", "risk": "candidate", "branch":
+        null, "expiration-date": null, "architecture": "arm64", "revision": 9, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2022-04-06T08:30:27Z", "channel": "latest/stable", "track": "latest", "risk":
+        "stable", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 9, "progressive": {"paused": false, "percentage": 58.0, "current-percentage":
+        null}}, {"when": "2022-04-06T08:29:20Z", "channel": "latest/stable", "track":
+        "latest", "risk": "stable", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 8, "progressive": {"paused": false, "percentage": 58.0,
+        "current-percentage": null}}, {"when": "2022-03-18T13:55:11Z", "channel":
+        "latest/stable", "track": "latest", "risk": "stable", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 8, "progressive": {"paused": false,
+        "percentage": 45.0, "current-percentage": null}}, {"when": "2022-03-14T13:19:39Z",
+        "channel": "latest/stable", "track": "latest", "risk": "stable", "branch":
+        null, "expiration-date": null, "architecture": "arm64", "revision": 5, "progressive":
+        {"paused": false, "percentage": 43.0, "current-percentage": null}}, {"when":
+        "2022-03-14T13:08:17Z", "channel": "latest/stable", "track": "latest", "risk":
+        "stable", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 6, "progressive": {"paused": false, "percentage": 43.0, "current-percentage":
+        null}}, {"when": "2022-03-14T13:07:05Z", "channel": "latest/candidate", "track":
+        "latest", "risk": "candidate", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 7, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2022-03-14T13:07:04Z", "channel":
+        "latest/beta", "track": "latest", "risk": "beta", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 7, "progressive": {"paused": null,
+        "percentage": null, "current-percentage": null}}, {"when": "2022-03-14T13:06:35Z",
+        "channel": "latest/stable", "track": "latest", "risk": "stable", "branch":
+        null, "expiration-date": null, "architecture": "arm64", "revision": 7, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2022-03-14T10:55:56Z", "channel": "latest/beta", "track": "latest", "risk":
+        "beta", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 4, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}, {"when": "2022-03-14T10:37:05Z", "channel": "latest/beta", "track":
+        "latest", "risk": "beta", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 6, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2022-03-14T10:32:30Z", "channel":
+        "latest/candidate", "track": "latest", "risk": "candidate", "branch": null,
+        "expiration-date": null, "architecture": "arm64", "revision": 6, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2022-03-14T10:32:04Z", "channel": "latest/stable", "track": "latest", "risk":
+        "stable", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 6, "progressive": {"paused": false, "percentage": 43.0, "current-percentage":
+        null}}, {"when": "2022-03-14T10:31:42Z", "channel": "latest/edge", "track":
+        "latest", "risk": "edge", "branch": null, "expiration-date": null, "architecture":
+        "arm64", "revision": 6, "progressive": {"paused": null, "percentage": null,
+        "current-percentage": null}}, {"when": "2022-03-14T10:29:10Z", "channel":
+        "latest/stable", "track": "latest", "risk": "stable", "branch": null, "expiration-date":
+        null, "architecture": "arm64", "revision": 5, "progressive": {"paused": false,
+        "percentage": 43.0, "current-percentage": null}}, {"when": "2022-03-14T10:28:44Z",
+        "channel": "latest/stable", "track": "latest", "risk": "stable", "branch":
+        null, "expiration-date": null, "architecture": "arm64", "revision": 5, "progressive":
+        {"paused": null, "percentage": null, "current-percentage": null}}, {"when":
+        "2022-03-10T17:03:42Z", "channel": "latest/beta", "track": "latest", "risk":
+        "beta", "branch": null, "expiration-date": null, "architecture": "arm64",
+        "revision": 1, "progressive": {"paused": null, "percentage": null, "current-percentage":
+        null}}], "revisions": [{"architectures": ["arm64"], "attributes": {"build-request-id":
+        "lp-95040028", "build-request-timestamp": "2025-01-07T15:29:57Z"}, "base":
+        "bare", "build_url": "https://launchpad.net/~build.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2698836",
+        "confinement": "strict", "created_at": "2025-01-07T15:34:08Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 58, "sha3-384": "4a70aabbff1f275fdb8db947504a2346d22e2bbc90921f3a2e7b18752211691d10652d39f68df1b82ca40a453c28e743",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-94529909", "build-request-timestamp":
+        "2024-12-17T15:12:14Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2684353",
+        "confinement": "strict", "created_at": "2024-12-17T15:16:12Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 57, "sha3-384": "4da2820c4a6b400593f52f1230bcf625f6eb783cba3dd50efb79c97f9e6d9333ddd2585929cb21b84d3ea51f6eae51ca",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-94229076", "build-request-timestamp":
+        "2024-12-05T14:02:16Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2674698",
+        "confinement": "strict", "created_at": "2024-12-05T14:32:13Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 56, "sha3-384": "0c19a6be6c4c518add0ca858ba34b38bc87df98abd9e5d6d8d2f28b7d1770287515b9952fec8f2d779af919298a10ef7",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-93207793", "build-request-timestamp":
+        "2024-10-23T09:13:44Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2636916",
+        "confinement": "strict", "created_at": "2024-10-23T09:17:13Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 55, "sha3-384": "5922049aa336d9f757ca16c1cdfa958f2ff8a3ec0323a1c82f07bce236610260b2353985b7e076a04f52f7cde2d80212",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-93207271", "build-request-timestamp":
+        "2024-10-23T08:19:35Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2636817",
+        "confinement": "strict", "created_at": "2024-10-23T08:23:12Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 54, "sha3-384": "dfdd0a8672ef9e9981784a550ab5365b80e6a8a7ee66401f4860f7f11c84421c910b7aeefe28b78d2b65b7af31c8f958",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-93186421", "build-request-timestamp":
+        "2024-10-22T13:48:33Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2636159",
+        "confinement": "strict", "created_at": "2024-10-22T13:52:15Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 53, "sha3-384": "bb656bb65462f1a81dffe8532e565aa8f15e29fba1aacbb18e0e18a7240547fa6c30e23632812e4d6d9e32b43da066ea",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-93182147", "build-request-timestamp":
+        "2024-10-22T11:02:49Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2636053",
+        "confinement": "strict", "created_at": "2024-10-22T11:06:11Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 52, "sha3-384": "a1454bc35a1915991504a1cf278533451ab82f7155e4609ac99c758cd36021a051b0b2b462137d4586d91bfbd8f37d0f",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-93182096", "build-request-timestamp":
+        "2024-10-22T10:57:18Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2636045",
+        "confinement": "strict", "created_at": "2024-10-22T11:01:12Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 51, "sha3-384": "2d46d2a2306393b45a64f062b3001b6e20d5c9eef6deb4cbcf46b83a38b35bdbc0bcdd46a3ae9d243f140708383bdf9a",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-93182077", "build-request-timestamp":
+        "2024-10-22T10:54:28Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2636043",
+        "confinement": "strict", "created_at": "2024-10-22T10:58:11Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 50, "sha3-384": "9e88c85f5aa4218407ea3720172a5bdab2eb262130b81e35fc7f53747f3e0dd9d307510433d65203e0bf77bfccca2016",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-93180980", "build-request-timestamp":
+        "2024-10-22T09:50:59Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2635974",
+        "confinement": "strict", "created_at": "2024-10-22T09:59:52Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 49, "sha3-384": "ed206b2d2e0cf341eda0a842949f37a497f15594a03fe13a5083079f2a49f45b225c63dcf166951cadca79d531b50407",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-93160928", "build-request-timestamp":
+        "2024-10-21T15:20:58Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2634995",
+        "confinement": "strict", "created_at": "2024-10-21T15:24:20Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 48, "sha3-384": "f7b1d035488a97e7a35bec7c8debc38666ddcebe08db14a9d3b4c32012954ca52e23e73ce989b976be5210e8b038b5f0",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-93160865", "build-request-timestamp":
+        "2024-10-21T15:18:38Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2634986",
+        "confinement": "strict", "created_at": "2024-10-21T15:23:57Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 47, "sha3-384": "8ab17c10a14cc8165f598e221959f1969ea987377f75587030b963ffecb33a89d0738dcc743173d01bed1d120ece6e6a",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-93160439", "build-request-timestamp":
+        "2024-10-21T14:43:08Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2634970",
+        "confinement": "strict", "created_at": "2024-10-21T14:47:11Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 46, "sha3-384": "c78c7216e45ea569badf8e30816d06e22440900e27d9285b933a54091d3b642691bf9e21655642430c5b699325793fc3",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-93159505", "build-request-timestamp":
+        "2024-10-21T13:34:38Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2634917",
+        "confinement": "strict", "created_at": "2024-10-21T13:38:13Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 45, "sha3-384": "c3d879830f866a06eb74d6ce30c0ee0822b34062890642b642bb6225baa7511dbf8cc3727a0e30aa804003fa28def503",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-93059984", "build-request-timestamp":
+        "2024-10-18T14:25:55Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2632854",
+        "confinement": "strict", "created_at": "2024-10-18T14:30:14Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 44, "sha3-384": "d038af4b5f0724c4e57c5dace2c808baaca891f13e3807231d623f70b8255f4fa17797578fe89c845b86371a9f7691d0",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-93021654", "build-request-timestamp":
+        "2024-10-17T15:45:41Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2631598",
+        "confinement": "strict", "created_at": "2024-10-17T15:49:10Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 43, "sha3-384": "32eaef614ff9892446643432d6d08ed95c6bd55f071776e65f75f656ca169034ec41b6afe25cdbec0c7d2834f6638886",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-93020260", "build-request-timestamp":
+        "2024-10-17T14:47:09Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2631538",
+        "confinement": "strict", "created_at": "2024-10-17T14:51:13Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 42, "sha3-384": "757c1c9a14af5d193fb0e6987dcec714bc94d5c0a5ed8ce94633bb5724c9cb445f195eec4d0e8f5772c2f8b999875154",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-92727340", "build-request-timestamp":
+        "2024-10-07T14:44:00Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2620914",
+        "confinement": "strict", "created_at": "2024-10-07T14:50:29Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 41, "sha3-384": "11043164384b355b6e82bf666c65424d11c34196b1b1077623da601853ed0ba3c23ba715b64de24f238a6f582351a5ad",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-92726505", "build-request-timestamp":
+        "2024-10-07T14:07:50Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2620892",
+        "confinement": "strict", "created_at": "2024-10-07T14:12:13Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 40, "sha3-384": "e1a28afb3d8a08075b442fde80c3e7d5a16f35e12663f2f15e730d8bd3cf12526985124fcf8e30496c3025627dbe1cb8",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-91547592", "build-request-timestamp":
+        "2024-08-21T13:24:44Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2575001",
+        "confinement": "strict", "created_at": "2024-08-21T13:46:12Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 39, "sha3-384": "82fd700e9db7c3d33474107ebdd3ba17df60e6dc738be555bf72a95de6462984bd176c9892cbcad24c3cea5a55267347",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-91203275", "build-request-timestamp":
+        "2024-08-08T09:00:25Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2564305",
+        "confinement": "strict", "created_at": "2024-08-08T13:42:06Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 38, "sha3-384": "1701a00f87ce97b7c0bc96d9b28833b9e4c4d12ebfbfc630980655770958e7755c5f74673f6ffc57901f768ca4cfc5c4",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-89405486", "build-request-timestamp":
+        "2024-05-30T09:22:16Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2497274",
+        "confinement": "strict", "created_at": "2024-05-30T09:29:22Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 37, "sha3-384": "94e66c20e6413b459f197cc3dd159273c65e9342e6d00cfb336d19cf8c387dd91c6ce7d8b52720b0c338e124a727f499",
+        "size": 16384, "status": "Published", "version": "4.0.1"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "bare", "build_url": null, "confinement":
+        "strict", "created_at": "2023-06-12T09:46:07Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 36, "sha3-384": "6c20784bb0a3e4092fe9adba29fa99489b07a3b4fc0c3b09e4f9b9c3dd85cf44c22df179d6eeeecec7a4843ae1b2ff7e",
+        "size": 4096, "status": "Published", "version": "4.0.0"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "bare", "build_url": null, "confinement":
+        "strict", "created_at": "2023-06-12T09:41:21Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 35, "sha3-384": "aca13659403543c51a8e4a6ab94e1bc7b4dfe7c72c298994ad91d3c88f2763128977dd7a2ec3ed177f5708828ea1ed8c",
+        "size": 4096, "status": "Published", "version": "4.0.0"}, {"architectures":
+        ["arm64"], "attributes": {"build-request-id": "lp-79412770", "build-request-timestamp":
+        "2023-05-12T11:27:58Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2105844",
+        "confinement": "strict", "created_at": "2023-05-12T11:36:12Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 34, "sha3-384": "0c278c3ddf3e115231dc9448b91786020c83e6be2a724a19a549e3846a89f74b55ce6dba2f09f00866244687aa2db7ee",
+        "size": 4096, "status": "Published", "version": "3.0.0"}, {"architectures":
+        ["armhf"], "attributes": {"build-request-id": "lp-79412770", "build-request-timestamp":
+        "2023-05-12T11:27:58Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2105843",
+        "confinement": "strict", "created_at": "2023-05-12T11:35:12Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 33, "sha3-384": "39157150b8dd7ffe736fd27fe143296416d6e4193412cf5a671716f13d1000804e3524d859ae0694ae01dc0e49ae8bb9",
+        "size": 4096, "status": "Published", "version": "3.0.0"}, {"architectures":
+        ["s390x"], "attributes": {"build-request-id": "lp-79412770", "build-request-timestamp":
+        "2023-05-12T11:27:58Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2105846",
+        "confinement": "strict", "created_at": "2023-05-12T11:32:18Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 32, "sha3-384": "061cc4297271240f8ba572b8e183a51c9924e412066d4f3fd71300d213bd133a841b5d3a9ee1a374823b92914d177f97",
+        "size": 4096, "status": "Published", "version": "3.0.0"}, {"architectures":
+        ["ppc64el"], "attributes": {"build-request-id": "lp-79412770", "build-request-timestamp":
+        "2023-05-12T11:27:58Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2105845",
+        "confinement": "strict", "created_at": "2023-05-12T11:32:16Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 31, "sha3-384": "2c9f21647b78bb8d61afef0678996e451c68e8e6a4ab9c3184d3309b5a3abc9895d9021540c2e3df73ac7563bfea0d5d",
+        "size": 4096, "status": "Published", "version": "3.0.0"}, {"architectures":
+        ["amd64"], "attributes": {"build-request-id": "lp-79412770", "build-request-timestamp":
+        "2023-05-12T11:27:58Z"}, "base": "bare", "build_url": "https://launchpad.net/~build.staging.snapcraft.io/+snap/1a34fa8a4dd2a8ec399c23b7bee98faf/+build/2105842",
+        "confinement": "strict", "created_at": "2023-05-12T11:31:13Z", "epoch": {"read":
+        [0], "write": [0]}, "grade": "stable", "revision": 30, "sha3-384": "66970aa343db8fa62f81b1316b4c3f56ead2523e98e565658427295c87ab219e466cb5c6f1d82fbff6035095f162bbbe",
+        "size": 4096, "status": "Published", "version": "3.0.0"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-10-19T09:52:10Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 29, "sha3-384": "3b4abef7a8264e4316a2b33711381756c9e945e0ca0e41f6bef7ab4a00e0553bd29baaabe4ed80370d153d9f083814c5",
+        "size": 4096, "status": "Published", "version": "3.0.0"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-09-21T09:02:48Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 28, "sha3-384": "ac4f9098895a59cc23477b7d9b88ffcb30f1b916cfee0e1ea42f1013a5031cb998b4a98f0c2f46ea94b92849db28e6e0",
+        "size": 4096, "status": "Published", "version": "2.0.0"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-08-15T10:13:54Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 27, "sha3-384": "8180d1260f851de6916b5e5f7cbb46fdf02db8f628dcf3dfee766b249d5a750048432be5edf1a1930a8fd277ce9afbe5",
+        "size": 4096, "status": "Published", "version": "2.0.4"}, {"architectures":
+        ["amd64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-06-20T09:54:32Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 26, "sha3-384": "59b1bc8d6142b0316b25cf1daf23d5eb561ccc0c2c184562e6f452c874fd9e08b87f97af15312dc7af6baf447a6c89ac",
+        "size": 4096, "status": "Published", "version": "2.0.3"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-06-20T08:55:37Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 25, "sha3-384": "47ff94c2c5112b515c8887a49c8557589a9300f212eb2f9403cf1af29cb34ad6e8f3917e13b19700e2d0f86ee8c4f3ca",
+        "size": 4096, "status": "Published", "version": "2.0.1"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-06-20T08:37:52Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 24, "sha3-384": "ce8fc73571f5afe9ca13ed19ec0605990d78c26abb5dc273528e56e3e46a5215672adb75602a17a53a6de79288e60f5b",
+        "size": 4096, "status": "Published", "version": "2.0.0"}, {"architectures":
+        ["amd64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-06-01T08:59:35Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 23, "sha3-384": "20c4e17fca36fddccb933b730454256e81714914f2f050996a63efe250e1aa44e5e4dc92959e9cd72cf7ef9ca918c5b6",
+        "size": 4096, "status": "Published", "version": "1.0.1"}, {"architectures":
+        ["amd64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-06-01T08:56:34Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 22, "sha3-384": "0b266783778244bb4ae59be30f8723fd976b8e8bf4b7921e53ebd9921dc250b5d39aea8cc0c72cd5a75a0e2365fd4575",
+        "size": 4096, "status": "Unpublished", "version": "0.8"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-06-01T08:43:01Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 21, "sha3-384": "603d51b2b3b43c83969b3556d34bb7934bf6abdcf00bbd2339f896dc6ab8850c031a4783389cfd8edee3c7f56c7a8787",
+        "size": 4096, "status": "Unpublished", "version": "0.9"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-06-01T08:40:55Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 20, "sha3-384": "e78ff2382896e450b28a027eba1fc04ce203e21010feb731ea4a62efd3cdc2f134f1f5be6b9655fcf645f78bf1393838",
+        "size": 4096, "status": "Unpublished", "version": "0.8"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-04-12T10:08:38Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 19, "sha3-384": "81fde3e9e9f32d6220fd144b45e4efdfddf7a389da91690b6ad4963a22edd4aedabae0c750a98b690e55a26f721a7916",
+        "size": 4096, "status": "Published", "version": "100"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-04-11T14:05:01Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 18, "sha3-384": "ac000401fa7c2801afd9705077083b01e7189df8b801efe89373322342c2a3ff81309b03434a78318274bedc7d7f0342",
+        "size": 4096, "status": "Published", "version": "90"}, {"architectures": ["arm64"],
+        "attributes": {}, "base": "core18", "build_url": null, "confinement": "strict",
+        "created_at": "2022-04-11T11:23:06Z", "epoch": {"read": [0], "write": [0]},
+        "grade": "stable", "revision": 17, "sha3-384": "9bbbb081ca046a9bf411194ddcc04a25f27d71be347b0109836e55b91a591da58da8decedb236f3bb689c78318711cda",
+        "size": 4096, "status": "Published", "version": "80"}, {"architectures": ["arm64"],
+        "attributes": {}, "base": "core18", "build_url": null, "confinement": "strict",
+        "created_at": "2022-04-11T11:18:49Z", "epoch": {"read": [0], "write": [0]},
+        "grade": "stable", "revision": 16, "sha3-384": "1f65fe8830c400482f567deda104a69e745a3cb27da8b7bb2ff5e9ea4dec238afc123e477d8348cfb3a5f34230920f25",
+        "size": 4096, "status": "Published", "version": "70"}, {"architectures": ["arm64"],
+        "attributes": {}, "base": "core18", "build_url": null, "confinement": "strict",
+        "created_at": "2022-04-11T11:15:27Z", "epoch": {"read": [0], "write": [0]},
+        "grade": "stable", "revision": 15, "sha3-384": "8fc6e1dd2c80aac1ca034315d736b790d3d73529a07481776956d8969529a6dcaa25e5d28fbc367e99a4df4196c17de7",
+        "size": 4096, "status": "Published", "version": "60"}, {"architectures": ["arm64"],
+        "attributes": {}, "base": "core18", "build_url": null, "confinement": "strict",
+        "created_at": "2022-04-11T09:37:50Z", "epoch": {"read": [0], "write": [0]},
+        "grade": "stable", "revision": 14, "sha3-384": "abf5f41fe20c86ee68ab7960ab7bec4ccfd4a544efdc25c9ee4890cc86619563deba289a56996cd4d337c858eeb06486",
+        "size": 4096, "status": "Published", "version": "50"}, {"architectures": ["arm64"],
+        "attributes": {}, "base": "core18", "build_url": null, "confinement": "strict",
+        "created_at": "2022-04-11T08:38:33Z", "epoch": {"read": [0], "write": [0]},
+        "grade": "stable", "revision": 13, "sha3-384": "2b215d17f669c4005852735ec2b8d2ed454c8d4102bb5df9b63cd50b37ff176b2d1ee439b2f6fe8632c8df558440b45d",
+        "size": 4096, "status": "Published", "version": "5.0.0"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-04-07T14:18:35Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 12, "sha3-384": "a68664e70a60336fbcfac8e5278a6e43123091971482c03099865ceed43d49eb6e8b53f665daeb43f361a6a8d0bcc4d0",
+        "size": 4096, "status": "Published", "version": "45"}, {"architectures": ["arm64"],
+        "attributes": {}, "base": "core18", "build_url": null, "confinement": "strict",
+        "created_at": "2022-04-07T14:05:55Z", "epoch": {"read": [0], "write": [0]},
+        "grade": "stable", "revision": 11, "sha3-384": "0521c03fd2474641115681665a21dcf94907dc27b5d4649f5164f6a2f9a2d5f934f380eb92550afd5762688bf673dd15",
+        "size": 4096, "status": "Published", "version": "2"}, {"architectures": ["arm64"],
+        "attributes": {}, "base": "core18", "build_url": null, "confinement": "strict",
+        "created_at": "2022-04-07T14:01:16Z", "epoch": {"read": [0], "write": [0]},
+        "grade": "stable", "revision": 10, "sha3-384": "c800bfd440c26370de56ee03efe0080b2fe4a00a5c5fd9e6b593ff778a1c12274961865dd74a73583fb8399d9c1b1e4e",
+        "size": 4096, "status": "Published", "version": "1.2"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-04-06T08:30:05Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 9, "sha3-384": "80bc4d6704b2a37fc33e42a81869593f7e89ea3fe678a0455f233f96f92101c14c43706195c4d8fba12ed342c1d434f6",
+        "size": 4096, "status": "Published", "version": "1.0.2"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-03-18T13:54:25Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 8, "sha3-384": "95fd601d6e33bb086b9ee26f86ea8c1addf9c9e84ffc9e171452c4fadded3a436b9ee34e478bbcc10fbaecacc9410640",
+        "size": 4096, "status": "Published", "version": "1.0"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-03-14T13:06:30Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 7, "sha3-384": "3b21d749d20e67e3a48b556e9ca707b78e8e23471afed474b52f2deb02dcdc6234c01ff8f36f26d61483adb79c202ced",
+        "size": 4096, "status": "Published", "version": "0.8"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-03-14T10:31:36Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 6, "sha3-384": "18ff8dbec569fa5d0bd198093eddd88a9a9559133730eceb63f9711a1eb3bd5f3b9ab67bb1dec9318978a6bafa0a990e",
+        "size": 4096, "status": "Published", "version": "0.7"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "strict", "created_at": "2022-03-14T10:28:40Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 5, "sha3-384": "d455862507ac3d2557285527968c381e1423417c4b7025f4d747ed7a1b2c2e8c1472cc1c14d8f75a11ae250ea3578680",
+        "size": 4096, "status": "Published", "version": "0.6"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "devmode", "created_at": "2022-03-14T10:26:39Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "stable", "revision": 4, "sha3-384": "75e5a38a75d87cb51a3f87113a861e8a274e58e186dbed2311c5d207b9e66e3951b64d48bcb515c22346e7c4cfeabab7",
+        "size": 4096, "status": "Published", "version": "0.5"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "devmode", "created_at": "2022-03-14T10:15:59Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "devel", "revision": 3, "sha3-384": "8e48d7e84995209946a1583b17ad9a75028bd105424b04a5d1e07376a9a81be1bd2729346e4e877012b6a5077b15cba0",
+        "size": 4096, "status": "Unpublished", "version": "0.3"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "devmode", "created_at": "2022-03-14T10:13:55Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "devel", "revision": 2, "sha3-384": "3f840fc573750c1ff9dd04803c920f9be1b6f65e743e5a6282e8f534c577a795399036bc69827ce9f56c921f3ce72fdb",
+        "size": 4096, "status": "Unpublished", "version": "0.2"}, {"architectures":
+        ["arm64"], "attributes": {}, "base": "core18", "build_url": null, "confinement":
+        "devmode", "created_at": "2022-03-10T12:09:26Z", "epoch": {"read": [0], "write":
+        [0]}, "grade": "devel", "revision": 1, "sha3-384": "90988939376bd9f68ece4bf1edca6ba3bcb7b8f432df13c64c098512ec33c69f5e7420ccfd5f83a335a45c2e94d3c41b",
+        "size": 4096, "status": "Published", "version": "0.1"}], "snap": {"id": "bv9Q2i9CNAvTjt9wTx1cFC6SAT9YrEfG",
+        "name": "steve-test-snap", "private": false, "default-track": null, "publisher":
+        {"id": "prFvYmvaBsQbXLNaVaQFV4EAcJ8zh0Ej", "display-name": "Steve Rydz", "username":
+        "steverydz"}, "title": "steve-test-snap", "tracks": [{"name": "latest", "creation-date":
+        null, "version-pattern": null, "status": "default"}], "channels": [{"name":
+        "latest/stable", "fallback": null, "track": "latest", "risk": "stable", "branch":
+        null}, {"name": "latest/stable/branch-test-1", "fallback": "latest/stable",
+        "track": "latest", "risk": "stable", "branch": "branch-test-1"}, {"name":
+        "latest/stable/fix", "fallback": "latest/stable", "track": "latest", "risk":
+        "stable", "branch": "fix"}, {"name": "latest/stable/testing", "fallback":
+        "latest/stable", "track": "latest", "risk": "stable", "branch": "testing"},
+        {"name": "latest/candidate", "fallback": "latest/stable", "track": "latest",
+        "risk": "candidate", "branch": null}, {"name": "latest/beta", "fallback":
+        "latest/candidate", "track": "latest", "risk": "beta", "branch": null}, {"name":
+        "latest/beta/branch-test-1", "fallback": "latest/beta", "track": "latest",
+        "risk": "beta", "branch": "branch-test-1"}, {"name": "latest/edge", "fallback":
+        "latest/beta", "track": "latest", "risk": "edge", "branch": null}]}}'
+    headers:
+      Connection:
+      - Keep-Alive
+      Date:
+      - Mon, 27 Jan 2025 21:06:51 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Server:
+      - gunicorn
+      Strict-Transport-Security:
+      - max-age=2592000
+      cache-control:
+      - max-age=0, no-cache, no-store, must-revalidate, private
+      content-language:
+      - en
+      content-length:
+      - '60460'
+      content-type:
+      - application/json
+      expires:
+      - Mon, 27 Jan 2025 21:06:51 GMT
+      vary:
+      - Authorization,Accept-Language
+      via:
+      - 1.1 juju-5214c0-prod-scasnap-486 (squid/3.5.27)
+      x-cache:
+      - MISS from juju-5214c0-prod-scasnap-486
+      x-cache-lookup:
+      - MISS from juju-5214c0-prod-scasnap-486:3128
+      x-request-id:
+      - Z5f1asV3H1LrpyzshvTirQAAAGg1
+      x-vcs-revision:
+      - 99f3c3681c
+      x-view-name:
+      - api-snap-releases
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,56 @@
+interactions:
+- request:
+    body: '{"snap_name": "test-snap", "comment": "testing a dispute"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '58'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.3
+    method: POST
+    uri: https://dashboard.snapcraft.io/dev/api/register-name-dispute/
+  response:
+    body:
+      string: '{"snap_name": "test-snap", "status_url": "https://dashboard.snapcraft.io/register-snap-feedback/test-snap/"}'
+    headers:
+      Connection:
+      - Keep-Alive
+      Date:
+      - Mon, 27 Jan 2025 12:45:33 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Server:
+      - gunicorn
+      Strict-Transport-Security:
+      - max-age=2592000
+      content-language:
+      - en
+      content-length:
+      - '108'
+      content-type:
+      - application/json
+      vary:
+      - Authorization,Accept-Language
+      via:
+      - 1.1 juju-5214c0-prod-scasnap-485 (squid/3.5.27)
+      x-cache:
+      - MISS from juju-5214c0-prod-scasnap-485
+      x-cache-lookup:
+      - MISS from juju-5214c0-prod-scasnap-485:3128
+      x-request-id:
+      - Z5d-7CKm3p47SiRIACS9rgAAAi01
+      x-vcs-revision:
+      - 99f3c3681c
+      x-view-name:
+      - api-register-name-dispute
+    status:
+      code: 201
+      message: Created
+version: 1

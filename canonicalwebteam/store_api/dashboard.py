@@ -14,7 +14,7 @@ DASHBOARD_API_URL = getenv(
 
 
 class Dashboard(Base):
-    def __init__(self, session: Session):
+    def __init__(self, session=Session()):
         super().__init__(session)
 
         self.config = {
@@ -63,20 +63,6 @@ class Dashboard(Base):
         )
 
         return self.process_response(response)["macaroon"]
-
-    def whoami(self, session):
-        """
-        Get the authenticated user details.
-        Documentation:
-            https://dashboard.snapcraft.io/docs/reference/v2/en/tokens.html#api-tokens-whoami
-        Endpoint: [GET] https://dashboard.snapcraft.io/api/v2/tokens/whoami
-        """
-        response = self.session.get(
-            url=self.get_endpoint_url("tokens/whoami", api_version=2),
-            headers=self._get_authorization_header(session),
-        )
-
-        return self.process_response(response)
 
     def get_account(self, session):
         """
@@ -196,7 +182,7 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def get_snap_info(self, snap_name, session):
+    def get_snap_info(self, session, snap_name):
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#obtaining-information-about-a-snap
@@ -230,17 +216,17 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def get_snap_id(self, snap_name, session):
+    def get_snap_id(self, session, snap_name):
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#obtaining-information-about-a-snap
         Endpoint: https://dashboard.snapcraft.io/dev/api/snaps/info/{snap_name}
         """
-        snap_info = self.get_snap_info(snap_name, session)
+        snap_info = self.get_snap_info(session, snap_name)
 
         return snap_info["snap_id"]
 
-    def snap_metadata(self, snap_id, session, json=None):
+    def snap_metadata(self, session, snap_id, json=None):
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#managing-snap-metadata
@@ -259,7 +245,7 @@ class Dashboard(Base):
 
         return self.process_response(metadata_response)
 
-    def snap_screenshots(self, snap_id, session, data=None, files=None):
+    def snap_screenshots(self, session, snap_id, data=None, files=None):
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#managing-snap-metadata
@@ -392,7 +378,7 @@ class Dashboard(Base):
 
         return self.process_response(metrics_response)
 
-    def get_validation_sets(self, publisher_auth):
+    def get_validation_sets(self, session):
         """
         Return a list of validation sets for the current account
         Documentation:
@@ -401,11 +387,11 @@ class Dashboard(Base):
         """
         url = self.get_endpoint_url("validation-sets", api_version=2)
         response = self.session.get(
-            url, headers=self._get_authorization_header(publisher_auth)
+            url, headers=self._get_authorization_header(session)
         )
         return self.process_response(response)
 
-    def get_validation_set(self, publisher_auth, validation_set_id):
+    def get_validation_set(self, session, validation_set_id):
         """
         Return a validation set for the current account
         Documentation:
@@ -417,7 +403,7 @@ class Dashboard(Base):
             f"validation-sets/{validation_set_id}?sequence=all", api_version=2
         )
         response = self.session.get(
-            url, headers=self._get_authorization_header(publisher_auth)
+            url, headers=self._get_authorization_header(session)
         )
         return self.process_response(response)
 

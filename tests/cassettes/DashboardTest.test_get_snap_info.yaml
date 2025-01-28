@@ -1,0 +1,103 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://dashboard.snapcraft.io/dev/api/snaps/info/steve-test-snap
+  response:
+    body:
+      string: '{"snap_name": "steve-test-snap", "snap_id": "bv9Q2i9CNAvTjt9wTx1cFC6SAT9YrEfG",
+        "series": "16", "store": "Global", "publisher": {"id": "prFvYmvaBsQbXLNaVaQFV4EAcJ8zh0Ej",
+        "username": "steverydz", "display-name": "Steve Rydz", "validation": "unproven"},
+        "status": "published", "channel_maps_list": [{"track": "latest", "series":
+        "16", "architecture": "amd64", "map": [{"channel": "stable", "info": "released",
+        "revision": 23, "version": "1.0.1", "epoch": "0", "confinement": "strict",
+        "binary_filesize": 4096}, {"channel": "candidate", "info": "released", "revision":
+        23, "version": "1.0.1", "epoch": "0", "confinement": "strict", "binary_filesize":
+        4096}, {"channel": "beta", "info": null}, {"channel": "edge", "info": "released",
+        "revision": 22, "version": "0.8", "epoch": "0", "confinement": "strict", "binary_filesize":
+        4096}]}, {"track": "latest", "series": "16", "architecture": "arm64", "map":
+        [{"channel": "stable", "info": "released", "revision": 24, "version": "2.0.0",
+        "epoch": "0", "confinement": "strict", "binary_filesize": 4096}, {"channel":
+        "candidate", "info": "released", "revision": 24, "version": "2.0.0", "epoch":
+        "0", "confinement": "strict", "binary_filesize": 4096}, {"channel": "beta",
+        "info": null}, {"channel": "edge", "info": null}]}, {"track": "latest", "series":
+        "16", "architecture": "armhf", "map": [{"channel": "stable", "info": "released",
+        "revision": 33, "version": "3.0.0", "epoch": "0", "confinement": "strict",
+        "binary_filesize": 4096}, {"channel": "candidate", "info": "released", "revision":
+        33, "version": "3.0.0", "epoch": "0", "confinement": "strict", "binary_filesize":
+        4096}, {"channel": "beta", "info": null}, {"channel": "edge", "info": null}]},
+        {"track": "latest", "series": "16", "architecture": "ppc64el", "map": [{"channel":
+        "stable", "info": "released", "revision": 31, "version": "3.0.0", "epoch":
+        "0", "confinement": "strict", "binary_filesize": 4096}, {"channel": "candidate",
+        "info": null}, {"channel": "beta", "info": null}, {"channel": "edge", "info":
+        null}]}, {"track": "latest", "series": "16", "architecture": "s390x", "map":
+        [{"channel": "stable", "info": "released", "revision": 32, "version": "3.0.0",
+        "epoch": "0", "confinement": "strict", "binary_filesize": 4096}, {"channel":
+        "candidate", "info": null}, {"channel": "beta", "info": null}, {"channel":
+        "edge", "info": null}]}], "aliases": null, "private": false, "whitelist_country_codes":
+        ["GB"], "blacklist_country_codes": [], "license": "ANTLR-PD-fallback", "media":
+        [{"type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2024/12/snap_icon_flsMeVO.png",
+        "width": 512, "height": 512}, {"type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2024/12/snap_banner_DU2jjLW.jpg",
+        "width": 720, "height": 240}, {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2024/09/snap_screenshot_2-1727704935.jpg",
+        "width": 480, "height": 480}, {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2024/09/snap_screenshot_4-1727704935.jpg",
+        "width": 512, "height": 512}, {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2024/09/snap_screenshot_3-1727704951.jpg",
+        "width": 1707, "height": 960}, {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2024/12/snap_screenshot-1734436970.jpg",
+        "width": 3840, "height": 2160}, {"type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2024/12/snap_screenshot-1734436970.jpg",
+        "width": 3840, "height": 2160}], "title": "steve-test-snap", "summary": "The
+        snap I use for testing", "description": "This is the snap I use for development
+        and testing", "keywords": [], "contact": "https://contact.com", "website":
+        "https://steverydz.com", "video_urls": ["https://www.youtube.com/watch?v=oTahLEX3NXos"],
+        "links": {"source": ["https://github.com/"], "contact": ["https://contact.com",
+        "mailto:hi@example.com"], "website": ["https://steverydz.com", "https://websites.com",
+        "http://example.com", "https://testing.com"], "issues": ["https://issues.com"],
+        "donations": ["https://example.com/donate"]}, "public_metrics_enabled": true,
+        "public_metrics_blacklist": ["installed_base_by_country_percent"], "unlisted":
+        true, "default_track": null, "categories": {"locked": false, "items": [{"featured":
+        true, "name": "featured", "since": "2024-03-28T12:54:38.387380"}, {"featured":
+        false, "name": "personalisation", "since": "2025-01-24T10:36:41.294636"},
+        {"featured": false, "name": "social", "since": "2025-01-24T10:06:12.547889"}]},
+        "update_metadata_on_release": true, "visibility_locked": false}'
+    headers:
+      Connection:
+      - Keep-Alive
+      Date:
+      - Tue, 28 Jan 2025 07:49:24 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Server:
+      - gunicorn
+      Strict-Transport-Security:
+      - max-age=2592000
+      content-language:
+      - en
+      content-length:
+      - '4615'
+      content-type:
+      - application/json
+      vary:
+      - Authorization,Accept-Language
+      via:
+      - 1.1 juju-5214c0-prod-scasnap-486 (squid/3.5.27)
+      x-cache:
+      - MISS from juju-5214c0-prod-scasnap-486
+      x-cache-lookup:
+      - MISS from juju-5214c0-prod-scasnap-486:3128
+      x-request-id:
+      - Z5iMBJBiFUy-vrYS37ud@wAAAZQ1
+      x-vcs-revision:
+      - 99f3c3681c
+      x-view-name:
+      - api-snap-info
+    status:
+      code: 200
+      message: OK
+version: 1

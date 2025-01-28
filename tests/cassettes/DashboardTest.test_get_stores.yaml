@@ -1,0 +1,183 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://dashboard.snapcraft.io/dev/api/account
+  response:
+    body:
+      string: '{"id": "test_store", "display-name": "Alimot
+        Akinbode", "username": "the-user", "email": "alimot.akinbode@canonical.com",
+        "validation": "unproven", "account-keys": [], "snaps": {"16": {"test-lukewh":
+        {"icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/11/icon_Wz0GAsG",
+        "latest_comments": [], "latest_revisions": [{"architectures": ["amd64"], "channels":
+        ["edge"], "revision": 1, "since": "2018-04-23T12:29:02Z", "status": "Published",
+        "version": "qa"}], "price": null, "private": false, "publisher": {"id": "GMrEEEdGN4gN9BhRHjRRDCoJuUkyJJnm",
+        "display-name": "LukeWH", "username": "lukewh", "validation": null}, "since":
+        "2018-04-23T12:25:22Z", "snap-id": "DbWUCmbbs9jl1fzTW2DzOIAVHFgnENpK", "status":
+        "Approved", "store": "Global", "unlisted": false}, "steve-test-snap": {"icon_url":
+        "https://dashboard.snapcraft.io/site_media/appmedia/2024/12/snap_icon_flsMeVO.png",
+        "latest_comments": [], "latest_revisions": [{"architectures": ["arm64"], "channels":
+        [], "revision": 58, "since": "2025-01-07T15:34:08Z", "status": "Published",
+        "version": "4.0.1"}, {"architectures": ["arm64"], "channels": [], "revision":
+        57, "since": "2024-12-17T15:16:12Z", "status": "Published", "version": "4.0.1"},
+        {"architectures": ["arm64"], "channels": [], "revision": 56, "since": "2024-12-05T14:32:13Z",
+        "status": "Published", "version": "4.0.1"}, {"architectures": ["arm64"], "channels":
+        [], "revision": 55, "since": "2024-10-23T09:17:13Z", "status": "Published",
+        "version": "4.0.1"}, {"architectures": ["arm64"], "channels": [], "revision":
+        54, "since": "2024-10-23T08:23:12Z", "status": "Published", "version": "4.0.1"}],
+        "price": null, "private": false, "publisher": {"id": "prFvYmvaBsQbXLNaVaQFV4EAcJ8zh0Ej",
+        "display-name": "Steve Rydz", "username": "steverydz", "validation": null},
+        "since": "2021-05-26T09:42:33Z", "snap-id": "bv9Q2i9CNAvTjt9wTx1cFC6SAT9YrEfG",
+        "status": "Approved", "store": "Global", "unlisted": true}, "alimot-test-snap":
+        {"icon_url": null, "latest_comments": [], "latest_revisions": [], "price":
+        null, "private": true, "publisher": {"id": "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f",
+        "display-name": "Alimot Akinbode", "username": "the-user", "validation": "unproven"},
+        "since": "2022-12-01T13:01:02Z", "snap-id": "ZcWblreupPVrtiEKLilAtgNgsIHQE2Jr",
+        "status": "Approved", "store": "Global", "unlisted": false}, "limesdr": {"icon_url":
+        null, "latest_comments": [], "latest_revisions": [], "price": null, "private":
+        true, "publisher": {"id": "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f", "display-name":
+        "Alimot Akinbode", "username": "the-user", "validation": "unproven"}, "since":
+        "2022-12-05T07:51:22Z", "snap-id": "gfoSgD8i6W13LP1gwiY3BOHmd6EG3GCA", "status":
+        "Revoked", "store": "Global", "unlisted": false}, "alimot-testing": {"icon_url":
+        null, "latest_comments": [], "latest_revisions": [], "price": null, "private":
+        false, "publisher": {"id": "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f", "display-name":
+        "Alimot Akinbode", "username": "the-user", "validation": "unproven"}, "since":
+        "2022-12-05T12:56:43Z", "snap-id": "jXDyLNBTp5cSjskNnhkbZ8FcJPclk9LV", "status":
+        "Approved", "store": "Global", "unlisted": false}, "reserve": {"icon_url":
+        null, "latest_comments": [], "latest_revisions": [], "price": null, "private":
+        false, "publisher": {"id": "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f", "display-name":
+        "Alimot Akinbode", "username": "the-user", "validation": "unproven"}, "since":
+        "2022-12-05T20:29:20Z", "snap-id": "laGPLahTeftWHKGjm96KDKYbiuTWRecY", "status":
+        "Approved", "store": "Global", "unlisted": false}, "alimot-test-snap2": {"icon_url":
+        null, "latest_comments": [], "latest_revisions": [], "price": null, "private":
+        false, "publisher": {"id": "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f", "display-name":
+        "Alimot Akinbode", "username": "the-user", "validation": "unproven"}, "since":
+        "2023-06-09T07:26:49Z", "snap-id": "eAkyDxdLVl3rzjikN8gcU17M619txOL0", "status":
+        "Revoked", "store": "Global", "unlisted": false}, "xyz-xyz": {"icon_url":
+        null, "latest_comments": [], "latest_revisions": [], "price": null, "private":
+        false, "publisher": {"id": "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f", "display-name":
+        "Alimot Akinbode", "username": "the-user", "validation": "unproven"}, "since":
+        "2023-10-23T10:46:17Z", "snap-id": "g3mgLGmpVATzBQ9QaTFX9lfFBqaM2TxL", "status":
+        "Revoked", "store": "Global", "unlisted": false}, "ghjk": {"icon_url": null,
+        "latest_comments": [], "latest_revisions": [], "price": null, "private": false,
+        "publisher": {"id": "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f", "display-name": "Alimot
+        Akinbode", "username": "the-user", "validation": "unproven"}, "since": "2023-10-23T11:21:35Z",
+        "snap-id": "i7p15JxKcktiKVp8d1Zqa4gciWd5zxnu", "status": "Revoked", "store":
+        "Global", "unlisted": false}, "test-qwerty": {"icon_url": null, "latest_comments":
+        [], "latest_revisions": [], "price": null, "private": true, "publisher": {"id":
+        "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f", "display-name": "Alimot Akinbode", "username":
+        "the-user", "validation": "unproven"}, "since": "2024-01-18T08:32:40Z", "snap-id":
+        "gffsQIXcbV41M3RuaYIRGigHwOIMnAFh", "status": "Approved", "store": "Global",
+        "unlisted": false}, "another-test-snap": {"icon_url": null, "latest_comments":
+        [], "latest_revisions": [], "price": null, "private": false, "publisher":
+        {"id": "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f", "display-name": "Alimot Akinbode",
+        "username": "the-user", "validation": "unproven"}, "since": "2024-04-22T14:22:45Z",
+        "snap-id": "7AIXyKuJ9leovUbxS99xm7Uovqq9cj2o", "status": "Approved", "store":
+        "Canonical Web Team Test Store", "unlisted": false}, "test-manual-review-snap":
+        {"icon_url": null, "latest_comments": [], "latest_revisions": [], "price":
+        null, "private": true, "publisher": {"id": "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f",
+        "display-name": "Alimot Akinbode", "username": "the-user", "validation": "unproven"},
+        "since": "2024-05-03T05:39:54Z", "snap-id": "gSeqJofbcb2X8bi9VLu19B2WyjzKL0fz",
+        "status": "Approved", "store": "Global", "unlisted": false}, "test-visiblity-in-brand-store":
+        {"icon_url": null, "latest_comments": [], "latest_revisions": [], "price":
+        null, "private": true, "publisher": {"id": "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f",
+        "display-name": "Alimot Akinbode", "username": "the-user", "validation": "unproven"},
+        "since": "2024-05-08T07:39:33Z", "snap-id": "H3D9S28kWHcJouSrRjbcEF3HcwgEpm4k",
+        "status": "Approved", "store": "Canonical Web Team Test Device Store", "unlisted":
+        false}, "test-visibility-locked2": {"icon_url": null, "latest_comments": [],
+        "latest_revisions": [], "price": null, "private": false, "publisher": {"id":
+        "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f", "display-name": "Alimot Akinbode", "username":
+        "the-user", "validation": "unproven"}, "since": "2024-05-08T07:48:10Z", "snap-id":
+        "7F4722Z2wnbMKaVmnv2UbEadCj4TXViP", "status": "Approved", "store": "Canonical
+        Web Team Test Device Store", "unlisted": false}, "another-test-snap-for-manual-review":
+        {"icon_url": null, "latest_comments": [], "latest_revisions": [], "price":
+        null, "private": false, "publisher": {"id": "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f",
+        "display-name": "Alimot Akinbode", "username": "the-user", "validation": "unproven"},
+        "since": "2024-05-10T08:51:37Z", "snap-id": "r12p4VfTByz0AchkUmmcaFxcooCLrvV1",
+        "status": "Approved", "store": "Canonical Web Team Test Device Store", "unlisted":
+        false}, "testingifendpointstillworks": {"icon_url": null, "latest_comments":
+        [], "latest_revisions": [], "price": null, "private": true, "publisher": {"id":
+        "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f", "display-name": "Alimot Akinbode", "username":
+        "the-user", "validation": "unproven"}, "since": "2024-05-22T06:04:25Z", "snap-id":
+        "b0g5f22VmzABTyC9RzZOKtBDmcCzw2ys", "status": "Approved", "store": "Canonical
+        Web Team Test Device Store", "unlisted": false}, "one-more-test-snap": {"icon_url":
+        null, "latest_comments": [], "latest_revisions": [], "price": null, "private":
+        true, "publisher": {"id": "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f", "display-name":
+        "Alimot Akinbode", "username": "the-user", "validation": "unproven"}, "since":
+        "2024-06-04T05:33:11Z", "snap-id": "VC99tDctGuRssC00FKPCsrWLnyZfIGRr", "status":
+        "Approved", "store": "Canonical Web Team Test Store", "unlisted": false},
+        "test-snap": {"icon_url": null, "latest_comments": [{"author": {"id": "goONEa3ZJxTrzvGy5xr5lG6QIsA8Kc7b",
+        "display-name": "Guillermo Gonzalez", "username": "verterok", "validation":
+        null}, "comment": "Hi! \r\n\r\nshould I revoke it or you need further testing?\r\n\r\nRegards",
+        "reason": "Reviewer comment", "since": "2025-01-27T17:20:17Z"}, {"author":
+        {"id": "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f", "display-name": "Alimot Akinbode",
+        "username": "the-user", "validation": "unproven"}, "comment": "testing a dispute",
+        "reason": "Registrant comment", "since": "2025-01-27T12:45:33Z"}], "latest_revisions":
+        [], "price": null, "private": false, "publisher": {"id": "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f",
+        "display-name": "Alimot Akinbode", "username": "the-user", "validation": "unproven"},
+        "since": "2025-01-27T12:45:33Z", "snap-id": null, "status": "DisputePending",
+        "store": "Global", "unlisted": false}}}, "stores": [{"id": "ubuntu", "name":
+        "Global", "roles": ["view", "access"]}, {"id": "wahsh4IQu8aiw5eisaeS", "name":
+        "Canonical Web Team Test Device Store", "roles": ["admin", "review", "view",
+        "access"]}, {"id": "nah4ahShap8aefie6pha", "name": "Canonical Web Team Test
+        Store", "roles": ["admin", "review", "view", "access"]}, {"id": "LimeNET",
+        "name": "LimeNET", "roles": ["access"]}, {"id": "LimeSDR", "name": "LimeSDR",
+        "roles": ["access"]}, {"id": "orange-pi", "name": "Orange Pi", "roles": ["access"]},
+        {"id": "TestInternalStoreTeam2023", "name": "Test Internal Store Team", "roles":
+        ["view"]}, {"id": "test1LaNg1xi6eonae5R", "name": "Test Store Team Appliance",
+        "roles": ["admin"]}, {"id": "testGahNg0wohVae8aY4", "name": "Test Store Team
+        Store", "roles": ["view"]}, {"id": "ahnuP3quahti9vis8aiw", "name": "Web and
+        Design", "roles": ["admin", "review", "view", "access"]}], "account_id": "j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f",
+        "account_keys": [], "displayname": "Alimot Akinbode", "namespace": "the-user",
+        "openid_identifier": "https://login.ubuntu.com/+id/n6ztcyL", "short_namespace":
+        "the-user"}'
+    headers:
+      Connection:
+      - Keep-Alive
+      Date:
+      - Mon, 27 Jan 2025 21:40:53 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Server:
+      - gunicorn
+      Strict-Transport-Security:
+      - max-age=2592000
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - max-age=0, no-cache, no-store, must-revalidate, private
+      content-language:
+      - en
+      content-length:
+      - '10147'
+      content-type:
+      - application/json
+      expires:
+      - Mon, 27 Jan 2025 21:40:53 GMT
+      vary:
+      - Authorization,Accept-Language
+      via:
+      - 1.1 juju-5214c0-prod-scasnap-486 (squid/3.5.27)
+      x-cache:
+      - MISS from juju-5214c0-prod-scasnap-486
+      x-cache-lookup:
+      - MISS from juju-5214c0-prod-scasnap-486:3128
+      x-request-id:
+      - Z5f9ZBRCmCvp63TIJAct0wAAABo1
+      x-vcs-revision:
+      - 99f3c3681c
+      x-view-name:
+      - api-account-info
+    status:
+      code: 200
+      message: OK
+version: 1
