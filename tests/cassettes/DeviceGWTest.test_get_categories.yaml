@@ -1,0 +1,46 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Snap-Device-Series:
+      - '16'
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.snapcraft.io/v2/snaps/categories?type=shared
+  response:
+    body:
+      string: '{"categories":[{"name":"art-and-design"},{"name":"books-and-reference"},{"name":"development"},{"name":"devices-and-iot"},{"name":"education"},{"name":"entertainment"},{"name":"featured"},{"name":"finance"},{"name":"games"},{"name":"health-and-fitness"},{"name":"music-and-audio"},{"name":"news-and-weather"},{"name":"personalisation"},{"name":"photo-and-video"},{"name":"productivity"},{"name":"science"},{"name":"security"},{"name":"server-and-cloud"},{"name":"social"},{"name":"utilities"}]}
+
+        '
+    headers:
+      cache-control:
+      - public, max-age=3600
+      content-length:
+      - '495'
+      content-type:
+      - application/json
+      date:
+      - Tue, 28 Jan 2025 12:06:21 GMT
+      server:
+      - gunicorn
+      snap-store-version:
+      - '62'
+      vary:
+      - Snap-Device-Store
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19D91A800000000000000000000FFFF0A8325F301BB6798C83D104700DE
+      x-vcs-revision:
+      - c53097aa4a4f8f14a597766878e52468848697b0
+      x-view-name:
+      - snapdevicegw.webapi_categories.snaps_categories
+    status:
+      code: 200
+      message: OK
+version: 1

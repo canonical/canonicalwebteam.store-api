@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+      X-Ubuntu-Architecture:
+      - wide
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=&size=2&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"apps": ["josm"], "architecture":
+        ["amd64"], "developer_id": "vxj7EkYOlg15uAHRswTXIUpzWqO2sTBi", "developer_name":
+        "Michael Vogt", "developer_validation": "starred", "media": [{"height": 128,
+        "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2021/01/logo_128.png",
+        "width": 128}], "origin": "mvo", "package_name": "josm", "sections": [{"featured":
+        false, "name": "education"}, {"featured": true, "name": "featured"}], "summary":
+        "Editor for OpenStreetMap", "title": "josm"}, {"apps": ["vault"], "architecture":
+        ["amd64"], "developer_id": "canonical", "developer_name": "Canonical", "developer_validation":
+        "verified", "media": [{"height": 256, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/09/android-chrome-512x512.png",
+        "width": 256}, {"height": 500, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2024/03/Screenshot_from_2024-03-20_16-12-04-1710965788.png",
+        "width": 873}, {"height": 1068, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2024/03/Screenshot_from_2024-03-20_16-15-49-1710965788.png",
+        "width": 1793}], "origin": "canonical", "package_name": "vault", "sections":
+        [{"featured": true, "name": "featured"}, {"featured": true, "name": "security"},
+        {"featured": false, "name": "utilities"}], "summary": "Vault is a tool for
+        securely accessing secrets.", "title": "vault"}]}, "_links": {"last": {"href":
+        "https://api.snapcraft.io/api/v1/snaps/search?size=2&page=8&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured"},
+        "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=2&page=2&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured"},
+        "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=2&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=featured"}},
+        "total": 16}'
+    headers:
+      content-length:
+      - '2345'
+      content-type:
+      - application/hal+json
+      date:
+      - Tue, 28 Jan 2025 12:38:27 GMT
+      server:
+      - gunicorn
+      snap-store-version:
+      - '62'
+      via:
+      - 1.1 juju-c7799c-prod-snap-store-136 (squid/4.10)
+      x-cache:
+      - MISS from juju-c7799c-prod-snap-store-136
+      x-cache-lookup:
+      - MISS from juju-c7799c-prod-snap-store-136:3128
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DCB6800000000000000000000FFFF0A8325B201BB6798CFC210932C93
+      x-vcs-revision:
+      - c53097aa4a4f8f14a597766878e52468848697b0
+      x-view-name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+version: 1

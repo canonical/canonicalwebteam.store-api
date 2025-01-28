@@ -1,0 +1,52 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Snap-Device-Series:
+      - '16'
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.snapcraft.io/v2/snaps/find?q=xyz&category=&architecture=&publisher=&featured=false
+  response:
+    body:
+      string: '{"results":[{"name":"colorpie","snap":{},"snap-id":"ShhrcFAnHVqqDmco88Lm4ijbdDrWh11h"},{"name":"odin-c2is","snap":{},"snap-id":"xyz-id"},{"name":"jmol","snap":{},"snap-id":"another-xyz-id"}]}
+
+        '
+    headers:
+      cache-control:
+      - public, max-age=300
+      content-length:
+      - '236'
+      content-type:
+      - application/json
+      date:
+      - Tue, 28 Jan 2025 12:06:20 GMT
+      server:
+      - gunicorn
+      snap-store-version:
+      - '62'
+      vary:
+      - Snap-Device-Store, Snap-Device-Series, Accept-Encoding
+      via:
+      - 1.1 juju-c7799c-prod-snap-store-99 (squid/4.10)
+      x-cache:
+      - MISS from juju-c7799c-prod-snap-store-99
+      x-cache-lookup:
+      - MISS from juju-c7799c-prod-snap-store-99:3128
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19D919A00000000000000000000FFFF0A8325F301BB6798C83C1046F06B
+      x-vcs-revision:
+      - c53097aa4a4f8f14a597766878e52468848697b0
+      x-view-name:
+      - snapdevicegw.webapi_search_v2.snaps_find
+    status:
+      code: 200
+      message: OK
+version: 1
