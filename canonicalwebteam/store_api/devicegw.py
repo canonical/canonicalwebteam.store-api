@@ -1,5 +1,6 @@
 from os import getenv
 
+from requests import Session
 from canonicalwebteam.store_api.base import Base
 
 
@@ -7,7 +8,7 @@ DEVICEGW_URL = getenv("DEVICEGW_URL", "https://api.snapcraft.io/")
 
 
 class DeviceGW(Base):
-    def __init__(self, session, store=None):
+    def __init__(self, session=Session(), store=None):
         super().__init__(session)
         self.config = {
             1: {
