@@ -1,0 +1,83 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+      X-Ubuntu-Architecture:
+      - wide
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=&size=3&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=games
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"apps": ["0ad", "atlas"], "architecture":
+        ["amd64"], "developer_id": "ptOwp7zpcHN1VUQUwXHZ027UnbkDZF8i", "developer_name":
+        "Wildfire Games", "developer_validation": "verified", "media": [{"type": "icon",
+        "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/icon256_f9302jP.png"},
+        {"height": 640, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/flatpackbanner_QKYFlgx.jpg",
+        "width": 1920}, {"height": 1200, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/CarthaginianTown.jpg",
+        "width": 1600}, {"height": 1440, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/BritsAbroad.jpg",
+        "width": 1920}, {"height": 1440, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/MacedonPort.jpg",
+        "width": 1920}, {"height": 1200, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/SpartanTown.jpg",
+        "width": 1600}, {"height": 1200, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/11/MauryanColony.jpg",
+        "width": 1600}], "origin": "play0ad", "package_name": "0ad", "sections": [{"featured":
+        false, "name": "entertainment"}, {"featured": true, "name": "games"}], "summary":
+        "Real-time strategy game of ancient warfare", "title": "0ad"}, {"apps": ["dosbox-x"],
+        "architecture": ["amd64"], "developer_id": "eEoV9TnaNkCzfJBu9SRhr2678vzyYV43",
+        "developer_name": "Snapcrafters", "developer_validation": "starred", "media":
+        [{"height": 512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/10/dosbox-x.svg.png",
+        "width": 512}, {"height": 1053, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/10/01-msword.png",
+        "width": 1284}, {"height": 1053, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/10/02-tomb3d.png",
+        "width": 1284}, {"height": 1053, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/10/03-win98guest.png",
+        "width": 1284}, {"height": 1064, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/10/04-pc98touhou.png",
+        "width": 1284}, {"height": 1178, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2022/10/05-configtool.png",
+        "width": 1444}], "origin": "snapcrafters", "package_name": "dosbox-x", "sections":
+        [{"featured": true, "name": "games"}, {"featured": false, "name": "utilities"}],
+        "summary": "DOSBox-X fork of the DOSBox project", "title": "DOSBox-X"}, {"apps":
+        ["cnc", "d2k", "ra", "ts"], "architecture": ["amd64"], "developer_id": "oew2TZOpQF0lGd3JKNZydA2BCn1Z66FO",
+        "developer_name": "Lucy Llewellyn", "developer_validation": "starred", "media":
+        [{"height": 256, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/08/openra.png",
+        "width": 256}, {"height": 327, "type": "banner", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/06/openra-banner.png",
+        "width": 981}, {"height": 1080, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2018/08/Screenshot_at_2018-08-14_13-05-24.png",
+        "width": 1920}], "origin": "lucyllewy", "package_name": "openra", "sections":
+        [{"featured": true, "name": "games"}], "summary": "A Libre/Free Real Time
+        Strategy game engine supporting early Westwood classics", "title": "OpenRA"}]},
+        "_links": {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=320&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=games"},
+        "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=2&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=games"},
+        "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?size=3&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide&section=games"}},
+        "total": 959}'
+    headers:
+      content-length:
+      - '4364'
+      content-type:
+      - application/hal+json
+      date:
+      - Tue, 28 Jan 2025 12:37:25 GMT
+      server:
+      - gunicorn
+      snap-store-version:
+      - '62'
+      via:
+      - 1.1 juju-c7799c-prod-snap-store-135 (squid/4.10)
+      x-cache:
+      - MISS from juju-c7799c-prod-snap-store-135
+      x-cache-lookup:
+      - HIT from juju-c7799c-prod-snap-store-135:3128
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DC05C00000000000000000000FFFF0A8325B201BB6798CF8510909BC3
+      x-vcs-revision:
+      - c53097aa4a4f8f14a597766878e52468848697b0
+      x-view-name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+version: 1

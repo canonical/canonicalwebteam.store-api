@@ -1,0 +1,49 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+      X-Ubuntu-Architecture:
+      - wide
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=publisher%3Alukewh&size=3&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": []}, "_links": {"self": {"href":
+        "https://api.snapcraft.io/api/v1/snaps/search?q=publisher%3Alukewh&size=3&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide"}}}'
+    headers:
+      content-length:
+      - '347'
+      content-type:
+      - application/hal+json
+      date:
+      - Tue, 28 Jan 2025 12:45:05 GMT
+      server:
+      - gunicorn
+      snap-store-version:
+      - '62'
+      via:
+      - 1.1 juju-c7799c-prod-snap-store-99 (squid/4.10)
+      x-cache:
+      - MISS from juju-c7799c-prod-snap-store-99
+      x-cache-lookup:
+      - MISS from juju-c7799c-prod-snap-store-99:3128
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DD40200000000000000000000FFFF0A8325B201BB6798D15110A40280
+      x-vcs-revision:
+      - c53097aa4a4f8f14a597766878e52468848697b0
+      x-view-name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+version: 1
