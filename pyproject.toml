@@ -11,9 +11,9 @@ include = 'canonicalwebteam'
 
 [tool.poetry.dependencies]
 python = '^3.8'
-coverage = '^5.4'
+coverage = '^7.0'
 pymacaroons = '0.13.0'
-requests = '^2.24.0'
+requests = '^2.32.3'
 
 [tool.poetry.dev-dependencies]
 vcrpy-unittest = '^0.1.7'
