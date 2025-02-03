@@ -24,10 +24,8 @@ class PublisherGW(Base):
     ) -> str:
         base_url = self.config[version]["base_url"]
         if has_name_space:
-            return (
-                f"{base_url}/{self.name_space}/{endpoint}"
-            ).rstrip("/")
-        return (f"{base_url}/{endpoint}").rstrip("/")
+            return f"{base_url}/{self.name_space}/{endpoint}".rstrip("/")
+        return f"{base_url}/{endpoint}".rstrip("/")
 
     # SEARCH
     def find(
