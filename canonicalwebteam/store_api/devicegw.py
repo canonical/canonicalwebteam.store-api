@@ -1,4 +1,5 @@
 from os import getenv
+from typing import Optional
 
 from requests import Session
 from canonicalwebteam.store_api.base import Base
@@ -25,19 +26,19 @@ class DeviceGW(Base):
             self.config[1]["headers"].update({"X-Ubuntu-Store": store})
             self.config[2]["headers"].update({"Snap-Device-Store": store})
 
-    def get_endpoint_url(self, endpoint, api_version=1):
+    def get_endpoint_url(self, endpoint, api_version=1) -> str:
         base_url = self.config[api_version]["base_url"]
         return f"{base_url}{endpoint}"
 
     def search(
         self,
-        search,
-        size=100,
-        page=1,
-        category=None,
-        arch="wide",
-        api_version=1,
-    ):
+        search: str,
+        size: int = 100,
+        page: int = 1,
+        category: Optional[str] = None,
+        arch: str = "wide",
+        api_version: int = 1,
+    ) -> dict:
         """
         Documentation: https://api.snapcraft.io/docs/search.html#snap_search
         Endpoint:  https://api.snapcraft.io/api/v1/snaps/search
@@ -90,13 +91,13 @@ class DeviceGW(Base):
 
     def find(
         self,
-        query="",
-        category="",
-        architecture="",
-        publisher="",
-        featured="false",
-        fields=[],
-    ):
+        query: str = "",
+        category: str = "",
+        architecture: str = "",
+        publisher: str = "",
+        featured: str = "false",
+        fields: list = [],
+    ) -> dict:
         """
         Documentation: https://api.snapcraft.io/docs/search.html#snaps_find
         Endpoint: [GET] https://api.snapcraft.io/v2/snaps/find
@@ -115,7 +116,7 @@ class DeviceGW(Base):
         response = self.session.get(url, params=params, headers=headers)
         return self.process_response(response)
 
-    def get_all_items(self, size, api_version=1):
+    def get_all_items(self, size: int, api_version: int = 1) -> dict:
         """
         Documentation: https://api.snapcraft.io/docs/search.html#snap_search
         Endpoint:  https://api.snapcraft.io/api/v1/snaps/search
@@ -130,7 +131,13 @@ class DeviceGW(Base):
             )
         )
 
-    def get_category_items(self, category, size=10, page=1, api_version=1):
+    def get_category_items(
+        self,
+        category: str,
+        size: int = 10,
+        page: int = 1,
+        api_version: int = 1,
+    ) -> dict:
         """
         Documentation: https://api.snapcraft.io/docs/search.html#snap_search
         Endpoint:  https://api.snapcraft.io/api/v1/snaps/search
@@ -143,7 +150,9 @@ class DeviceGW(Base):
             api_version=api_version,
         )
 
-    def get_featured_items(self, size=10, page=1, api_version=1):
+    def get_featured_items(
+        self, size: int = 10, page: int = 1, api_version: int = 1
+    ) -> dict:
         """
         Documentation: https://api.snapcraft.io/docs/search.html#snap_search
         Endpoint:  https://api.snapcraft.io/api/v1/snaps/search
@@ -156,7 +165,13 @@ class DeviceGW(Base):
             api_version=api_version,
         )
 
-    def get_publisher_items(self, publisher, size=500, page=1, api_version=1):
+    def get_publisher_items(
+        self,
+        publisher: str,
+        size: int = 500,
+        page: int = 1,
+        api_version: int = 1,
+    ) -> dict:
         """
         Documentation: https://api.snapcraft.io/docs/search.html#snap_search
         Endpoint:  https://api.snapcraft.io/api/v1/snaps/search
@@ -168,7 +183,13 @@ class DeviceGW(Base):
             api_version=api_version,
         )
 
-    def get_item_details(self, name, channel=None, fields=[], api_version=2):
+    def get_item_details(
+        self,
+        name: str,
+        channel: Optional[str] = None,
+        fields: list = [],
+        api_version: int = 2,
+    ) -> dict:
         """
         Documentation: https://api.snapcraft.io/docs/info.html
         Endpoint: [GET]
@@ -188,7 +209,7 @@ class DeviceGW(Base):
             )
         )
 
-    def get_public_metrics(self, json, api_version=1):
+    def get_public_metrics(self, json: dict, api_version: int = 1) -> dict:
         """
         Documentation: https://api.snapcraft.io/docs/metrics.html
         Endpoint: https://api.snapcraft.io/api/v1/snaps/metrics
@@ -202,7 +223,9 @@ class DeviceGW(Base):
             self.session.post(url, headers=headers, json=json)
         )
 
-    def get_categories(self, api_version=2, type="shared"):
+    def get_categories(
+        self, api_version: int = 2, type: str = "shared"
+    ) -> dict:
         """
         Documentation: https://api.snapcraft.io/docs/categories.html
         Endpoint: https://api.snapcraft.io/api/v2/{name_space}/categories
@@ -216,7 +239,9 @@ class DeviceGW(Base):
             )
         )
 
-    def get_resource_revisions(self, name, resource_name, api_version=2):
+    def get_resource_revisions(
+        self, name: str, resource_name: str, api_version: int = 2
+    ) -> dict:
         """
         Documentation:
             https://api.snapcraft.io/docs/charms.html#list_resource_revisions
@@ -234,7 +259,9 @@ class DeviceGW(Base):
             )
         )["revisions"]
 
-    def get_featured_snaps(self, api_version=1, fields="snap_id"):
+    def get_featured_snaps(
+        self, api_version: int = 1, fields: str = "snap_id"
+    ) -> dict:
         """
         Documentation: (link to spec)
             https://docs.google.com/document/d/1UAybxuZyErh3ayqb4nzL3T4BbvMtnmKKEPu-ixcCj_8/edit

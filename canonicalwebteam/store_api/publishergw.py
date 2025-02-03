@@ -1,10 +1,8 @@
 from os import getenv
+from typing import Optional
 from requests import Session
 
 from canonicalwebteam.store_api.base import Base
-from canonicalwebteam.store_api.utils import (
-    remove_trailing_slash,
-)
 
 
 PUBLISHERGW_URL = getenv("PUBLISHERGW_URL", "https://api.charmhub.io")
@@ -22,26 +20,26 @@ class PublisherGW(Base):
         }
 
     def get_endpoint_url(
-        self, endpoint: str, version: int = 1, has_name_space=False
-    ):
+        self, endpoint: str, version: int = 1, has_name_space: bool = False
+    ) -> str:
         base_url = self.config[version]["base_url"]
         if has_name_space:
-            return remove_trailing_slash(
+            return (
                 f"{base_url}/{self.name_space}/{endpoint}"
-            )
-        return remove_trailing_slash(f"{base_url}/{endpoint}")
+            ).rstrip("/")
+        return (f"{base_url}/{endpoint}").rstrip("/")
 
     # SEARCH
     def find(
         self,
-        query="",
-        category="",
-        publisher="",
-        type=None,
-        provides=[],
-        requires=[],
-        fields=[],
-    ):
+        query: str = "",
+        category: str = "",
+        publisher: str = "",
+        type: Optional[str] = None,
+        provides: list = [],
+        requires: list = [],
+        fields: list = [],
+    ) -> dict:
         """
         Given a search term, return an array of matching search results.
         v2 API only.
@@ -71,7 +69,9 @@ class PublisherGW(Base):
         )
 
     # CATEGORIES
-    def get_categories(self, api_version=2, type="shared"):
+    def get_categories(
+        self, api_version: int = 2, type: str = "shared"
+    ) -> dict:
         """
         Documentation: https://api.snapcraft.io/docs/categories.html
         Endpoint: https://api.charmhub.io/v2/{name_space}/categories
@@ -86,13 +86,13 @@ class PublisherGW(Base):
         )
 
     # AUTH AND MACAROONS
-    def _get_authorization_header(self, publisher_auth):
+    def _get_authorization_header(self, publisher_auth: str) -> dict:
         """
         Return the formatted Authorization header for the publisher API.
         """
         return {"Authorization": f"Macaroon {publisher_auth}"}
 
-    def get_macaroon(self):
+    def get_macaroon(self) -> str:
         """
         Return existing macaroons for the authenticated account.
         Documentation: https://api.charmhub.io/docs/default.html#get_macaroon
@@ -101,7 +101,12 @@ class PublisherGW(Base):
         response = self.session.get(url=self.get_endpoint_url("tokens"))
         return self.process_response(response)["macaroon"]
 
-    def issue_macaroon(self, permissions, description=None, ttl=None):
+    def issue_macaroon(
+        self,
+        permissions: list,
+        description: Optional[list] = None,
+        ttl: Optional[list] = None,
+    ) -> str:
         """
         Return a bakery v2 macaroon to be discharged by Candid.
         Documentation: https://api.charmhub.io/docs/default.html#issue_macaroon
@@ -121,7 +126,7 @@ class PublisherGW(Base):
         )
         return self.process_response(response)["macaroon"]
 
-    def exchange_macaroons(self, issued_macaroon):
+    def exchange_macaroons(self, issued_macaroon: str) -> str:
         """
         Return an exchanged snapstore-only authentication macaroon.
         Documentation:
@@ -137,7 +142,7 @@ class PublisherGW(Base):
 
         return self.process_response(response)["macaroon"]
 
-    def exchange_dashboard_macaroons(self, publisher_auth):
+    def exchange_dashboard_macaroons(self, publisher_auth: str) -> str:
         """
         Exchange dashboard.snapcraft.io SSO discharged macaroons
         Documentation:
@@ -152,7 +157,7 @@ class PublisherGW(Base):
 
         return self.process_response(response)["macaroon"]
 
-    def macaroon_info(self, publisher_auth):
+    def macaroon_info(self, publisher_auth: str) -> dict:
         """
         Return information about the authenticated macaroon token.
         Documentation: https://api.charmhub.io/docs/default.html#macaroon_info
@@ -168,10 +173,10 @@ class PublisherGW(Base):
     # PACKAGES MANAGEMENT
     def get_account_packages(
         self,
-        publisher_auth,
-        package_type,
-        include_collaborations=False,
-        status=None,
+        publisher_auth: str,
+        package_type: str,
+        include_collaborations: bool = False,
+        status: Optional[str] = None,
     ):
         """
         Return publisher packages
@@ -213,7 +218,9 @@ class PublisherGW(Base):
 
         return packages
 
-    def get_package_metadata(self, publisher_auth, package_name):
+    def get_package_metadata(
+        self, publisher_auth: str, package_name: str
+    ) -> dict:
         """
         Get general metadata for a package.
         Documentation:
@@ -238,8 +245,8 @@ class PublisherGW(Base):
         return self.process_response(response)["metadata"]
 
     def update_package_metadata(
-        self, publisher_auth, package_type, name, data
-    ):
+        self, publisher_auth: str, package_type: str, name: str, data: dict
+    ) -> dict:
         """
         Update general metadata for a package.
         Documentation:
@@ -276,7 +283,7 @@ class PublisherGW(Base):
 
         return self.process_response(response)["metadata"]
 
-    def register_package_name(self, publisher_auth, data):
+    def register_package_name(self, publisher_auth: str, data: dict) -> dict:
         """
         Register a package name.
         Documentation: https://api.charmhub.io/docs/default.html#register_name
@@ -298,7 +305,9 @@ class PublisherGW(Base):
 
         return self.process_response(response)
 
-    def unregister_package_name(self, publisher_auth, package_name):
+    def unregister_package_name(
+        self, publisher_auth: str, package_name: str
+    ) -> dict:
         """
         Unregister a package name.
         Documentation:
@@ -319,7 +328,7 @@ class PublisherGW(Base):
         )
         return response
 
-    def get_charm_libraries(self, package_name):
+    def get_charm_libraries(self, package_name: str) -> dict:
         """
         Get libraries for a charm.
         Documentation:
@@ -335,7 +344,12 @@ class PublisherGW(Base):
 
         return self.process_response(response)
 
-    def get_charm_library(self, charm_name, library_id, api_version=None):
+    def get_charm_library(
+        self,
+        charm_name: str,
+        library_id: str,
+        api_version: Optional[int] = None,
+    ) -> dict:
         """
         Get library metadata and content
         Documentation:
@@ -361,7 +375,7 @@ class PublisherGW(Base):
 
         return self.process_response(response)
 
-    def get_releases(self, publisher_auth, package_name):
+    def get_releases(self, publisher_auth: str, package_name: str) -> dict:
         """
         List of all releases for a package.
         Documentation:
@@ -381,7 +395,13 @@ class PublisherGW(Base):
         )
         return self.process_response(response)
 
-    def get_item_details(self, name, channel=None, fields=[], api_version=2):
+    def get_item_details(
+        self,
+        name: str,
+        channel: Optional[str] = None,
+        fields: list = [],
+        api_version: int = 2,
+    ) -> dict:
         """
         Documentation: https://api.snapcraft.io/docs/info.html
         Endpoint: [GET]
@@ -405,7 +425,9 @@ class PublisherGW(Base):
         )
 
     # COLLABORATORS
-    def get_collaborators(self, publisher_auth, package_name):
+    def get_collaborators(
+        self, publisher_auth: str, package_name: str
+    ) -> dict:
         """
         Get collaborators (accepted invites) for the given package.
         Documentation:
@@ -426,7 +448,9 @@ class PublisherGW(Base):
         )
         return self.process_response(response)
 
-    def get_pending_invites(self, publisher_auth, package_name):
+    def get_pending_invites(
+        self, publisher_auth: str, package_name: str
+    ) -> dict:
         """
         Get pending collaborator invites for the given package.
         Documentation:
@@ -447,7 +471,9 @@ class PublisherGW(Base):
         )
         return self.process_response(response)
 
-    def invite_collaborators(self, publisher_auth, package_name, emails):
+    def invite_collaborators(
+        self, publisher_auth: str, package_name: str, emails: list[str]
+    ) -> dict:
         """
         Invite one or more collaborators for a package.
         Documentation:
@@ -461,7 +487,7 @@ class PublisherGW(Base):
             package_name: Name of the package
             emails: List of emails to invite
         """
-        payload = {"invites": []}
+        payload: dict = {"invites": []}
 
         for email in emails:
             payload["invites"].append({"email": email})
@@ -475,7 +501,9 @@ class PublisherGW(Base):
         )
         return self.process_response(response)
 
-    def revoke_invites(self, publisher_auth, package_name, emails):
+    def revoke_invites(
+        self, publisher_auth: str, package_name: str, emails: list[str]
+    ) -> dict:
         """
         Revoke invites to the specified emails for the package.
         Documentation:
@@ -488,7 +516,7 @@ class PublisherGW(Base):
             name: Name of the package
             emails: List of emails to revoke
         """
-        payload = {"invites": []}
+        payload: dict = {"invites": []}
 
         for email in emails:
             payload["invites"].append({"email": email})
@@ -503,7 +531,9 @@ class PublisherGW(Base):
         )
         return response
 
-    def accept_invite(self, publisher_auth, package_name, token):
+    def accept_invite(
+        self, publisher_auth: str, package_name: str, token: str
+    ) -> dict:
         """
         Accept a collaborator invite.
         Documentation:
@@ -526,7 +556,9 @@ class PublisherGW(Base):
         )
         return response
 
-    def reject_invite(self, publisher_auth, package_name, token):
+    def reject_invite(
+        self, publisher_auth: str, package_name: str, token: str
+    ) -> dict:
         """
         Reject a collaborator invite.
         Documentation:
@@ -551,12 +583,12 @@ class PublisherGW(Base):
     # TRACKS
     def create_track(
         self,
-        publisher_auth,
-        package_name,
-        track_name,
-        version_pattern=None,
-        auto_phasing_percentage=None,
-    ):
+        publisher_auth: str,
+        package_name: str,
+        track_name: str,
+        version_pattern: Optional[str] = None,
+        auto_phasing_percentage: Optional[str] = None,
+    ) -> dict:
         """
         Create a track for an artefact base on the artefact's guardrail
         pattern.
@@ -587,7 +619,7 @@ class PublisherGW(Base):
         return response
 
     # MODEL SERVICE ADMIN
-    def get_store_models(self, publisher_auth, store_id):
+    def get_store_models(self, publisher_auth: str, store_id: str) -> dict:
         """
         Documentation:
             https://api.charmhub.io/docs/model-service-admin.html#read_models
@@ -600,7 +632,13 @@ class PublisherGW(Base):
 
         return self.process_response(response)
 
-    def create_store_model(self, publisher_auth, store_id, name, api_key=None):
+    def create_store_model(
+        self,
+        publisher_auth: str,
+        store_id: str,
+        name: str,
+        api_key: Optional[str] = None,
+    ) -> dict:
         """
         Documentation:
             https://api.charmhub.io/docs/model-service-admin.html#create_model
@@ -619,8 +657,8 @@ class PublisherGW(Base):
         return self.process_response(response)
 
     def update_store_model(
-        self, publisher_auth, store_id, model_name, api_key
-    ):
+        self, publisher_auth: str, store_id: str, model_name: str, api_key: str
+    ) -> dict:
         """
         Doucumentation:
             https://api.charmhub.io/docs/model-service-admin.html#update_model
@@ -635,7 +673,9 @@ class PublisherGW(Base):
 
         return self.process_response(response)
 
-    def get_store_model_policies(self, publisher_auth, store_id, model_name):
+    def get_store_model_policies(
+        self, publisher_auth: str, store_id: str, model_name: str
+    ) -> dict:
         """
         Documentation:
             https://api.charmhub.io/docs/model-service-admin.html#read_serial_policies
@@ -652,8 +692,12 @@ class PublisherGW(Base):
         return self.process_response(response)
 
     def create_store_model_policy(
-        self, publisher_auth, store_id, model_name, signing_key
-    ):
+        self,
+        publisher_auth: str,
+        store_id: str,
+        model_name: str,
+        signing_key: str,
+    ) -> dict:
         """
         Documentation:
             https://api.charmhub.io/docs/model-service-admin.html#create_serial_policy
@@ -671,8 +715,12 @@ class PublisherGW(Base):
         return self.process_response(response)
 
     def delete_store_model_policy(
-        self, publisher_auth, store_id, model_name, rev
-    ):
+        self,
+        publisher_auth: str,
+        store_id: str,
+        model_name: str,
+        rev: str,
+    ) -> dict:
         """
         Documentation:
             https://api.charmhub.io/docs/model-service-admin.html#delete_serial_policy
@@ -689,7 +737,9 @@ class PublisherGW(Base):
 
         return response
 
-    def get_store_signing_keys(self, publisher_auth, store_id):
+    def get_store_signing_keys(
+        self, publisher_auth: str, store_id: str
+    ) -> dict:
         """
         Documentation:
             https://api.charmhub.io/docs/model-service-admin.html#read_signing_keys
@@ -702,7 +752,9 @@ class PublisherGW(Base):
         )
         return self.process_response(response)
 
-    def create_store_signing_key(self, publisher_auth, store_id, name):
+    def create_store_signing_key(
+        self, publisher_auth: str, store_id: str, name: str
+    ) -> dict:
         """
         Documentation:
             https://api.charmhub.io/docs/model-service-admin.html#create_signing_key
@@ -718,8 +770,8 @@ class PublisherGW(Base):
         return self.process_response(response)
 
     def delete_store_signing_key(
-        self, publisher_auth, store_id, signing_key_sha3_384
-    ):
+        self, publisher_auth: str, store_id: str, signing_key_sha3_384: str
+    ) -> dict:
         """
         Documentation:
             https://api.charmhub.io/docs/model-service-admin.html#delete_signing_key
@@ -737,7 +789,7 @@ class PublisherGW(Base):
 
         return response
 
-    def get_brand(self, publisher_auth, store_id):
+    def get_brand(self, publisher_auth: str, store_id: str) -> dict:
         """
         Documentation:
             https://api.charmhub.io/docs/model-service-admin.html#read_brand
@@ -753,7 +805,9 @@ class PublisherGW(Base):
         return self.process_response(response)
 
     # FEATURED SNAP AUTOMATION
-    def delete_featured_snaps(self, publisher_auth, packages):
+    def delete_featured_snaps(
+        self, publisher_auth: str, packages: str
+    ) -> dict:
         """
         Documentation: (link to spec)
             https://docs.google.com/document/d/1UAybxuZyErh3ayqb4nzL3T4BbvMtnmKKEPu-ixcCj_8
@@ -764,7 +818,9 @@ class PublisherGW(Base):
         response = self.session.delete(url=url, headers=headers, json=packages)
         return response
 
-    def update_featured_snaps(self, publisher_auth, snaps):
+    def update_featured_snaps(
+        self, publisher_auth: str, snaps: list[str]
+    ) -> dict:
         """
         Documentation: (link to spec)
             https://docs.google.com/document/d/1UAybxuZyErh3ayqb4nzL3T4BbvMtnmKKEPu-ixcCj_8
