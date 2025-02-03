@@ -1,9 +1,10 @@
 from os import getenv
 from requests import Session
 from pymacaroons import Macaroon
+from typing import Optional
 
 from canonicalwebteam.store_api.base import Base
-from canonicalwebteam.store_api.exceptions import (
+from canonicalwebteam.exceptions import (
     PublisherMacaroonRefreshRequired,
 )
 
@@ -22,14 +23,16 @@ class Dashboard(Base):
             2: {"base_url": f"{DASHBOARD_API_URL}api/v2/"},
         }
 
-    def get_endpoint_url(self, endpoint, api_version=1, is_store=False):
+    def get_endpoint_url(
+        self, endpoint: str, api_version: int = 1, is_store: bool = False
+    ) -> str:
         if is_store:
             base_url = self.config[api_version]["base_url"]
             return f"{base_url}stores/{endpoint}"
         base_url = self.config[api_version]["base_url"]
         return f"{base_url}{endpoint}"
 
-    def _get_authorization_header(self, session):
+    def _get_authorization_header(self, session: dict) -> dict:
         """
         Bind root and discharge macaroons and return the authorization header.
         """
@@ -49,22 +52,23 @@ class Dashboard(Base):
         # With Candid the header is Macaroons
         elif "macaroons" in session:
             return {"Macaroons": session["macaroons"]}
+        return {"Macaroons": ""}
 
-    def get_macaroon(self, permissions):
+    def get_macaroon(self, permissions: list[str]) -> str:
         """
         Return a bakery v2 macaroon from the publisher API to be discharged
         Documemntation:
             https://dashboard.snapcraft.io/docs/reference/v1/macaroon.html
         Endpoint: [POST] https://dashboard.snapcraft.io/dev/api/acl
         """
-        response = self.session.post(
+        response: dict = self.session.post(
             url=self.get_endpoint_url("tokens", 2),
             json={"permissions": permissions},
         )
 
         return self.process_response(response)["macaroon"]
 
-    def get_account(self, session):
+    def get_account(self, session: dict) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/account.html#get--dev-api-account
@@ -76,7 +80,7 @@ class Dashboard(Base):
         )
         return self.process_response(response)
 
-    def get_account_snaps(self, session):
+    def get_account_snaps(self, session: dict) -> dict:
         """
         Returns the snaps associated with a user account
         Documentation:
@@ -85,7 +89,7 @@ class Dashboard(Base):
         """
         return self.get_account(session).get("snaps", {}).get("16", {})
 
-    def get_agreement(self, session):
+    def get_agreement(self, session: dict) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#release-a-snap-build-to-a-channel
@@ -101,7 +105,7 @@ class Dashboard(Base):
 
         return agreement_response.json()
 
-    def post_agreement(self, session, agreed):
+    def post_agreement(self, session: dict, agreed: bool) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#release-a-snap-build-to-a-channel
@@ -116,7 +120,7 @@ class Dashboard(Base):
 
         return self.process_response(agreement_response)
 
-    def post_username(self, session, username):
+    def post_username(self, session: dict, username: str) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/account.html#get--dev-api-account
@@ -135,12 +139,12 @@ class Dashboard(Base):
 
     def post_register_name(
         self,
-        session,
-        snap_name,
-        registrant_comment=None,
-        is_private=False,
-        store=None,
-    ):
+        session: dict,
+        snap_name: str,
+        registrant_comment: str = "",
+        is_private: str = "",
+        store: str = "",
+    ) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#register-a-snap-name
@@ -165,7 +169,9 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def post_register_name_dispute(self, session, snap_name, claim_comment):
+    def post_register_name_dispute(
+        self, session: dict, snap_name: str, claim_comment: str
+    ) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#register-a-snap-name-dispute
@@ -182,7 +188,7 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def get_snap_info(self, session, snap_name):
+    def get_snap_info(self, session: dict, snap_name: str) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#obtaining-information-about-a-snap
@@ -196,7 +202,9 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def get_package_upload_macaroon(self, session, snap_name, channels):
+    def get_package_upload_macaroon(
+        self, session: dict, snap_name: str, channels: list[str]
+    ) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/macaroon.html#request-a-macaroon
@@ -216,7 +224,7 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def get_snap_id(self, session, snap_name):
+    def get_snap_id(self, session: dict, snap_name: str) -> str:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#obtaining-information-about-a-snap
@@ -226,7 +234,9 @@ class Dashboard(Base):
 
         return snap_info["snap_id"]
 
-    def snap_metadata(self, session, snap_id, json=None):
+    def snap_metadata(
+        self, session: dict, snap_id: str, json: Optional[dict] = None
+    ) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#managing-snap-metadata
@@ -245,7 +255,13 @@ class Dashboard(Base):
 
         return self.process_response(metadata_response)
 
-    def snap_screenshots(self, session, snap_id, data=None, files=None):
+    def snap_screenshots(
+        self,
+        session,
+        snap_id,
+        data: Optional[str] = None,
+        files: Optional[list] = None,
+    ) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#managing-snap-metadata
@@ -269,7 +285,7 @@ class Dashboard(Base):
             else:
                 # API requires a multipart request, but we have no files to
                 # push https://github.com/requests/requests/issues/1081
-                files_array = {"info": ("", data["info"])}
+                # files_array.append(("info", ("", data["info"], "")))
                 data = None
 
         screenshot_response = self.session.request(
@@ -283,7 +299,9 @@ class Dashboard(Base):
 
         return self.process_response(screenshot_response)
 
-    def get_snap_revision(self, session, snap_id, revision_id):
+    def get_snap_revision(
+        self, session: dict, snap_id: str, revision_id: int
+    ) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/macaroon.html#request-a-macaroon
@@ -299,7 +317,9 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def snap_release_history(self, session, snap_name, page=1):
+    def snap_release_history(
+        self, session: dict, snap_name: str, page: int = 1
+    ) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v2/en/snaps.html#snap-releases
@@ -316,7 +336,7 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def snap_channel_map(self, session, snap_name):
+    def snap_channel_map(self, session: dict, snap_name: str) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v2/en/snaps.html#snap-channel-map
@@ -332,7 +352,7 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def post_snap_release(self, session, snap_name, json):
+    def post_snap_release(self, session: dict, json: dict) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#release-a-snap-build-to-a-channel
@@ -346,7 +366,9 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def post_close_channel(self, session, snap_id, json):
+    def post_close_channel(
+        self, session: dict, snap_id: str, json: dict
+    ) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#close-a-channel-for-a-snap-package
@@ -361,7 +383,7 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def get_publisher_metrics(self, session, json):
+    def get_publisher_metrics(self, session: dict, json: dict) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/snap.html#fetch-metrics-for-snaps
@@ -378,7 +400,7 @@ class Dashboard(Base):
 
         return self.process_response(metrics_response)
 
-    def get_validation_sets(self, session):
+    def get_validation_sets(self, session: dict) -> dict:
         """
         Return a list of validation sets for the current account
         Documentation:
@@ -391,7 +413,9 @@ class Dashboard(Base):
         )
         return self.process_response(response)
 
-    def get_validation_set(self, session, validation_set_id):
+    def get_validation_set(
+        self, session: dict, validation_set_id: str
+    ) -> dict:
         """
         Return a validation set for the current account
         Documentation:
@@ -407,7 +431,11 @@ class Dashboard(Base):
         )
         return self.process_response(response)
 
-    def get_stores(self, session, roles=["admin", "review", "view", "access"]):
+    def get_stores(
+        self,
+        session: dict,
+        roles: list[str] = ["admin", "review", "view", "access"],
+    ) -> list[dict]:
         """Return a list a stores with the given roles
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/account.html#get--dev-api-account
@@ -431,7 +459,7 @@ class Dashboard(Base):
 
         return user_stores
 
-    def get_store(self, session, store_id):
+    def get_store(self, session: dict, store_id: str) -> dict:
         """Return a store where the user is an admin
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#list-the-details-of-a-brand-store
@@ -450,8 +478,12 @@ class Dashboard(Base):
         return self.process_response(response)["store"]
 
     def get_store_snaps(
-        self, session, store_id, query=None, allowed_for_inclusion=None
-    ):
+        self,
+        session: dict,
+        store_id: str,
+        query: Optional[str] = None,
+        allowed_for_inclusion: Optional[str] = None,
+    ) -> list[dict]:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#get
@@ -477,7 +509,7 @@ class Dashboard(Base):
 
         return self.process_response(response).get("snaps", [])
 
-    def get_store_members(self, session, store_id):
+    def get_store_members(self, session: dict, store_id: str) -> list[dict]:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#list-the-details-of-a-brand-store
@@ -494,7 +526,9 @@ class Dashboard(Base):
 
         return self.process_response(response).get("users", [])
 
-    def update_store_members(self, session, store_id, members):
+    def update_store_members(
+        self, session: dict, store_id: str, members: dict
+    ) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#add-remove-or-edit-users-roles
@@ -513,7 +547,9 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def invite_store_members(self, session, store_id, members):
+    def invite_store_members(
+        self, session: dict, store_id: str, members: dict
+    ) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#manage-store-invitations
@@ -532,7 +568,9 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def change_store_settings(self, session, store_id, settings):
+    def change_store_settings(
+        self, session: dict, store_id: str, settings: dict
+    ) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#change-store-settings
@@ -551,7 +589,9 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def update_store_snaps(self, session, store_id, snaps):
+    def update_store_snaps(
+        self, session: dict, store_id: str, snaps: list
+    ) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#post
@@ -570,7 +610,9 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def update_store_invites(self, session, store_id, invites):
+    def update_store_invites(
+        self, session: dict, store_id: str, invites: list
+    ) -> dict:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#manage-store-invitations
@@ -589,7 +631,7 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def get_store_invites(self, session, store_id):
+    def get_store_invites(self, session: dict, store_id: str) -> list[dict]:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#list-the-details-of-a-brand-store

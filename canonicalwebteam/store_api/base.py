@@ -1,4 +1,4 @@
-from canonicalwebteam.store_api.exceptions import (
+from canonicalwebteam.exceptions import (
     StoreApiConnectionError,
     StoreApiResourceNotFound,
     StoreApiResponseDecodeError,

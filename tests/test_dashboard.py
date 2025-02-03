@@ -88,7 +88,6 @@ class DashboardTest(VCRTestCase):
     def test_post_snap_release(self):
         release = self.client.post_snap_release(
             test_session,
-            "steve-test-snap",
             {"channels": ["edge"], "name": "steve-test-snap", "revision": 22},
         )
         self.assertIsInstance(release, dict)
