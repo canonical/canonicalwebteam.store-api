@@ -69,7 +69,3 @@ Base URL = `https://api.charmhub.io`
 | get_brand   | v1/brand/{brand_account_id}     | GET     | [get brand](https://api.charmhub.io/docs/model-service-admin.html#read_brand)     |
 | delete_featured_snaps  | /featured     | DELETE     | [delete featured](https://docs.google.com/document/d/1UAybxuZyErh3ayqb4nzL3T4BbvMtnmKKEPu-ixcCj_8)     |
 | update_featured_snaps   | /featured     | PUT     | [update featured](https://docs.google.com/document/d/1UAybxuZyErh3ayqb4nzL3T4BbvMtnmKKEPu-ixcCj_8)     | 
-
-
-
-NOte: whoami has been taken out because it's deprecated and nit in juse in any of the stores
