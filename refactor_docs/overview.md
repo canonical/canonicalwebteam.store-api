@@ -20,3 +20,12 @@ The scope of the project is to:
 - Move all endpoints hitting api.snapcraft.io to `devicegw.py`
 - Refactor Charmhub and snapcraft to use the refcatored module
 - Document all changes made
+
+## How methods are reorganized
+In the past, we have the `Publisher` and `Store` classes that were inherited by `CharmPublisher`, `SnapPublisher` and `CharmStore`, `SnapStore` respectively. These groupings were based on the store frontends (Charmhub and Snapcraft). Endpoints related to publisher features in `Charmhub` and `Snapcraft` were found in `CharmPublisher`  and `SnapPublisher` respectively, while endpoints related to stores in `Charmhub` and `Snapcraft` were found in `CharmStore` and `SnapStore` respectively. These classes (CharmPublisher, CharmStore, SnapPublisher, SnapStore) all consumes API endpoints from one or more of the three available API gateways which are publisher-gateway(https://api.charmhub.io), dashboard-SCA(https://dashboard.snapcraft.io), device-gateway(https://api.snapcraft.io).
+
+With this refactor, methods are regrouped based on these API gateways, we now have a `Base` class for methods that are common to all and we have `Dashboard`, `Publishergw` and `Devicegw` classes inheriting from the `Base` class and having all methods related to them. The implication of this is that, for example in `Dashboard`, only methods that are consuming SCA endpoints will be found, same goes for `Publisher` and `Device`. Example usage in store frontends can be found in the specific gateway documentation [dashboard](./dashboard.md), [devicegw](./devicegw.md) and [publishergw](./publishergw.md).
+
+
+### Deprecated methods
+- whoami: this method has been taken out of the repo as it has been deprecated by the store team and it is not used by any of the stores.
