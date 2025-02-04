@@ -1,6 +1,6 @@
 [tool.poetry]
 name = 'canonicalwebteam.store-api'
-version = '5.0.0'
+version = '6.0.0'
 description = ''
 authors = ['Canonical Web Team <webteam@canonical.com>']
 license = 'LGPL-3.0'
