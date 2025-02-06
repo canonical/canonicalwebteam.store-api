@@ -12,7 +12,7 @@ class DeviceGWTest(VCRTestCase):
         return {"filter_headers": ["Authorization", "Macaroons"]}
 
     def setUp(self):
-        self.client = DeviceGW()
+        self.client = DeviceGW("snap")
         return super().setUp()
 
     def test_search(self):
