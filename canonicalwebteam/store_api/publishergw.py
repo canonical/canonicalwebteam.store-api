@@ -816,9 +816,7 @@ class PublisherGW(Base):
         response = self.session.delete(url=url, headers=headers, json=packages)
         return response
 
-    def update_featured_snaps(
-        self, publisher_auth: str, snaps: list
-    ) -> dict:
+    def update_featured_snaps(self, publisher_auth: str, snaps: list) -> dict:
         """
         Documentation: (link to spec)
             https://docs.google.com/document/d/1UAybxuZyErh3ayqb4nzL3T4BbvMtnmKKEPu-ixcCj_8
