@@ -21,7 +21,7 @@ from canonicalwebteam.storeapi.devicegw import DeviceGW
 
 devicegw = DeviceGW(Session(), store="store")
 
-account = dashboard.get_account(flask.session)
+account = devicegw.get_account(flask.session)
 
 ```
 

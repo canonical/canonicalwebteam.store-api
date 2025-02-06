@@ -45,7 +45,7 @@ class PublisherGW(Base):
         Documentation: https://api.snapcraft.io/docs/charms.html#charm_find
         Endpoint: https://api.charmhub.io/v2/{name_space}/find
         """
-        url = self.get_endpoint_url("find", 2)
+        url = self.get_endpoint_url(f"{self.name_space}s/find", 2)
         headers = self.config[2].get("headers")
         params = {
             "q": query,
