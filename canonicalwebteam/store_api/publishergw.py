@@ -43,7 +43,7 @@ class PublisherGW(Base):
         v2 API only.
 
         Documentation: https://api.snapcraft.io/docs/charms.html#charm_find
-        Endpoint: https://api.charmhub.io/v2/charms/find
+        Endpoint: https://api.charmhub.io/v2/{name_space}/find
         """
         url = self.get_endpoint_url("find", 2)
         headers = self.config[2].get("headers")
@@ -74,7 +74,7 @@ class PublisherGW(Base):
         Documentation: https://api.snapcraft.io/docs/categories.html
         Endpoint: https://api.charmhub.io/v2/{name_space}/categories
         """
-        url = self.get_endpoint_url("categories", api_version)
+        url = self.get_endpoint_url("charms/categories", api_version)
         return self.process_response(
             self.session.get(
                 url,
@@ -470,7 +470,7 @@ class PublisherGW(Base):
         return self.process_response(response)
 
     def invite_collaborators(
-        self, publisher_auth: str, package_name: str, emails: list[str]
+        self, publisher_auth: str, package_name: str, emails: list
     ) -> dict:
         """
         Invite one or more collaborators for a package.
@@ -500,7 +500,7 @@ class PublisherGW(Base):
         return self.process_response(response)
 
     def revoke_invites(
-        self, publisher_auth: str, package_name: str, emails: list[str]
+        self, publisher_auth: str, package_name: str, emails: list
     ) -> dict:
         """
         Revoke invites to the specified emails for the package.
@@ -817,7 +817,7 @@ class PublisherGW(Base):
         return response
 
     def update_featured_snaps(
-        self, publisher_auth: str, snaps: list[str]
+        self, publisher_auth: str, snaps: list
     ) -> dict:
         """
         Documentation: (link to spec)

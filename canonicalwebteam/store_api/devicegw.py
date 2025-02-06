@@ -9,15 +9,15 @@ DEVICEGW_URL = getenv("DEVICEGW_URL", "https://api.snapcraft.io/")
 
 
 class DeviceGW(Base):
-    def __init__(self, session=Session(), store=None):
+    def __init__(self, namespace, session=Session(), store=None):
         super().__init__(session)
         self.config = {
             1: {
-                "base_url": f"{DEVICEGW_URL}api/v1/snaps/",
+                "base_url": f"{DEVICEGW_URL}api/v1/{namespace}s/",
                 "headers": {"X-Ubuntu-Series": "16"},
             },
             2: {
-                "base_url": f"{DEVICEGW_URL}v2/snaps/",
+                "base_url": f"{DEVICEGW_URL}v2/{namespace}s/",
                 "headers": {"Snap-Device-Series": "16"},
             },
         }
