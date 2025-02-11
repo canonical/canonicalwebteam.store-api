@@ -8,6 +8,10 @@ test_session = getenv(
     "PUBLISHER_MACAROON",
     "test_session",
 )
+test_dev_auth = getenv(
+    "DEVELOPER_TOKEN",
+    {"developer_token": "test_dev_auth"},
+)
 
 
 class PublisherGWTest(VCRTestCase):
@@ -28,21 +32,21 @@ class PublisherGWTest(VCRTestCase):
 
     def test_get_account_packages_all_charms(self):
         charms = self.client.get_account_packages(
-            publisher_auth=test_session, package_type="charm"
+            test_session, package_type="charm"
         )
         for charm in charms:
             self.assertEqual(charm["type"], "charm")
 
     def test_get_package_metadata(self):
         metadata = self.client.get_package_metadata(
-            publisher_auth=test_session, package_name="marketplace-test-charm"
+            test_dev_auth, package_name="marketplace-test-charm"
         )
         self.assertEqual(metadata["type"], "charm")
         self.assertEqual(metadata["name"], "marketplace-test-charm")
 
     def test_update_package_metadata(self):
         metadata = self.client.update_package_metadata(
-            publisher_auth=test_session,
+            test_session,
             package_type="charm",
             name="marketplace-test-charm",
             data={"description": "Updated description"},
@@ -51,7 +55,7 @@ class PublisherGWTest(VCRTestCase):
 
     def test_register_package_name(self):
         response = self.client.register_package_name(
-            publisher_auth=test_session,
+            test_session,
             data={
                 "name": "marketplace-test-charm2",
                 "type": "charm",
@@ -62,7 +66,7 @@ class PublisherGWTest(VCRTestCase):
 
     def test_unregister_package_name(self):
         response = self.client.unregister_package_name(
-            publisher_auth=test_session, package_name="marketplace-test-charm2"
+            test_session, package_name="marketplace-test-charm2"
         )
         self.assertEqual(response.status_code, 200)
 
@@ -74,7 +78,7 @@ class PublisherGWTest(VCRTestCase):
 
     def test_get_releases(self):
         response = self.client.get_releases(
-            publisher_auth=test_session,
+            test_session,
             package_name="marketplace-test-charm",
         )
         self.assertIn("channel-map", response)
@@ -87,21 +91,21 @@ class PublisherGWTest(VCRTestCase):
 
     def test_get_collaborators(self):
         response = self.client.get_collaborators(
-            publisher_auth=test_session,
+            test_session,
             package_name="marketplace-test-charm",
         )
         self.assertIn("collaborators", response)
 
     def test_get_pending_invites(self):
         response = self.client.get_pending_invites(
-            publisher_auth=test_session,
+            test_session,
             package_name="marketplace-test-charm",
         )
         self.assertIn("invites", response)
 
     def test_invite_collaborators(self):
         response = self.client.invite_collaborators(
-            publisher_auth=test_session,
+            test_session,
             package_name="marketplace-test-charm",
             emails=["alimot.akinbode@test.canonical.com"],
         )
@@ -110,7 +114,7 @@ class PublisherGWTest(VCRTestCase):
 
     def test_revoke_invites(self):
         response = self.client.revoke_invites(
-            publisher_auth=test_session,
+            test_session,
             package_name="marketplace-test-charm",
             emails=["alimot.akinbode@test.canonical.com"],
         )
@@ -118,7 +122,7 @@ class PublisherGWTest(VCRTestCase):
 
     def test_create_store_signing_key(self):
         response = self.client.create_store_signing_key(
-            publisher_auth=test_session,
+            test_dev_auth,
             store_id="marketplace_test_store_id",
             name="test-key",
         )
@@ -126,14 +130,14 @@ class PublisherGWTest(VCRTestCase):
 
     def test_get_store_models(self):
         response = self.client.get_store_models(
-            publisher_auth=test_session,
+            test_dev_auth,
             store_id="marketplace_test_store_id",
         )
         self.assertIsInstance(response, list)
 
     def test_create_store_model(self):
         response = self.client.create_store_model(
-            publisher_auth=test_session,
+            test_dev_auth,
             store_id="marketplace_test_store_id",
             name="test-model",
         )
@@ -141,7 +145,7 @@ class PublisherGWTest(VCRTestCase):
 
     def test_get_store_model_policies(self):
         response = self.client.get_store_model_policies(
-            publisher_auth=test_session,
+            test_dev_auth,
             store_id="marketplace_test_store_id",
             model_name="test-model",
         )
@@ -149,7 +153,7 @@ class PublisherGWTest(VCRTestCase):
 
     def test_create_store_model_policy(self):
         response = self.client.create_store_model_policy(
-            publisher_auth=test_session,
+            test_dev_auth,
             store_id="marketplace_test_store_id",
             model_name="test-model",
             signing_key="test_signing_key",
@@ -158,7 +162,7 @@ class PublisherGWTest(VCRTestCase):
 
     def test_delete_store_model_policy(self):
         response = self.client.delete_store_model_policy(
-            publisher_auth=test_session,
+            test_dev_auth,
             store_id="marketplace_test_store_id",
             model_name="test-model",
             rev=0,
@@ -167,14 +171,14 @@ class PublisherGWTest(VCRTestCase):
 
     def test_get_store_signing_keys(self):
         response = self.client.get_store_signing_keys(
-            publisher_auth=test_session,
+            test_dev_auth,
             store_id="marketplace_test_store_id",
         )
         self.assertIsInstance(response, list)
 
     def test_delete_store_signing_key(self):
         response = self.client.delete_store_signing_key(
-            publisher_auth=test_session,
+            test_dev_auth,
             store_id="marketplace_test_store_id",
             signing_key_sha3_384="h1_5lws3GBr_DXSOlLquzEN7cfq49xAGG",
         )
@@ -182,7 +186,7 @@ class PublisherGWTest(VCRTestCase):
 
     def test_get_brand(self):
         response = self.client.get_brand(
-            publisher_auth=test_session,
+            test_dev_auth,
             store_id="marketplace_test_store_id",
         )
         self.assertEqual("marketplace_test_store_id", response["account-id"])

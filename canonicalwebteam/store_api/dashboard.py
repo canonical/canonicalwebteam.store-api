@@ -1,7 +1,7 @@
 from os import getenv
 from requests import Session
 from pymacaroons import Macaroon
-from typing import Optional
+from typing import Optional, List
 
 from canonicalwebteam.store_api.base import Base
 from canonicalwebteam.exceptions import (
@@ -54,7 +54,7 @@ class Dashboard(Base):
             return {"Macaroons": session["macaroons"]}
         return {"Macaroons": ""}
 
-    def get_macaroon(self, permissions: list[str]) -> str:
+    def get_macaroon(self, permissions: List[str]) -> str:
         """
         Return a bakery v2 macaroon from the publisher API to be discharged
         Documemntation:
@@ -203,7 +203,7 @@ class Dashboard(Base):
         return self.process_response(response)
 
     def get_package_upload_macaroon(
-        self, session: dict, snap_name: str, channels: list[str]
+        self, session: dict, snap_name: str, channels: List[str]
     ) -> dict:
         """
         Documentation:
@@ -434,8 +434,8 @@ class Dashboard(Base):
     def get_stores(
         self,
         session: dict,
-        roles: list[str] = ["admin", "review", "view", "access"],
-    ) -> list[dict]:
+        roles: List[str] = ["admin", "review", "view", "access"],
+    ) -> List[dict]:
         """Return a list a stores with the given roles
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v1/account.html#get--dev-api-account
@@ -483,7 +483,7 @@ class Dashboard(Base):
         store_id: str,
         query: Optional[str] = None,
         allowed_for_inclusion: Optional[str] = None,
-    ) -> list[dict]:
+    ) -> List[dict]:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#get
@@ -506,10 +506,9 @@ class Dashboard(Base):
             params=params,
             headers=headers,
         )
-
         return self.process_response(response).get("snaps", [])
 
-    def get_store_members(self, session: dict, store_id: str) -> list[dict]:
+    def get_store_members(self, session: dict, store_id: str) -> List[dict]:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#list-the-details-of-a-brand-store
@@ -631,7 +630,7 @@ class Dashboard(Base):
 
         return self.process_response(response)
 
-    def get_store_invites(self, session: dict, store_id: str) -> list[dict]:
+    def get_store_invites(self, session: dict, store_id: str) -> List[dict]:
         """
         Documentation:
             https://dashboard.snapcraft.io/docs/reference/v2/en/stores.html#list-the-details-of-a-brand-store

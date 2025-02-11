@@ -3,11 +3,12 @@ from typing import Optional
 from requests import Session
 
 from canonicalwebteam.store_api.base import Base
-
+from canonicalwebteam.store_api.dashboard import Dashboard
 
 PUBLISHERGW_URL = getenv("PUBLISHERGW_URL", "https://api.charmhub.io")
 VALID_NAMESPACE = ["charm", "snap"]
 CHARMSTORE_VALID_PACKAGE_TYPES = ["charm", "bundle"]
+dashboard_authorization_header = Dashboard()._get_authorization_header
 
 
 class PublisherGW(Base):
@@ -84,11 +85,15 @@ class PublisherGW(Base):
         )
 
     # AUTH AND MACAROONS
-    def _get_authorization_header(self, publisher_auth: str) -> dict:
+
+    def _get_authorization_header(self, session: str) -> dict:
         """
         Return the formatted Authorization header for the publisher API.
         """
-        return {"Authorization": f"Macaroon {publisher_auth}"}
+        return {"Authorization": f"Macaroon {session}"}
+
+    def _get_dev_token_authorization_header(self, session: dict):
+        return {"Authorization": f"Macaroon {session['developer_token']}"}
 
     def get_macaroon(self) -> str:
         """
@@ -140,19 +145,19 @@ class PublisherGW(Base):
 
         return self.process_response(response)["macaroon"]
 
-    def exchange_dashboard_macaroons(self, publisher_auth: str) -> str:
+    def exchange_dashboard_macaroons(self, session: str) -> str:
         """
         Exchange dashboard.snapcraft.io SSO discharged macaroons
         Documentation:
             https://api.charmhub.io/docs/default.html#exchange_dashboard_macaroons
-        Endpoint: [POST] https://api.charmhub.io/v1/tokens/dashboard/exchange
+        Endpoint: [POST] https://api.charmhub.io
         """
+        url = self.get_endpoint_url("tokens/dashboard/exchange")
         response = self.session.post(
-            url=self.get_endpoint_url("tokens/dashboard/exchange"),
-            headers=self._get_authorization_header(publisher_auth),
+            url=url,
+            headers=dashboard_authorization_header(session),
             json={},
         )
-
         return self.process_response(response)["macaroon"]
 
     def macaroon_info(self, publisher_auth: str) -> dict:
@@ -216,16 +221,14 @@ class PublisherGW(Base):
 
         return packages
 
-    def get_package_metadata(
-        self, publisher_auth: str, package_name: str
-    ) -> dict:
+    def get_package_metadata(self, session: dict, package_name: str) -> dict:
         """
         Get general metadata for a package.
         Documentation:
             https://api.charmhub.io/docs/default.html#package_metadata
         Endpoint URL: [GET]
-        https://api.charmhub.io/v1/{namespace}/{package_name}
-        namespace: charm for both charms and bundles
+        https://api.charmhub.io/v1/{name_space}/{package_name}
+        namespace: charm for both charms and bundles, snap for snaps
         package_name: Package name
 
         Args:
@@ -237,7 +240,7 @@ class PublisherGW(Base):
         """
         response = self.session.get(
             url=self.get_endpoint_url(f"{package_name}", has_name_space=True),
-            headers=self._get_authorization_header(publisher_auth),
+            headers=self._get_dev_token_authorization_header(session),
         )
 
         return self.process_response(response)["metadata"]
@@ -303,9 +306,7 @@ class PublisherGW(Base):
 
         return self.process_response(response)
 
-    def unregister_package_name(
-        self, publisher_auth: str, package_name: str
-    ) -> dict:
+    def unregister_package_name(self, session: str, package_name: str) -> dict:
         """
         Unregister a package name.
         Documentation:
@@ -322,7 +323,7 @@ class PublisherGW(Base):
         url = self.get_endpoint_url(package_name, has_name_space=True)
         response = self.session.delete(
             url=url,
-            headers=self._get_authorization_header(publisher_auth),
+            headers=dashboard_authorization_header(session),
         )
         return response
 
@@ -413,12 +414,12 @@ class PublisherGW(Base):
             params["fields"] = ",".join(fields)
         if channel:
             params["channel"] = channel
-
+        headers = self.config[api_version].get("headers")
         return self.process_response(
             self.session.get(
                 url,
                 params=params,
-                headers=self.config[api_version].get("headers"),
+                headers=headers,
             )
         )
 
@@ -581,7 +582,7 @@ class PublisherGW(Base):
     # TRACKS
     def create_track(
         self,
-        publisher_auth: str,
+        session: dict,
         package_name: str,
         track_name: str,
         version_pattern: Optional[str] = None,
@@ -611,13 +612,13 @@ class PublisherGW(Base):
             url=self.get_endpoint_url(
                 f"{package_name}/tracks", has_name_space=True
             ),
-            headers=self._get_authorization_header(publisher_auth),
+            headers=self._get_dev_token_authorization_header(session),
             json=[payload],
         )
         return response
 
     # MODEL SERVICE ADMIN
-    def get_store_models(self, publisher_auth: str, store_id: str) -> dict:
+    def get_store_models(self, session: dict, store_id: str) -> dict:
         """
         Documentation:
             https://api.charmhub.io/docs/model-service-admin.html#read_models
@@ -625,14 +626,14 @@ class PublisherGW(Base):
         """
         response = self.session.get(
             url=self.get_endpoint_url(f"brand/{store_id}/model"),
-            headers=self._get_authorization_header(publisher_auth),
+            headers=self._get_dev_token_authorization_header(session),
         )
 
         return self.process_response(response)
 
     def create_store_model(
         self,
-        publisher_auth: str,
+        session: dict,
         store_id: str,
         name: str,
         api_key: Optional[str] = None,
@@ -648,14 +649,14 @@ class PublisherGW(Base):
             payload = {"name": name, "series": "16"}
         response = self.session.post(
             url=self.get_endpoint_url(f"brand/{store_id}/model"),
-            headers=self._get_authorization_header(publisher_auth),
+            headers=self._get_dev_token_authorization_header(session),
             json=payload,
         )
 
         return self.process_response(response)
 
     def update_store_model(
-        self, publisher_auth: str, store_id: str, model_name: str, api_key: str
+        self, session: dict, store_id: str, model_name: str, api_key: str
     ) -> dict:
         """
         Doucumentation:
@@ -665,14 +666,14 @@ class PublisherGW(Base):
         """
         response = self.session.patch(
             url=self.get_endpoint_url(f"brand/{store_id}/model/{model_name}"),
-            headers=self._get_authorization_header(publisher_auth),
+            headers=self._get_dev_token_authorization_header(session),
             json={"api-key": api_key},
         )
 
         return self.process_response(response)
 
     def get_store_model_policies(
-        self, publisher_auth: str, store_id: str, model_name: str
+        self, session: dict, store_id: str, model_name: str
     ) -> dict:
         """
         Documentation:
@@ -684,14 +685,14 @@ class PublisherGW(Base):
             url=self.get_endpoint_url(
                 f"brand/{store_id}/model/{model_name}/serial_policy"
             ),
-            headers=self._get_authorization_header(publisher_auth),
+            headers=self._get_dev_token_authorization_header(session),
         )
 
         return self.process_response(response)
 
     def create_store_model_policy(
         self,
-        publisher_auth: str,
+        session: dict,
         store_id: str,
         model_name: str,
         signing_key: str,
@@ -706,7 +707,7 @@ class PublisherGW(Base):
             url=self.get_endpoint_url(
                 f"brand/{store_id}/model/{model_name}/serial_policy"
             ),
-            headers=self._get_authorization_header(publisher_auth),
+            headers=self._get_dev_token_authorization_header(session),
             json={"signing-key-sha3-384": signing_key},
         )
 
@@ -714,7 +715,7 @@ class PublisherGW(Base):
 
     def delete_store_model_policy(
         self,
-        publisher_auth: str,
+        session: dict,
         store_id: str,
         model_name: str,
         rev: str,
@@ -730,20 +731,18 @@ class PublisherGW(Base):
         )
         response = self.session.delete(
             url=url,
-            headers=self._get_authorization_header(publisher_auth),
+            headers=self._get_dev_token_authorization_header(session),
         )
 
         return response
 
-    def get_store_signing_keys(
-        self, publisher_auth: str, store_id: str
-    ) -> dict:
+    def get_store_signing_keys(self, session: dict, store_id: str) -> dict:
         """
         Documentation:
             https://api.charmhub.io/docs/model-service-admin.html#read_signing_keys
         Endpoint: [GET] https://api.charmhub.io/v1/brand/{store_id}/signing_key
         """
-        headers = self._get_authorization_header(publisher_auth)
+        headers = self._get_dev_token_authorization_header(session)
         response = self.session.get(
             url=self.get_endpoint_url(f"brand/{store_id}/signing_key"),
             headers=headers,
@@ -751,7 +750,7 @@ class PublisherGW(Base):
         return self.process_response(response)
 
     def create_store_signing_key(
-        self, publisher_auth: str, store_id: str, name: str
+        self, session: dict, store_id: str, name: str
     ) -> dict:
         """
         Documentation:
@@ -759,7 +758,7 @@ class PublisherGW(Base):
         Endpoint: [POST]
             https://api.charmhub.io/v1/brand/{store_id}/signing_key
         """
-        headers = self._get_authorization_header(publisher_auth)
+        headers = self._get_dev_token_authorization_header(session)
         response = self.session.post(
             url=self.get_endpoint_url(f"brand/{store_id}/signing_key"),
             headers=headers,
@@ -768,7 +767,7 @@ class PublisherGW(Base):
         return self.process_response(response)
 
     def delete_store_signing_key(
-        self, publisher_auth: str, store_id: str, signing_key_sha3_384: str
+        self, session: dict, store_id: str, signing_key_sha3_384: str
     ) -> dict:
         """
         Documentation:
@@ -776,7 +775,7 @@ class PublisherGW(Base):
         Endpoint: [DELETE]
             https://api.charmhub.io/v1/brand/{store_id}/signing_key/<signing_key_sha3_384}
         """
-        headers = self._get_authorization_header(publisher_auth)
+        headers = self._get_dev_token_authorization_header(session)
         url = self.get_endpoint_url(
             f"brand/{store_id}/signing_key/{signing_key_sha3_384}"
         )
@@ -787,19 +786,18 @@ class PublisherGW(Base):
 
         return response
 
-    def get_brand(self, publisher_auth: str, store_id: str) -> dict:
+    def get_brand(self, session: dict, store_id: str) -> dict:
         """
         Documentation:
             https://api.charmhub.io/docs/model-service-admin.html#read_brand
         Endpoint: [GET] https://api.charmhub.io/v1/brand/{store_id}
         """
-        headers = self._get_authorization_header(publisher_auth)
+        headers = self._get_dev_token_authorization_header(session)
         url = self.get_endpoint_url(f"brand/{store_id}")
         response = self.session.get(
             url=url,
             headers=headers,
         )
-
         return self.process_response(response)
 
     # FEATURED SNAP AUTOMATION

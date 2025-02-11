@@ -196,18 +196,19 @@ class DeviceGW(Base):
             https://api.snapcraft.io/api/v2/{name_space}/info/{package_name}
         """
         url = self.get_endpoint_url("info/" + name, api_version)
-        params = {"fields": ",".join(fields)}
+        params = {}
+        if fields:
+            params = {"fields": ",".join(fields)}
+        headers = self.config[api_version].get("headers")
 
         if channel:
             params["channel"] = channel
-
-        return self.process_response(
-            self.session.get(
-                url,
-                params=params,
-                headers=self.config[api_version].get("headers"),
-            )
+        response = self.session.get(
+            url,
+            params=params,
+            headers=headers,
         )
+        return self.process_response(response)
 
     def get_public_metrics(self, json: dict, api_version: int = 1) -> dict:
         """
