@@ -145,12 +145,12 @@ class PublisherGW(Base):
 
         return self.process_response(response)["macaroon"]
 
-    def exchange_dashboard_macaroons(self, session: str) -> str:
+    def exchange_dashboard_macaroons(self, session: dict) -> str:
         """
         Exchange dashboard.snapcraft.io SSO discharged macaroons
         Documentation:
             https://api.charmhub.io/docs/default.html#exchange_dashboard_macaroons
-        Endpoint: [POST] https://api.charmhub.io
+        Endpoint: [POST] https://api.charmhub.io/v1/tokens/dashboard/exchange
         """
         url = self.get_endpoint_url("tokens/dashboard/exchange")
         response = self.session.post(
@@ -306,7 +306,7 @@ class PublisherGW(Base):
 
         return self.process_response(response)
 
-    def unregister_package_name(self, session: str, package_name: str) -> dict:
+    def unregister_package_name(self, session: dict, package_name: str) -> dict:
         """
         Unregister a package name.
         Documentation:
