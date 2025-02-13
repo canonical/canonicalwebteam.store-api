@@ -306,7 +306,9 @@ class PublisherGW(Base):
 
         return self.process_response(response)
 
-    def unregister_package_name(self, session: dict, package_name: str) -> dict:
+    def unregister_package_name(
+        self, session: dict, package_name: str
+    ) -> dict:
         """
         Unregister a package name.
         Documentation:
