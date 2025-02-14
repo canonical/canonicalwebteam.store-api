@@ -1,0 +1,204 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=5
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"aliases": null, "anon_download_url":
+        "https://api.snapcraft.io/api/v1/snaps/download/76rrD7USwCJrZgepbRk7UdFEWON3tVKX_242.snap",
+        "apps": ["zoom-client"], "architecture": ["amd64"], "base": "core22", "binary_filesize":
+        406335488, "channel": "stable", "common_ids": [], "confinement": "strict",
+        "contact": "mailto:ogra@ubuntu.com?subject=zoom-client", "content": "application",
+        "date_published": "2020-03-01T13:26:18.128580Z", "deltas": [], "description":
+        "Video conferencing with real-time messaging and content sharing\n\nhttps://zoom.us
+        provides simplified video conferencing, whiteboard sharing\nand messaging
+        across any device. This is an unofficial re-pack of the debian\npackage provided
+        by zoom.us\n", "developer_id": "dev-test-id", "developer_name":
+        "Oliver Grawert", "developer_validation": "unproven", "download_sha3_384":
+        "830fefcff9c399aa786ac3ae905e08ae4f535ba41706919f6d0df71d6cebe06205b841563c9cb1343008c874ab24ae53",
+        "download_sha512": "0136acbc410c975b21b44627629f1a757f237c5fc47ef5c4cdd5bddbbcd5c1e721fdb27b55c2a354b3d4e761a489983f7aa674a0bee6e507f0c85a69667ff4d7",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/76rrD7USwCJrZgepbRk7UdFEWON3tVKX_242.snap",
+        "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/icon.png",
+        "last_updated": "2024-09-29T08:17:40.573401+00:00", "license": "Proprietary",
+        "links": {"contact": ["mailto:ogra@ubuntu.com?subject=zoom-client"], "website":
+        ["https://zoom.us"]}, "name": "zoom-client.ogra", "origin": "ogra", "package_name":
+        "zoom-client", "prices": {}, "private": false, "publisher": "Oliver Grawert",
+        "ratings_average": 0.0, "release": ["16"], "revision": 242, "screenshot_urls":
+        ["https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-tray.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-perm.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-login.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-account.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/zoom-settings.png"],
+        "snap_id": "test_id", "summary": "ZOOM Cloud Meetings",
+        "support_url": "", "title": "zoom-client", "version": "6.2.3.2056", "website":
+        "https://zoom.us"}, {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/pOBIoZ2LrCB3rDohMxoYGnbN14EHOgD7_82.snap",
+        "apps": ["spotify"], "architecture": ["amd64"], "base": "core20", "binary_filesize":
+        193589248, "channel": "stable", "common_ids": [], "confinement": "strict",
+        "contact": "https://community.spotify.com/t5/Desktop-Linux/bd-p/desktop_linux",
+        "content": "application", "date_published": "2017-08-01T11:53:59.677918Z",
+        "deltas": [], "description": "Love music? Play your favorite songs and albums
+        free on Linux with\nSpotify.\n\nStream the tracks you love instantly, browse
+        the charts or fire up\nreadymade playlists in every genre and mood. Radio
+        plays you great\nsong after great song, based on your music taste. Discover
+        new music\ntoo, with awesome playlists built just for you.\n\nStream Spotify
+        free, with occasional ads, or go Premium.\n\nFree:\n\u2022 Play any song,
+        artist, album or playlist instantly\n\u2022 Browse hundreds of readymade playlists
+        in every genre and mood\n\u2022 Stay on top of the Charts\n\u2022 Stream Radio\n\u2022
+        Enjoy podcasts, audiobooks and videos\n\u2022 Discover more music with personalized
+        playlists\n\nPremium:\n\u2022 Download tunes and play offline\n\u2022 Listen
+        ad-free\n\u2022 Get even better sound quality\n\u2022 Try it free for 30 days,
+        no strings attached\n\nLike us on Facebook: http://www.facebook.com/spotify\nFollow
+        us on Twitter: http://twitter.com/spotify\n\nNote: Spotify for Linux is a
+        labor of love from our engineers that\nwanted to listen to Spotify on their
+        Linux development machines. They\nwork on it in their spare time and it is
+        currently not a platform\nthat we actively support. The experience may differ
+        from our other\nSpotify Desktop clients, such as Windows and Mac.\n", "developer_id":
+        "dev-test-id", "developer_name": "Spotify", "developer_validation":
+        "verified", "download_sha3_384": "4b7fba6821f0d307eedb1a939789851a346c6f4c23c8d846eb6570e0344626c0b96cde076bdef17ebe0ca96710c98545",
+        "download_sha512": "7841a41dcc34f2e076f7cf1592e8e2d91885290bde0d1d24509a9c4315fcba1ef5db932553189528b8498dc81674c3b024044824d04c09f5dffe94c2b24c2843",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/pOBIoZ2LrCB3rDohMxoYGnbN14EHOgD7_82.snap",
+        "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/spotify-linux-256.png",
+        "last_updated": "2024-12-16T09:32:04.767684+00:00", "license": "Proprietary",
+        "links": {"contact": ["https://community.spotify.com/t5/Desktop-Linux/bd-p/desktop_linux"],
+        "website": []}, "name": "spotify.spotify", "origin": "spotify", "package_name":
+        "spotify", "prices": {}, "private": false, "publisher": "Spotify", "ratings_average":
+        0.0, "release": ["16"], "revision": 82, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screenshot_from_2017-12-18_12-07-06.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screenshot_from_2017-12-18_12-09-22.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screenshot_from_2017-12-18_12-18-27.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/Screenshot_from_2017-12-18_12-20-23.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/banner_dSwF9EF.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/banner-icon_WaLCF17.png"],
+        "snap_id": "test_id3", "summary": "Music for everyone",
+        "support_url": "", "title": "spotify", "version": "1.2.52.442.g01893f92",
+        "website": null}, {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/JUJH91Ved74jd4ZgJCpzMBtYbPOzTlsD_178.snap",
+        "apps": ["slack"], "architecture": ["amd64"], "base": "core18", "binary_filesize":
+        127700992, "channel": "stable", "common_ids": [], "confinement": "strict",
+        "contact": "https://get.slack.help/hc/en-us", "content": "application", "date_published":
+        "2017-12-19T01:17:11.334759Z", "deltas": [], "description": "Caution: Slack
+        for Linux is in beta. We\u2019re still busy adding features and ironing out
+        potential issues.\n\nSlack brings team communication and collaboration into
+        one place so you can get more work done, whether you belong to a large enterprise
+        or a small business. Check off your to-do list and move your projects forward
+        by bringing the right people, conversations, tools, and information you need
+        together. Slack is available on any device, so you can find and access your
+        team and your work, whether you\u2019re at your desk or on the go.\n\nScientifically
+        proven (or at least rumored) to make your working life simpler, more pleasant,
+        and more productive. We hope you\u2019ll give Slack a try.\n\nStop by and
+        learn more at: https://slack.com/", "developer_id": "dev-test-id1",
+        "developer_name": "Slack", "developer_validation": "verified", "download_sha3_384":
+        "acaff08ceb3d84e42281b1d213a21be9ef8aaf5d8332feb8d973ff6745c920591c35416382d2b9e85fcac1cf9693b5ee",
+        "download_sha512": "bbb6f661d1b59c25750bbcd4f801aee3139c492f7bd842ff3f6d9ae580dca5e6fac16dd625217d2a4910d573c65699ba86a02d65d4474a336bc9cad540d6109a",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/JUJH91Ved74jd4ZgJCpzMBtYbPOzTlsD_178.snap",
+        "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/Snapcraft_256x256.png",
+        "last_updated": "2024-12-05T23:29:03.478152+00:00", "license": "Proprietary",
+        "links": {"contact": ["https://get.slack.help/hc/en-us"], "website": ["https://slack.com"]},
+        "name": "slack.slack", "origin": "slack", "package_name": "slack", "prices":
+        {}, "private": false, "publisher": "Slack", "ratings_average": 0.0, "release":
+        ["16"], "revision": 178, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2019/01/1-slack-snap-overview.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/2-slack-snap-integrations.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/3-slack-snap-search.jpg",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2019/01/4-slack-snap-teams.png"],
+        "snap_id": "test-id1", "summary": "Team communication
+        for the 21st century.", "support_url": "", "title": "Slack", "version": "4.41.105",
+        "website": "https://slack.com"}, {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/XEOrla3TiUZiTmvCRiG2TdzQMt64NARk_325.snap",
+        "apps": ["beekeeper-studio"], "architecture": ["amd64"], "base": "core22",
+        "binary_filesize": 163659776, "channel": "stable", "common_ids": [], "confinement":
+        "strict", "contact": "mailto:matthew@rathbonelabs.com", "content": "application",
+        "date_published": "2020-03-27T16:21:32.433012Z", "deltas": [], "description":
+        "Beekeeper Studio Community Edition is a database manager and SQL editor that
+        you''ll actually enjoy using.\n\nSome stuff you can do:\n- Get into flow state
+        with an intuitive editor with tabs that behave as you''d expect them to\n-
+        Edit tables in a spreadsheet-like interface\n- Create and modify table schemas
+        without writing SQL\n- Write and execute SQL in a nice to use editor with
+        gentle code completion\n- Save queries for later\n- Easily filter table data\n\nWe
+        sweat the details, here are some things we added that help improve the experience:\n-
+        Click on a foreign key to go to that record in a new tab\n- Ctrl-P to quick-search
+        all your tables and queries\n- Pin a table to the sidebar for easy reference\n\nDatabases:\n-
+        PostgreSQL\n- MySQL\n- SQL Server\n- SQLite\n- Redshift\n- CockroachDB\n-
+        MariaDB", "developer_id": "dev-test-id2", "developer_name":
+        "Beekeeper Studio", "developer_validation": "unproven", "download_sha3_384":
+        "929becf266d3def0b63020013d03719c680cbb1d8c4615f48446e24744fa4f352379ca0d4d1b797b23009be518f1eb7e",
+        "download_sha512": "29e545b975a34d91bec7666bfeb6e690d9f27f083d57a78afc59621568417cbe1d6a98e207497d70e3f0f59bc9dcb86441717695c70d12b1f4edb22e226b8b09",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/XEOrla3TiUZiTmvCRiG2TdzQMt64NARk_325.snap",
+        "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/03/512x512_4JGJ8f7.png",
+        "last_updated": "2024-12-19T23:48:53.023565+00:00", "license": "MIT", "links":
+        {"contact": ["mailto:matthew@rathbonelabs.com"], "website": ["https://beekeeperstudio.io"]},
+        "name": "beekeeper-studio.matthew-rathbone", "origin": "matthew-rathbone",
+        "package_name": "beekeeper-studio", "prices": {}, "private": false, "publisher":
+        "Beekeeper Studio", "ratings_average": 0.0, "release": ["16"], "revision":
+        325, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2021/09/main-dark.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2021/09/main-light.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2021/09/view-dark.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2021/09/connection-dark.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2021/09/view-light.png"],
+        "snap_id": "test-id", "summary": "An easy-to use
+        SQL editor and DB Manager for PSQL, MySQL, & More", "support_url": "", "title":
+        "Beekeeper Studio", "version": "5.0.9", "website": "https://beekeeperstudio.io"},
+        {"aliases": null, "anon_download_url": "https://api.snapcraft.io/api/v1/snaps/download/njObIbGQEaVx1H4nyWxchk1i8opy4h54_46218.snap",
+        "apps": ["disable-https", "enable-https", "export", "import", "manual-install",
+        "mysql-client", "mysqldump", "occ"], "architecture": ["amd64"], "base": "core18",
+        "binary_filesize": 328966144, "channel": "stable", "common_ids": [], "confinement":
+        "strict", "contact": "https://github.com/nextcloud/nextcloud-snap", "content":
+        "application", "date_published": "2016-06-14T18:42:19.938486Z", "deltas":
+        [], "description": "Access, share and protect your files, calendars, contacts,
+        communication and\nmore at home and in your enterprise.", "developer_id":
+        "dev-test-id", "developer_name": "Nextcloud", "developer_validation":
+        "verified", "download_sha3_384": "59f6e9503dcc8f69609f36c8d6a98d7f965129fd60ea52c6458f9e7c232abbcfaeb5b010a9edf15f46699cb081abba64",
+        "download_sha512": "e044ecf2c2ef8821768f26defd24c3df0576598c25459dd99f82b84d4b042b6c0eb4402f0dab48f433f6b3d04203662c47e1e0ebec3b080e61ceb5ad2399749e",
+        "download_url": "https://api.snapcraft.io/api/v1/snaps/download/njObIbGQEaVx1H4nyWxchk1i8opy4h54_46218.snap",
+        "gated_snap_ids": [], "icon_url": "https://dashboard.snapcraft.io/site_media/appmedia/2016/06/icon.svg_1.png",
+        "last_updated": "2025-01-18T15:25:33.761224+00:00", "license": "AGPL-3.0+",
+        "links": {"contact": ["https://github.com/nextcloud/nextcloud-snap"], "donations":
+        [], "issues": ["https://github.com/nextcloud-snap/nextcloud-snap/issues"],
+        "source": ["https://github.com/nextcloud/nextcloud-snap"], "website": ["https://github.com/nextcloud/nextcloud-snap"]},
+        "name": "nextcloud.nextcloud", "origin": "nextcloud", "package_name": "nextcloud",
+        "prices": {}, "private": false, "publisher": "Nextcloud", "ratings_average":
+        0.0, "release": ["16"], "revision": 46218, "screenshot_urls": ["https://dashboard.snapcraft.io/site_media/appmedia/2020/06/sidebar_and_new_share_dialog.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2020/06/talk-promoted-view.png",
+        "https://dashboard.snapcraft.io/site_media/appmedia/2020/06/calendar.png"],
+        "snap_id": "test_id", "summary": "Nextcloud Server
+        - A safe home for all your data", "support_url": "", "title": "nextcloud",
+        "version": "30.0.5snap1", "website": "https://github.com/nextcloud/nextcloud-snap"}]},
+        "_links": {"last": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=5&page=1676"},
+        "next": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=5&page=2"},
+        "self": {"href": "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&size=5"}},
+        "total": 8376}'
+    headers:
+      content-length:
+      - '14163'
+      content-type:
+      - application/hal+json
+      date:
+      - Tue, 28 Jan 2025 12:06:21 GMT
+      server:
+      - gunicorn
+      snap-store-version:
+      - '62'
+      via:
+      - 1.1 juju-c7799c-prod-snap-store-136 (squid/4.10)
+      x-cache:
+      - MISS from juju-c7799c-prod-snap-store-136
+      x-cache-lookup:
+      - HIT from juju-c7799c-prod-snap-store-136:3128
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19D91A400000000000000000000FFFF0A8325F301BB6798C83C1046F69E
+      x-vcs-revision:
+      - c53097aa4a4f8f14a597766878e52468848697b0
+      x-view-name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,73 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+      X-Ubuntu-Architecture:
+      - wide
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?q=xyz&size=100&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"apps": ["colorpie"], "architecture":
+        ["amd64"], "developer_id": "ccpcJpODSdWMi621YDqnMi9Q8UO6hb8L", "developer_name":
+        "keshavbhatt", "developer_validation": "starred", "media": [{"height": 500,
+        "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/10/icon_DJOTX5M.png",
+        "width": 500}, {"height": 758, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/10/Screenshot_from_2020-10-13_22-12-52.png",
+        "width": 1325}], "origin": "keshavnrj", "package_name": "colorpie", "sections":
+        [{"featured": false, "name": "productivity"}, {"featured": false, "name":
+        "utilities"}], "summary": "Colour Picker & converter", "title": "ColorPie"},
+        {"apps": ["odin-c2is"], "architecture": ["amd64"], "developer_id": "ptkNx0wdDFgj8QcNpG7TS7GtOZMOj9X0",
+        "developer_name": "Syncpoint GmbH", "developer_validation": "unproven", "media":
+        [{"height": 512, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/05/logo512_DRpTK6n.png",
+        "width": 512}, {"height": 1847, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2021/05/grafik.jpg",
+        "width": 2568}], "origin": "syncpoint", "package_name": "odin-c2is", "sections":
+        [{"featured": false, "name": "productivity"}], "summary": "ODIN helps you
+        create situational awareness with standardized NATO symbols", "title": "odin-c2is"},
+        {"apps": ["jmol"], "architecture": ["amd64"], "developer_id": "sPbvp09E9I3a2lnOixoZQx26q1SiQzR2",
+        "developer_name": "Genadi Naydenov", "developer_validation": "unproven", "media":
+        [{"height": 128, "type": "icon", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/05/Jmol_icon_128.png",
+        "width": 128}, {"height": 755, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/05/Jmol_10.jpg",
+        "width": 1097}, {"height": 708, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/05/jmol_9.png",
+        "width": 1092}, {"height": 737, "type": "screenshot", "url": "https://dashboard.snapcraft.io/site_media/appmedia/2020/05/jmol_windows.png",
+        "width": 1024}], "origin": "gantonayde", "package_name": "jmol", "sections":
+        [{"featured": false, "name": "education"}, {"featured": false, "name": "science"}],
+        "summary": "Molecular Viewer", "title": "Jmol"}]}, "_links": {"self": {"href":
+        "https://api.snapcraft.io/api/v1/snaps/search?q=xyz&size=100&page=1&scope=wide&confinement=strict%2Cclassic&fields=package_name%2Ctitle%2Csummary%2Carchitecture%2Cmedia%2Cdeveloper_name%2Cdeveloper_id%2Cdeveloper_validation%2Corigin%2Capps%2Csections&arch=wide"}},
+        "total": 3}'
+    headers:
+      content-length:
+      - '2633'
+      content-type:
+      - application/hal+json
+      date:
+      - Tue, 28 Jan 2025 12:06:25 GMT
+      server:
+      - gunicorn
+      snap-store-version:
+      - '62'
+      via:
+      - 1.1 juju-c7799c-prod-snap-store-136 (squid/4.10)
+      x-cache:
+      - MISS from juju-c7799c-prod-snap-store-136
+      x-cache-lookup:
+      - MISS from juju-c7799c-prod-snap-store-136:3128
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DC1C400000000000000000000FFFF0A8325F001BB6798C841100F7074
+      x-vcs-revision:
+      - c53097aa4a4f8f14a597766878e52468848697b0
+      x-view-name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+version: 1

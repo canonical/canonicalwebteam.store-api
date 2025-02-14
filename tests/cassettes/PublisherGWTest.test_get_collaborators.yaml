@@ -1,0 +1,42 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.charmhub.io/v1/charm/marketplace-test-charm/collaborators
+  response:
+    body:
+      string: '{"collaborators":[{"account":{"display-name":"Steve Rydz","email":"steve.rydz@canonical.com","id":"prFvYmvaBsQbXLNaVaQFV4EAcJ8zh0Ej","username":"steverydz"},"created-at":"2024-05-02T10:46:41Z","created-by":{"display-name":"Steve
+        Rydz","email":"steve.rydz@canonical.com","id":"test_id","username":"steverydz"},"permissions":["package-collaborator"],"updated-at":null}],"publisher":{"display-name":"Alimot
+        Akinbode","email":"alimot.akinbode@canonical.com","id":"test_id","username":"codeempress"}}
+
+        '
+    headers:
+      content-length:
+      - '546'
+      content-type:
+      - application/json
+      date:
+      - Thu, 23 Jan 2025 23:45:49 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DC2B200000000000000000000FFFF0A83255C01BB6792D4AD202FA2AA
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi_collab.get_collaborators
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,64 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+      X-Ubuntu-Series:
+      - '16'
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/search?scope=wide&arch=wide&confinement=strict%2Cclassic%2Cdevmode&fields=snap_id&section=featured
+  response:
+    body:
+      string: '{"_embedded": {"clickindex:package": [{"package_name": "josm", "snap_id":
+        "wShl4osatuO4sXk2TfzrxE6hZF0biJhS"}, {"package_name": "vault", "snap_id":
+        "bIb4p4yWWjyZdo2EU64whkZhw9QYYsMH"}, {"package_name": "artikulate", "snap_id":
+        "hHiqKR3Bgg6i591bUdkHAzscVywZbpQP"}, {"package_name": "mumble", "snap_id":
+        "wVB1RfBgsZY8dmVifSFeMkTE6UN41osI"}, {"package_name": "kolourpaint", "snap_id":
+        "kvAx1DJUbiqow1LgLfW5OzjksfqUEcqJ"}, {"package_name": "insomnia", "snap_id":
+        "ZtF4mLp5Bededu3S65ocO6HfGXCtcvZ9"}, {"package_name": "clion", "snap_id":
+        "6JBjLwyVchga4cOSDqhWJd9NgQfrTYam"}, {"package_name": "hey-mail", "snap_id":
+        "lfWUNpR7PrPGsDfuxIhVxbj0wZHoH7bK"}, {"package_name": "superproductivity",
+        "snap_id": "wZo5sef6NuUKCW6DP83fJ6zIZyd5R1sA"}, {"package_name": "terminal-parrot",
+        "snap_id": "G9GFr0OFxXrWLDuyfXXD07GFG8UflpJN"}, {"package_name": "okular",
+        "snap_id": "SfUqQ280Y4bJ0k64qtBKTTXq5ml46tvQ"}, {"package_name": "whalebird",
+        "snap_id": "wtlQQaUNASoWxqfxRflcRjU3au6cQ3X0"}, {"package_name": "warzone2100",
+        "snap_id": "roFhaRzMw8ted6zNEL8NQnNrkFdIHnHv"}, {"package_name": "tdhcad",
+        "snap_id": "qYBYNvfcQaSWRQAhY89lwrtniZeZMWRH"}, {"package_name": "minetest",
+        "snap_id": "DtXxirDGfOc8LeUJVENXGTir4Oq0F7Ts"}, {"package_name": "helix",
+        "snap_id": "JbSwFezsVhBG8EpYeNqD4HX31U5WIzdY"}]}, "_links": {"self": {"href":
+        "https://api.snapcraft.io/api/v1/snaps/search?scope=wide&arch=wide&confinement=strict%2Cclassic%2Cdevmode&fields=snap_id&section=featured"}},
+        "total": 16}'
+    headers:
+      content-length:
+      - '1460'
+      content-type:
+      - application/hal+json
+      date:
+      - Tue, 28 Jan 2025 12:06:23 GMT
+      server:
+      - gunicorn
+      snap-store-version:
+      - '62'
+      via:
+      - 1.1 juju-c7799c-prod-snap-store-99 (squid/4.10)
+      x-cache:
+      - MISS from juju-c7799c-prod-snap-store-99
+      x-cache-lookup:
+      - MISS from juju-c7799c-prod-snap-store-99:3128
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19D964200000000000000000000FFFF0A8325B201BB6798C83E103EBBD9
+      x-vcs-revision:
+      - c53097aa4a4f8f14a597766878e52468848697b0
+      x-view-name:
+      - snapdevicegw.webapi_search.snap_search
+    status:
+      code: 200
+      message: OK
+version: 1

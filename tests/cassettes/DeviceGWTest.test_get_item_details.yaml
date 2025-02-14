@@ -1,0 +1,43 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Snap-Device-Series:
+      - '16'
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.snapcraft.io/v2/snaps/info/test-lukewh?fields=name%2Csummary
+  response:
+    body:
+      string: '{"channel-map":[{"channel":{"architecture":"amd64","name":"edge","released-at":"2018-11-02T10:25:16.375214+00:00","risk":"edge","track":"latest"}}],"default-track":null,"name":"test-lukewh","snap":{"name":"test-lukewh","summary":"A
+        Snapcraft design/ web team test snap"},"snap-id":"test-id"}
+
+        '
+    headers:
+      content-length:
+      - '317'
+      content-type:
+      - application/json
+      date:
+      - Tue, 28 Jan 2025 12:06:24 GMT
+      server:
+      - gunicorn
+      snap-store-version:
+      - '62'
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19D9EB800000000000000000000FFFF0A83255C01BB6798C8401036D5EF
+      x-vcs-revision:
+      - c53097aa4a4f8f14a597766878e52468848697b0
+      x-view-name:
+      - snapdevicegw.webapi_info.snap_info
+    status:
+      code: 200
+      message: OK
+version: 1

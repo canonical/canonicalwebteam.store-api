@@ -1,0 +1,42 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.charmhub.io/v1/charm/marketplace-test-charm/collaborators/invites
+  response:
+    body:
+      string: '{"invites":[{"accepted-at":"2024-05-02T11:47:53Z","accepted-by":{"display-name":"LukeWH","email":"luke.wesley-holley@canonical.com","id":"test_id","username":"lukewh"},"created-at":"2024-05-02T10:47:06Z","created-by":{"display-name":"Steve
+        Rydz","email":"steve.rydz@canonical.com","id":"test_id","username":"steverydz"},"email":"luke.wesley-holley@canonical.com","expires-at":"2024-06-01T10:47:06Z","invite-type":"package-collaborator","revoked-at":"2024-05-02T12:01:34Z","revoked-by":{"display-name":"Steve
+        Rydz","email":"steve.rydz@canonical.com","id":"test_id","username":"steverydz"}}]}
+
+        '
+    headers:
+      content-length:
+      - '7243'
+      content-type:
+      - application/json
+      date:
+      - Thu, 23 Jan 2025 23:56:11 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19D881C00000000000000000000FFFF0A8325B201BB6792D71B205E5B3C
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi_collab.get_all_invites
+    status:
+      code: 200
+      message: OK
+version: 1

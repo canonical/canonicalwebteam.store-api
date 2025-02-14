@@ -1,0 +1,45 @@
+interactions:
+- request:
+    body: '{"snaps": "marketplace-test-charm"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '35'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.3
+    method: DELETE
+    uri: https://api.charmhub.io/v1/snap/featured
+  response:
+    body:
+      string: '{"error-list":[{"code":"api-error","message":"Additional properties
+        are not allowed (''snaps'' was unexpected) at /"}]}
+
+        '
+    headers:
+      content-length:
+      - '118'
+      content-type:
+      - application/json
+      date:
+      - Fri, 24 Jan 2025 12:41:42 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19D8E5E00000000000000000000FFFF0A8325B201BB67938A8627184C8A
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi.delete_featured
+    status:
+      code: 400
+      message: BAD REQUEST
+version: 1

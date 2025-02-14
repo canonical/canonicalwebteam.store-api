@@ -1,0 +1,43 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.charmhub.io/v1/charm/marketplace-test-charm
+  response:
+    body:
+      string: '{"metadata":{"authority":null,"contact":null,"default-track":"latest","description":"This
+        charm is used by the Marketplace tribe for testing purposes.\n","id":"test_id","links":{},"media":[],"name":"marketplace-test-charm","private":false,"publisher":{"display-name":"Alimot
+        Akinbode","id":"test_id","username":"codeempress","validation":"unproven"},"status":"published","store":"ubuntu","summary":"A
+        charm for the Marketplace tribe to test.","title":"Charm Template","track-guardrails":[{"created-at":"2023-11-10T12:20:12.892031","pattern":"[0-9]\\.[0-9]"}],"tracks":[{"automatic-phasing-percentage":null,"created-at":"2023-11-29T08:14:38.922578","name":"0.0","version-pattern":null},{"automatic-phasing-percentage":null,"created-at":"2023-11-13T09:09:28.717348","name":"1.0","version-pattern":null},{"automatic-phasing-percentage":null,"created-at":"2023-11-13T09:08:45.678650","name":"2.0","version-pattern":null},{"automatic-phasing-percentage":null,"created-at":"2023-11-13T09:49:24.683216","name":"3.0","version-pattern":null},{"automatic-phasing-percentage":null,"created-at":"2023-11-13T09:50:41.957406","name":"4.0","version-pattern":null},{"automatic-phasing-percentage":null,"created-at":"2023-11-13T11:22:10.692925","name":"4.1","version-pattern":null},{"automatic-phasing-percentage":null,"created-at":"2023-11-28T08:29:50.444178","name":"4.2","version-pattern":null},{"automatic-phasing-percentage":null,"created-at":"2023-11-29T10:39:14.357585","name":"6.0","version-pattern":null},{"automatic-phasing-percentage":null,"created-at":"2023-11-29T10:42:55.656822","name":"6.1","version-pattern":null},{"automatic-phasing-percentage":null,"created-at":"2023-11-29T11:28:41.362221","name":"6.2","version-pattern":null},{"automatic-phasing-percentage":null,"created-at":"2023-11-29T11:29:21.146872","name":"6.3","version-pattern":null},{"automatic-phasing-percentage":null,"created-at":"2023-11-29T11:30:40.693510","name":"6.4","version-pattern":null},{"automatic-phasing-percentage":null,"created-at":"2023-11-29T11:32:42.863699","name":"6.5","version-pattern":null},{"automatic-phasing-percentage":null,"created-at":"2023-11-29T11:33:30.941590","name":"6.6","version-pattern":null},{"automatic-phasing-percentage":null,"created-at":"2023-11-29T11:34:07.112131","name":"6.7","version-pattern":null},{"automatic-phasing-percentage":null,"created-at":"2023-11-09T14:45:28.062026","name":"latest","version-pattern":null}],"type":"charm","website":null}}
+
+        '
+    headers:
+      content-length:
+      - '2511'
+      content-type:
+      - application/json
+      date:
+      - Thu, 23 Jan 2025 22:34:28 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DCBE400000000000000000000FFFF0A8325F001BB6792C3F41F4AED96
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi.package_metadata
+    status:
+      code: 200
+      message: OK
+version: 1

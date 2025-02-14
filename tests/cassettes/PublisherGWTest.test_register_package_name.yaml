@@ -1,0 +1,44 @@
+interactions:
+- request:
+    body: '{"name": "marketplace-test-charm2", "type": "charm", "private": true}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '69'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.3
+    method: POST
+    uri: https://api.charmhub.io/v1/charm
+  response:
+    body:
+      string: '{"id":"QjdtBWuv0OI0VRItOZHUU6lFiOqfoaPW"}
+
+        '
+    headers:
+      content-length:
+      - '42'
+      content-type:
+      - application/json
+      date:
+      - Thu, 23 Jan 2025 23:13:24 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DD51200000000000000000000FFFF0A83255C01BB6792CD141FEB4D99
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi.register_name
+    status:
+      code: 200
+      message: OK
+version: 1

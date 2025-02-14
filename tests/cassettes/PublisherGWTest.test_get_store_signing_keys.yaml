@@ -1,0 +1,45 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.charmhub.io/v1/brand/marketplace_test_store_id/signing_key
+  response:
+    body:
+      string: '[{"brand-account-id":"marketplace_test_store_id","created-at":"2023-06-22T12:45:28.301419","created-by":{"display-name":"Bowen
+        Fan","email":"bowen.fan@canonical.com","id":"nL0axbuUQXD4WcmZgAxeANXkjVjcWqsd","username":"bowenfan","validation":"unproven"},"fingerprint":"test_fingerprint","modified-at":null,"modified-by":null,"name":"insecure-test-key-3-lpss-bowen","sha3-384":"sha384-key"},{"brand-account-id":"marketplace_test_store_id","created-at":"2023-07-12T15:06:20.945151","created-by":{"display-name":"Bowen
+        Fan","email":"bowen.fan@canonical.com","id":"nL0axbuUQXD4WcmZgAxeANXkjVjcWqsd","username":"bowenfan","validation":"unproven"},"fingerprint":"test_fingerprint","modified-at":null,"modified-by":null,"name":"testkeytochecklpss-again-bowen-3","sha3-384":"sha384-key"},{"brand-account-id":"marketplace_test_store_id","created-at":"2023-07-12T15:14:26.548465","created-by":{"display-name":"Alimot
+        Akinbode","email":"alimot.akinbode@canonical.com","id":"j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f","username":"codeempress","validation":"unproven"},"fingerprint":"test_fingerprint","modified-at":null,"modified-by":null,"name":"insecure-test-key-lpss-alimot1","sha3-384":"sha384-key"},{"brand-account-id":"marketplace_test_store_id","created-at":"2023-07-13T06:12:30.389586","created-by":{"display-name":"Alimot
+        Akinbode","email":"alimot.akinbode@canonical.com","id":"j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f","username":"codeempress","validation":"unproven"},"fingerprint":"test_fingerprint","modified-at":null,"modified-by":null,"name":"insecure-test-key-lpss-alimot2","sha3-384":"sha384-key"},{"brand-account-id":"marketplace_test_store_id","created-at":"2023-07-13T06:12:39.029764","created-by":{"display-name":"Alimot
+        Akinbode","email":"alimot.akinbode@canonical.com","id":"j8laSpowi3xu3hHDNnm3XVP0TBYIZW5f","username":"codeempress","validation":"unproven"},"fingerprint":"test_fingerprint","modified-at":null,"modified-by":null,"name":"insecure-test-key-lpss-alimot3","sha3-384":"sha384-key"},{"brand-account-id":"marketplace_test_store_id","created-at":"2023-08-16T08:50:12.804502","created-by":{"display-name":"Steve
+        Rydz","email":"steve.rydz@canonical.com","id":"prFvYmvaBsQbXLNaVaQFV4EAcJ8zh0Ej","username":"steverydz","validation":"unproven"},"fingerprint":"test_fingerprint","modified-at":null,"modified-by":null,"name":"key-name-99","sha3-384":"sha384-key"}]
+        '
+    headers:
+      content-length:
+      - '15329'
+      content-type:
+      - application/json
+      date:
+      - Fri, 24 Jan 2025 07:26:07 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19D971A00000000000000000000FFFF0A8325B201BB6793408F2421F34C
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi_admin.read_signing_keys
+    status:
+      code: 200
+      message: OK
+version: 1

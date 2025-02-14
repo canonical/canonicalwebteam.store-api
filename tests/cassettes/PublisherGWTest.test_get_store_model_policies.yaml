@@ -1,0 +1,40 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.charmhub.io/v1/brand/marketplace_test_store_id/model/test-model/serial_policy
+  response:
+    body:
+      string: '[]
+
+        '
+    headers:
+      content-length:
+      - '3'
+      content-type:
+      - application/json
+      date:
+      - Fri, 24 Jan 2025 12:53:15 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DB73E00000000000000000000FFFF0A8325F001BB67938D3B26AEBE19
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi_admin.read_serial_policies
+    status:
+      code: 200
+      message: OK
+version: 1
