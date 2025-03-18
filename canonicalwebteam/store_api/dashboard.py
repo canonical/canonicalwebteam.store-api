@@ -284,8 +284,7 @@ class Dashboard(Base):
                     )
             else:
                 # API requires a multipart request, but we have no files to
-                # push https://github.com/requests/requests/issues/1081
-                # files_array.append(("info", ("", data["info"], "")))
+                files_array.append(("info", ("", data["info"], "")))
                 data = None
 
         screenshot_response = self.session.request(
