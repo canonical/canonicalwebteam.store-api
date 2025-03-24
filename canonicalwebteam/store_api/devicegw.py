@@ -5,11 +5,15 @@ from canonicalwebteam.store_api.base import Base
 
 
 DEVICEGW_URL = getenv("DEVICEGW_URL", "https://api.snapcraft.io/")
-DEVICEGW_URL_STAGING = getenv("DEVICEGW_URL_STAGING", "https://api.staging.snapcraft.io/")
+DEVICEGW_URL_STAGING = getenv(
+    "DEVICEGW_URL_STAGING", "https://api.staging.snapcraft.io/"
+)
 
 
 class DeviceGW(Base):
-    def __init__(self, namespace, session=Session(), store=None, staging=False):
+    def __init__(
+        self, namespace, session=Session(), store=None, staging=False
+    ):
         super().__init__(session)
         if staging:
             self.config = {
