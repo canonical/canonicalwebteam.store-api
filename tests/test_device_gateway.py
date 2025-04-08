@@ -13,6 +13,7 @@ class DeviceGWTest(VCRTestCase):
 
     def setUp(self):
         self.client = DeviceGW("snap")
+        self.rock_client_staging = DeviceGW("rock", staging=True)
         return super().setUp()
 
     def test_search(self):
@@ -73,4 +74,10 @@ class DeviceGWTest(VCRTestCase):
     def test_get_featured_snaps(self):
         response = self.client.get_featured_snaps()
         self.assertIsInstance(response, dict)
-        # self.assertIn("featured", response)
+
+    def test_rocks_find_staging(self):
+        response = self.rock_client_staging.find(query="aramanau")
+        self.assertIsInstance(response, dict)
+        self.assertIn("results", response)
+        for package in response["results"]:
+            self.assertIn("aramanau", package["name"])
