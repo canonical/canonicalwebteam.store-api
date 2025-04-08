@@ -111,7 +111,7 @@ class DeviceGW(Base):
         category: str = "",
         architecture: str = "",
         publisher: str = "",
-        featured: str = "false",
+        featured: str = "",
         fields: list = [],
     ) -> dict:
         """
@@ -120,16 +120,19 @@ class DeviceGW(Base):
         """
         url = self.get_endpoint_url("find", 2)
         headers = self.config[2].get("headers")
-        params = {
-            "q": query,
-            "category": category,
-            "architecture": architecture,
-            "publisher": publisher,
-            "featured": featured,
-        }
+        params = {"q": query}
         if fields:
             params["fields"] = ",".join(fields)
+        if architecture:
+            params["architecture"] = architecture
+        if category:
+            params["category"] = category
+        if publisher:
+            params["publisher"] = publisher
+        if featured:
+            params["featured"] = featured
         response = self.session.get(url, params=params, headers=headers)
+        # pprint(response.json())
         return self.process_response(response)
 
     def get_all_items(self, size: int, api_version: int = 1) -> dict:
