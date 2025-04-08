@@ -1,0 +1,46 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Snap-Device-Series:
+      - '16'
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.staging.snapcraft.io/v2/rocks/find?q=aramanau
+  response:
+    body:
+      string: '{"results":[{"name":"aramanau-rock-phase2","package-id":"A1skK6yjCWYFvTdkaXUS9f1NPAvV05Py"},{"name":"aramanau-rock-phase1-v3","package-id":"DNCGYXW5tuqXngmywwWVbNGw9s3gEJ4x"},{"name":"aramanau-rock-phase1-v2","package-id":"Py3wqCGBTtwVck158BVtD9JC1YXd3gSh"}]}
+
+        '
+    headers:
+      cache-control:
+      - public, max-age=300
+      content-length:
+      - '260'
+      content-type:
+      - application/json
+      date:
+      - Tue, 08 Apr 2025 14:46:47 GMT
+      server:
+      - gunicorn
+      snap-store-version:
+      - '69'
+      vary:
+      - Accept-Encoding
+      x-request-id:
+      - 00000000000000000000FFFF6DABFA7BCB2C00000000000000000000FFFF0A84022101BB67F536D60842
+      x-vcs-revision:
+      - 826d5aac01e92e3e624a933d5bddbd759190f16b
+      x-view-name:
+      - snapdevicegw.webapi_search_rock.rock_find
+    status:
+      code: 200
+      message: OK
+version: 1

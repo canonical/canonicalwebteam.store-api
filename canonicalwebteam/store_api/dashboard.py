@@ -259,7 +259,7 @@ class Dashboard(Base):
         self,
         session,
         snap_id,
-        data: Optional[str] = None,
+        data: Optional[dict] = None,
         files: Optional[list] = None,
     ) -> dict:
         """

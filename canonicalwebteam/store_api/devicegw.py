@@ -1,26 +1,42 @@
 from os import getenv
 from typing import Optional
-
 from requests import Session
 from canonicalwebteam.store_api.base import Base
 
 
 DEVICEGW_URL = getenv("DEVICEGW_URL", "https://api.snapcraft.io/")
+DEVICEGW_URL_STAGING = getenv(
+    "DEVICEGW_URL_STAGING", "https://api.staging.snapcraft.io/"
+)
 
 
 class DeviceGW(Base):
-    def __init__(self, namespace, session=Session(), store=None):
+    def __init__(
+        self, namespace, session=Session(), store=None, staging=False
+    ):
         super().__init__(session)
-        self.config = {
-            1: {
-                "base_url": f"{DEVICEGW_URL}api/v1/{namespace}s/",
-                "headers": {"X-Ubuntu-Series": "16"},
-            },
-            2: {
-                "base_url": f"{DEVICEGW_URL}v2/{namespace}s/",
-                "headers": {"Snap-Device-Series": "16"},
-            },
-        }
+        if staging:
+            self.config = {
+                1: {
+                    "base_url": f"{DEVICEGW_URL_STAGING}api/v1/{namespace}s/",
+                    "headers": {"X-Ubuntu-Series": "16"},
+                },
+                2: {
+                    "base_url": f"{DEVICEGW_URL_STAGING}v2/{namespace}s/",
+                    "headers": {"Snap-Device-Series": "16"},
+                },
+            }
+        else:
+            self.config = {
+                1: {
+                    "base_url": f"{DEVICEGW_URL}api/v1/{namespace}s/",
+                    "headers": {"X-Ubuntu-Series": "16"},
+                },
+                2: {
+                    "base_url": f"{DEVICEGW_URL}v2/{namespace}s/",
+                    "headers": {"Snap-Device-Series": "16"},
+                },
+            }
 
         if store:
             self.config[1]["headers"].update({"X-Ubuntu-Store": store})
@@ -95,25 +111,28 @@ class DeviceGW(Base):
         category: str = "",
         architecture: str = "",
         publisher: str = "",
-        featured: str = "false",
+        featured: str = "",
         fields: list = [],
     ) -> dict:
         """
         Documentation: https://api.snapcraft.io/docs/search.html#snaps_find
-        Endpoint: [GET] https://api.snapcraft.io/v2/snaps/find
+        Endpoint: [GET] https://api.snapcraft.io/v2/{namespace}/find
         """
         url = self.get_endpoint_url("find", 2)
         headers = self.config[2].get("headers")
-        params = {
-            "q": query,
-            "category": category,
-            "architecture": architecture,
-            "publisher": publisher,
-            "featured": featured,
-        }
+        params = {"q": query}
         if fields:
             params["fields"] = ",".join(fields)
+        if architecture:
+            params["architecture"] = architecture
+        if category:
+            params["category"] = category
+        if publisher:
+            params["publisher"] = publisher
+        if featured:
+            params["featured"] = featured
         response = self.session.get(url, params=params, headers=headers)
+        # pprint(response.json())
         return self.process_response(response)
 
     def get_all_items(self, size: int, api_version: int = 1) -> dict:
@@ -193,7 +212,7 @@ class DeviceGW(Base):
         """
         Documentation: https://api.snapcraft.io/docs/info.html
         Endpoint: [GET]
-            https://api.snapcraft.io/api/v2/{name_space}/info/{package_name}
+            https://api.snapcraft.io/v2/{name_space}/info/{package_name}
         """
         url = self.get_endpoint_url("info/" + name, api_version)
         params = {}
@@ -229,7 +248,7 @@ class DeviceGW(Base):
     ) -> dict:
         """
         Documentation: https://api.snapcraft.io/docs/categories.html
-        Endpoint: https://api.snapcraft.io/api/v2/{name_space}/categories
+        Endpoint: https://api.snapcraft.io/v2/{name_space}/categories
         """
         url = self.get_endpoint_url("categories", api_version)
         return self.process_response(
@@ -247,7 +266,7 @@ class DeviceGW(Base):
         Documentation:
             https://api.snapcraft.io/docs/charms.html#list_resource_revisions
         Endpoint:
-            https://api.snapcraft.io/api/v2/charms/resources/{package_name}/{resource_name}/revisions
+            https://api.snapcraft.io/v2/charms/resources/{package_name}/{resource_name}/revisions
         """
         url = self.get_endpoint_url(
             f"resources/{name}/{resource_name}/revisions", api_version
