@@ -13,10 +13,10 @@ interactions:
       User-Agent:
       - python-requests/2.32.3
     method: GET
-    uri: https://api.snapcraft.io/v2/snaps/find?q=xyz&category=&architecture=&publisher=&featured=false
+    uri: https://api.snapcraft.io/v2/snaps/find?q=xyz
   response:
     body:
-      string: '{"results":[{"name":"colorpie","snap":{},"snap-id":"ShhrcFAnHVqqDmco88Lm4ijbdDrWh11h"},{"name":"odin-c2is","snap":{},"snap-id":"xyz-id"},{"name":"jmol","snap":{},"snap-id":"another-xyz-id"}]}
+      string: '{"results":[{"name":"colorpie","snap":{},"snap-id":"ShhrcFAnHVqqDmco88Lm4ijbdDrWh11h"},{"name":"odin-c2is","snap":{},"snap-id":"GAk9GH9UddI0N6Xr8NOfYL1qjgBMxR33"},{"name":"jmol","snap":{},"snap-id":"rNmTkTKQL5WDm20c0TahQZ0SpOUTyz0p"}]}
 
         '
     headers:
@@ -27,23 +27,23 @@ interactions:
       content-type:
       - application/json
       date:
-      - Tue, 28 Jan 2025 12:06:20 GMT
+      - Tue, 08 Apr 2025 14:30:55 GMT
       server:
       - gunicorn
       snap-store-version:
-      - '62'
+      - '69'
       vary:
       - Snap-Device-Store, Snap-Device-Series, Accept-Encoding
       via:
-      - 1.1 juju-c7799c-prod-snap-store-99 (squid/4.10)
+      - 1.1 juju-c7799c-prod-snap-store-135 (squid/4.10)
       x-cache:
-      - MISS from juju-c7799c-prod-snap-store-99
+      - MISS from juju-c7799c-prod-snap-store-135
       x-cache-lookup:
-      - MISS from juju-c7799c-prod-snap-store-99:3128
+      - MISS from juju-c7799c-prod-snap-store-135:3128
       x-request-id:
-      - 00000000000000000000FFFF6DABE19D919A00000000000000000000FFFF0A8325F301BB6798C83C1046F06B
+      - 00000000000000000000FFFF6DABFA7BB2AE00000000000000000000FFFF0A83255C01BB67F5331E2EDB9183
       x-vcs-revision:
-      - c53097aa4a4f8f14a597766878e52468848697b0
+      - 30d5a26fd6984c4f8f5b80e6c8a1d87dd1031179
       x-view-name:
       - snapdevicegw.webapi_search_v2.snaps_find
     status:
