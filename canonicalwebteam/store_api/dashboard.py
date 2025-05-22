@@ -80,6 +80,15 @@ class Dashboard(Base):
         )
         return self.process_response(response)
 
+    def get_account_keys(self, session: dict) -> dict:
+        """
+        Returns the keys associated with a user account
+        Documentation:
+            https://dashboard.snapcraft.io/docs/reference/v1/account.html#get--dev-api-account
+        Endpoint: [GET] https://dashboard.snapcraft.io/dev/api/account
+        """
+        return self.get_account(session).get("account-keys", {})
+
     def get_account_snaps(self, session: dict) -> dict:
         """
         Returns the snaps associated with a user account
