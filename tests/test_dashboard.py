@@ -26,6 +26,7 @@ class DashboardTest(VCRTestCase):
         self.assertIsInstance(account, dict)
         self.assertEqual(account["username"], "codeempress")
         self.assertIn("snaps", account)
+        self.assertIn("account-keys", account)
 
     def test_get_agreement(self):
         agreement = self.client.get_agreement(test_session)
