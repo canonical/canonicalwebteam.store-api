@@ -28,6 +28,14 @@ class DashboardTest(VCRTestCase):
         self.assertIn("snaps", account)
         self.assertIn("account-keys", account)
 
+    def test_get_account_keys(self):
+        keys = self.client.get_account_keys(test_session)
+        self.assertIsInstance(keys, list)
+        for k in keys:
+            self.assertIn("name", k)
+            self.assertIn("public-key-sha3-384", k)
+            self.assertIn("since", k)
+
     def test_get_agreement(self):
         agreement = self.client.get_agreement(test_session)
         self.assertIsInstance(agreement, dict)
