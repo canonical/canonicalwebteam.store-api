@@ -1,0 +1,66 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://dashboard.snapcraft.io/dev/api/account
+  response:
+    body:
+      string: '{"id": "test_id", "display-name": "Eduard
+        Daniel Manta", "username": "edisile", "email": "eduard.manta@canonical.com",
+        "validation": "unproven", "account-keys": [{"name": "test", "public-key-sha3-384":
+        "****************************************************************", "since":
+        "2025-05-14T13:29:49Z"}, {"name": "test3", "public-key-sha3-384": "****************************************************************",
+        "since": "2025-05-23T09:57:47Z"}, {"name": "test2", "public-key-sha3-384":
+        "****************************************************************", "since":
+        "2025-05-21T11:54:39Z"}], "snaps": {"16":{}},
+        "short_namespace": "edisile"}'
+    headers:
+      Connection:
+      - Keep-Alive
+      Date:
+      - Fri, 23 May 2025 12:38:45 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Server:
+      - gunicorn
+      Strict-Transport-Security:
+      - max-age=2592000
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - max-age=0, no-cache, no-store, must-revalidate, private
+      content-language:
+      - en
+      content-length:
+      - '1834'
+      content-type:
+      - application/json
+      expires:
+      - Fri, 23 May 2025 12:38:45 GMT
+      vary:
+      - Authorization,Accept-Language
+      via:
+      - 1.1 juju-5214c0-prod-scasnap-486 (squid/3.5.27)
+      x-cache:
+      - MISS from juju-5214c0-prod-scasnap-486
+      x-cache-lookup:
+      - MISS from juju-5214c0-prod-scasnap-486:3128
+      x-request-id:
+      - aDBsVDx0qogN38KyaejRywAAAXU1
+      x-vcs-revision:
+      - b161d9872c
+      x-view-name:
+      - api-account-info
+    status:
+      code: 200
+      message: OK
+version: 1
