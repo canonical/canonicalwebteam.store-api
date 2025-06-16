@@ -307,7 +307,7 @@ class PublisherGW(Base):
         return self.process_response(response)
 
     def unregister_package_name(
-        self, session: dict, package_name: str
+        self, publisher_auth: str, package_name: str
     ) -> dict:
         """
         Unregister a package name.
@@ -325,7 +325,7 @@ class PublisherGW(Base):
         url = self.get_endpoint_url(package_name, has_name_space=True)
         response = self.session.delete(
             url=url,
-            headers=dashboard_authorization_header(session),
+            headers=self._get_authorization_header(publisher_auth),
         )
         return response
 
