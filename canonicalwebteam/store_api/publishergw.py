@@ -243,6 +243,9 @@ class PublisherGW(Base):
             headers=self._get_dev_token_authorization_header(session),
         )
 
+        if response.status_code == 404:
+            return self.process_response(response)
+
         return self.process_response(response)["metadata"]
 
     def update_package_metadata(
