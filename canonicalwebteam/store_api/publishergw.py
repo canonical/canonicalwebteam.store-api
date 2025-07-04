@@ -243,10 +243,14 @@ class PublisherGW(Base):
             headers=self._get_dev_token_authorization_header(session),
         )
 
-        if response.status_code == 404:
-            return self.process_response(response)
+        processed_response = self.process_response(response)
 
-        return self.process_response(response)["metadata"]
+        if "metadata" not in processed_response:
+            raise KeyError("Missing 'metadata' key in response")
+
+        return processed_response["metadata"]
+            
+
 
     def update_package_metadata(
         self, publisher_auth: str, package_type: str, name: str, data: dict
