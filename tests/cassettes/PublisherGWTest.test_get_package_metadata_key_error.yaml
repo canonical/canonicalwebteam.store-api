@@ -1,0 +1,38 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.charmhub.io/v1/charm/marketplace-test-charm3
+  response:
+    body:
+      string: '{}'
+    headers:
+      content-length:
+      - '2511'
+      content-type:
+      - application/json
+      date:
+      - Thu, 23 Jan 2025 22:34:28 GMT
+      publishergw-version:
+      - '42'
+      server:
+      - gunicorn
+      x-request-id:
+      - 00000000000000000000FFFF6DABE19DCBE400000000000000000000FFFF0A8325F001BB6792C3F41F4AED96
+      x-vcs-revision:
+      - 3e7e8f8acd88c31c9c8d4e29c178b532dc9e7ebb
+      x-view-name:
+      - publishergw.webapi.package_metadata
+    status:
+      code: 200
+      message: OK
+version: 1
