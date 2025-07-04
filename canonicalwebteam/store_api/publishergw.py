@@ -249,8 +249,6 @@ class PublisherGW(Base):
             raise KeyError("Missing 'metadata' key in response")
 
         return processed_response["metadata"]
-            
-
 
     def update_package_metadata(
         self, publisher_auth: str, package_type: str, name: str, data: dict
