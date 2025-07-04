@@ -44,6 +44,12 @@ class PublisherGWTest(VCRTestCase):
         self.assertEqual(metadata["type"], "charm")
         self.assertEqual(metadata["name"], "marketplace-test-charm")
 
+    def test_get_package_metadata_key_error(self):
+        with self.assertRaises(KeyError):
+            metadata = self.client.get_package_metadata(
+                test_dev_auth, package_name="marketplace-test-charm3"
+            )
+
     def test_update_package_metadata(self):
         metadata = self.client.update_package_metadata(
             test_session,
