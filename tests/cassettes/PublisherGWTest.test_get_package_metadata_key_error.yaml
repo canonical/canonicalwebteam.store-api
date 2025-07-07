@@ -14,7 +14,7 @@ interactions:
     uri: https://api.charmhub.io/v1/charm/marketplace-test-charm3
   response:
     body:
-      string: '{"error-list":[{"code":"resource-not-found", "success":"false"}]}'
+      string: '{}'
     headers:
       content-length:
       - '2511'
