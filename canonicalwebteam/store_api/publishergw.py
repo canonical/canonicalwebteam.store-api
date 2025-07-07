@@ -246,7 +246,7 @@ class PublisherGW(Base):
         processed_response = self.process_response(response)
 
         if "metadata" not in processed_response:
-            raise KeyError("Missing 'metadata' key in response")
+            return processed_response
 
         return processed_response["metadata"]
 

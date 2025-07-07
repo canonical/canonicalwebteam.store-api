@@ -53,7 +53,7 @@ class Base:
                     response.status_code,
                     error_list,
                 )
-            else:
+            elif not body:
                 raise StoreApiResponseError(
                     "Unknown error from api", response.status_code
                 )

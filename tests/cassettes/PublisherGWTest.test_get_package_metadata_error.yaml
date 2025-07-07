@@ -11,10 +11,10 @@ interactions:
       User-Agent:
       - python-requests/2.32.3
     method: GET
-    uri: https://api.charmhub.io/v1/charm/marketplace-test-charm4
+    uri: https://api.charmhub.io/v1/charm/marketplace-test-charm3
   response:
     body:
-      string: '{"error": "Some error"}'
+      string: '{}'
     headers:
       content-length:
       - '2511'
@@ -33,6 +33,6 @@ interactions:
       x-view-name:
       - publishergw.webapi.package_metadata
     status:
-      code: 401
-      message: "Unauthorized"
+      code: 404
+      message: "Not Found"
 version: 1
