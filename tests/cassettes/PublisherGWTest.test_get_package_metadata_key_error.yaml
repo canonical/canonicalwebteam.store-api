@@ -14,7 +14,7 @@ interactions:
     uri: https://api.charmhub.io/v1/charm/marketplace-test-charm3
   response:
     body:
-      string: '{}'
+      string: '{"error-list":[{"code":"resource-not-found", "success":"false"}]}'
     headers:
       content-length:
       - '2511'
@@ -33,6 +33,6 @@ interactions:
       x-view-name:
       - publishergw.webapi.package_metadata
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: "Not Found"
 version: 1

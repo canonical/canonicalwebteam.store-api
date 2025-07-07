@@ -2,7 +2,9 @@ from os import getenv
 
 from vcr_unittest import VCRTestCase
 from canonicalwebteam.store_api.publishergw import PublisherGW
-
+from canonicalwebteam.exceptions import (
+    StoreApiResourceNotFound,
+)
 
 test_session = getenv(
     "PUBLISHER_MACAROON",
@@ -45,7 +47,7 @@ class PublisherGWTest(VCRTestCase):
         self.assertEqual(metadata["name"], "marketplace-test-charm")
 
     def test_get_package_metadata_key_error(self):
-        with self.assertRaises(KeyError):
+        with self.assertRaises(StoreApiResourceNotFound):
             self.client.get_package_metadata(
                 test_dev_auth, package_name="marketplace-test-charm3"
             )
