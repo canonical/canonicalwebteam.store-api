@@ -1,5 +1,5 @@
 from os import getenv
-from typing import Optional
+from typing import Optional, Union
 from requests import Session
 
 from canonicalwebteam.store_api.base import Base
@@ -312,7 +312,7 @@ class PublisherGW(Base):
         return self.process_response(response)
 
     def unregister_package_name(
-        self, publisher_auth: str, package_name: str
+        self, publisher_auth: Union[str, dict], package_name: str
     ) -> dict:
         """
         Unregister a package name.
@@ -328,9 +328,29 @@ class PublisherGW(Base):
             Otherwise, returns an error list
         """
         url = self.get_endpoint_url(package_name, has_name_space=True)
+        if self.name_space == "snap":
+            # for Snap packages, `unregister_package` uses SCA's API under the
+            # hood: this means we must pass the authorization header as if
+            # we were calling SCA
+            if not isinstance(publisher_auth, dict):
+                raise TypeError(
+                    "Name space 'snap' requires a 'dict' as 'publisher_auth'"
+                )
+            authorization_header = dashboard_authorization_header(
+                publisher_auth
+            )
+        else:
+            if not isinstance(publisher_auth, str):
+                raise TypeError(
+                    f"Name space '{self.name_space}' requires a 'str' as "
+                    "'publisher_auth'"
+                )
+            authorization_header = self._get_authorization_header(
+                publisher_auth
+            )
         response = self.session.delete(
             url=url,
-            headers=self._get_authorization_header(publisher_auth),
+            headers=authorization_header,
         )
         return response
 
