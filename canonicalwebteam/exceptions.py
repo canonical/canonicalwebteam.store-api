@@ -14,6 +14,46 @@ class StoreApiConnectionError(StoreApiError):
     pass
 
 
+class StoreApiInternalError(StoreApiConnectionError):
+    """
+    Store API internal error
+    """
+
+    pass
+
+
+class StoreApiNotImplementedError(StoreApiConnectionError):
+    """
+    Store API doesn't implement this method
+    """
+
+    pass
+
+
+class StoreApiBadGatewayError(StoreApiConnectionError):
+    """
+    Got and invalid response from Store API
+    """
+
+    pass
+
+
+class StoreApiServiceUnavailableError(StoreApiConnectionError):
+    """
+    Store API is not available
+    """
+
+    pass
+
+
+class StoreApiGatewayTimeoutError(StoreApiConnectionError):
+    """
+    Request to Store API timed out
+    """
+
+    pass
+
+
 class StoreApiResourceNotFound(StoreApiError):
     """
     The requested resource is not found
