@@ -22,29 +22,22 @@ class Base:
     def process_response(self, response):
         # 5xx responses are not in JSON format
         if response.status_code >= 500:
-            match response.status_code:
-                case 500:
-                    raise StoreApiInternalError("Internal error upstream")
-                case 501:
-                    raise StoreApiNotImplementedError(
-                        "Service doesn't implement this method"
-                    )
-                case 502:
-                    raise StoreApiBadGatewayError(
-                        "Invalid response from upstream"
-                    )
-                case 503:
-                    raise StoreApiServiceUnavailableError(
-                        "Service is unavailable"
-                    )
-                case 504:
-                    raise StoreApiGatewayTimeoutError(
-                        "Upstream request timed out"
-                    )
-                case _:
-                    raise StoreApiConnectionError(
-                        f"Service unavailable, code {response.status_code}"
-                    )
+            if response.status_code == 500:
+                raise StoreApiInternalError("Internal error upstream")
+            elif response.status_code == 501:
+                raise StoreApiNotImplementedError(
+                    "Service doesn't implement this method"
+                )
+            elif response.status_code == 502:
+                raise StoreApiBadGatewayError("Invalid response from upstream")
+            elif response.status_code == 503:
+                raise StoreApiServiceUnavailableError("Service is unavailable")
+            elif response.status_code == 504:
+                raise StoreApiGatewayTimeoutError("Upstream request timed out")
+            else:
+                raise StoreApiConnectionError(
+                    f"Service unavailable, code {response.status_code}"
+                )
 
         try:
             body = response.json()
