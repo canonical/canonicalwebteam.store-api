@@ -20,7 +20,7 @@ class Counter:
 class RetryDecoratorTest(VCRTestCase):
     def test_bad_limit(self):
         with self.assertRaises(ValueError):
-
+            # can't use negative limit
             @retry(limit=-1)
             def noop():
                 pass
