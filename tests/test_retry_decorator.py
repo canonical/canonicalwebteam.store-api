@@ -1,5 +1,3 @@
-from os import getenv
-from typing import Type
 from vcr_unittest import VCRTestCase
 from canonicalwebteam.retry_utils import retry
 

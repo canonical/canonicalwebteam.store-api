@@ -1,21 +1,23 @@
-from typing import Callable, List, Tuple, Type, TypeVar
+from typing import Callable, Tuple, Type, TypeVar
 from random import random
-from time import sleep
 from sys import maxsize as MAX_INT
 import functools
 
 
-P = TypeVar('P')
-R = TypeVar('R')
+P = TypeVar("P")
+R = TypeVar("R")
 
 
-def retry(func: Callable[P, R] = None, *,
-          limit: int = MAX_INT,
-          delay_fn: Callable[[int], float] = (lambda x: 0.0),
-          sleep_fn: Callable[[float], None] = (lambda x: None),
-          callback_fn: Callable[[Exception], bool] = (lambda x: False),
-          logger_fn: Callable[[str], None] = (lambda x: None),
-          exceptions: Tuple[Type[Exception]] = (Exception)) -> Callable[P, R]:
+def retry(
+    func: Callable[P, R] = None,
+    *,
+    limit: int = MAX_INT,
+    delay_fn: Callable[[int], float] = (lambda x: 0.0),
+    sleep_fn: Callable[[float], None] = (lambda x: None),
+    callback_fn: Callable[[Exception], bool] = (lambda x: False),
+    logger_fn: Callable[[str], None] = (lambda x: None),
+    exceptions: Tuple[Type[Exception]] = (Exception),
+) -> Callable[P, R]:
     """
     Decorator that implements retry logic for `func` when any of the
     Exceptions in `exceptions` happen.
@@ -28,7 +30,7 @@ def retry(func: Callable[P, R] = None, *,
     exceptions: tuple containing the types of exceptions we can catch and
         that trigger a retry
     callback_fn: function that takes as argument an exception caught a during
-        the retry loop, it should return a bool indicating whether to abort 
+        the retry loop, it should return a bool indicating whether to abort
         the loop or not; it will be called every time a member of `exceptions`
         is caught
     logger_fn: function that logs errors caught and not propagated during
@@ -47,13 +49,15 @@ def retry(func: Callable[P, R] = None, *,
         # if this decorator is applied using the @ syntax, `func` will not
         # be defined correctly, so we must do a partial application to wrap
         # `func` correctly
-        return functools.partial(retry,
-                                 limit=limit,
-                                 delay_fn=delay_fn,
-                                 sleep_fn=sleep_fn,
-                                 callback_fn=callback_fn,
-                                 logger_fn=logger_fn,
-                                 exceptions=exceptions)
+        return functools.partial(
+            retry,
+            limit=limit,
+            delay_fn=delay_fn,
+            sleep_fn=sleep_fn,
+            callback_fn=callback_fn,
+            logger_fn=logger_fn,
+            exceptions=exceptions,
+        )
 
     if limit <= 0:
         raise ValueError("The limit must be at least 1")
@@ -64,7 +68,7 @@ def retry(func: Callable[P, R] = None, *,
         last_exception = None
 
         while retry_attempts < limit:
-            if (retry_attempts > 0):
+            if retry_attempts > 0:
                 # only sleep if we've already tried once
                 sleep_fn(delay_fn(retry_attempts))
 
@@ -79,7 +83,8 @@ def retry(func: Callable[P, R] = None, *,
                     raise e
 
                 logger_fn(
-                    f"@retry ({retry_attempts}/{limit}) `{func.__name__}`: {e}")
+                    f"@retry ({retry_attempts}/{limit}) `{func.__name__}`: {e}"
+                )
 
         # if we made it here, it means we ran the loop and couldn't get a
         # clean run, raise the last exception we caught and let the user
@@ -104,7 +109,9 @@ def delay_random(min: float, max: float):
     return _delay_random
 
 
-def delay_exponential(delay_mult: float, exp_base: float, max_delay: float = float('inf')):
+def delay_exponential(
+    delay_mult: float, exp_base: float, max_delay: float = float("inf")
+):
     """
     Returns a function that implements an exponential backoff with an upper
     limit based on the number of attempts made `n`, according to the following
@@ -119,7 +126,7 @@ def delay_exponential(delay_mult: float, exp_base: float, max_delay: float = flo
         raise ValueError("The maximum delay must be greater than 0")
 
     def _delay_exponential(attempt: int):
-        return min(max_delay, delay_mult * (exp_base ** attempt))
+        return min(max_delay, delay_mult * (exp_base**attempt))
 
     return _delay_exponential
 

@@ -24,23 +24,27 @@ class Base:
         if response.status_code >= 500:
             match response.status_code:
                 case 500:
-                    raise StoreApiInternalError(
-                        "Internal error upstream")
+                    raise StoreApiInternalError("Internal error upstream")
                 case 501:
                     raise StoreApiNotImplementedError(
-                        "Service doesn't implement this method")
+                        "Service doesn't implement this method"
+                    )
                 case 502:
                     raise StoreApiBadGatewayError(
-                        "Invalid response from upstream")
+                        "Invalid response from upstream"
+                    )
                 case 503:
                     raise StoreApiServiceUnavailableError(
-                        "Service is unavailable")
+                        "Service is unavailable"
+                    )
                 case 504:
                     raise StoreApiGatewayTimeoutError(
-                        "Upstream request timed out")
+                        "Upstream request timed out"
+                    )
                 case _:
                     raise StoreApiConnectionError(
-                        f"Service unavailable, code {response.status_code}")
+                        f"Service unavailable, code {response.status_code}"
+                    )
 
         try:
             body = response.json()

@@ -1,5 +1,3 @@
-from os import getenv
-from typing import Type
 from types import FunctionType
 from vcr_unittest import VCRTestCase
 from canonicalwebteam.retry_utils import delay_random, delay_exponential
@@ -13,11 +11,11 @@ class RetryHelpersTest(VCRTestCase):
 
     def test_delay_random_bad_min(self):
         with self.assertRaises(ValueError):
-            delay = delay_random(-1.0, 1.0)
+            delay_random(-1.0, 1.0)
 
     def test_delay_random_bad_max(self):
         with self.assertRaises(ValueError):
-            delay = delay_random(1.0, 1.0)
+            delay_random(1.0, 1.0)
 
     def test_delay_exp(self):
         delay = delay_exponential(1.0, 2.0, 8.0)
@@ -29,12 +27,12 @@ class RetryHelpersTest(VCRTestCase):
 
     def test_delay_exp_bad_mult(self):
         with self.assertRaises(ValueError):
-            delay = delay_exponential(-1.0, 2.0, 8.0)
+            delay_exponential(-1.0, 2.0, 8.0)
 
     def test_delay_exp_bad_base(self):
         with self.assertRaises(ValueError):
-            delay = delay_exponential(1.0, 0.1, 8.0)
+            delay_exponential(1.0, 0.1, 8.0)
 
     def test_delay_exp_bad_max(self):
         with self.assertRaises(ValueError):
-            delay = delay_exponential(1.0, 0.1, -8.0)
+            delay_exponential(1.0, 0.1, -8.0)
