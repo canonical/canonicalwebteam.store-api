@@ -44,6 +44,25 @@ class RetryDecoratorTest(VCRTestCase):
             # last execution will raise Exception
             wrapper()
 
+    def test_callback_fn_early_exit(self):
+        c = Counter()
+
+        def callback(e: Exception):
+            c.increment()
+            self.assertIsInstance(e, TypeError)
+            return True
+
+        @retry(callback_fn=callback)
+        def wrapper():
+            raise Exception("Exception")
+
+        with self.assertRaises(Exception):
+            # last execution will raise Exception
+            wrapper()
+
+        # only one execution because we exit early
+        self.assertEqual(c.counter, 1)
+
     def test_logger_fn(self):
         def logger(e: str):
             self.assertIsInstance(e, str)
