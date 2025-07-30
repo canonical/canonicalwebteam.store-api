@@ -4,10 +4,6 @@ from vcr_unittest import VCRTestCase
 from canonicalwebteam.retry_utils import retry
 
 
-def raise_exception(E: Type[Exception]):
-    raise E("Exception")
-
-
 LIMIT = 5
 
 
@@ -24,6 +20,13 @@ class Counter:
 
 
 class RetryDecoratorTest(VCRTestCase):
+    def test_bad_limit(self):
+        with self.assertRaises(ValueError):
+
+            @retry(limit=-1)
+            def noop():
+                pass
+
     def test_no_exception(self):
         @retry()
         def noop():
@@ -35,10 +38,7 @@ class RetryDecoratorTest(VCRTestCase):
         def callback(e: Exception):
             self.assertIsInstance(e, TypeError)
 
-        @retry(
-            limit=LIMIT,
-            callback_fn=callback
-        )
+        @retry(limit=LIMIT, callback_fn=callback)
         def wrapper():
             raise Exception("Exception")
 
@@ -51,10 +51,7 @@ class RetryDecoratorTest(VCRTestCase):
             self.assertIsInstance(e, str)
             self.assertTrue(e.startswith("@retry"))
 
-        @retry(
-            limit=LIMIT,
-            logger_fn=logger
-        )
+        @retry(limit=LIMIT, logger_fn=logger)
         def wrapper():
             raise Exception("Exception")
 
@@ -65,10 +62,7 @@ class RetryDecoratorTest(VCRTestCase):
     def test_retry_limit(self):
         c = Counter()
 
-        @retry(
-            limit=LIMIT,
-            callback_fn=c.increment
-        )
+        @retry(limit=LIMIT, callback_fn=c.increment)
         def wrapper():
             raise Exception("Exception")
 
@@ -81,11 +75,7 @@ class RetryDecoratorTest(VCRTestCase):
     def test_good_exception_match(self):
         c = Counter()
 
-        @retry(
-            limit=LIMIT,
-            callback_fn=c.increment,
-            exceptions=(TypeError)
-        )
+        @retry(limit=LIMIT, callback_fn=c.increment, exceptions=(TypeError))
         def wrapper():
             raise TypeError("Exception")
 
@@ -96,10 +86,7 @@ class RetryDecoratorTest(VCRTestCase):
         self.assertEqual(c.counter, LIMIT)
 
     def test_bad_exception_match(self):
-        @retry(
-            limit=LIMIT,
-            exceptions=(TypeError)
-        )
+        @retry(limit=LIMIT, exceptions=(TypeError))
         def wrapper():
             raise ValueError("Exception")
 
@@ -115,11 +102,7 @@ class RetryDecoratorTest(VCRTestCase):
             c.increment()
             return 0.0
 
-        @retry(
-            limit=LIMIT,
-            delay_fn=delay,
-            exceptions=(TypeError)
-        )
+        @retry(limit=LIMIT, delay_fn=delay, exceptions=(TypeError))
         def wrapper():
             raise Exception("Exception")
 
@@ -138,7 +121,7 @@ class RetryDecoratorTest(VCRTestCase):
             limit=LIMIT,
             exceptions=(Exception),
             delay_fn=(lambda x: float(x)),
-            sleep_fn=sleep
+            sleep_fn=sleep,
         )
         def wrapper():
             raise Exception("Exception")
