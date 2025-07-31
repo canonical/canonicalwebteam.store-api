@@ -1,9 +1,22 @@
 from types import FunctionType
 from vcr_unittest import VCRTestCase
-from canonicalwebteam.retry_utils import delay_random, delay_exponential
+from canonicalwebteam.retry_utils import (
+    delay_constant,
+    delay_random,
+    delay_exponential,
+)
 
 
 class RetryHelpersTest(VCRTestCase):
+    def test_delay_constant(self):
+        delay = delay_constant(1.0)
+        self.assertIsInstance(delay, FunctionType)
+        self.assertAlmostEqual(1.0, delay(0))
+
+    def test_delay_constant_bad_delay(self):
+        with self.assertRaises(ValueError):
+            delay_constant(-1.0)
+
     def test_delay_random(self):
         delay = delay_random(0.0, 1.0)
         self.assertIsInstance(delay, FunctionType)

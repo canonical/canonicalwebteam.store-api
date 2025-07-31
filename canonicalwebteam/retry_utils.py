@@ -94,6 +94,19 @@ def retry(
     return _retry
 
 
+def delay_constant(delay: float):
+    """
+    Returns a function that always returns `delay`
+    """
+    if delay < 0:
+        raise ValueError("The delay must be at least 0")
+
+    def _delay_constant(_: int):
+        return delay
+
+    return _delay_constant
+
+
 def delay_random(min: float, max: float):
     """
     Returns a function that picks a random delay between `min` and `max`
