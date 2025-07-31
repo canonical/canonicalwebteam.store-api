@@ -46,9 +46,9 @@ def retry(
     """
 
     if func is None:
-        # if this decorator is applied using the @ syntax, `func` will not
-        # be defined correctly, so we must do a partial application to wrap
-        # `func` correctly
+        # if the decorator is applied using parameters (e.g. @retry(limit=3)),
+        # `func` will be None, so we must first do a partial application on
+        # the decorator itself to actually wrap `func` correctly
         return functools.partial(
             retry,
             limit=limit,
