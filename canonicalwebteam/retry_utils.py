@@ -1,5 +1,5 @@
 from typing import Callable, Tuple, Type, TypeVar
-from random import random
+from random import uniform
 from sys import maxsize as MAX_INT
 import functools
 
@@ -22,27 +22,45 @@ def retry(
     Decorator that implements retry logic for `func` when any of the
     Exceptions in `exceptions` happen.
 
-    Arguments:
-    func: function what will be retried
+    Args:
+        func (Callable[P, R], optional): The function that will be retried.
+            Defaults to `None` when invoking the decorator using parameters,
+            e.g. `@retry(limit=3)`).
+        limit (int, optional): The maximum number of retry attempts.
+            Defaults to `sys.maxsize`, allowing for a very large number of
+            retries.
+        delay_fn (Callable[[int], float], optional): A function that accepts
+            the current attempt number (starting from 1) and returns a float
+            representing the delay in seconds before the next call to `func`.
+            Defaults to a function that always returns 0.0 (no delay).
+        sleep_fn (Callable[[float], None], optional): A function that takes
+            a float (delay in seconds) and pauses execution for that duration.
+            Users are responsible for ensuring this function is appropriate
+            for their environment (e.g., an async sleep for async contexts).
+            Defaults to a function that performs no actual sleep.
+        callback_fn (Callable[[Exception], bool], optional): A function that
+            is called every time an exception from `exceptions` is caught
+            during the retry loop. It receives the caught exception as an
+            argument and should return `True` to abort the retry loop, or
+            `False` to continue. Defaults to a function that always returns
+            `False`.
+        logger_fn (Callable[[str], None], optional): A function designed to
+            log errors that are caught and handled (not propagated) during
+            the retry loop. It's invoked each time an exception from
+            `exceptions` is caught. Defaults to a function that performs no
+            logging.
+        exceptions (Tuple[Type[Exception]], optional): A tuple containing the
+            types of exceptions that will trigger a retry. Defaults to
+            `(Exception)`, meaning any standard exception will cause a retry.
 
-    Keyword arguments:
-    limit: max number of retry attempts
-    exceptions: tuple containing the types of exceptions we can catch and
-        that trigger a retry
-    callback_fn: function that takes as argument an exception caught a during
-        the retry loop, it should return a bool indicating whether to abort
-        the loop or not; it will be called every time a member of `exceptions`
-        is caught
-    logger_fn: function that logs errors caught and not propagated during
-        the retry loop; it will be called every time a member of `exceptions`
-        is caught
-    delay_fn: function that takes the current attempt as an argument and
-        returns a float indicating the delay in seconds before calling `func`
-        again
-    sleep_fn: function that takes a float indicating a delay in seconds and
-        waits for this specified time before executing `func` again; it's
-        user's responsibility to make sure the sleep function is appropriate
-        for their usage (e.g. use an async sleep in and async environment)
+    Returns:
+        Callable[P, R]: A decorated version of the input function `func`
+            that incorporates the defined retry logic. If `func` is initially
+            `None` (when used as `@retry(...)`), it returns a decorator
+            function ready to be applied to another callable.
+
+    Raises:
+        ValueError: if `limit` is less than 1
     """
 
     if func is None:
@@ -59,7 +77,7 @@ def retry(
             exceptions=exceptions,
         )
 
-    if limit <= 0:
+    if limit < 1:
         raise ValueError("The limit must be at least 1")
 
     @functools.wraps(func)
@@ -94,30 +112,59 @@ def retry(
     return _retry
 
 
-def delay_constant(delay: float):
+def delay_constant(d: float):
     """
-    Returns a function that always returns `delay`
+    Create a constant delay function that always returns `d`.
+
+    Args:
+        d (float): The constant delay in seconds that the returned function
+            will always provide.
+
+    Returns:
+        Callable[[int], float]: A function that takes an integer
+            (representing the attempt number) and always returns the
+            specified `d` float.
+
+    Raises:
+        ValueError: if `d` is negative
     """
-    if delay < 0:
+    if d < 0:
         raise ValueError("The delay must be at least 0")
 
     def _delay_constant(_: int):
-        return delay
+        return d
 
     return _delay_constant
 
 
-def delay_random(min: float, max: float):
+def delay_random(min_delay: float, max_delay: float):
     """
-    Returns a function that picks a random delay between `min` and `max`
+    Create a random delay function that returns a random value between
+    `min_delay` and `max_delay`.
+
+    Args:
+        min_delay (float): The minimum delay in seconds that the returned
+            function will provide.
+        max_delay (float): The maximum delay in seconds that the returned
+            function will provide.
+
+    Returns:
+        Callable[[int], float]: A function that takes an integer
+            (representing the attempt number) and returns a random float
+            between `min_delay` and `max_delay`.
+
+    Raises:
+        ValueError: if `min` is negative
+        ValueError: if `max` is less than or equal to `min`
     """
-    if min < 0:
+
+    if min_delay < 0:
         raise ValueError("The minimum delay must be at least 0")
-    if max <= min:
+    if max_delay <= min_delay:
         raise ValueError("The maximum delay must be greater than the minimum")
 
     def _delay_random(_: int):
-        return min + random() * (max - min)
+        return uniform(min_delay, max_delay)
 
     return _delay_random
 
@@ -126,10 +173,30 @@ def delay_exponential(
     delay_mult: float, exp_base: float, max_delay: float = float("inf")
 ):
     """
-    Returns a function that implements an exponential backoff with an upper
-    limit based on the number of attempts made `n`, according to the following
-    formula:
-        min(`max_delay`, `delay_mult` * `exp_base`^`n`)
+    Create a function that implements an exponential backoff with an upper
+    limit. The delay is calculated based on the number of attempts made `n`,
+    according to the following formula:
+        `min(max_delay, delay_mult * exp_base^n)`.
+
+    Args:
+        delay_mult (float): The multiplier for the exponential delay
+            calculation. This value scales the base exponential growth.
+        exp_base (float): The base of the exponent for the delay
+            calculation. This determines how quickly the delay increases
+            with each attempt.
+        max_delay (float, optional): The upper limit for the delay in
+            seconds. The calculated exponential delay will not exceed this
+            value. Defaults to positive infinity.
+
+    Returns:
+        Callable[[int], float]: A function that takes an integer
+            (representing the attempt number `n`) and returns a float
+            indicating the calculated exponential delay.
+
+    Raises:
+        ValueError: if `delay_mult` is negative or zero
+        ValueError: if `exp_base` is less than 1
+        ValueError: if `max_delay` is negative
     """
     if delay_mult <= 0:
         raise ValueError("The delay multiplier must be greater than 0")
