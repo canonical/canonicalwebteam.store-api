@@ -228,7 +228,7 @@ class DeviceGW(Base):
             headers=headers,
         )
         return self.process_response(response)
-    
+
     def get_snap_details(
         self,
         name: str,
