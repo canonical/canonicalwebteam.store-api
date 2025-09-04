@@ -229,6 +229,34 @@ class DeviceGW(Base):
         )
         return self.process_response(response)
 
+    def get_snap_details(
+        self,
+        name: str,
+        channel: Optional[str] = None,
+        fields: list = [],
+    ) -> dict:
+        """
+        Documentation: https://api.snapcraft.io/docs/details.html#snap_details
+        Endpoint: [GET]
+            https://api.snapcraft.io/api/v1/{name_space}/details/{package_name}
+        """
+        # this method is only available in API version 1
+        api_version = 1
+        url = self.get_endpoint_url("details/" + name, api_version=api_version)
+        params = {}
+        if fields:
+            params = {"fields": ",".join(fields)}
+        if channel:
+            params["channel"] = channel
+        headers = self.config[api_version].get("headers")
+
+        response = self.session.get(
+            url,
+            params=params,
+            headers=headers,
+        )
+        return self.process_response(response)
+
     def get_public_metrics(self, json: dict, api_version: int = 1) -> dict:
         """
         Documentation: https://api.snapcraft.io/docs/metrics.html

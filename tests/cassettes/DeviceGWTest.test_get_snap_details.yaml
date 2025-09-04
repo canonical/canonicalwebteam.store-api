@@ -1,0 +1,60 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Snap-Device-Series:
+      - '16'
+      X-Ubuntu-Series:
+      - '16'
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://api.snapcraft.io/api/v1/snaps/details/nushell?fields=name%2Caliases
+  response:
+    body:
+      string: |
+        {
+          "aliases": [
+            { "name": "nu", "target": "nu" },
+            {
+              "name": "nu_plugin_stress_internals",
+              "target": "nu-plugin-stress-internals"
+            },
+            { "name": "nu_plugin_gstat", "target": "nu-plugin-gstat" },
+            { "name": "nu_plugin_formats", "target": "nu-plugin-formats" },
+            { "name": "nu_plugin_polars", "target": "nu-plugin-polars" },
+            { "name": "nu_plugin_query", "target": "nu-plugin-query" },
+            { "name": "nu_plugin_inc", "target": "nu-plugin-inc" },
+            { "name": "nu_plugin_example", "target": "nu-plugin-example" },
+            { "name": "nu_plugin_custom_values", "target": "nu-plugin-custom-values" }
+          ],
+          "name": "nushell.sed-i",
+          "package_name": "nushell"
+        }
+    headers:
+      content-length:
+      - '687'
+      content-type:
+      - application/json
+      date:
+      - Wed, 3 Sep 2025 09:44:24 GMT
+      server:
+      - gunicorn
+      snap-store-version:
+      - '69'
+      x-request-id:
+      - 00000000000000000000FFFF0AACCA2CE9A000000000000000000000FFFF0A8325F001BB68B81A1AE667B51D
+      x-vcs-revision:
+      - cd12ae9598aebd93b8b720cd2681b669c61bd790
+      x-view-name:
+      - snapdevicegw.webapi_details.snap_details
+    status:
+      code: 200
+      message: OK
+version: 1

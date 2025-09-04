@@ -66,6 +66,17 @@ class DeviceGWTest(VCRTestCase):
         self.assertIsInstance(response, dict)
         self.assertEqual(response["name"], "test-lukewh")
 
+    def test_get_snap_details(self):
+        response = self.client.get_snap_details(
+            name="nushell",
+            fields=["name", "aliases"],
+        )
+        self.assertIsInstance(response, dict)
+        self.assertEqual(response["name"], "nushell.sed-i")
+        self.assertEqual(response["package_name"], "nushell")
+        self.assertIsInstance(response["aliases"], list)
+        self.assertEqual(len(response["aliases"]), 9)
+
     def test_get_categories(self):
         response = self.client.get_categories()
         self.assertIsInstance(response, dict)
