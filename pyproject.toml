@@ -1,6 +1,6 @@
 [tool.poetry]
 name = 'canonicalwebteam.store-api'
-version = '6.8.1'
+version = '6.9.0'
 description = ''
 authors = ['Canonical Web Team <webteam@canonical.com>']
 license = 'LGPL-3.0'
@@ -10,11 +10,13 @@ readme = 'README.md'
 include = 'canonicalwebteam'
 
 [tool.poetry.dependencies]
-python = '^3.8'
+python = '^3.9'
 coverage = '^7.0'
 pymacaroons = '0.13.0'
 requests = '^2.32.2'
 mypy = "^1.14.1"
+redis = "^6.4.0"
+cachetools = "^6.2.0"
 
 [tool.poetry.dev-dependencies]
 vcrpy-unittest = '^0.1.7'
