@@ -41,7 +41,9 @@ class RedisCache:
             logger.error("Serialization error: %s", e)
             raise
 
-    def _deserialize(self, value: Optional[str], expected_type: str) -> Any:
+    def _deserialize(
+        self, value: Optional[str], expected_type: type = str
+    ) -> Any:
         if value is None:
             return None
         if expected_type is str:
@@ -52,7 +54,7 @@ class RedisCache:
             logger.error("Deserialization error: %s", e)
             raise
 
-    def get(self, key: str, expected_type: str) -> Any:
+    def get(self, key: str, expected_type: type = str) -> Any:
         if self.redis_available:
             full_key = self._build_key(key)
             try:

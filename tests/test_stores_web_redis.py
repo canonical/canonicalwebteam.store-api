@@ -3,11 +3,7 @@ import time
 import unittest
 from unittest.mock import MagicMock, patch
 from redis.exceptions import RedisError
-from cachetools import TTLCache
 from canonicalwebteam.stores_web_redis.utility import RedisCache
-import canonicalwebteam.stores_web_redis.utility as u
-
-
 
 
 class TestRedisCache(unittest.TestCase):
