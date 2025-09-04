@@ -132,7 +132,6 @@ class DeviceGW(Base):
         if featured:
             params["featured"] = featured
         response = self.session.get(url, params=params, headers=headers)
-        # pprint(response.json())
         return self.process_response(response)
 
     def get_all_items(self, size: int, api_version: int = 1) -> dict:
