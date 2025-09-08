@@ -12,6 +12,16 @@ port = os.getenv("REDIS_DB_PORT", "6379")
 password = os.getenv("REDIS_DB_PASSWORD", None)
 
 
+class SafeJSONEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, bytes):
+            try:
+                return obj.decode("utf-8")
+            except UnicodeDecodeError:
+                return f"<<non-decodable-bytes ({len(obj)} bytes)>>"
+        return super().default(obj)
+
+
 class RedisCache:
     def __init__(self, namespace: str, maxsize: int, ttl: int = 300):
         self.namespace = namespace
@@ -42,7 +52,7 @@ class RedisCache:
         if isinstance(value, str):
             return value
         try:
-            return json.dumps(value)
+            return json.dumps(value, cls=SafeJSONEncoder)
         except (TypeError, ValueError) as e:
             logger.error("Serialization error: %s", e)
             raise
