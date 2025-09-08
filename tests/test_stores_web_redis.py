@@ -35,14 +35,14 @@ class TestRedisCache(unittest.TestCase):
     def test_build_key_multiple_parts(self):
         cache = RedisCache(namespace="my-store", maxsize=1)
         self.assertEqual(
-            cache._build_key("base", arch="x86", test="test"),
+            cache._build_key(("base", {"arch": "x86", "test": "test"})),
             "my-store:base:arch-x86:test-test",
         )
 
     def test_build_key_falsy_parts(self):
         cache = RedisCache(namespace="my-store", maxsize=1)
         self.assertEqual(
-            cache._build_key("base", arch="", test=None, lib=False),
+            cache._build_key(("base", {"arch": "", "test": None, "lib": False})),
             "my-store:base",
         )
 
@@ -75,7 +75,7 @@ class TestRedisCache(unittest.TestCase):
         mock_redis.return_value = mock_client
 
         cache = RedisCache(namespace="my-store", maxsize=1)
-        value = cache.get("key", expected_type=dict)
+        value = cache.get(("key",{"arch": "x86"}), expected_type=dict)
         self.assertEqual(value, {"x": 1})
 
     @patch("canonicalwebteam.stores_web_redis.utility.redis.Redis")
@@ -84,8 +84,8 @@ class TestRedisCache(unittest.TestCase):
         instance.ping.side_effect = RedisError("Down")
 
         cache = RedisCache(namespace="my-store", maxsize=1)
-        cache.fallback["key"] = {"fallback": True}
-        result = cache.get("key", expected_type=dict)
+        cache.fallback["my-store:key:arch-x86"] = {"fallback": True}
+        result = cache.get(("key",{"arch": "x86"}), expected_type=dict)
         self.assertEqual(result, {"fallback": True})
 
     @patch("canonicalwebteam.stores_web_redis.utility.redis.Redis")
@@ -95,7 +95,7 @@ class TestRedisCache(unittest.TestCase):
         mock_client.ping.return_value = True
 
         cache = RedisCache(namespace="my-store", maxsize=1)
-        cache.set("key", {"value": 123})
+        cache.set(("key",{"arch": "x86"}), {"value": 123})
         mock_client.setex.assert_called_once()
 
     @patch("canonicalwebteam.stores_web_redis.utility.redis.Redis")
@@ -104,8 +104,8 @@ class TestRedisCache(unittest.TestCase):
         instance.ping.side_effect = RedisError("Down")
 
         cache = RedisCache(namespace="my-store", maxsize=1)
-        cache.set("key", {"fallback": True})
-        self.assertEqual(cache.fallback["key"], {"fallback": True})
+        cache.set(("key",{"arch": "x86"}), {"fallback": True})
+        self.assertEqual(cache.fallback["my-store:key:arch-x86"], {"fallback": True})
 
     @patch("canonicalwebteam.stores_web_redis.utility.redis.Redis")
     def test_delete_from_redis(self, mock_redis):
@@ -114,7 +114,7 @@ class TestRedisCache(unittest.TestCase):
         mock_client.ping.return_value = True
 
         cache = RedisCache(namespace="my-store", maxsize=1)
-        cache.delete("key")
+        cache.delete(("key",{"arch": "x86"}))
         mock_client.delete.assert_called_once()
 
     @patch("canonicalwebteam.stores_web_redis.utility.redis.Redis")
@@ -123,9 +123,9 @@ class TestRedisCache(unittest.TestCase):
         instance.ping.side_effect = RedisError("Down")
 
         cache = RedisCache(namespace="my-store", maxsize=1)
-        cache.fallback["key"] = "to-delete"
-        cache.delete("key")
-        self.assertNotIn("key", cache.fallback)
+        cache.fallback["my-store:key:arch-x86"] = "to-delete"
+        cache.delete(("key",{"arch": "x86"}))
+        self.assertNotIn(("my-store:key:arch-x86"), cache.fallback)
 
     @patch("canonicalwebteam.stores_web_redis.utility.redis.Redis")
     def test_ttl_cache_expiry(self, mock_redis):
@@ -133,10 +133,10 @@ class TestRedisCache(unittest.TestCase):
         instance.ping.side_effect = RedisError("Down")
 
         cache = RedisCache(namespace="my-store", maxsize=1, ttl=1)
-        cache.set("key", "value")
-        self.assertEqual(cache.get("key"), "value")
+        cache.set(("key",{"arch": "x86"}), "value")
+        self.assertEqual(cache.get(("key",{"arch": "x86"})), "value")
         time.sleep(1.5)
-        self.assertIsNone(cache.get("key"))
+        self.assertIsNone(cache.get(("key",{"arch": "x86"})))
 
 
 if __name__ == "__main__":
