@@ -39,7 +39,9 @@ class RedisCache:
             logger.warning("Redis unavailable: %s", e)
             self.redis_available = False
 
-    def _build_key(self, key: Union[str, tuple[str, Optional[dict[str, Any]]]]) -> str:
+    def _build_key(
+        self, key: Union[str, tuple[str, Optional[dict[str, Any]]]]
+    ) -> str:
         base_key, parts = key if isinstance(key, tuple) else (key, {})
         key_parts = ":".join(f"{k}-{v}" for k, v in parts.items() if v)
         full_key = (
@@ -71,7 +73,11 @@ class RedisCache:
             logger.error("Deserialization error: %s", e)
             raise
 
-    def get(self, key: Union[str, tuple[str, Optional[dict[str, Any]]]], expected_type: type = str) -> Any:
+    def get(
+        self,
+        key: Union[str, tuple[str, Optional[dict[str, Any]]]],
+        expected_type: type = str,
+    ) -> Any:
         full_key = self._build_key(key)
         if self.redis_available:
             try:
@@ -82,7 +88,12 @@ class RedisCache:
         value = self.fallback.get(full_key)
         return value
 
-    def set(self, key: Union[str, tuple[str, Optional[dict[str, Any]]]], value: Any, ttl=300):
+    def set(
+        self,
+        key: Union[str, tuple[str, Optional[dict[str, Any]]]],
+        value: Any,
+        ttl=300,
+    ):
         full_key = self._build_key(key)
         if self.redis_available:
             try:
