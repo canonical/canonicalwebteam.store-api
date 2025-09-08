@@ -28,9 +28,23 @@ class TestRedisCache(unittest.TestCase):
         cache = RedisCache(namespace=self.namespace, maxsize=self.maxsize)
         self.assertFalse(cache.redis_available)
 
-    def test_build_key(self):
+    def test_build_key_no_parts(self):
         cache = RedisCache(namespace="my-store", maxsize=1)
         self.assertEqual(cache._build_key("abc"), "my-store:abc")
+
+    def test_build_key_multiple_parts(self):
+        cache = RedisCache(namespace="my-store", maxsize=1)
+        self.assertEqual(
+            cache._build_key("base", arch="x86", test="test"),
+            "my-store:base:arch-x86:test-test",
+        )
+
+    def test_build_key_falsy_parts(self):
+        cache = RedisCache(namespace="my-store", maxsize=1)
+        self.assertEqual(
+            cache._build_key("base", arch="", test=None, lib=False),
+            "my-store:base",
+        )
 
     def test_serialize_str(self):
         cache = RedisCache(namespace="my-store", maxsize=1)
