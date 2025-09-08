@@ -36,14 +36,14 @@ class TestRedisCache(unittest.TestCase):
         cache = RedisCache(namespace="my-store", maxsize=1)
         self.assertEqual(
             cache._build_key("base", arch="x86", test="test"),
-            "my-store:base:arch-x86:test-test"
+            "my-store:base:arch-x86:test-test",
         )
 
     def test_build_key_falsy_parts(self):
         cache = RedisCache(namespace="my-store", maxsize=1)
         self.assertEqual(
             cache._build_key("base", arch="", test=None, lib=False),
-            "my-store:base"
+            "my-store:base",
         )
 
     def test_serialize_str(self):

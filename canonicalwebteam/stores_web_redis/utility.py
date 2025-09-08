@@ -31,7 +31,11 @@ class RedisCache:
 
     def _build_key(self, base_key: str, **parts) -> str:
         key_parts = ":".join(f"{k}-{v}" for k, v in parts.items() if v)
-        key = f"{self.namespace}:{base_key}:{key_parts}" if key_parts else f"{self.namespace}:{base_key}"
+        key = (
+            f"{self.namespace}:{base_key}:{key_parts}"
+            if key_parts
+            else f"{self.namespace}:{base_key}"
+        )
         return key
 
     def _serialize(self, value: Any) -> str:
