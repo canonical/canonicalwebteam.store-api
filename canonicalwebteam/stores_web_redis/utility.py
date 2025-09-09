@@ -3,13 +3,23 @@ from cachetools import TTLCache
 import redis
 import json
 import logging
-from typing import Optional, Any
+from typing import Optional, Any, Union
 
 logger = logging.getLogger(__name__)
 
 host = os.getenv("REDIS_DB_HOSTNAME", "localhost")
 port = os.getenv("REDIS_DB_PORT", "6379")
 password = os.getenv("REDIS_DB_PASSWORD", None)
+
+
+class SafeJSONEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, bytes):
+            try:
+                return obj.decode("utf-8")
+            except UnicodeDecodeError:
+                return f"<<non-decodable-bytes ({len(obj)} bytes)>>"
+        return super().default(obj)
 
 
 class RedisCache:
@@ -29,20 +39,23 @@ class RedisCache:
             logger.warning("Redis unavailable: %s", e)
             self.redis_available = False
 
-    def _build_key(self, base_key: str, **parts) -> str:
+    def _build_key(
+        self, key: Union[str, tuple[str, Optional[dict[str, Any]]]]
+    ) -> str:
+        base_key, parts = key if isinstance(key, tuple) else (key, {})
         key_parts = ":".join(f"{k}-{v}" for k, v in parts.items() if v)
-        key = (
+        full_key = (
             f"{self.namespace}:{base_key}:{key_parts}"
             if key_parts
             else f"{self.namespace}:{base_key}"
         )
-        return key
+        return full_key
 
     def _serialize(self, value: Any) -> str:
         if isinstance(value, str):
             return value
         try:
-            return json.dumps(value)
+            return json.dumps(value, cls=SafeJSONEncoder)
         except (TypeError, ValueError) as e:
             logger.error("Serialization error: %s", e)
             raise
@@ -60,34 +73,43 @@ class RedisCache:
             logger.error("Deserialization error: %s", e)
             raise
 
-    def get(self, key: str, expected_type: type = str) -> Any:
+    def get(
+        self,
+        key: Union[str, tuple[str, Optional[dict[str, Any]]]],
+        expected_type: type = str,
+    ) -> Any:
+        full_key = self._build_key(key)
         if self.redis_available:
-            full_key = self._build_key(key)
             try:
                 value = self.client.get(full_key)
                 return self._deserialize(value, expected_type)
             except redis.RedisError as e:
                 logger.error("Redis get error: %s", e)
-        value = self.fallback.get(key)
+        value = self.fallback.get(full_key)
         return value
 
-    def set(self, key: str, value: Any, ttl=300):
+    def set(
+        self,
+        key: Union[str, tuple[str, Optional[dict[str, Any]]]],
+        value: Any,
+        ttl=300,
+    ):
+        full_key = self._build_key(key)
         if self.redis_available:
-            full_key = self._build_key(key)
             try:
                 serialized = self._serialize(value)
                 self.client.setex(full_key, ttl, serialized)
                 return
             except redis.RedisError as e:
                 logger.error("Redis set error: %s", e)
-        self.fallback[key] = value
+        self.fallback[full_key] = value
 
-    def delete(self, key: str):
+    def delete(self, key: Union[str, tuple[str, Optional[dict[str, Any]]]]):
+        full_key = self._build_key(key)
         if self.redis_available:
-            full_key = self._build_key(key)
             try:
                 self.client.delete(full_key)
             except redis.RedisError as e:
                 logger.error("Redis delete error: %s", e)
         else:
-            self.fallback.pop(key, None)
+            self.fallback.pop(full_key, None)
