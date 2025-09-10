@@ -56,10 +56,9 @@ class TestRedisCache(unittest.TestCase):
         cache = RedisCache(namespace="my-store", maxsize=1)
         self.assertEqual(cache._serialize({"a": 1}), json.dumps({"a": 1}))
 
-    def test_serialize_invalid(self):
+    def test_serialize_set(self):
         cache = RedisCache(namespace="my-store", maxsize=1)
-        with self.assertRaises(TypeError):
-            cache._serialize({1, 2})
+        self.assertEqual(cache._serialize({1, 2}), json.dumps([1, 2]))
 
     def test_deserialize_str(self):
         cache = RedisCache(namespace="my-store", maxsize=1)
