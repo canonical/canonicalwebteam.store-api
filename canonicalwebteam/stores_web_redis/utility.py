@@ -18,7 +18,7 @@ class SafeJSONEncoder(json.JSONEncoder):
             try:
                 return bytes(obj).decode("utf-8")
             except UnicodeDecodeError:
-                return f"<<non-decodable-bytes ({len(obj)} bytes)>>"
+                return f"non-decodable-bytes ({len(obj)} bytes)"
 
         if isinstance(obj, set):
             try:

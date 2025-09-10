@@ -26,7 +26,7 @@ class TestSafeJSONEncoder(unittest.TestCase):
         bad = b"\xff\xfe"
         self.assertEqual(
             json.dumps({"b": bad}, cls=SafeJSONEncoder),
-            '{"b": "<<non-decodable-bytes (2 bytes)>>"}',
+            '{"b": "non-decodable-bytes (2 bytes)"}',
         )
 
     def test_set_sortable_returns_sorted_list(self):
