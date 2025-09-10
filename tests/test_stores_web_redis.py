@@ -6,6 +6,54 @@ from redis.exceptions import RedisError
 from canonicalwebteam.stores_web_redis.utility import RedisCache
 
 
+from canonicalwebteam.stores_web_redis.utility import SafeJSONEncoder
+
+
+class TestSafeJSONEncoder(unittest.TestCase):
+    def test_bytes_utf8_decodable(self):
+        data = {"b": b"helloworld"}
+        self.assertEqual(
+            json.dumps(data, cls=SafeJSONEncoder), '{"b": "helloworld"}'
+        )
+
+    def test_bytearray_utf8_decodable(self):
+        data = {"b": bytearray(b"helloworld")}
+        self.assertEqual(
+            json.dumps(data, cls=SafeJSONEncoder), '{"b": "helloworld"}'
+        )
+
+    def test_bytes_non_utf8(self):
+        bad = b"\xff\xfe"
+        self.assertEqual(
+            json.dumps({"b": bad}, cls=SafeJSONEncoder),
+            '{"b": "non-decodable-bytes (2 bytes)"}',
+        )
+
+    def test_set_sortable_returns_sorted_list(self):
+        data = {"set": {3, 1, 2}}
+        loaded = json.loads(json.dumps(data, cls=SafeJSONEncoder))
+        self.assertEqual(loaded["set"], [1, 2, 3])
+
+    def test_set_not_sortable_falls_back_to_list(self):
+        data = {"set": {1, "a"}}
+        loaded = json.loads(json.dumps(data, cls=SafeJSONEncoder))
+        self.assertEqual(set(loaded["set"]), {1, "a"})
+        self.assertIsInstance(loaded["set"], list)
+
+    def test_tuple_converted_to_list(self):
+        data = {"t": (1, 2, 3)}
+        loaded = json.loads(json.dumps(data, cls=SafeJSONEncoder))
+        self.assertEqual(loaded["t"], [1, 2, 3])
+        self.assertIsInstance(loaded["t"], list)
+
+    def test_super_default_raises_typeerror_for_unknown_obj(self):
+        class Foo:
+            pass
+
+        with self.assertRaises(TypeError):
+            json.dumps({"x": Foo()}, cls=SafeJSONEncoder)
+
+
 class TestRedisCache(unittest.TestCase):
 
     def setUp(self):
@@ -56,10 +104,9 @@ class TestRedisCache(unittest.TestCase):
         cache = RedisCache(namespace="my-store", maxsize=1)
         self.assertEqual(cache._serialize({"a": 1}), json.dumps({"a": 1}))
 
-    def test_serialize_invalid(self):
+    def test_serialize_set(self):
         cache = RedisCache(namespace="my-store", maxsize=1)
-        with self.assertRaises(TypeError):
-            cache._serialize({1, 2})
+        self.assertEqual(cache._serialize({1, 2}), json.dumps([1, 2]))
 
     def test_deserialize_str(self):
         cache = RedisCache(namespace="my-store", maxsize=1)

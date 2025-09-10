@@ -14,11 +14,19 @@ password = os.getenv("REDIS_DB_PASSWORD", None)
 
 class SafeJSONEncoder(json.JSONEncoder):
     def default(self, obj):
-        if isinstance(obj, bytes):
+        if isinstance(obj, (bytes, bytearray)):
             try:
-                return obj.decode("utf-8")
+                return bytes(obj).decode("utf-8")
             except UnicodeDecodeError:
-                return f"<<non-decodable-bytes ({len(obj)} bytes)>>"
+                return f"non-decodable-bytes ({len(obj)} bytes)"
+
+        if isinstance(obj, set):
+            try:
+                return sorted(obj)
+            except Exception:
+                return list(obj)
+        if isinstance(obj, tuple):
+            return list(obj)
         return super().default(obj)
 
 
