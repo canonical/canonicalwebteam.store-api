@@ -1,3 +1,5 @@
+import logging
+
 from canonicalwebteam.exceptions import (
     PublisherAgreementNotSigned,
     PublisherMacaroonRefreshRequired,
@@ -15,13 +17,32 @@ from canonicalwebteam.exceptions import (
 )
 
 
+logger = logging.getLogger(__name__)
+
 class Base:
     def __init__(self, session):
         self.session = session
 
+    def log_detailed_error(self, response):
+        logger.error(
+            "Request: {url = %s, headers = %s, cookies = %s, body = %s}",
+            response.request.url,
+            response.request.headers,
+            response.request._cookies.items(),
+            response.request.body,
+        )
+        logger.error(
+            "Response: {status = %s, headers = %s, cookies = %s}",
+            response.status_code,
+            response.headers,
+            response.cookies.items(),
+        )
+        logger.error("Response text: %s", response.text)
+
     def process_response(self, response):
         # 5xx responses are not in JSON format
         if response.status_code >= 500:
+            self.log_detailed_error(response)
             if response.status_code == 500:
                 raise StoreApiInternalError("Internal error upstream")
             elif response.status_code == 501:
@@ -42,15 +63,18 @@ class Base:
         try:
             body = response.json()
         except ValueError as decode_error:
+            logger.error("JSON decoding failed. Response text: %s", response.text)
             api_error_exception = StoreApiResponseDecodeError(
                 "JSON decoding failed: {}".format(decode_error)
             )
             raise api_error_exception
 
         if self._is_macaroon_expired(response.headers):
+            logger.error("Publisher macaroon refresh required")
             raise PublisherMacaroonRefreshRequired
 
         if not response.ok:
+            self.log_detailed_error(response)
             error_list = (
                 body["error_list"]
                 if "error_list" in body
