@@ -19,6 +19,7 @@ from canonicalwebteam.exceptions import (
 
 logger = logging.getLogger(__name__)
 
+
 class Base:
     def __init__(self, session):
         self.session = session
@@ -63,7 +64,9 @@ class Base:
         try:
             body = response.json()
         except ValueError as decode_error:
-            logger.error("JSON decoding failed. Response text: %s", response.text)
+            logger.error(
+                "JSON decoding failed. Response text: %s", response.text
+            )
             api_error_exception = StoreApiResponseDecodeError(
                 "JSON decoding failed: {}".format(decode_error)
             )
