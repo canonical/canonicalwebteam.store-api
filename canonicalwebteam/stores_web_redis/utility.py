@@ -89,12 +89,20 @@ class RedisCache:
         full_key = self._build_key(key)
         if self.redis_available:
             try:
-                value = self.client.get(full_key)
-                return self._deserialize(value, expected_type)
+                return self._deserialize(
+                    self.client.get(full_key), expected_type
+                )
             except redis.RedisError as e:
                 logger.error("Redis get error: %s", e)
-        value = self.fallback.get(full_key)
-        return value
+        else:
+            try:
+                return self._deserialize(
+                    self.fallback[full_key], expected_type
+                )
+            except KeyError:
+                return None
+            except Exception as e:
+                logger.error("Fallback cache get error: %s", e)
 
     def set(
         self,
@@ -103,14 +111,18 @@ class RedisCache:
         ttl=300,
     ):
         full_key = self._build_key(key)
+        serialized = self._serialize(value)
         if self.redis_available:
             try:
-                serialized = self._serialize(value)
                 self.client.setex(full_key, ttl, serialized)
                 return
             except redis.RedisError as e:
                 logger.error("Redis set error: %s", e)
-        self.fallback[full_key] = value
+        else:
+            try:
+                self.fallback[full_key] = serialized
+            except Exception as e:
+                logger.error("Fallback cache set error: %s", e)
 
     def delete(self, key: Union[str, tuple[str, Optional[dict[str, Any]]]]):
         full_key = self._build_key(key)

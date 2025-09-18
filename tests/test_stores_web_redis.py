@@ -133,9 +133,11 @@ class TestRedisCache(unittest.TestCase):
         instance.ping.side_effect = RedisError("Down")
 
         cache = RedisCache(namespace="my-store", maxsize=1)
-        cache.fallback["my-store:key:arch-x86"] = {"fallback": True}
+        cache.fallback["my-store:key:arch-x86"] = json.dumps(
+            {"fallback": True}
+        )
         result = cache.get(("key", {"arch": "x86"}), expected_type=dict)
-        self.assertEqual(result, {"fallback": True})
+        self.assertEqual((result), {"fallback": True})
 
     @patch("canonicalwebteam.stores_web_redis.utility.redis.Redis")
     def test_set_redis_success(self, mock_redis):
@@ -155,7 +157,8 @@ class TestRedisCache(unittest.TestCase):
         cache = RedisCache(namespace="my-store", maxsize=1)
         cache.set(("key", {"arch": "x86"}), {"fallback": True})
         self.assertEqual(
-            cache.fallback["my-store:key:arch-x86"], {"fallback": True}
+            json.loads(cache.fallback["my-store:key:arch-x86"]),
+            {"fallback": True},
         )
 
     @patch("canonicalwebteam.stores_web_redis.utility.redis.Redis")
