@@ -307,7 +307,7 @@ class DeviceGW(Base):
         )["revisions"]
 
     def get_featured_snaps(
-        self, api_version: int = 1, fields: str = "snap_id"
+        self, api_version: int = 1, fields: str = "snap_id", headers: dict = {}
     ) -> dict:
         """
         Documentation: (link to spec)
@@ -315,7 +315,9 @@ class DeviceGW(Base):
         Endpoint: https://api.snapcraft.io/api/v1/snaps/search
         """
         url = self.get_endpoint_url("search")
-        headers = self.config[api_version].get("headers")
+        default_headers = self.config[api_version].get("headers", {})
+
+        merged_headers = {**default_headers, **headers}
 
         params = {
             "scope": "wide",
@@ -326,5 +328,5 @@ class DeviceGW(Base):
         }
 
         return self.process_response(
-            self.session.get(url, params=params, headers=headers)
+            self.session.get(url, params=params, headers=merged_headers)
         )
