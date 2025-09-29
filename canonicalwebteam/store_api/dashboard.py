@@ -10,7 +10,7 @@ from canonicalwebteam.exceptions import (
 
 
 DASHBOARD_API_URL = getenv(
-    "DASHBOARD_API_URL", "https://dashboard.snapcraft.io/"
+    "SNAPSTORE_DASHBOARD_API_URL", "https://dashboard.snapcraft.io/"
 )
 
 
