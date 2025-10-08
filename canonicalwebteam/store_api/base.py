@@ -20,25 +20,44 @@ from canonicalwebteam.exceptions import (
 logger = logging.getLogger(__name__)
 
 
+def _sanitize_dict(dictionary):
+    result = {}
+    for k, v in dictionary.items():
+        if isinstance(v, str):
+            result[k] = f"<len {len(v)}>"
+        else:
+            result[k] = None
+    return result
+
+
+def _loggable_request(request):
+    return {
+        "url": request.url,
+        "headers": _sanitize_dict(request.headers),
+        "cookies": _sanitize_dict(request._cookies),
+        "body": request.body,
+    }
+
+
+def _loggable_response(response):
+    return {
+        "status": response.status_code,
+        "url": response.url,
+        "headers": _sanitize_dict(response.headers),
+        "cookies": _sanitize_dict(response.cookies),
+        "text": response.text,
+    }
+
+
 class Base:
     def __init__(self, session):
         self.session = session
 
     def log_detailed_error(self, response):
-        logger.error(
-            "Request: {url = %s, headers = %s, cookies = %s, body = %s}",
-            response.request.url,
-            response.request.headers,
-            response.request._cookies.items(),
-            response.request.body,
-        )
-        logger.error(
-            "Response: {status = %s, headers = %s, cookies = %s}",
-            response.status_code,
-            response.headers,
-            response.cookies.items(),
-        )
-        logger.error("Response text: %s", response.text)
+        logger.error("Request failed", extra={
+            "request": _loggable_request(response.request),
+            "response": _loggable_response(response),
+        })
 
     def process_response(self, response):
         # 5xx responses are not in JSON format

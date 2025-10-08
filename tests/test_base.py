@@ -35,6 +35,7 @@ def build_response(status_code: int):
 
     response = Mock(spec=Response)
     response.status_code = status_code
+    response.url = request.url
     response.headers = {}
     response.cookies = {}
     response.request = request
