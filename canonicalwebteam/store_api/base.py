@@ -54,10 +54,13 @@ class Base:
         self.session = session
 
     def log_detailed_error(self, response):
-        logger.error("Request failed", extra={
-            "request": _loggable_request(response.request),
-            "response": _loggable_response(response),
-        })
+        logger.error(
+            "Request failed",
+            extra={
+                "request": _loggable_request(response.request),
+                "response": _loggable_response(response),
+            },
+        )
 
     def process_response(self, response):
         # 5xx responses are not in JSON format
