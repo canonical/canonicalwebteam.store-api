@@ -1,3 +1,5 @@
+import logging
+
 from canonicalwebteam.exceptions import (
     PublisherAgreementNotSigned,
     PublisherMacaroonRefreshRequired,
@@ -15,13 +17,55 @@ from canonicalwebteam.exceptions import (
 )
 
 
+logger = logging.getLogger(__name__)
+
+
+def _sanitize_dict(dictionary):
+    result = {}
+    for k, v in dictionary.items():
+        if isinstance(v, str):
+            result[k] = f"<len {len(v)}>"
+        else:
+            result[k] = None
+    return result
+
+
+def _loggable_request(request):
+    return {
+        "url": request.url,
+        "headers": _sanitize_dict(request.headers),
+        "cookies": _sanitize_dict(request._cookies),
+        "body": request.body,
+    }
+
+
+def _loggable_response(response):
+    return {
+        "status": response.status_code,
+        "url": response.url,
+        "headers": _sanitize_dict(response.headers),
+        "cookies": _sanitize_dict(response.cookies),
+        "text": response.text,
+    }
+
+
 class Base:
     def __init__(self, session):
         self.session = session
 
+    def log_detailed_error(self, response):
+        logger.error(
+            "Request failed",
+            extra={
+                "request": _loggable_request(response.request),
+                "response": _loggable_response(response),
+            },
+        )
+
     def process_response(self, response):
         # 5xx responses are not in JSON format
         if response.status_code >= 500:
+            self.log_detailed_error(response)
             if response.status_code == 500:
                 raise StoreApiInternalError("Internal error upstream")
             elif response.status_code == 501:
@@ -42,15 +86,20 @@ class Base:
         try:
             body = response.json()
         except ValueError as decode_error:
+            logger.error(
+                "JSON decoding failed. Response text: %s", response.text
+            )
             api_error_exception = StoreApiResponseDecodeError(
                 "JSON decoding failed: {}".format(decode_error)
             )
             raise api_error_exception
 
         if self._is_macaroon_expired(response.headers):
+            logger.error("Publisher macaroon refresh required")
             raise PublisherMacaroonRefreshRequired
 
         if not response.ok:
+            self.log_detailed_error(response)
             error_list = (
                 body["error_list"]
                 if "error_list" in body
