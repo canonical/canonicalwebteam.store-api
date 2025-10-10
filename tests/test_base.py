@@ -90,11 +90,11 @@ class TestBase(unittest.TestCase):
                     self.assertEqual(1, len(log_manager.records))
                     record_request = cast(
                         Dict[str, str],
-                        log_manager.records[0].__dict__.get("request", {})
+                        log_manager.records[0].__dict__.get("request", {}),
                     )
                     record_response = cast(
                         Dict[str, str | int],
-                        log_manager.records[0].__dict__.get("response", {})
+                        log_manager.records[0].__dict__.get("response", {}),
                     )
                     self.assertIn(expected_log, record_request["body"])
                     self.assertEqual(SAMPLE_URL, record_response["url"])
