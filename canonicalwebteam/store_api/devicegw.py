@@ -60,7 +60,7 @@ class DeviceGW(Base):
         Endpoint:  https://api.snapcraft.io/api/v1/snaps/search
         """
         url = self.get_endpoint_url("search", api_version)
-        headers = self.config[api_version].get("headers")
+        headers = self.config[api_version].get("headers", {}).copy()
 
         if "publisher:" not in search:
             search = search.replace(":", " ")
