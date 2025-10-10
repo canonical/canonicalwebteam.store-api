@@ -1,11 +1,10 @@
-from vcr_unittest import VCRTestCase
-from unittest.mock import Mock, MagicMock
+import unittest
+
 from requests import Session
 from requests.models import Response, Request
-from canonicalwebteam.store_api.base import (
-    Base,
-    logger as LOGGER,
-)
+from typing import Dict, cast
+from unittest.mock import Mock, MagicMock
+
 from canonicalwebteam.exceptions import (
     StoreApiInternalError,
     StoreApiNotImplementedError,
@@ -15,6 +14,11 @@ from canonicalwebteam.exceptions import (
     StoreApiConnectionError,
     StoreApiResponseError,
 )
+from canonicalwebteam.store_api.base import (
+    Base,
+    logger as LOGGER,
+)
+
 
 STATUS_MAPPING = {
     500: StoreApiInternalError,
@@ -24,11 +28,13 @@ STATUS_MAPPING = {
     504: StoreApiGatewayTimeoutError,
 }
 
+SAMPLE_URL = "http://www.test.com"
+
 
 def build_response(status_code: int):
     # the request is used by the logging messages
     request = Mock(spec=Request)
-    request.url = "http://www.test.com"
+    request.url = SAMPLE_URL
     request.headers = {}
     request._cookies = {}
     request.body = ""
@@ -47,10 +53,10 @@ def build_response(status_code: int):
     return response
 
 
-class BaseTest(VCRTestCase):
+class TestBase(unittest.TestCase):
     def setUp(self):
+        super().setUp()
         self.client = Base(Mock(spec=Session))
-        return super().setUp()
 
     def test_process_response_known_status(self):
         for status, exception in STATUS_MAPPING.items():
@@ -64,24 +70,35 @@ class BaseTest(VCRTestCase):
             self.client.process_response(response)
 
     def test_process_response_not_ok(self):
-        response = build_response(404)
-        with self.assertRaises(StoreApiResponseError):
+        class NonSerializableClass:
+            pass
+
+        for body, expected_log in [
+            ("test", "test"),
+            ("test".encode(), "test"),
+            # chinese characters that mean "test", encoded with "gbk"
+            (b"\xb2\xe2\xca\xd4", "<len 4>"),
+            (NonSerializableClass(), "NonSerializableClass"),
+        ]:
+            response = build_response(404)
+            response.request.body = body
+
             with self.assertLogs(logger=LOGGER) as log_manager:
-                self.client.process_response(response)
-                self.assertEqual(
-                    log_manager.records,
-                    [
-                        (
-                            "Request: {url = http://www.test.com, "
-                            "headers = {}, "
-                            "cookies = dict_items([]), body = }"
-                        ),
-                        (
-                            "Response: {status = 500, headers = {}, "
-                            "cookies = dict_items([])}"
-                        ),
-                    ],
-                )
+                try:
+                    self.client.process_response(response)
+                except StoreApiResponseError:
+                    self.assertEqual(1, len(log_manager.records))
+                    record_request = cast(
+                        Dict[str, str],
+                        log_manager.records[0].__dict__.get("request", {})
+                    )
+                    record_response = cast(
+                        Dict[str, str | int],
+                        log_manager.records[0].__dict__.get("response", {})
+                    )
+                    self.assertIn(expected_log, record_request["body"])
+                    self.assertEqual(SAMPLE_URL, record_response["url"])
+                    self.assertEqual(404, record_response["status"])
 
     def test_process_response_ok(self):
         response = build_response(200)
