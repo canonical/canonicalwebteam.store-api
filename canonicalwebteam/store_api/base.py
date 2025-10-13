@@ -30,12 +30,28 @@ def _sanitize_dict(dictionary):
     return result
 
 
+def _get_request_body(request) -> str:
+    body = request.body
+    if isinstance(body, (bytes, bytearray)):
+        # try to decode utf-8
+        try:
+            body = body.decode()
+        except UnicodeError:
+            # we don't want to guess so we just print the body's length
+            body = f"<len {len(body)}>"
+    elif not isinstance(body, str):
+        # we don't know if the type will be JSON serializable
+        # so we just print the type
+        body = f"{type(body)}"
+    return body
+
+
 def _loggable_request(request):
     return {
         "url": request.url,
         "headers": _sanitize_dict(request.headers),
         "cookies": _sanitize_dict(request._cookies),
-        "body": request.body,
+        "body": _get_request_body(request),
     }
 
 
