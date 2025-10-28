@@ -22,8 +22,8 @@ jobs:
 
           # check if the PR changes the library in any way
           echo "Changes:" $(git diff origin/main --name-only)
-          LIB_IN_DIFF=$(git diff origin/main --name-only | \
-            c1grep -E "canonicalwebteam|pyproject.toml|poetry.lock")
+          DIFF_PATTERN="canonicalwebteam|pyproject.toml|poetry.lock|README|LICENSE"
+          LIB_IN_DIFF=$(git diff origin/main --name-only | c1grep -E $DIFF_PATTERN)
           if [ -z $LIB_IN_DIFF ]; then
             echo "This PR doesn't introduce changes to the library"
             exit 0
