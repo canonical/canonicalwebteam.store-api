@@ -3,6 +3,64 @@ name: Tests
 on: pull_request
 
 jobs:
+  check-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check version
+        run: |
+          # Determine whether a version bump is needed before merging
+
+          function c1grep {
+            # ignore status code 1 when grep doesn't find a match
+            grep "$@" || test $? = 1;
+          }
+
+          # check if the PR changes the library in any way
+          echo "Changes:" $(git diff origin/main --name-only)
+          LIB_IN_DIFF=$(git diff origin/main --name-only | \
+            c1grep -E "canonicalwebteam|pyproject.toml|poetry.lock")
+          if [ -z $LIB_IN_DIFF ]; then
+            echo "This PR doesn't introduce changes to the library"
+            exit 0
+          fi
+          echo "Detected changes to library, checking if version was bumped"
+
+
+          function throw_error {
+            echo -e "::error file=pyproject.toml,title=Version bump needed::\n$@"
+            exit 1
+          }
+
+          # check if the commit includes changes to version in pyproject.toml
+          DIFF=$(git diff origin/main -- pyproject.toml | c1grep "version")
+          if [ -z $DIFF ]; then
+            throw_error \
+              "Project version in 'pyproject.toml' is the same as the currently" \
+              "released version; bump version before merging into main.\n\n" \
+              "Run 'poetry version <type>' and commit the change to this branch."
+          fi
+
+          # if version changed, make sure that it's greater than the one on main
+          CUR_VER=$(echo "$DIFF" | c1grep -e "-version" | c1grep -oe "[0-9.]*")
+          NEW_VER=$(echo "$DIFF" | c1grep -e "+version" | c1grep -oe "[0-9.]*")
+          echo "Current:" $CUR_VER "-->" "New:" $NEW_VER
+
+          function semver_to_number {
+            # transforms "x.y.z" into "x00y00z" so they can be compared as numbers
+            echo "$@" | awk -F. '{ printf("%d%03d%03d\n", $1, $2, $3); }';
+          }
+          if [ $(semver_to_number $CUR_VER) -ge $(semver_to_number $NEW_VER) ]; then
+            throw_error \
+              "Project version in 'pyproject.toml' is lower than the currently" \
+              "released one; bump version before merging into main.\n\n" \
+              "Run 'poetry version <type>' and commit the change to this branch."
+          fi
+
   build:
     runs-on: ubuntu-latest
 
