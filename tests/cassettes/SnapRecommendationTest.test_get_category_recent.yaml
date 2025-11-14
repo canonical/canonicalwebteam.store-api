@@ -1,0 +1,1026 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.5
+    method: GET
+    uri: https://recommendations.snapcraft.io/api/category/recent
+  response:
+    body:
+      string: '[{"details":{"contact":"mailto:contact@edgeiq.ai","description":"Note:
+        To use EdgeIQ Coda, an EdgeIQ Symphony subscription is required.\n\nEdgeIQ
+        Coda facilitates the efficient management of IoT devices, ensuring seamless
+        data flow and secure communication with the EdgeIQ Symphony platform. It offers
+        robust features for device monitoring, data collection, and real-time analytics,
+        making it an essential tool for edge computing solutions.\n\nEdgeIQ Coda is
+        a powerful service designed to connect, manage, and orchestrate IoT devices
+        at the edge. It supports a wide range of industrial protocols (Modbus, BacNET,
+        OPC-UA) and application protocols (Serial, D-Bus, SNMP, HTTP, TCP/UDP, etc.),
+        and can be integrated with numerous cloud services (AWS IoT Core, Azure IoT
+        Hub, GCP, Inmarsat, Orbcomm, Twilio, etc.), providing flexible workflows for
+        IoT device orchestration.\n\nThis snap package simplifies the deployment of
+        Coda on Ubuntu Core, enabling users to leverage its capabilities with minimal
+        setup effort. Whether deploying a small number of devices or managing a large-scale
+        IoT network, Coda offers the tools and functionality needed to ensure smooth
+        and reliable operations.\n\nFor more information, visit the website: \"https://www.edgeiq.ai/\".","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2024/09/EdgeIQ-BUG-Black.svg.png","last_updated":"Wed,
+        29 Oct 2025 08:18:48 GMT","license":"Proprietary","links":{"contact":["mailto:contact@edgeiq.ai"],"donations":[],"issues":["https://edgeiq.atlassian.net/servicedesk/customer/portal/3"],"source":["https://github.com/EdgeIQ/coda-snap.git"],"website":["https://www.edgeiq.ai/","https://dev.edgeiq.io/"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/09/EdgeIQ-BUG-Black.svg.png","width":512},{"height":960,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/09/EdgeIQ__Canonical-1726755486.png","width":1180},{"height":1320,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/09/Symphony_-_Unified_X-1726755486.png","width":1200},{"height":1358,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/09/Coda_Local_Admin-1726755486.png","width":2182},{"height":854,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/09/Coda_Integrations-1726769302.png","width":1432},{"height":1252,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/09/Workflow-1726769302.png","width":2026}],"name":"coda","publisher":"EdgeIQ","revision":27,"snap_id":"t7HdJLYYS2j6AfEPL8eq8xZWLZvBTMV8","summary":"EdgeIQ
+        Agent for Device Management and Workflow Orchestration","title":"coda","version":"4.1.27","website":"https://www.edgeiq.ai/"},"rank":1,"snap_id":"t7HdJLYYS2j6AfEPL8eq8xZWLZvBTMV8"},{"details":{"contact":"https://github.com//snapcrafters/discord/issues","description":"Discord
+        is the easiest way to communicate over voice, video, and text. Chat, hang
+        out, and stay close with your friends and communities.\n\nSnaps are confined,
+        as such Discord may be unable to perform some of the tasks it typically does
+        when unconfined. This may result in the system log getting spammed with apparmor
+        errors. Granting access to the system-observe interface when in the snap will
+        enable the features, and thus reduce the logging.\n\n  snap connect discord:system-observe\n\n**Authors**\n\nThis
+        snap is maintained by the Snapcrafters community, and is not necessarily endorsed
+        or officially maintained by the upstream developers.\n","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2023/10/com.discordapp.Discord_1.png","last_updated":"Tue,
+        28 Oct 2025 10:36:19 GMT","license":"Proprietary","links":{"contact":["https://github.com//snapcrafters/discord/issues"],"donations":[],"issues":["https://github.com//snapcrafters/discord/issues"],"source":["https://github.com//snapcrafters/discord"],"website":["https://discord.com/"]},"media":[{"height":128,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/10/com.discordapp.Discord_1.png","width":128},{"height":702,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/10/1_w9mjNHx.png","width":1248},{"height":702,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/10/2_nGC8n6L.png","width":1248},{"height":702,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/10/3_Uubi1ex.png","width":1248},{"height":702,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/10/4_ztrHo8d.png","width":1248},{"height":702,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/10/5_cSq3Jzb.png","width":1248}],"name":"discord","publisher":"Snapcrafters","revision":258,"snap_id":"qHVefGEBezeuCeSfTND40uoUD6GRw8BO","summary":"Chat
+        for Communities and Friends","title":"Discord","version":"0.0.113","website":"https://discord.com/"},"rank":2,"snap_id":"qHVefGEBezeuCeSfTND40uoUD6GRw8BO"},{"details":{"contact":"https://github.com/kenvandine/thrive-snap/issues","description":"An
+        evolution simulation game. Take control of your species in the environment
+        and edit your species as a whole to compete with other evolving species From
+        the lowly tidepools of your home planet, you will rise to cosmic dominance.
+        At every step, powerful creation tools and deep simulation mechanics will
+        aid your species\u2019 development. Revolutionary Games is the open-source
+        team of dedicated volunteers aiming to make Thrive a reality.","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2025/04/icon-black.png","last_updated":"Sat,
+        01 Nov 2025 15:54:52 GMT","license":"GPL-3.0+","links":{"contact":["https://github.com/kenvandine/thrive-snap/issues"],"donations":[],"issues":["https://github.com/kenvandine/thrive-snap/issues"],"source":["https://github.com/Revolutionary-Games/Thrive"],"website":["https://revolutionarygamesstudio.com/"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/04/icon-black.png","width":512},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/04/screenshot1-1743475919.png","width":1920},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/04/screenshot2-1743475919.png","width":1920},{"height":493,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/04/screenshot3-1743475919.png","width":900},{"height":493,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/04/screenshot4-1743475919.png","width":900}],"name":"thrive","publisher":"Ken
+        VanDine","revision":5,"snap_id":"bDgdDQvpw4j44JQ7H43kD0cEEiYaMxMM","summary":"An
+        evolution simulation game","title":"Thrive","version":"0.9.0","website":"https://revolutionarygamesstudio.com/"},"rank":3,"snap_id":"bDgdDQvpw4j44JQ7H43kD0cEEiYaMxMM"},{"details":{"contact":"mailto:hi@onekey.so","description":"To
+        Install:\n\nsudo snap install onekey-wallet\n\n\nTo Update:\n\nsudo snap refresh
+        onekey-wallet\n\n** Please do not install the EDGE version as it is built
+        using the latest development branch code and has not been fully tested. **\n\n---\n\nOneKey
+        is a open source project of a decentralized wallet that allows users to self-custody
+        their own digital assets, i.e. #HYOK - HODL YOUR OWN KEY.\n\n\nCROSS-CHAIN
+        SWAP\n\nBest price. Lowest slippage. Cross-chain supported.\n\n\nMULTI-CHAIN
+        SUPPORT\n\nSolana, Aptos, Near, STC, BTC, DOGE, LTC, Tron, EVM Chains (BSC,
+        ETH, Arbitrum, Avalanche, Optimism, Polygon, CELO, CRO, FTM, HECO, OEC, xDai,
+        and customized EVM Network).\n\n\nMULTI-WALLET, MULTI-ACCOUNT SUPPORT\n\nCreate
+        accounts for different Web3 sites to isolate contract risks.\n\n\nHARDWARE
+        WALLET\n\nStore your crypto safer with OneKey hardware wallet.\n\n\nWATCH
+        ADDRESSES\n\nAdd public address to watch the whales.\n\n\nACCOUNT ACTIVITY
+        NOTIFICATIONS\n\nGet notified when your account has new activities.\n\n\nBACK
+        UP WITH ONEKEY LITE\n\nBack up and restore your wallet without typing a word.\n\n---\n\nTwitter:\nhttps://twitter.com/OneKeyHQ\n\nStar
+        or create a PR to our Github Repo:\nhttps://github.com/OneKeyHQ/app-monorepo","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2025/04/onekey_icon_default_solid_green_black.png","last_updated":"Thu,
+        30 Oct 2025 19:52:22 GMT","license":"Apache-2.0","links":{"contact":["mailto:hi@onekey.so"],"donations":[],"issues":[],"source":["https://github.com/OneKeyHQ/app-monorepo"],"website":["https://onekey.so"]},"media":[{"height":1440,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/07/snapcraft-featured-banner_lsHLFZr.png","width":4320},{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/04/onekey_icon_default_solid_green_black.png","width":512},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/07/macos_1-1720798345.png","width":2880},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/07/macos_2-1720798345.png","width":2880},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/07/macos_3-1720798345.png","width":2880},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/07/macos_4-1720798345.png","width":2880},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/07/macos_5-1720798345.png","width":2880}],"name":"onekey-wallet","publisher":"OneKey","revision":2097,"snap_id":"sZpadQ0jruaWEwWqLPr4E1dJEnb8IcqA","summary":"Anti-scam.
+        Multi-chain Wallet.","title":"OneKey: Secure Crypto Wallet","version":"5.16.0","website":"https://onekey.so"},"rank":4,"snap_id":"sZpadQ0jruaWEwWqLPr4E1dJEnb8IcqA"},{"details":{"contact":"mailto:support@nordvpn.com","description":"Take
+        your online security to the next level with one of the fastest VPNs for Linux,
+        now with an easy-to-use GUI when downloaded from the Snap store. Whether you\u2019re
+        working from home or browsing over your hotel\u2019s Wi-Fi, explore the internet
+        with peace of mind.\n\n**More security**\n\n* **Secure connection.**  Without
+        encryption, your online traffic is vulnerable. NordVPN encrypts your connection
+        to stop malicious actors from potentially stealing data.   \n* **Malicious
+        domain blocker.**  Don\u2019t let misclicks take you to dangerous websites.
+        Once turned on, Threat Protection will block access to known malicious domains.\n*
+        **Kill Switch.**  Prevent leaks when you unexpectedly lose connection to NordVPN.
+        Kill Switch automatically cuts off online access until your VPN connection
+        is restored. \n* **Specialty servers.**  Get even more security from our Double
+        VPN servers. Combine the privacy of the Tor browser with extra VPN security
+        thanks to Onion Over VPN.\n\n**More privacy**\n\n* **Private online activity.**
+        Unencrypted online traffic may be observed by others, including your ISP.
+        Using NordVPN shields your online activity from prying eyes. \n* **New virtual
+        location.** Connect to a VPN server to use its IP address \u2014 and change
+        your virtual location. NordVPN offers 8,200+ VPN servers covering 165 locations.\n*
+        **Censorship bypass.** Connecting to NordVPN servers lets you avoid many common
+        censorship measures. Experience the internet with more privacy as it was meant
+        to be.\n* **Privacy-friendly practices.** NordVPN does not track your online
+        activity. Our practices have been independently verified five times to prove
+        our claims.\n\n**More convenience**\n\n* **Ad blocker.** Browse the web without
+        ads getting in your way. Turn on our Threat Protection feature for Linux to
+        block ads before they load.\n* **Easy GUI.** Switch servers, toggle options,
+        and check connection status with a few clicks \u2014 NordVPN on the Snap store
+        comes with a handy graphical interface.  \n* **Optimized for speed.** All
+        VPNs slow you down \u2014 but with NordVPN\u2019s infrastructure and revolutionary
+        NordLynx protocol (based on WireGuard\u00ae), you won\u2019t notice it.  \n*
+        **24/7 support.** Our friendly customer support team is ready to help you
+        at any time. We also have detailed guides covering every NordVPN function
+        in our Help Center. \n* **SmartPlay.** Stream paid content from home while
+        traveling with no extra steps. Simply connect to a VPN server in your country
+        and enjoy the show.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2024/03/nord-vpn-logo-snap-package-icon-for-linux-512x512.svg.png","last_updated":"Wed,
+        29 Oct 2025 11:40:07 GMT","license":"GPL-3.0","links":{"contact":["mailto:support@nordvpn.com"],"donations":[],"issues":[],"source":["https://github.com/NordSecurity/nordvpn-linux"],"website":["https://nordvpn.com"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/03/nord-vpn-logo-snap-package-icon-for-linux-512x512.svg.png","width":512},{"height":1440,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/snap-package-banner-for-linux.png","width":4320},{"height":2160,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/product-one-of-the-fastest-vpnss-for-linux-1760540252.png","width":3840},{"height":2160,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/product-safely-work-stream-and-play-online-1760540252.png","width":3840},{"height":2160,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/product-secure-vpn-servers-locations-1760540252.png","width":3840},{"height":2160,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/product-block-ads-and-malicious-websites-1760540252.png","width":3840},{"height":2160,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/product-we-are-always-ready-to-help-1760540252.png","width":3840}],"name":"nordvpn","publisher":"NordVPN","revision":51,"snap_id":"ICE3QkBGt5EeAJmjlIjOERmb4SmmuWNZ","summary":"Shield
+        your online activity and browse privately with the world\u2019s leading VPN","title":"NordVPN","version":"4.2.1","website":"https://nordvpn.com"},"rank":5,"snap_id":"ICE3QkBGt5EeAJmjlIjOERmb4SmmuWNZ"},{"details":{"contact":"https://www.gimp.org/discuss.html","description":"GIMP
+        is an acronym for GNU Image Manipulation Program. It is a freely distributed
+        program for high-end tasks such as photo retouching, image composition and
+        image authoring.\n\nIt has many capabilities. It can be used as a paint program,
+        an expert quality photo retouching program, an online batch processing system,
+        a mass production image renderer, an image format converter, etc.\n\nGIMP
+        is expandable and extensible. It is designed to be augmented with plug-ins
+        and extensions to do just about anything. The advanced scripting interface
+        allows everything from the simplest task to the most complex image manipulation
+        procedures to be easily scripted. GIMP is available for Linux, Microsoft Windows
+        and macOS.\n\n\u2755**NOTE**: users from previous versions maintained by Snapcrafters
+        (prior to 3.0.6) need to install https://github.com/canonical/gimp-plugins-gmic-snap
+        and/or https://github.com/canonical/openvino-ai-plugins-gimp-snap manually","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/gimp-logo-shadow.svg_1mt1zvq.png","last_updated":"Thu,
+        16 Oct 2025 17:59:02 GMT","license":"GPL-3.0+ AND LGPL-3.0+","links":{"contact":["https://www.gimp.org/discuss.html"],"donations":["https://www.gimp.org/donating/"],"issues":["https://gitlab.gnome.org/GNOME/gimp/issues/new"],"source":["https://gitlab.gnome.org/GNOME/gimp/"],"website":["https://www.gimp.org/"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/gimp-logo-shadow.svg_1mt1zvq.png","width":512},{"height":1280,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/503769391-2dd9f6db-4b24-466e-a1b2-a79d4a6393cf.jpg","width":3840},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/Screenshot-gimp-3.0-painting-1759941129.jpg","width":1920},{"height":1048,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/Screenshot-gimp-3.0-photo-editing-1-1759941129.jpg","width":1920},{"height":1048,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/Screenshot-gimp-3.0-photo-editing-2-1759941129.jpg","width":1920},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/Screenshot-gimp-3.0-engraving-1759941129.jpg","width":1920}],"name":"gimp","publisher":"GIMP
+        team","revision":542,"snap_id":"KDHYbyuzZukmLhiogKiUksByRhXD2gYV","summary":"Create
+        high-end images and edit photographs","title":"GNU Image Manipulation Program","version":"3.0.6","website":"https://www.gimp.org/"},"rank":6,"snap_id":"KDHYbyuzZukmLhiogKiUksByRhXD2gYV"},{"details":{"contact":"mailto:crystal@manas.tech","description":"Crystal
+        is a programming language with the following goals:\n\n* Have a syntax similar
+        to Ruby (but compatibility with it is not a goal)\n* Statically type-checked
+        but without having to specify the type of variables or method arguments.\n*
+        Be able to call C code by writing bindings to it in Crystal.\n* Have compile-time
+        evaluation and generation of code, to avoid boilerplate code.\nCompile to
+        efficient native code.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2019/06/B_Crystal_icon_copy.png","last_updated":"Tue,
+        21 Oct 2025 16:48:38 GMT","license":"Apache-2.0","links":{"contact":["mailto:crystal@manas.tech"],"donations":["https://opencollective.com/crystal-lang"],"issues":["https://github.com/crystal-lang/crystal/issues"],"source":["https://github.com/crystal-lang/crystal"],"website":["https://crystal-lang.org/"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/06/B_Crystal_icon_copy.png","width":512},{"height":954,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/06/banner-featured_FZOuZl9.png","width":2862},{"height":1420,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/06/screen1_ABjnNHM.png","width":2840},{"height":1420,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/06/screen2_hNvKUQP.png","width":2840},{"height":240,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/06/banner.png","width":1218}],"name":"crystal","publisher":"Crystal
+        Language","revision":2727,"snap_id":"hJ4PLSdMxJZPNnfQ4SHvcD0yScjupEFo","summary":"A
+        language for humans and computers","title":"Crystal","version":"1.18.2","website":"https://crystal-lang.org/"},"rank":7,"snap_id":"hJ4PLSdMxJZPNnfQ4SHvcD0yScjupEFo"},{"details":{"contact":"https://codeberg.org/forgejo/forgejo/issues/2542","description":"**Welcome
+        to Forgejo**\n\nHi there! Tired of big platforms playing monopoly? Providing
+        Git hosting for your project, friends, company or community? Forgejo (/for''d\u0361\u0292e.jo/
+        inspired by for\u011dejo \u2013 the Esperanto word for forge) has you covered
+        with its intuitive interface, light and easy hosting and a lot of builtin
+        functionality.\n\nForgejo was created in 2022 because we think that the project
+        should be owned by an independent community. If you second that, then Forgejo
+        is for you! Our promise: Independent Free/Libre Software forever!\n\n**What
+        does Forgejo offer?**\n\nIf you like any of the following, Forgejo is literally
+        meant for you:\n\n* Lightweight: Forgejo can easily be hosted on nearly every
+        machine. Running on a Raspberry? Small cloud instance? No problem!\n* Project
+        management: Besides Git hosting, Forgejo offers issues, pull requests, wikis,
+        kanban boards and much more to coordinate with your team.\n* Publishing: Have
+        something to share? Use releases to host your software for download, or use
+        the package registry to publish it for docker, npm and many other package
+        managers.\n* Customizable: Want to change your look? Change some settings?
+        There are many config switches to make Forgejo work exactly like you want.\n*
+        Powerful: Organizations & team permissions, CI integration, Code Search, LDAP,
+        OAuth and much more. If you have advanced needs, Forgejo has you covered.\n*
+        Privacy: From update checker to default settings: Forgejo is built to be privacy
+        first for you and your crew.\n* Federation: (WIP) We are actively working
+        to connect software forges with each other through ActivityPub, and create
+        a collaborative network of personal instances.\n\n**Learn more**\n\nDive into
+        the documentation, subscribe to releases and blog post on our website, find
+        us on the Fediverse or hop into our Matrix room if you have any questions
+        or want to get involved.\n\n**Get involved**\n\nIf you are interested in making
+        Forgejo better, either by reporting a bug or by changing the governance, please
+        take a look at the contribution guide.\n\n**Snap specific information**\n\nThis
+        snap is currently published as an evaluation. It is built by Alan Pope using
+        configuration hosted at this repo: https://codeberg.org/forgejo-contrib/snap\n\nSee
+        the following issue for more information: https://codeberg.org/forgejo/forgejo/issues/2542\n\n**Installation**\n\nThe
+        snap is published for 64-bit x86 and ARM architectures. It can be installed
+        on a local workstation, server, or Raspberry Pi.\n\n`snap install forgejo`\n\n**Setup**\n\nVisit
+        http://localhost:3000 to start Forgeo configuration. Use a local SQLite database
+        for the simplest configuration.","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2024/03/logo_OIroA86.png","last_updated":"Sun,
+        26 Oct 2025 16:02:18 GMT","license":"MIT","links":{"contact":["https://codeberg.org/forgejo/forgejo/issues/2542"],"donations":["https://docs.codeberg.org/improving-codeberg/donate/"],"issues":["https://codeberg.org/forgejo/forgejo/issues","https://codeberg.org/forgejo-contrib/snap/issues"],"source":["https://codeberg.org/forgejo/forgejo","https://codeberg.org/forgejo-contrib/snap"],"website":["https://forgejo.org/"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/03/logo_OIroA86.png","width":512},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/03/Screenshot_from_2024-03-16_08-34-25-1710578351.png","width":1920},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/03/Screenshot_from_2024-03-16_08-36-54-1710578351.png","width":1920},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/03/Screenshot_from_2024-03-16_08-38-53-1710578351.png","width":1920}],"name":"forgejo","publisher":"Alan
+        Pope","revision":124,"snap_id":"dIk8qKSPJZN4lergpYUdauT9NgIP1Qvj","summary":"Beyond
+        coding. We forge","title":"Forgejo","version":"v13.0.2","website":"https://forgejo.org/"},"rank":8,"snap_id":"dIk8qKSPJZN4lergpYUdauT9NgIP1Qvj"},{"details":{"contact":"https://github.com/nextcloud/nextcloud-snap","description":"Access,
+        share and protect your files, calendars, contacts, communication and\nmore
+        at home and in your enterprise.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2016/06/icon.svg_1.png","last_updated":"Tue,
+        28 Oct 2025 10:18:39 GMT","license":"AGPL-3.0+","links":{"contact":["https://github.com/nextcloud/nextcloud-snap"],"donations":[],"issues":["https://github.com/nextcloud-snap/nextcloud-snap/issues"],"source":["https://github.com/nextcloud/nextcloud-snap"],"website":["https://github.com/nextcloud/nextcloud-snap"]},"media":[{"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2016/06/icon.svg_1.png"},{"height":1440,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2020/06/Nextcloud_Hub_Snap_background_Y4FhvPp.png","width":4320},{"height":900,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2020/06/sidebar_and_new_share_dialog.png","width":1600},{"height":1440,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2020/06/talk-promoted-view.png","width":2560},{"height":1440,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2020/06/calendar.png","width":2560}],"name":"nextcloud","publisher":"Nextcloud","revision":50962,"snap_id":"njObIbGQEaVx1H4nyWxchk1i8opy4h54","summary":"Nextcloud
+        Server - A safe home for all your data","title":"nextcloud","version":"31.0.10snap1","website":"https://github.com/nextcloud/nextcloud-snap"},"rank":9,"snap_id":"njObIbGQEaVx1H4nyWxchk1i8opy4h54"},{"details":{"contact":null,"description":"Saber
+        is the notes app built for handwriting.\n\n\n\nIt''s designed to be as simple
+        and intuitive as possible, while still delivering unique features that you''ll
+        actually use. Additionally, Saber is available across all your devices, large
+        and small, and syncs between them seamlessly.\n\n\n\nNotably, it can invert
+        your notes when you''re in dark mode. This allows you to write with white
+        ink on a black background, which is much easier on the eyes in low-light environments
+        like when the teacher turns off the lights in class.\nImages and PDFs are
+        also inverted, so you can still use a digital printout or a textbook without
+        the fuss.\n\n\n\nSaber uses a dual-password system to protect your notes from
+        anyone but you, even if they have complete control over the server. You can
+        safely store your notes on the official Saber server, another server, or even
+        host your own!\n\n\n\nThe app is completely open-source so that anyone can
+        view the source code and see exactly what it''s doing and how it handles your
+        data. Many other note-taking apps are closed-source and proprietary, meaning
+        that their inner workings are a mystery to the public.\n\n\n\nAs someone who
+        studies maths, highlighting multi-line equations was always a hassle with
+        other apps, where the highlighter would change color when it overlapped with
+        itself. Another problem I had was that in some apps, the highlighter would
+        render on top of the text, fading it out and making it hard to read.\nSaber''s
+        highlighter has no such issues. It utilizes canvas compositing to render the
+        highlighter in a way that is consistent with/better than traditional paper,
+        where it handles overlaps and maintains color consistency.\n\n\n\nSaber has
+        everything you need to keep your notes organized. Create folders inside folders
+        inside folders to your heart''s content with no limit on the number of nested
+        folders. And even though a note may be buried deep within a nested folder,
+        you can still access it easily with your most recent notes always available
+        on the home screen.\n\n\n\nDiscover a whole new way to capture and organize
+        your thoughts\nwith Saber. Whether you''re a student, professional, or creative\nmind,
+        Saber is your trusted companion for digital handwriting.\nDownload now and
+        let your ideas flow freely!","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2024/09/ic_launcher-playstore.png","last_updated":"Tue,
+        28 Oct 2025 08:32:22 GMT","license":"GPL-3.0","links":{"contact":[],"donations":["https://github.com/sponsors/adil192"],"issues":["https://github.com/saber-notes/saber/issues"],"source":["https://github.com/saber-notes/saber"],"website":["https://github.com/saber-notes/saber"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/09/ic_launcher-playstore.png","width":512},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/09/1_home-1727386142.png","width":1920},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/09/2_editor-1727386142.png","width":1920},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/09/3_login-1727386142.png","width":1920},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/09/4_settings-1727386142.png","width":1920}],"name":"saber","publisher":"\u09b8\u09cc\u09ae\u09cd\u09af\u09a6\u09c0\u09aa
+        \u0998\u09cb\u09b7(Soumyadeep Ghosh)","revision":545,"snap_id":"7t0dqP9R8kn2k2gsve0k7EBo6GdukTqV","summary":"The
+        notes app built for handwriting","title":"Saber","version":"0.26.12","website":"https://github.com/saber-notes/saber"},"rank":10,"snap_id":"7t0dqP9R8kn2k2gsve0k7EBo6GdukTqV"},{"details":{"contact":"https://golangcilint.bsky.social","description":"Runs
+        linters in parallel, uses caching, supports yaml config, has\nintegrations
+        with all major IDE and has dozens of linters included.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2022/05/go.png","last_updated":"Tue,
+        04 Nov 2025 11:30:14 GMT","license":"GPL-3.0-only","links":{"contact":["https://golangcilint.bsky.social"],"donations":["https://github.com/sponsors/golangci","https://opencollective.com/golangci-lint"],"issues":["https://github.com/golangci/golangci-lint/issues/"],"source":["https://github.com/golangci/golangci-lint"],"website":["https://golangci-lint.run"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2022/05/go.png","width":512},{"height":480,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/11/banner-snap_NFuAHV6.png","width":1440}],"name":"golangci-lint","publisher":"GolangCI-Lint","revision":503,"snap_id":"Pg8yGQTH72ACwdynbfqpifrcTVCQmI2e","summary":"Fast
+        linters runner for Go","title":"golangci-lint","version":"2.6.1","website":"https://golangci-lint.run"},"rank":11,"snap_id":"Pg8yGQTH72ACwdynbfqpifrcTVCQmI2e"},{"details":{"contact":"mailto:canonical-robotics-community-group@canonical.com","description":"Rerun
+        is building the multimodal data stack to model,\ningest, store, query and
+        view robotics-style data.\nIt''s used in areas like robotics, spatial and
+        embodied AI, generative media,\nindustrial processing, simulation, security,
+        and health.\n\nRerun is easy to use!\nUse the Rerun SDK (available for C++,
+        Python and Rust) to log data like images,\ntensors, point clouds, and text.\nLogs
+        are streamed to the Rerun Viewer for live visualization or to file for later
+        use.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2025/02/rerun-icon.png","last_updated":"Wed,
+        22 Oct 2025 10:05:03 GMT","license":"Apache-2.0","links":{"contact":["mailto:canonical-robotics-community-group@canonical.com"],"donations":[],"issues":["https://github.com/ubuntu-robotics/rerun-snap/issues"],"source":["https://github.com/ubuntu-robotics/rerun-snap"],"website":["https://rerun.io/"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/02/rerun-icon.png","width":512},{"height":480,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/02/rerun2-1738944525.png","width":480},{"height":480,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/02/rerun55-1738944525.png","width":480},{"height":480,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/02/rerun3-1738944525.png","width":480},{"height":480,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/02/rerun1-1738944525.png","width":480},{"height":480,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/02/rerun4-1738944525.png","width":480}],"name":"rerun","publisher":"Ubuntu
+        Robotics Community","revision":21,"snap_id":"xL6N3EAAvT6KLINHhW4KMhLUWkQhaZuR","summary":"Visualize
+        streams of multimodal data","title":"rerun","version":"0.26.1","website":"https://rerun.io/"},"rank":12,"snap_id":"xL6N3EAAvT6KLINHhW4KMhLUWkQhaZuR"},{"details":{"contact":"https://community.brave.app/","description":"The
+        new Brave browser automatically blocks ads and trackers, making it faster
+        and safer than your current browser. This package is official.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2019/12/12301619.png","last_updated":"Thu,
+        06 Nov 2025 19:10:25 GMT","license":"MPL-2.0","links":{"contact":["https://community.brave.app/"],"donations":[],"issues":["https://github.com/brave/brave-browser/issues"],"source":["https://github.com/brave/brave-core"],"website":["https://brave.com"]},"media":[{"height":200,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/12/12301619.png","width":200},{"height":1746,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/12/Brave2.jpg","width":2738},{"height":1714,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/12/Brave1.png","width":2102}],"name":"brave","publisher":"Brave
+        Software","revision":567,"snap_id":"uE3hSmGE91m9MpbDEnUWi2vpeumH6gmv","summary":"Browse
+        faster and safer with Brave.","title":"brave","version":"1.84.135","website":"https://brave.com"},"rank":13,"snap_id":"uE3hSmGE91m9MpbDEnUWi2vpeumH6gmv"},{"details":{"contact":"https://github.com/snapcrafters/mattermost-desktop/issues","description":"Mattermost
+        is secure workplace messaging from behind your firewall.\n\n- Discuss topics
+        in private groups, one-to-one or team-wide\n- Easily share and view image
+        files\n- Connect in-house systems with webhooks and Slack-compatible integrations\n\nFor
+        technical and operations teams who execute high-stakes, collaborative workflows,\nMattermost
+        provides integrated team messaging, audio and screen share, workflow automation\nand
+        project management. Governments, banks and tech giants use our secure collaboration
+        platform\nto reduce risk and error rates while accelerating technical productivity.\n\nTo
+        use this app, you need a URL for a Mattermost server.\n\nThis snap is maintained
+        by the Snapcrafters community, and is not necessarily endorsed or\nofficially
+        maintained by the upstream developers.\n","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2025/02/mattermost-desktop.png","last_updated":"Fri,
+        31 Oct 2025 10:36:57 GMT","license":"MIT","links":{"contact":["https://github.com/snapcrafters/mattermost-desktop/issues"],"donations":[],"issues":["https://github.com/snapcrafters/mattermost-desktop/issues"],"source":["https://github.com//snapcrafters/mattermost-desktop"],"website":["https://mattermost.com/"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/02/mattermost-desktop.png","width":512},{"height":1592,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/12/146078917-e1ba8c1f-24e5-4613-8b4b-f3507422f4f2.png","width":2788},{"height":834,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/12/mattermost-open-source-unzip_M0ciZHb.png","width":1179},{"height":2159,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/12/Playbooks_Hero.png","width":3840}],"name":"mattermost-desktop","publisher":"Snapcrafters","revision":808,"snap_id":"ed0pxJoDHrgmAWHH7baX5nryAHy1UNj0","summary":"A
+        secure, flexible platform build for the new era of collaboration","title":"Mattermost
+        Desktop","version":"5.13.2","website":"https://mattermost.com/"},"rank":14,"snap_id":"ed0pxJoDHrgmAWHH7baX5nryAHy1UNj0"},{"details":{"contact":"mailto:help@standardnotes.com","description":"#
+        An end-to-end encrypted notes app for digitalists and professionals.\n\nStandard
+        Notes helps you gain control in a world that often feels out of control. Protect
+        your life''s work with end-to-end encryption, advanced security, and unmatched
+        privacy controls.\n\n## A steel vault for your most sensitive data.\n\nStandard
+        Notes protects your notes and files with 4x-audited industry-leading end-to-end
+        encryption, meaning only you have access to the keys required to decrypt your
+        information.\n\nSafely store all your sensitive data in one place and access
+        it from all your devices, resting assured that your data is always protected
+        by the highest security standards.\n\n## Write fearlessly.\n\nNote-taking
+        services like Evernote, Google Keep, Notion, and Simplenote cannot prevent
+        employees and governments from reading your data. Standard Notes features
+        advanced security measures and privacy controls that protect your data against
+        hacks, data breaches, government access, and even employee access.\n\n## Your
+        notes and files, always.\n\nNever worry about losing your data again. You''ll
+        always have an offline copy of your data, so you can access your notes and
+        files even without an internet connection. Automated backups and secure cloud
+        sync ensure that your data is safe and sound, even if your device is lost,
+        damaged, or stolen.\n\n## Take back your data.\n\nShape-shifting privacy policies
+        and unauthorized access by #BigTech and other non-encrypted services can lead
+        to leaks, doxing, financial fraud, identity theft, loss of control over your
+        information, and other existential harms to you or your business. Safeguard
+        your private data with zero-knowledge encryption and open, audited applications
+        by Standard Notes.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Blue-Rounded-512.png","last_updated":"Thu,
+        06 Nov 2025 17:02:35 GMT","license":"CC-BY-NC-SA-4.0","links":{"contact":["mailto:help@standardnotes.com"],"website":["https://standardnotes.com"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Blue-Rounded-512.png","width":512},{"height":1060,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Banner.png","width":3180},{"height":658,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Screenshot_1.png","width":1170},{"height":658,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Screenshot_2.png","width":1170},{"height":658,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Screenshot_3.png","width":1170},{"height":658,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/11/Screenshot_4.png","width":1170}],"name":"standard-notes","publisher":"Standard
+        Notes","revision":1121,"snap_id":"54zJyS09HO95Dwafu93mvAiQzFz3FAtY","summary":"Standard
+        Notes","title":"Standard Notes","version":"3.201.1","website":"https://standardnotes.com"},"rank":15,"snap_id":"54zJyS09HO95Dwafu93mvAiQzFz3FAtY"},{"details":{"contact":"https://twitter.com/code","description":"Visual
+        Studio Code is a new choice of tool that combines the\nsimplicity of a code
+        editor with what developers need for the core\nedit-build-debug cycle.\n","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2019/05/code512.png","last_updated":"Thu,
+        06 Nov 2025 05:59:45 GMT","license":"Proprietary","links":{"contact":["https://twitter.com/code"],"website":["https://code.visualstudio.com/"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/05/code512.png","width":512},{"height":520,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2018/02/home-screenshot-linux.png","width":617},{"height":421,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/03/intellisense_b.png","width":745},{"height":423,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/03/peek_b.png","width":751},{"height":420,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/03/debug_b.png","width":751},{"height":420,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/03/git_b.png","width":750}],"name":"code-insiders","publisher":"Visual
+        Studio Code","revision":2157,"snap_id":"vNVY8DiBL4e2Q8H3Xtsh71c8QSTaxBdp","summary":"Code
+        editing. Redefined.","title":"code-insiders","version":"402271f5","website":"https://code.visualstudio.com/"},"rank":16,"snap_id":"vNVY8DiBL4e2Q8H3Xtsh71c8QSTaxBdp"},{"details":{"contact":"https://lablicate.com/about/contact","description":"OpenChrom\u00ae
+        is an Open Source tool for the analysis and visualization of mass spectrometric
+        and chromatographic data developed by Lablicate GmbH.\n\nData from different
+        systems can be imported and analyzed, hence it\u2019s a vendor independent
+        software. Originally, the intention was to create a ChemStation alternative.
+        Meanwhile, it has become much more. Generally, it supports handling GC/MS,
+        GC/FID, HPLC-UV/VIS, FTIR, PCR and NMR data. Originally, OpenChrom\u00ae was
+        designed to analyze data from analytical pyrolysis, called Py-GC/MS. Thus,
+        it has a strong focus on chromatography and nominal mass spectrometry.\n\n
+        In the course of time, additional requirements have been added. More features
+        are already in the pipeline. Its strength is to handle GC/MS and GC/FID measurements.
+        Methods for peak detection, integration, identification, quantitation and
+        reporting are supported. Using internal (ISTD) and external standards (ESTD)
+        for quantitation purposes is supported as well. Additional filter help to
+        optimize the measurements and classifier calculate key values of the chromatographic
+        data and help to point out problems like shifted retention times or degraded
+        columns.\n\nDid you know that it is easy to detect and identify peaks in a
+        GC/MS file and to transfer these peaks to its corresponding GC/FID measurement
+        for quantitation purposes? In summary, the modularity of OpenChrom\u00ae allows
+        recombining the contained functionality for many different purposes. Both
+        working in target screening (TS) and non-target screening (NTS) mode is possible.
+        Therefore, the platform can be utilized for quality control purposes or for
+        the analysis of chromatographic fingerprints.\n\nWhile the base version is
+        free and mostly Open Source, Lablicate offers commercial extensions in the
+        Lablicate Marketplace. When registering an account with a university e-Mail
+        you can apply for student discounts.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2021/12/OpenChrom_Logo.svg.png","last_updated":"Fri,
+        24 Oct 2025 06:15:49 GMT","license":"EPL-2.0","links":{"contact":["https://lablicate.com/about/contact"],"donations":["https://www.paypal.me/openchrom"],"issues":["https://github.com/openchrom/openchrom-snap/issues","https://github.com/openchrom/openchrom/issues"],"source":["https://github.com/openchrom/openchrom-snap","https://github.com/openchrom/openchrom"],"website":["https://openchrom.net/"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2021/12/OpenChrom_Logo.svg.png","width":512},{"height":349,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2022/04/banner_GBqXrQW.png","width":1047},{"height":1053,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2022/04/OpenChrom_1.5.0.png","width":1920}],"name":"openchrom","publisher":"Lablicate
+        GmbH","revision":243,"snap_id":"1X2gyJLQOOa8RIJOdysy9SftRoGeB7ls","summary":"Visualization
+        and Analysis of mass spectrometric and chromatographic data.","title":"OpenChrom","version":"1.5.30","website":"https://openchrom.net/"},"rank":17,"snap_id":"1X2gyJLQOOa8RIJOdysy9SftRoGeB7ls"},{"details":{"contact":"https://github.com//snapcrafters/signal-desktop/issues","description":"**Note:
+        To use the Signal desktop app, you must first install Signal on your phone.**\n\nMillions
+        of people use Signal every day for free and instantaneous communication anywhere
+        in the world. Send and receive high-fidelity messages, participate in HD voice/video
+        calls, and explore a growing set of new features that help you stay connected.
+        Signal''s advanced privacy-preserving technology is always enabled, so you
+        can focus on sharing the moments that matter with the people who matter to
+        you.\n\n- Say anything - State-of-the-art end-to-end encryption (powered by
+        the open source Signal Protocol\u2122) keeps your conversations secure. Privacy
+        isn''t an optional mode; it''s just the way that Signal works. Every message,
+        every call, every time.\n- Go fast - Messages are delivered quickly and reliably,
+        even on slow networks. Signal is optimized to operate in the most constrained
+        environment possible.\n- Feel free - Signal is a completely independent 501c3
+        nonprofit. Development is supported by users like you. No advertisements.
+        No trackers. No kidding.\n- Be yourself - You can use your existing phone
+        number and address book to securely communicate with your friends.\n- Speak
+        up - Whether they live across town or across the ocean, Signal''s enhanced
+        audio and video quality will make your friends and family feel closer.\n-
+        Whisper in the shadows - Switch to the dark theme if you refuse to see the
+        light.\n\n**Minimize to tray**\n\nPer the request of the Signal developers,
+        this snap does not use the system tray by default. This is disabled by default
+        per the request of the Signal developers, because system tray support is not
+        stable. Set to `false`, Signal will stop when you close it and will not have
+        a system tray icon. You can enable it by running the following command.\n\n    snap
+        set signal-desktop tray-icon=true\n\n\n**Are you having issues?**\n\nLet us
+        know by creating a new issue here: https://github.com/snapcrafters/signal-desktop/issues\n\n**Authors**\n\nThis
+        snap is maintained by the Snapcrafters community, and is not necessarily endorsed
+        or officially maintained by the upstream developers.","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2025/04/icon_fxvYdrE.png","last_updated":"Thu,
+        06 Nov 2025 10:39:26 GMT","license":"AGPL-3.0-only","links":{"contact":["https://github.com//snapcrafters/signal-desktop/issues"],"issues":["https://github.com//snapcrafters/signal-desktop/issues"],"source":["https://github.com//snapcrafters/signal-desktop"],"website":["https://signal.org/"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/04/icon_fxvYdrE.png","width":512},{"height":490,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2022/09/signal-desktop-screenshot.png","width":804}],"name":"signal-desktop","publisher":"Snapcrafters","revision":843,"snap_id":"r4LxMVp7zWramXsJQAKdamxy6TAWlaDD","summary":"Speak
+        Freely - Private Messenger","title":"Signal Desktop","version":"7.78.0","website":"https://signal.org/"},"rank":18,"snap_id":"r4LxMVp7zWramXsJQAKdamxy6TAWlaDD"},{"details":{"contact":"https://anchore.com/discourse","description":"CLI
+        tool and library for generating a Software Bill of Materials from container
+        images and filesystems\n\n**Introduction**\n\nSyft is a powerful and easy-to-use
+        open-source tool for generating Software Bill of Materials (SBOMs) for container
+        images and filesystems. It provides detailed visibility into the packages
+        and dependencies in your software, helping you manage vulnerabilities, license
+        compliance, and software supply chain security.\n\nSyft development is sponsored
+        by Anchore, and is released under the Apache-2.0 License. For commercial support
+        options with Syft or Grype, please contact Anchore.\n\n**Getting Started**\n\nTo
+        generate an SBOM for a container image:\n\n   syft <image>\n\nThe above output
+        includes only software that is visible in the container (i.e., the squashed
+        representation of the image). To include software from all image layers in
+        the SBOM, regardless of its presence in the final image, provide `--scope
+        all-layers`:\n\n   syft <image> --scope all-layers\n\n**Output Formats**\n\nThe
+        output format for Syft is configurable as well using the `-o` (or `--output`)
+        option:\n\n   syft <image> -o <format>\n\nWhere the `formats` available are:\n\n*
+        syft-json: Use this to get as much information out of Syft as possible!\n*
+        syft-text: A row-oriented, human-and-machine-friendly output.\n* cyclonedx-xml:
+        A XML report conforming to the CycloneDX 1.6 specification.\n* cyclonedx-xml@1.5:
+        A XML report conforming to the CycloneDX 1.5 specification.\n* cyclonedx-json:
+        A JSON report conforming to the CycloneDX 1.6 specification.\n* cyclonedx-json@1.5:
+        A JSON report conforming to the CycloneDX 1.5 specification.\n* spdx-tag-value:
+        A tag-value formatted report conforming to the SPDX 2.3 specification.\n*
+        spdx-tag-value@2.2: A tag-value formatted report conforming to the SPDX 2.2
+        specification.\n* spdx-json: A JSON report conforming to the SPDX 2.3 JSON
+        Schema.\n* spdx-json@2.2: A JSON report conforming to the SPDX 2.2 JSON Schema.\n*
+        github-json: A JSON report conforming to GitHub''s dependency snapshot format.\n*
+        syft-table: A columnar summary (default).\n* template: Lets the user specify
+        the output format. See \"Using templates\" below.\n\nNote that flags using
+        the @ can be used for earlier versions of each specification as well.\n\n**Supported
+        Ecosystems**\n\n- Alpine (apk)\n- C (conan)\n- C++ (conan)\n- Dart (pubs)\n-
+        Debian (dpkg)\n- Dotnet (deps.json)\n- Objective-C (cocoapods)\n- Elixir (mix)\n-
+        Erlang (rebar3)\n- Go (go.mod, Go binaries)\n- Haskell (cabal, stack)\n- Java
+        (jar, ear, war, par, sar, nar, native-image)\n- JavaScript (npm, yarn)\n-
+        Jenkins Plugins (jpi, hpi)\n- Linux kernel archives (vmlinz)\n- Linux kernel
+        modules (ko)\n- Nix (outputs in /nix/store)\n- PHP (composer)\n- Python (wheel,
+        egg, poetry, requirements.txt)\n- Red Hat (rpm)\n- Ruby (gem)\n- Rust (cargo.lock)\n-
+        Swift (cocoapods, swift-package-manager)\n- Wordpress plugins\n\n**Documentation**\n\nOur
+        wiki contains further details::\n\nhttps://github.com/anchore/syft/wiki\n\nFor
+        commercial support options with Syft or Grype, please contact Anchore\n\n*This
+        prototype Syft snap is built using the configuration here: https://github.com/popey/syft-snap*","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2024/08/syft-snap.png","last_updated":"Thu,
+        06 Nov 2025 07:47:39 GMT","license":"Apache-2.0","links":{"contact":["https://anchore.com/discourse"],"donations":[],"issues":["https://github.com/anchore/syft/issues"],"source":["https://github.com/anchore/syft","https://github.com/popey/syft-snap"],"website":["https://anchore.com/opensource"]},"media":[{"height":256,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/08/syft-snap.png","width":256},{"height":709,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/09/syft-1726137810.gif","width":1121}],"name":"syft","publisher":"Alan
+        Pope","revision":179,"snap_id":"TILW1jhsuj942PzpnMLGkFPB3TT6bGlj","summary":"SBOM
+        Generator","title":"Syft - SBOM Generator","version":"v1.37.0","website":"https://anchore.com/opensource"},"rank":19,"snap_id":"TILW1jhsuj942PzpnMLGkFPB3TT6bGlj"},{"details":{"contact":"https://anchore.com/discourse","description":"A
+        vulnerability scanner for container images and filesystems. Easily install
+        the binary to try it out. Works with Syft, the powerful SBOM (software bill
+        of materials) tool for container images and filesystems.\n\n**Features**\n\nScan
+        the contents of a container image or filesystem to find known vulnerabilities.\nFind
+        vulnerabilities for major operating system packages:\n\n* Alpine\n* Amazon
+        Linux\n* BusyBox\n* CentOS\n* CBL-Mariner\n* Debian\n* Distroless\n* Oracle
+        Linux\n* Red Hat (RHEL)\n* Ubuntu\n* Wolfi\n\nFind vulnerabilities for language-specific
+        packages:\n\n* Ruby (Gems)\n* Java (JAR, WAR, EAR, JPI, HPI)\n* JavaScript
+        (NPM, Yarn)\n* Python (Egg, Wheel, Poetry, requirements.txt/setup.py files)\n*
+        Dotnet (deps.json)\n* Golang (go.mod)\n* PHP (Composer)\n* Rust (Cargo)\n*
+        Supports Docker, OCI and Singularity image formats.\n* OpenVEX support for
+        filtering and augmenting scanning results.\n\nIf you encounter an issue, please
+        let us know using the issue tracker.\n\n**Installation**\n\n   snap install
+        grype\n\n**Getting Started**\n\nTo scan for vulnerabilities in an image:\n\n   grype
+        <image>\n\nThe above command scans for vulnerabilities that are visible in
+        the container (i.e., the squashed representation of the image). To include
+        software from all image layers in the vulnerability scan, regardless of its
+        presence in the final image, provide `--scope all-layers`:\n\n   grype <image>
+        --scope all-layers\n\n**Supported sources**\n\nGrype can scan a variety of
+        sources beyond those found in Docker.\n\n   # scan a container image archive
+        (from the result of `docker image save ...`, `podman save ...`, or `skopeo
+        copy` commands)\n   grype path/to/image.tar\n\n   # scan a Singularity Image
+        Format (SIF) container\n   grype path/to/image.sif\n\n   # scan a directory\n   grype
+        dir:path/to/dir\n\nSources can be explicitly provided with a scheme:\n\n   podman:yourrepo/yourimage:tag          use
+        images from the Podman daemon\n   docker:yourrepo/yourimage:tag          use
+        images from the Docker daemon\n   docker-archive:path/to/yourimage.tar   use
+        a tarball from disk for archives created from \"docker save\"\n   oci-archive:path/to/yourimage.tar      use
+        a tarball from disk for OCI archives (from Skopeo or otherwise)\n   oci-dir:path/to/yourimage              read
+        directly from a path on disk for OCI layout directories (from Skopeo or otherwise)\n   singularity:path/to/yourimage.sif      read
+        directly from a Singularity Image Format (SIF) container on disk\n   dir:path/to/yourproject                read
+        directly from a path on disk (any directory)\n   sbom:path/to/syft.json                 read
+        Syft JSON from path on disk\n   registry:yourrepo/yourimage:tag        pull
+        image directly from a registry (no container runtime required)\n\nIf an image
+        source is not provided and cannot be detected from the given reference it
+        is assumed the image should be pulled from the Docker daemon. If docker is
+        not present, then the Podman daemon is attempted next, followed by reaching
+        out directly to the image registry last.\n\n**Output Formats**\n\nThe output
+        format for Grype is configurable as well:\n\n   grype <image> -o <format>\n\nWhere
+        the formats available are:\n\n* `table`: A columnar summary (default).\n*
+        `cyclonedx`: An XML report conforming to the CycloneDX 1.6 specification.\n*
+        `cyclonedx-json`: A JSON report conforming to the CycloneDX 1.6 specification.\n*
+        `json`: Use this to get as much information out of Grype as possible!\n* `sarif`:
+        Use this option to get a SARIF report (Static Analysis Results Interchange
+        Format)\n* `template`: Lets the user specify the output format.\n\n**Documentation**\n\nOur
+        GitHub contains further details:\n\nhttps://github.com/anchore/grype\n\nFor
+        commercial support options with Syft or Grype, please contact Anchore\n\n*This
+        prototype Grype snap is built using the configuration here: https://github.com/popey/grype-snap*","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2024/08/grype-snap.png","last_updated":"Thu,
+        06 Nov 2025 07:45:26 GMT","license":"Apache-2.0","links":{"contact":["https://anchore.com/discourse"],"donations":[],"issues":["https://github.com/anchore/grype/issues"],"source":["https://github.com/anchore/grype","https://github.com/popey/grype-snap"],"website":["https://anchore.com/opensource"]},"media":[{"height":256,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/08/grype-snap.png","width":256},{"height":1066,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/09/grype-1726137786.gif","width":1281}],"name":"grype","publisher":"Alan
+        Pope","revision":212,"snap_id":"zEyKpDb0nhEEPj2gv3n43cq4J2TqnyQL","summary":"Vulnerability
+        scanner","title":"Grype - Container Vulnerability Scanner","version":"v0.103.0","website":"https://anchore.com/opensource"},"rank":20,"snap_id":"zEyKpDb0nhEEPj2gv3n43cq4J2TqnyQL"},{"details":{"contact":"https://proton.me/support/contact","description":"Keep
+        your conversations private. Proton Mail is encrypted email from\nSwitzerland.
+        Used by millions worldwide, our email application protects your\ncommunications
+        and has everything you need to easily manage your inbox.\n\n**The Wall Street
+        Journal says:**\n\n\"Proton Mail offers encrypted email, which makes it virtually
+        impossible for\nanyone to read it except the sender and the recipient.\"\n\n**With
+        the Proton Mail desktop application, you can:**\n\n* Manage your Proton Mail
+        and Calendar from one application\n* Switch between multiple Proton Mail accounts\n*
+        Send and receive encrypted emails and attachments with ease\n* Keep your inbox
+        tidy and clean with folders, labels and with different views\n* Stay productive
+        with native desktop notifications\n* Send Password-protected Emails to anyone\n*
+        Enjoy your inbox in dark mode\n\n**Why use Proton Mail?**\n\n* Easy to use
+        -- Our all-new app has been redesigned to make it easier to\n    read, organize,
+        and write your emails.\n* Your inbox is yours -- We don''t spy on your communications
+        to show you\n    targeted ads. Your inbox, your rules.\n* Rigorous encryption
+        -- Your entire inbox is secured, on all your devices. No\n    one can read
+        your emails but you.\n* Proton is privacy, guaranteed by end-to-end and zero-access
+        encryption.\n* Unmatched protection -- We offer strong phishing, spam, and
+        spying/tracking\n    protection for all your communications.\n\n**Industry
+        Leading Security Features**\n\nMessages are stored on Proton Mail servers
+        using end-to-end encryption at all\ntimes and are transmitted securely between
+        Proton servers and user devices.\nThis largely eliminates the risk of message
+        interception.\n\n**Zero Access to Your Email Content**\n\nProton Mail''s zero
+        access architecture means that your data is encrypted in a\nway that makes
+        it inaccessible to us. Data is encrypted on the client side\nusing an encryption
+        key that Proton does not have access to. This means we\ndon''t have the technical
+        ability to decrypt your messages.\n\n**Open-Source Cryptography**\n\nProton
+        Mail''s open-source software has been thoroughly vetted by security\nexperts
+        from around the world to ensure the highest levels of protection.\nProton
+        Mail only uses secure implementations of AES, RSA, along with OpenPGP,\nwhile
+        all of the cryptographic libraries used are open source. By using\nopen-source
+        libraries, Proton Mail can guarantee that the encryption\nalgorithms used
+        do not have clandestinely built-in back doors.\n\n**Proton Mail in the press:**\n\n\"Proton
+        Mail is a Gmail-like email system which uses end-to-end encryption,\nmaking
+        it impossible for outside parties to monitor.\" _Forbes_\n\n\"A new email
+        service being developed by a group who met at MIT and CERN\npromises to bring
+        secure, encrypted email to the masses and keep sensitive\ninformation away
+        from prying eyes.\" _Huffington Post_","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2024/08/proton-mail.svg.png","last_updated":"Mon,
+        20 Oct 2025 20:56:40 GMT","license":"GPL-3.0","links":{"contact":["https://proton.me/support/contact"],"donations":[],"issues":["https://proton.me/support/contact"],"source":["https://github.com/ProtonMail/WebClients/tree/main/applications/inbox-desktop"],"website":["https://proton.me/mail","https://proton.me/calendar"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/08/proton-mail.svg.png","width":512},{"height":2016,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/Proton_Mail1-fs8-fs8-1761144770.png","width":3840},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/Mail_Linux_Ubuntu_Light-1761144770.png","width":2880},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/Calendar_Linux_Ubuntu_Light-1761144770.png","width":2880},{"height":1200,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/10/Proton_Mail_desktop_app_blog_cover2x-1761144770.png","width":2400}],"name":"proton-mail","publisher":"Proton
+        AG","revision":26,"snap_id":"F5XGUvSSJjSe4lAhh5ARLlUDoWZ4XJLY","summary":"Proton''s
+        encrypted email and calendar desktop application","title":"Proton Mail","version":"1.9.2","website":"https://proton.me/mail"},"rank":21,"snap_id":"F5XGUvSSJjSe4lAhh5ARLlUDoWZ4XJLY"},{"details":{"contact":"https://github.com/canonical/multipass/issues/new","description":"Multipass
+        is a tool to launch and manage VMs on Windows, Mac and Linux that simulates
+        a cloud environment with support for cloud-init. Get Ubuntu on-demand with
+        clean integration to your IDE and version control on your native platform.\n\nLaunch
+        an instance (by default you get the current Ubuntu LTS)\n\n   multipass launch
+        --name foo\n\nRun commands in that instance, try running bash (logout or ctrl-d
+        to quit)\n\n   multipass exec foo -- lsb_release -a\n\nPass a cloud-init metadata
+        file to an instance on launch\n\n   multipass launch -n bar --cloud-init cloud-config.yaml\n\nSee
+        your instances\n\n   multipass list\n\nStop and start instances\n\n   multipass
+        stop\n   multipass start\n\nGet help\n\n   multipass help","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2024/04/multipass-icon.png","last_updated":"Fri,
+        31 Oct 2025 06:06:22 GMT","license":"GPL-3.0 OR Proprietary","links":{"contact":["https://github.com/canonical/multipass/issues/new"],"donations":[],"issues":["https://github.com/canonical/multipass/issues/new"],"source":["https://github.com/canonical/multipass"],"website":["https://multipass.run"]},"media":[{"height":624,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/05/multipass-banner.png","width":1872},{"height":297,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/04/multipass-icon.png","width":297},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/05/Screenshot_from_2019-05-30_18-01-18.png","width":1920}],"name":"multipass","publisher":"Canonical","revision":16067,"snap_id":"mA11087v6dR3IEcQLgICQVjuvhUUBUKM","summary":"Instant
+        Ubuntu VMs","title":"Multipass","version":"1.16.1","website":"https://multipass.run"},"rank":22,"snap_id":"mA11087v6dR3IEcQLgICQVjuvhUUBUKM"},{"details":{"contact":"https://community.onlyoffice.com","description":"ONLYOFFICE
+        Desktop Editors is a free and open-source office suite pack that comprises
+        editors for text documents, spreadsheets, presentations, PDFs and PDF forms.
+        It allows you to create, view and edit office docs stored on your Windows/Linux
+        PC or Mac without an Internet connection. The suite is fully compatible with
+        Office Open XML formats: .docx, .xlsx, .pptx. \n\nThanks to the tab-based
+        user interface, you can deal with multiple files within one and the same window.
+        Multiple plugins allow adding any extra functionality you might need. Password
+        protection and digital signatures ensure a higher level of security while
+        working with files.\n\nSwitch between various interface themes to comfortably
+        work in any environment. Extend your editing capabilities by using plugins:
+        work faster with the AI helper, translate, recognize text from pictures, convert
+        your docs to Markdown, etc. \n\nAlong with offline work, it\u2019s possible
+        to connect the application to the cloud for online document collaboration.
+        Available options include ONLYOFFICE cloud, Moodle, Nextcloud, Seafile, ownCloud,
+        kDrive, and Liferay.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2024/02/asc-de-256.png","last_updated":"Wed,
+        15 Oct 2025 02:54:14 GMT","license":"AGPL-3.0","links":{"contact":["https://community.onlyoffice.com"],"donations":[],"issues":["https://github.com/ONLYOFFICE/snap-desktopeditors/issues"],"source":["https://github.com/ONLYOFFICE/snap-desktopeditors"],"website":["https://www.onlyoffice.com"]},"media":[{"height":256,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/02/asc-de-256.png","width":256},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/11/Connect_clouds-1730888467.png","width":1920},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/11/PDF-1730888467.png","width":1920},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/11/Doc-1730888467.png","width":1920},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/11/Sheets-1730888467.png","width":1920},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/11/Slides-1730888467.png","width":1920}],"name":"onlyoffice-desktopeditors","publisher":"Ascensio
+        System SIA","revision":746,"snap_id":"GSnkYLqliZYZvozVLqnU1cUESEDhTAYc","summary":"An
+        office suite that allows to create, view and edit local documents.","title":"ONLYOFFICE
+        Desktop Editors","version":"9.1.0","website":"https://www.onlyoffice.com"},"rank":23,"snap_id":"GSnkYLqliZYZvozVLqnU1cUESEDhTAYc"},{"details":{"contact":"mailto:support@waveterm.dev","description":"Wave
+        is an open-source terminal that can launch graphical widgets, controlled and
+        integrated directly with the CLI. It includes a base terminal, directory browser,
+        file previews (images, media, markdown), a graphical editor (for code/text
+        files), a web browser, and integrated AI chat.\n\nWave isn''t just another
+        terminal emulator; it''s a rethink on how terminals are built. For too long
+        there has been a disconnect between the CLI and the web. If you want fast,
+        keyboard-accessible, easy-to-write applications, you use the CLI, but if you
+        want graphical interfaces, native widgets, copy/paste, scrolling, variable
+        font sizes, then you''d have to turn to the web. Wave''s goal is to bridge
+        that gap.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2024/11/appicon-windows.png","last_updated":"Wed,
+        05 Nov 2025 01:50:02 GMT","license":"Apache-2.0","links":{"contact":["mailto:support@waveterm.dev"],"donations":[],"issues":["https://github.com/wavetermdev/waveterm/issues"],"source":["https://github.com/wavetermdev/waveterm"],"website":["https://www.waveterm.dev"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/11/appicon-windows.png","width":512},{"height":1243,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/12/Screenshot_2024-12-10_at_2.00.14PM-1734131943.png","width":1920}],"name":"waveterm","publisher":"Command
+        Line Inc","revision":142,"snap_id":"IR3FezXrr7voRlxbA4T7m9US21rCKuKu","summary":"An
+        open-source, cross-platform terminal for seamless workflows","title":"Wave
+        Terminal","version":"0.12.2","website":"https://www.waveterm.dev"},"rank":24,"snap_id":"IR3FezXrr7voRlxbA4T7m9US21rCKuKu"},{"details":{"contact":"https://forum.snapcraft.io/c/snapcraft","description":"Package,
+        distribute, and update any app for Linux and IoT.\n\nSnaps are containerised
+        software packages that are simple to create and install. They auto-update
+        and are safe to run. And because they bundle their dependencies, they work
+        on all major Linux systems without modification.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2018/04/Snapcraft-logo-bird.png","last_updated":"Thu,
+        06 Nov 2025 09:11:17 GMT","license":"GPL-3.0","links":{"contact":["https://forum.snapcraft.io/c/snapcraft"],"website":["https://github.com/snapcore/snapcraft"]},"media":[{"height":256,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2018/04/Snapcraft-logo-bird.png","width":256},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/03/shot-1.png","width":1920},{"height":240,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/03/banner_Gqg7Com.png","width":1218},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/03/featured_HG3LAVN.png","width":1920},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/03/shot-2_nxKjIUA.png","width":1920}],"name":"snapcraft","publisher":"Canonical","revision":16428,"snap_id":"vMTKRaLjnOJQetI78HjntT37VuoyssFE","summary":"easily
+        create snaps","title":"snapcraft","version":"8.13.1","website":"https://github.com/snapcore/snapcraft"},"rank":25,"snap_id":"vMTKRaLjnOJQetI78HjntT37VuoyssFE"},{"details":{"contact":null,"description":"**Libation
+        is a free, open source audible library manager**\n\n_Decrypt, backup, organize,
+        and search your audible library_\n\nIf you found this useful, tell a friend.
+        If you found this REALLY useful, you can click here to PayPal.me: https://paypal.me/MBucari\n...or
+        just tell more friends. As long as I''m maintaining this software, it will
+        remain free and open source.\n\n**Audible audiobook manager**\n\n* Import
+        library from audible, including cover art\n* Download and remove DRM from
+        all books\n* Download accompanying PDFs\n* Add tags to books for better organization\n*
+        Powerful advanced search built on the Lucene search engine\n* Customizable
+        saved filters for common searches\n* Open source\n* Supports most regions:
+        US, UK, Canada, Germany, France, Australia, Japan, India, and Spain\n* Fully
+        supported in Windows, Mac, and Linux\n\n**The bad**\n\n* Large file size\n*
+        Made by a programmer, not a designer so the goals are function rather than
+        beauty. And it shows\n\n**The Ugly**\n\n* Documentation? Yer lookin'' at it\n*
+        This is a single-developer personal passion project. Support, response, updates,
+        enhancements, bug fixes etc are as my free time allows\n* I have a full-time
+        job, a life, and a finite attention span. Therefore a lot of time can potentially
+        go by with no improvements of any kind\n\nDisclaimer: I''ve made every good-faith
+        effort to include nothing insecure, malicious, anti-privacy, or destructive.
+        That said: use at your own risk.\n\nI made this for myself and I want to share
+        it with the great programming and audible/audiobook communities which have
+        been so generous with their time and help.","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2023/12/libation_512.png","last_updated":"Tue,
+        04 Nov 2025 10:56:18 GMT","license":"GPL-3.0","links":{"contact":[],"donations":["https://paypal.me/mcrackan"],"issues":["https://github.com/rmcrackan/Libation/issues"],"source":["https://github.com/rmcrackan/Libation"],"website":["https://github.com/rmcrackan/Libation"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/12/libation_512.png","width":512},{"height":1023,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/12/Screenshot_from_2023-12-19_11-59-40_e4yhdw5.png","width":1468}],"name":"libation","publisher":"Alan
+        Pope","revision":113,"snap_id":"awqBv6DCa6zjKJ9MPyVBPfTJGZv6DraV","summary":"Liberate
+        your audio books","title":"Libation","version":"12.6.0","website":"https://github.com/rmcrackan/Libation"},"rank":26,"snap_id":"awqBv6DCa6zjKJ9MPyVBPfTJGZv6DraV"},{"details":{"contact":"mailto:packager@vivaldi.com","description":"The
+        web browser for techies and people who need a browser that helps them get
+        things done. The user interface is fully customizable, including keyboard
+        shortcuts, mouse gestures, and programmable macros.\n\n * Seize back control
+        of your tabs with features like Workspaces, Tab Stacks, and Tab Tiling.\n
+        * Stay on top of all your emails, appointments, to-dos, and news with Mail,
+        Calendar, Tasks, and Feed Reader. (Compatible with IMAP, POP3, CalDAV, and
+        Atom/RSS.)\n * Jot down ideas and inspiration with the integrated Notes manager.\n
+        * End-to-end encrypted (E2EE) sync of bookmarks, passwords, notes, and more
+        with Vivaldi for desktop, iOS, and Android.\n * Efficient built-in Tracker
+        and Ad Blocker.\n * Proton VPN.\n * Compatible with most browser extensions
+        from the Google Chrome Web Store.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2024/06/Vivaldi_Icon_Red.png","last_updated":"Wed,
+        08 Oct 2025 07:45:55 GMT","license":"Proprietary","links":{"contact":["mailto:packager@vivaldi.com"],"donations":["https://vivaldi.com/donate"],"issues":["https://help.vivaldi.com/desktop/troubleshoot/reporting-a-bug-in-vivaldi"],"source":[],"website":["https://vivaldi.com/","https://help.vivaldi.com/desktop/"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/06/Vivaldi_Icon_Red.png","width":512},{"height":240,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/10/ppp_text_only.png","width":720},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/10/Vivaldi_7-1-1730208240.png","width":1920},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/10/Feed-Folder-1730208240.png","width":1921},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/10/1920w_New-themes_Human-1730208240.png","width":1920},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/10/1920w_New-themes_Soft-Pink-1730208240.png","width":1921},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/10/1920w_New-default-theme_Settings-1730208240.png","width":1921}],"name":"vivaldi","publisher":"Vivaldi
+        Technologies","revision":301,"snap_id":"L0qubpVaz7pQaQjAbDf5RbOvfnGHTsct","summary":"A
+        Powerful. Personal. Private. web browser","title":"Vivaldi","version":"7.6.3797.63","website":"https://vivaldi.com/"},"rank":27,"snap_id":"L0qubpVaz7pQaQjAbDf5RbOvfnGHTsct"},{"details":{"contact":"https://discourse.julialang.org","description":"Julia
+        is a high level, high performance, dynamic language for technical computing.\n\nJulia
+        is **fast**: It was designed from the beginning for high performance. Julia
+        programs JIT compile to efficient native code for multiple systems and architectures
+        via LLVM.\n\nJulia is **general**: It uses multiple dispatch as a paradigm,
+        making it easy to express object oriented and functional programming patterns.
+        The standard library provides asynchronous I/O, process control, logging,
+        profiling, a package manager, and more. In addition, there is a rich ecosystem
+        of over 10,000 packages and counting across a number of domains.\n\nJulia
+        is **easy to use**: It has high level syntax and is dynamically typed, providing
+        accessibility for programmers of all backgrounds and experience levels, and
+        making it feel like a scripting language.\n\nJulia is **optionally typed**:
+        It has an extensive, flexible, and extensible type system, and type declarations
+        can be used to clarify and solidify programs. But type declarations are not
+        required for general use.\n\nJulia is **open source**: It''s free for anyone
+        to use, and the source code is publicly available under a permissive license
+        on GitHub (https://github.com/JuliaLang/julia).","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2022/08/jl.png","last_updated":"Wed,
+        05 Nov 2025 04:43:33 GMT","license":"MIT","links":{"contact":["https://discourse.julialang.org"],"website":["https://julialang.org"]},"media":[{"height":640,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/06/julia-open-graph-3-1.png","width":1920},{"height":200,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2022/08/jl.png","width":200},{"height":1036,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/06/Screen_Shot_2019-06-12_at_12.00.58_PM.png","width":1678},{"height":938,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/06/Screen_Shot_2019-06-12_at_12.04.55_PM.png","width":1078},{"height":820,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/06/Screen_Shot_2019-06-12_at_12.06.32_PM.png","width":1124}],"name":"julia","publisher":"The
+        Julia Language","revision":155,"snap_id":"41dnLjlTBED3PcRaHITMuc8EMCGwwx0W","summary":"The
+        Julia programming language","title":"julia","version":"1.12.1","website":"https://julialang.org"},"rank":28,"snap_id":"41dnLjlTBED3PcRaHITMuc8EMCGwwx0W"},{"details":{"contact":"mailto:support@coin.space","description":"Trusted
+        by over 24 million users in over 170 countries, Coin Wallet is the most popular
+        and secure cryptocurrency and bitcoin wallet.\n\nUse your Coin Wallet to easily
+        buy, sell, and swap Bitcoin (BTC), Bitcoin cash (BCH), Ethereum (ETH), Ethereum
+        Classic (ETC), Solana (SOL), Litecoin (LTC), Dogecoin (DOGE), Dash (DASH),
+        Ripple (XRP), Stellar (XLM), EOS, Monero (XMR), Binance Smart Chain (BNB),
+        Avalanche (AVAX), Cardano (ADA), Polygon (MATIC), TRON (TRX), Arbitrum One
+        (ARB), Toncoin (TON), Optimism (OP), Fantom (FTM), Sui (SUI), Base (ETH),
+        Sonic (S), and over 2000 ERC20, BEP20, ARC20, TRC20, SPL, Polygon, Arbitrum,
+        Optimism, Sui, Base, Sonic tokens or DeFi tokens!\n\nWith over $120B transacted
+        in cryptocurrency, the Coin Wallet app for Linux is the simplest, most secure
+        way to purchase and protect your bitcoin wallet and cryptocurrency.\n\n**BITCOIN
+        WALLET APP**\n\nGet started in seconds on our user-friendly cryptocurrency
+        wallet app! No registration or sign ups required to start your bitcoin wallet.
+        Easily swap, sell, hold or buy bitcoin BTC, BCH, ETH, ETC, SOL, BNB, XRP,
+        DASH, LTC, DOGE, XMR, ADA, MATIC, TRX, ARB, TON, OP, FTM, SUI, S, and other
+        cryptocurrency. Using our wallet app, you can also access Web 3 Decentralized
+        Applications (DApps) powered by Ethereum and Binance Smart Chain smart contracts!\n\n**EASILY
+        BUY BITCOIN, BITCOIN CASH, ETHEREUM**\n\nCoin Wallet makes it simple to buy
+        bitcoin and other cryptocurrency with a credit card, checking account, cash,
+        or another cryptocurrency! Trade BTC, Bitcoin cash (BCH), Ethereum (Ether
+        ETH), Binance Coin (BNB) and over 2000 popular ERC20 and BEP20 tokens instantly
+        with other cryptocurrencies or tokens in your Coin Wallet.\n\n**SECURE DIGITAL
+        WALLET**\n\nStore all your valuable cryptocurrency in one place in your pocket
+        - All cryptocurrency is protected on your own device utilizing industry-leading
+        hardware encryption. Coin Wallet provides a simple and secure wallet where
+        only you have access to your private keys and your crypto!\n\n**BITCOIN WALLET
+        SECURITY & PRIVACY**\n\nNo need to create an account or signup - Coin Wallet
+        connects directly to blockchain networks for maximum security and privacy!
+        Our server-free environment fully localizes each installed application. With
+        our wallet app, you are in total control of your privacy and crypto wallet!\n\n**FAST
+        BITCOIN WALLET APP SUPPORT**\n\nGet all your bitcoin wallet app questions
+        answered in less than 2 hours. Our global support team is ready to help everyone,
+        from first-time bitcoin wallet buyers to longtime cryptocurrency wallet holders.\n\n**DESIGNED
+        FOR WALLET BEGINNERS AND EXPERTS**\n\nThe Coin Wallet is easy for everyone,
+        from crypto wallet beginners to seasoned bitcoin wallet experts. You''ll see
+        how easy it is to swap, sell, and buy any cryptocurrency in your bitcoin wallet.
+        \n\n**CRYPTO PAYMENTS**\n\nQuickly send cryptocurrency payments to anyone,
+        anywhere in the world.\n\nFor feedback and assistance, you can reach us at
+        support@coin.space You can also find us on Twitter: @CoinAppWallet","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2021/11/android-chrome-512x512_CrH4Ymi.png","last_updated":"Mon,
+        06 Oct 2025 14:16:43 GMT","license":"MIT","links":{"contact":["mailto:support@coin.space"],"donations":[],"issues":["https://support.coin.space/hc/en-us"],"source":["https://github.com/CoinSpace/CoinSpace"],"website":["https://coin.space/"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2021/11/android-chrome-512x512_CrH4Ymi.png","width":512},{"height":1080,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/10/Featured_banner.png","width":3240},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/03/Mac_-_1-1741699398.png","width":2880},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/03/Mac_-_2-1741699398.png","width":2880},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/03/Mac_-_3-1741699398.png","width":2880},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/03/Mac_-_4-1741699398.png","width":2880},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/03/Mac_-_5-1741699398.png","width":2880}],"name":"coin","publisher":"Coin
+        Space","revision":267,"snap_id":"6ddCnpF6IWVYEe12ZQ90LaAA6JcgCZBw","summary":"Coin
+        Wallet","title":"coin","version":"6.19.0","website":"https://coin.space/"},"rank":29,"snap_id":"6ddCnpF6IWVYEe12ZQ90LaAA6JcgCZBw"},{"details":{"contact":"https://github.com/pedro-avalos/proton-pass-snap/issues","description":"NOTE:
+        This is a wrapper of the official package, but it is not verified,\naffiliated
+        with, or supported by Proton AG.\n\nFree and fully encrypted password manager
+        to keep your logins and passwords\nsafe.\n\nFree and unlimited password manager
+        to keep your login credentials safe and\nmanage them directly in your browser.\n\nGet
+        the password manager created by the former scientists who met at CERN\nbehind
+        Proton Mail, the world''s largest encrypted email provider. Proton Pass\nis
+        open-source, end-to-end encrypted, and protected by Swiss privacy laws.\n\nPass
+        offers more than other free password managers and has no ads or data\ncollection.
+        You can use it for free forever on all your devices to create and\nstore unlimited
+        passwords, autofill logins, generate 2FA codes, create email\naliases, secure
+        your notes, and more.\n\n**Protect your logins and their metadata with battle-tested
+        end-to-end encryption**\n\nWhile many other password managers only encrypt
+        your password, Proton Pass\nuses end-to-end encryption on all your stored
+        login details (including your\nusername, the website address, and more).\n\n**Audit
+        Pass''s open-source code**\n\nLike all other Proton services, Pass is open
+        source and built on the principle\nof trust through transparency. As scientists,
+        we know that transparency and\npeer review lead to better security. All Proton
+        Pass apps are open source,\nmeaning anyone can verify our security claims
+        for themselves.\n\n**How can Proton Pass be free forever?**\n\nWe offer Pass
+        for free because everyone deserves online privacy and security.\nThis is possible
+        thanks to our supportive community on paid plans. If you\nwould like to support
+        our work and get access to premium features, consider\nupgrading your plan.\n\n**Protect
+        more than just your passwords.**\n\nJoin over 100 million people who have
+        signed up for Proton''s privacy\necosystem, which includes Proton Mail, Proton
+        Drive, Proton Calendar, Proton\nVPN, and more. Take back control of your privacy
+        online with our encrypted\nemail, calendar, file storage, and VPN.\n\n**With
+        Proton Pass, you can:**\n\n* Store and auto-sync unlimited logins on unlimited
+        devices: You can create,\n  store, and manage your credentials from anywhere
+        with our browser extension\n  and apps for Android and iPhone.\n* Sign in
+        faster with Proton Pass autofill: You no longer need to copy and\n  paste
+        your username and password. Easily and securely log in with Proton\n  Pass
+        autofill technology.\n* Avoid weak passwords: With our built-in secure password
+        generator, you can\n  easily generate strong, unique, and random passwords
+        based on the security\n  requirements for every website you sign up to.\n*
+        Safely store encrypted notes: You can save private notes in Pass and access\n  them
+        on all your devices.\n* Create unique email addresses with hide-my-email aliases:
+        Proton Pass helps\n  you hide your personal email address with email aliases.
+        Keep spam out of\n  your inbox, avoid being tracked everywhere, and protect
+        yourself from data\n  breaches.\n* Make 2FA easy with our built-in authenticator:
+        With Pass''s integrated 2FA\n  authenticator, using 2FA is finally fast and
+        convenient. Easily add a 2FA\n  code for any website and use it when you log
+        in.\n* Easily organize and share your sensitive data with vaults (paid feature):\n  Manage
+        your logins, secure notes, and email aliases with vaults. In the next\n  version
+        of Pass, you''ll be able to share vaults with your family, friends,\n  or
+        colleagues.\n* Quick offline access to your login data: Access your stored
+        passwords and\n  notes in Pass from wherever you are, even when you don''t
+        have internet\n  connection.\n* Secure your Pass account with additional security
+        measures: Protect all your\n  data with another layer of protection, either
+        with TOTP or U2F/FIDO2\n  security keys.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2024/08/proton-pass.svg.png","last_updated":"Mon,
+        27 Oct 2025 10:39:29 GMT","license":"GPL-3.0","links":{"contact":["https://github.com/pedro-avalos/proton-pass-snap/issues"],"donations":[],"issues":["https://github.com/pedro-avalos/proton-pass-snap/issues"],"source":["https://github.com/ProtonMail/WebClients"],"website":["https://proton.me/pass"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/08/proton-pass.svg.png","width":512},{"height":815,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/08/screenshot-1723323505.png","width":1258},{"height":815,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/08/screenshot-1-1723323505.png","width":1258}],"name":"proton-pass","publisher":"Proton
+        AG","revision":42,"snap_id":"ZB99pF6D7Ab3yvisYm2WL3Z2ev2iv68V","summary":"Proton
+        Pass desktop application.","title":"Proton Pass","version":"1.32.11","website":"https://proton.me/pass"},"rank":30,"snap_id":"ZB99pF6D7Ab3yvisYm2WL3Z2ev2iv68V"},{"details":{"contact":"https://github.com/Miriway/Miriway/discussions","description":"Miriway
+        isn\u2019t a full featured desktop environment by itself, but it could be\nused
+        to build one. To provide a starting point here are some setup scripts:  \n\n*
+        /snap/miriway/current/example-configs/LXQT.bash\n* /snap/miriway/current/example-configs/MATE.bash\n*
+        /snap/miriway/current/example-configs/SWAY.bash\n* /snap/miriway/current/example-configs/XFCE.bash\n*
+        /snap/miriway/current/example-configs/alan_g.bash\n\nThese are provided on
+        a \"best effort\" basis as they rely on the current level \nof Wayland support
+        from the corresponding components on the host OS. \n\nMiriway is based on
+        Mir: https://mir-server.io/\n","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2023/08/miriway-cat.png","last_updated":"Sat,
+        01 Nov 2025 16:30:27 GMT","license":"GPL-3.0","links":{"contact":["https://github.com/Miriway/Miriway/discussions","https://matrix.to/#/#miriway:matrix.org"],"issues":["https://github.com/Miriway/Miriway/issues"],"source":["https://github.com/Miriway/Miriway"],"website":["https://github.com/Miriway"]},"media":[{"height":273,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/08/miriway-cat.png","width":273},{"height":1440,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/05/miriway.png","width":2560}],"name":"miriway","publisher":"Alan
+        Griffiths","revision":12843,"snap_id":"uBx4uAXBtr7QVoKdvl6Zf7Tthxvzo6y8","summary":"Miriway:
+        a graphical shell to configure for your desktop environment","title":"miriway","version":"25.12-mir2.23.0","website":"https://github.com/Miriway"},"rank":31,"snap_id":"uBx4uAXBtr7QVoKdvl6Zf7Tthxvzo6y8"},{"details":{"contact":"mailto:linux@bluemail.me","description":"BlueMail
+        is the beautifully designed, powerful email and calendar app trusted by millions
+        worldwide on Linux, Windows, macOS, iOS and Android. With enterprise-grade
+        security, smart AI tools and exceptional usability, BlueMail delivers the
+        ultimate email experience to your Linux desktop.\n\n\n**Key Email & Productivity
+        Features**\n\n\ud83d\udce7 **Unified Email Inbox**\n\n* Seamlessly manage
+        unlimited email accounts from providers like Gmail, Outlook, Yahoo, iCloud,
+        Exchange (EWS/EAS), Office 365, IMAP, POP3 and SMTP, all in one intuitive
+        app.\n* **Instant push email notifications ensure you never miss important
+        messages.**\n\n\ud83d\ude80 **AI-Enhanced Email Productivity**\n\n* **GemAI
+        Tools**: Summarize long email threads and draft intelligent email responses,
+        saving you time and effort.\n* **Ask GemAI**: Next level AI. Ask GemAI in
+        any email or conversation. Everyone gets an answer.\n* Smarter email organization
+        with AI-powered suggestions for sorting and managing your inbox.\n\n\ud83d\udcc5
+        **Integrated Calendar**\n\n* Direct integration with CalDAV and Exchange calendars
+        lets you easily create, view, edit and respond to events right from your inbox.\n*
+        Stay organized with built-in RSVP reminders, event notifications and calendar
+        syncing across all your devices.\n\n\ud83d\udd16 **Smart Email Management**\n*
+        **Clusters**: Organize emails automatically by sender, topic, or groups for
+        a clutter-free inbox.\n* **People-Centric Inbox**: Quickly identify and prioritize
+        important emails based on contacts and frequent senders.\n* **Task Board (\u201cLater\u201d)**:
+        Snooze emails or set reminders for follow-up tasks, ensuring you never overlook
+        important messages.\n\n\ud83d\udce4 **Email Sharing & Collaboration**\n\n*
+        Easily share email conversations with co-access links and manage group emails
+        seamlessly.\n* Simplify team communication and collaboration right from your
+        inbox.\n\n\ud83d\udd12 **Privacy & Security at the Core**\n\n* **Direct connection**
+        to mail servers: no email proxies, no scanning.\n* Built-in encryption, robust
+        spam filtering, secure push notifications and full privacy compliance ensure
+        your data stays protected.\n\n\ud83c\udfa8 **Customization & Flexibility**\n\n*
+        Personalize your email experience with customizable themes, layouts, quick
+        actions and signatures.\n* Extensive search capabilities across multiple email
+        accounts, lightning-fast with powerful filtering options.\n\n\ud83c\udf1f
+        **Cross-Platform Continuity**\n\n* Enjoy consistent email and calendar experiences
+        on Linux and seamlessly sync your settings, accounts and preferences across
+        mobile and desktop devices.\n\n\ud83c\udfaf **Perfect For**\n\n* Linux users
+        managing multiple email accounts who need streamlined, powerful email workflows.\n*
+        Professionals requiring integrated email and calendar solutions for better
+        productivity.\n* Privacy-conscious individuals looking for secure, direct
+        mail server connections.\n* Anyone wanting a smarter, faster email experience
+        enhanced by cutting-edge AI tools.\n\n**Experience BlueMail on Linux and revolutionize
+        the way you manage email.**","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2019/09/BlueMail-App-icon.png","last_updated":"Wed,
+        22 Oct 2025 07:55:31 GMT","license":"Proprietary","links":{"contact":["mailto:linux@bluemail.me"],"website":["https://bluemail.me"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/09/BlueMail-App-icon.png","width":512},{"height":640,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/09/Banner.png","width":1920},{"height":900,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2022/06/image_2022-06-17_19-01-54.png","width":1440},{"height":900,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2022/06/image_2022-06-17_19-01-54_1.png","width":1440},{"height":900,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2022/06/image_2022-06-17_19-01-54_2.png","width":1440},{"height":900,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2022/06/image_2022-06-17_19-01-55.png","width":1440},{"height":900,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2022/06/image_2022-06-17_19-01-55_1.png","width":1440}],"name":"bluemail","publisher":"Blix
+        Inc.","revision":188,"snap_id":"ZVlj0qw0GOFd5JgTfL8kk2Y5eIG1IpiH","summary":"BlueMail
+        - The Ultimate Cross-Platform Email & Calendar Experience Secure \u2022 Unified
+        \u2022 Smart \u2022 AI\u2011Enhanced \u2022 Unlimited Accounts","title":"BlueMail
+        - Email & Calendar","version":"1.140.105","website":"https://bluemail.me"},"rank":32,"snap_id":"ZVlj0qw0GOFd5JgTfL8kk2Y5eIG1IpiH"},{"details":{"contact":"https://github.com/maxiberta/moonlight-snap/issues","description":"Moonlight
+        can stream games and other applications from a PC with Sunshine or GeForce
+        Experience software installed.\n\nFeatures include:\n* Hardware accelerated
+        video decoding with VAAPI, VDPAU, and NVDEC support\n* H.264, HEVC, and AV1
+        codec support\n* 7.1 surround sound audio support\n* 10-point multitouch support\n*
+        Gamepad support with force feedback for up to 16 players\n* Support for both
+        pointer capture (for games) and direct mouse control (for remote desktop)\n*
+        Support for passing system-wide keyboard shortcuts like Alt+Tab to the host","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2018/12/moonlight.png","last_updated":"Fri,
+        31 Oct 2025 14:06:17 GMT","license":"GPL-3.0+","links":{"contact":["https://github.com/maxiberta/moonlight-snap/issues"],"website":["https://github.com/maxiberta/moonlight-snap"]},"media":[{"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2018/12/moonlight.png"},{"height":720,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2020/05/topshelf-wide1.png","width":2160},{"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2018/12/moonlight_screenshot_3.png"},{"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/01/moonlight_screenshot_2.png"},{"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/01/moonlight_screenshot_1_oum3vKW.png"}],"name":"moonlight","publisher":"Maximiliano
+        Bertacchini \u272a","revision":2718,"snap_id":"I0j9pDLWv9Sr1reqhjuLJyr8WVhGkAb9","summary":"Stream
+        games and other applications from another PC running Sunshine or GeForce Experience","title":"moonlight","version":"6.1.0","website":"https://github.com/maxiberta/moonlight-snap"},"rank":33,"snap_id":"I0j9pDLWv9Sr1reqhjuLJyr8WVhGkAb9"},{"details":{"contact":"https://www.thunderbird.net/contact/","description":"Thunderbird
+        is a free email application that\u2019s easy to set up and customize - and
+        it\u2019s loaded with great features!","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2023/10/thunderbird.png","last_updated":"Thu,
+        23 Oct 2025 17:35:34 GMT","license":"MPL-2.0","links":{"contact":["https://www.thunderbird.net/contact/"],"donations":["https://www.thunderbird.net/donate/"],"issues":["https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird&op_sys=Linux&keywords=snap"],"source":[],"website":["https://www.thunderbird.net/"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/10/thunderbird.png","width":512},{"height":2160,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/07/128_-_Dark2x-1721080472.png","width":3840},{"height":2160,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/07/128_-_Light2x-1721080472.png","width":3840}],"name":"thunderbird","publisher":"Canonical","revision":846,"snap_id":"k1Ml1O9GzSO2QftV0ZlWSbUfQ78nN460","summary":"Mozilla
+        Thunderbird email application","title":"thunderbird","version":"140.4.0esr-1","website":"https://www.thunderbird.net/"},"rank":34,"snap_id":"k1Ml1O9GzSO2QftV0ZlWSbUfQ78nN460"},{"details":{"contact":"https://github.com/canonical/mesa-2404","description":"A
+        content snap containing the mesa libraries and drivers for `base: core24`
+        snaps.\n\nIt supports a broad range of hardware through the Mesa stack as
+        well as Nvidia\ndrivers installed from your distribution through the native
+        SnapD support.\n\nTo make use of this snap in your application, allowing for
+        GPU acceleration on\na broader set of hardware without including the drivers
+        in your snap, refer to the\ndocumentation below:\n\nhttps://mir-server.io/docs/the-gpu-2404-snap-interface\n\n_Note:
+        On some, typically desktop, systems SnapD supports loading Nvidia drivers
+        installed on the host. mesa-2404 is compatible with this._","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2024/04/logo_bO5tj2X.png","last_updated":"Mon,
+        03 Nov 2025 05:37:38 GMT","license":"MIT","links":{"contact":["https://github.com/canonical/mesa-2404","https://matrix.to/#/#mir-server:matrix.org"],"donations":[],"issues":["https://github.com/canonical/mesa-2404/issues"],"source":["https://github.com/canonical/mesa-2404"],"website":["https://mesa3d.org/"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/04/logo_bO5tj2X.png","width":512}],"name":"mesa-2404","publisher":"Canonical","revision":1165,"snap_id":"HyhSEBPv3vHsW6uOHkQR384NgI7S6zpj","summary":"Mesa
+        libraries for core24 snaps","title":"mesa-2404","version":"25.0.7-snap211","website":"https://mesa3d.org/"},"rank":35,"snap_id":"HyhSEBPv3vHsW6uOHkQR384NgI7S6zpj"},{"details":{"contact":"https://github.com/AdguardTeam/AdGuardHome","description":"AdGuard
+        Home is a network-wide software for blocking ads & tracking. After\nyou set
+        it up, it''ll cover ALL your home devices, and you don''t need any\nclient-side
+        software for that.\n\nIt operates as a DNS server that re-routes tracking
+        domains to a \"black hole,\"\nthus preventing your devices from connecting
+        to those servers. It''s based\non software we use for our public AdGuard DNS
+        servers -- both share a lot\nof common code.\n\nIMPORTANT: \n1. Once it''s
+        installed, open http://127.0.0.1:3000/ in your browser to do the initial setup
+        and learn how to configure your devices to use AdGuard Home. You don''t need
+        to Launch anything explicitly, AdGuard Home service is already started after
+        the installation.\n2. If you''re running it on Ubuntu, you may need to select
+        a different \"Listen interface\" for the DNS server. Listening to all interfaces
+        is not possible because Ubuntu''s systemd-resolved service uses 127.0.0.1:53
+        already.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2020/04/256.png","last_updated":"Thu,
+        30 Oct 2025 15:34:26 GMT","license":"GPL-3.0","links":{"contact":["https://github.com/AdguardTeam/AdGuardHome"],"website":["https://adguard.com/"]},"media":[{"height":256,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2020/04/256.png","width":256},{"height":640,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2020/04/1_1_L6wlYts.png","width":1920},{"height":1366,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2020/04/agh1_Y8qX5Jf.png","width":2220},{"height":1370,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2020/04/agh2_BF6Xfj2.png","width":2220},{"height":1366,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2020/04/agh3_2Zqhv3A.png","width":2220}],"name":"adguard-home","publisher":"AdGuard","revision":8632,"snap_id":"UXZIkJfJT2SPCGejjnSjOBqJ71yHk8bw","summary":"Network-wide
+        ads & trackers blocking DNS server","title":"AdGuard Home","version":"v0.107.69","website":"https://adguard.com/"},"rank":36,"snap_id":"UXZIkJfJT2SPCGejjnSjOBqJ71yHk8bw"},{"details":{"contact":"https://console.aws.amazon.com/support","description":"The
+        AWS CLI is an open source tool built on top of the AWS SDK for Python (Boto)
+        that provides commands for interacting with AWS services. With minimal configuration,
+        you can start using all of the functionality provided by the AWS Management
+        Console from your favorite terminal program.\n\nThe official documentation
+        can be found here: https://aws.amazon.com/cli/\n\nTo install the latest v2:
+        `snap install aws-cli --classic`\n\nTo install the latest available v1 snap:
+        `snap install aws-cli --channel=v1/stable --classic`\n\nTo migrate from v1
+        to v2: see:\n- migration guide: https://docs.aws.amazon.com/cli/latest/userguide/cliv2-migration-changes.html
+        \n- breaking changes: https://docs.aws.amazon.com/cli/latest/userguide/cliv2-migration-changes.html#cliv2-migration-changes-breaking\n\nThe
+        \"latest\" track is not the default and is not recommended. It will be updated
+        from v1 to v2 in the future.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2023/04/aws-cli_2s5c04y.png","last_updated":"Thu,
+        06 Nov 2025 01:05:03 GMT","license":"Apache-2.0","links":{"contact":["https://console.aws.amazon.com/support"],"donations":[],"issues":[],"source":["https://github.com/aws/aws-cli"],"website":["https://github.com/aws/aws-cli","https://aws.amazon.com/cli/"]},"media":[{"height":40,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/04/aws-cli_2s5c04y.png","width":40},{"height":586,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2017/06/Screen_Shot_2017-06-07_at_8.16.09_AM.png","width":1204}],"name":"aws-cli","publisher":"Amazon
+        Web Services","revision":1705,"snap_id":"CRrJViJiSuDcCkU31G0xpNRVNaj4P960","summary":"Universal
+        Command Line Interface for Amazon Web Services","title":"aws-cli","version":"1.42.67","website":"https://github.com/aws/aws-cli"},"rank":37,"snap_id":"CRrJViJiSuDcCkU31G0xpNRVNaj4P960"},{"details":{"contact":"mailto:support@authzed.com","description":"**What
+        is SpiceDB?**\n\nSpiceDB is a graph database purpose-built for storing and
+        evaluating access control data.\n\nAs of 2021, broken access control became
+        the #1 threat to the web\u00b9. With SpiceDB, developers finally have the
+        solution to stopping this threat the same way as the hyperscalers.\n\n**Why
+        SpiceDB?**\n\n- World-class engineering\u00b2: painstakingly built by experts
+        that pioneered the cloud-native ecosystem\n- Authentic design\u00b3: mature
+        and feature-complete implementation of Google''s Zanzibar paper\n- Proven
+        in production\u2074: 5ms p95 when scaled to millions of queries/s, billions
+        of relationships\n- Global consistency\u2075: consistency configured per-request
+        unlocks correctness while maintaining performance\n- Multi-paradigm\u2076:
+        caveated relationships combine the best concepts in authorization: ABAC &
+        ReBAC\n- Safety in tooling\u2077: designs schemas with real-time validation
+        or validate in your CI/CD workflow\n- Reverse Indexes\u2078: queries for \"What
+        can `subject` do?\", \"Who can access `resource`?\"\n\n\n**Foot Notes**\n\n1.
+        https://owasp.org/Top10/A01_2021-Broken_Access_Control/\n2. https://authzed.com/why-authzed\n3.
+        https://authzed.com/zanzibar\n4. https://authzed.com/blog/google-scale-authorization\n5.
+        https://authzed.com/docs/spicedb/concepts/consistency\n6. https://netflixtechblog.com/abac-on-spicedb-enabling-netflixs-complex-identity-types-c118f374fa89\n7.
+        https://authzed.com/docs/spicedb/modeling/validation-testing-debugging\n8.
+        https://authzed.com/docs/spicedb/getting-started/faq#what-is-a-reverse-index","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2024/03/github_logo.png","last_updated":"Mon,
+        27 Oct 2025 19:48:04 GMT","license":"Apache-2.0","links":{"contact":["mailto:support@authzed.com","mailto:security@authzed.com"],"donations":[],"issues":["https://github.com/authzed/spicedb/issues"],"source":["https://github.com/authzed/spicedb"],"website":["https://authzed.com","https://discord.gg/spicedb","https://www.youtube.com/@authzed"]},"media":[{"height":460,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/03/github_logo.png","width":460},{"height":540,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/04/header.png","width":1620}],"name":"spicedb","publisher":"authzed","revision":58,"snap_id":"8hBuLy1MK3G5nxRdbQP4DM2QGr5ELflZ","summary":"Open
+        Source, Google Zanzibar-inspired permissions database to enable fine-grained
+        access control for customer applications","title":"spicedb","version":"1.46.2","website":"https://authzed.com"},"rank":38,"snap_id":"8hBuLy1MK3G5nxRdbQP4DM2QGr5ELflZ"},{"details":{"contact":"mailto:soumyadeepghosh2004+whatsup@zohomail.in","description":"\"Whatsup\"
+        is a desktop client for WhatsApp designed to integrate with the KDE Plasma
+        desktop environment. It acts as a \"wrapper\" for the web version of WhatsApp,
+        providing a more native-like experience for users on Linux.\n","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2025/08/icon.svg_lFv0VRt.png","last_updated":"Thu,
+        02 Oct 2025 08:19:31 GMT","license":"GPL-3.0-or-later","links":{"contact":["mailto:soumyadeepghosh2004+whatsup@zohomail.in"],"donations":["http://github.com/soumyaDghosh/sponsors"],"issues":["https://invent.kde.org/soumyadghosh/whatsup/-/issues"],"source":["https://invent.kde.org/soumyadghosh/whatsup"],"website":["https://invent.kde.org/soumyadghosh/whatsup"]},"media":[{"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/08/icon.svg_lFv0VRt.png"},{"height":976,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/08/whatsup-with-expanded-side-bar-1755685261.png","width":1271},{"height":976,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/08/whatsup-main-window-1755685261.png","width":1271},{"height":976,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/08/whatsup-settings-page-1755685261.png","width":1271},{"height":976,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/08/whatsup-asking-for-permission-1755685261.png","width":1271}],"name":"whatsup","publisher":"\u09b8\u09cc\u09ae\u09cd\u09af\u09a6\u09c0\u09aa
+        \u0998\u09cb\u09b7(Soumyadeep Ghosh)","revision":8,"snap_id":"hqnyKfYtmRqlZF7aerSlp9t3bUSQh1ZF","summary":"A
+        WhatsApp wrapper using QtWebEngine, and Kirigami","title":"WhatsUp","version":"0.1","website":"https://invent.kde.org/soumyadghosh/whatsup"},"rank":39,"snap_id":"hqnyKfYtmRqlZF7aerSlp9t3bUSQh1ZF"},{"details":{"contact":null,"description":"Defold
+        comes fully featured out of the box. There''s nothing to set up or configure,
+        not even when building. Simply download the editor and get creative!\n\n**No
+        setup**\n\n    \u2713 Visual Editor          \u2713 Scene Editor\n    \u2713
+        Code Editor            \u2713 Particle Editor\n    \u2713 Lua Scripting          \u2713
+        Tilemap Editor\n    \u2713 Lua Debugger           \u2713 2D & 3D\n**Truly
+        cross-platform**\n\n    \u2713 PlayStation\u00ae4          \u2713 Windows\n    \u2713
+        Nintendo Switch        \u2713 Steam\n    \u2713 Android                \u2713
+        HTML5\n    \u2713 iOS                    \u2713 Facebook\n    \u2713 macOS                  \u2713
+        Q3 2023 PlayStation\u00ae5\n    \u2713 Linux                  \u2713 Q2 2024
+        XBox\n**Turn-key solution**\n\n    \u2713 Use basic building blocks to create
+        complex behaviour.\n    \u2713 Everything you need to make a game in one tool\n    \u2713
+        Write game logic using Lua.\n    \u2713 Zero-config cloud build for native
+        code\n**Custom configuration**\n\n    \u2713 Add new functionality from the
+        Asset Portal.\n    \u2713 Setup your own local build environment.\n    \u2713
+        Write your own native code to extend the engine.\n    \u2713 Integrated with
+        tools such as Atom, VS Code, Spine and Tiled.\n**Free. Forever.**\n\n    \u2713
+        No up-front cost.\n    \u2713 No licensing cost.\n    \u2713 No royalties.\n    \u2713
+        No runtime fee.\n    \u2713 Free forever. Thanks to the objectives of the
+        Defold Foundation \n**Production ready**\n\n    \u2713 Proven track record
+        of game releases on mobile, web, desktop and consoles. \n    \u2713 Integrations
+        with analytics, app economy and game services available out of the box.\n    \u2713
+        Actively developed, with a new release every month.\n    \u2713 Technical
+        support contracts available if needed. \n\n* Defold foundation: https://defold.com/foundation\n*
+        Showcase: https://defold.com/showcase\n* Support: https://defold.com/support\n*
+        License: https://www.defold.com/license\n\nThis is an unofficial package.\n\nLicensed
+        under the Defold License.","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2023/11/defold.png","last_updated":"Wed,
+        08 Oct 2025 16:24:37 GMT","license":"unset","links":{"contact":[],"donations":["https://defold.com/donate/"],"issues":["https://github.com/popey/defold-snap/issues"],"source":["https://github.com/defold/defold"],"website":["https://defold.com/"]},"media":[{"height":480,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/11/familyisland-50.png","width":1440},{"height":200,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/11/defold.png","width":200},{"height":1050,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/11/ss_0b2cb861c92ad6a74380b6e65def1179909d45fc.jpg","width":1920},{"height":985,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/11/ss_c2a33ae2861ba0305e34d41af0b831d2876b8969.jpg","width":1917},{"height":1080,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/11/ss_3ae4e3e717205118bb73b2af7f144693de6e3ae7.jpg","width":1920},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/11/ss_c261a28018c812ec4c09a9677362108fd6fa273b.jpg","width":2880},{"height":900,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/11/ss_17c433a3362b8525c740c49e3efe902e044eff83.jpg","width":1602}],"name":"defold","publisher":"Alan
+        Pope","revision":32,"snap_id":"xpzdPdX5jAivuexJTQxUqMeGdA5s8sx5","summary":"The
+        game engine for high-performance cross-platform games","title":"Defold","version":"1.11.1","website":"https://defold.com/"},"rank":40,"snap_id":"xpzdPdX5jAivuexJTQxUqMeGdA5s8sx5"},{"details":{"contact":"mailto:support@domotz.com","description":"**Domotz
+        Network Monitoring and Management**\n\nDomotz is a cloud-based platform that
+        helps you discover, monitor, and\nmanage your network and connected devices
+        without overspending. With\nfull-context visibility and powerful management
+        tools, Domotz helps you\neliminate blind spots, resolve issues faster, and
+        exceed service\nexpectations.\n\n**Subscription Requirement**\\\nDomotz requires
+        a subscription as described at\nhttp://www.domotz.com/. View transparent pricing
+        at\nhttp://www.domotz.com/pricing.\n\n**Why Domotz?**\n\nToday''s networks
+        are complex, distributed, and packed with connected\ndevices. Without proper
+        monitoring, IT teams are left reacting to\nissues, wasting time troubleshooting
+        blind spots, and putting out fires.\n\nDomotz gives you complete visibility
+        into every device and connection.\nWith features like real-time alerts, remote
+        access, and visual network\ntopology, you can quickly identify and resolve
+        problems, often before\nanyone notices.\n\nSpend less time in crisis mode
+        and more time ensuring stability and\nsatisfaction.\n\n**Try Domotz for free
+        and access the full feature set:**\n\n- **Device Discovery & Inventory**\\\n  Automatically
+        identifies all connected devices and builds a\n  comprehensive inventory.\n-
+        **Network Topology Mapping**\\\n  Visualizes how devices are connected for
+        easier navigation and faster\n  troubleshooting.\n- **Real-Time Alerts**\\\n  Notifies
+        you when devices go offline, new ones connect, or performance\n  degrades.\n-
+        **Remote Access**\\\n  Securely connect to devices using HTTP, SSH, RDP, Telnet---no
+        open\n  ports needed.\n- **Power Management**\\\n  Power cycle devices remotely
+        using PoE switches, PDUs, or Wake-on-LAN.\n- **SNMP & TCP Monitoring**\\\n  Monitor
+        SNMP metrics and TCP services for deeper insights.\n- **Custom Scripting**\\\n  Automate
+        tasks or trigger actions using customizable scripts.\n- **Configuration Management**\\\n  Backup
+        and restore device configurations to streamline recovery and\n  consistency.\n-
+        **Network Diagnostics**\\\n  Includes tools like traceroute, latency tracking,
+        DHCP monitoring,\n  bufferbloat, bandwidth analysis, and speed tests.\n- **Camera
+        Access (ONVIF)**\\\n  Stream or capture snapshots from IP cameras---no reconfiguring\n  firewalls.\n\n**Why
+        Domotz Stands Out**\n\n- **Accessible**\\\n  Agentless deployment in under
+        15 minutes. Easy to evaluate, implement,\n  and maintain at an affordable
+        price.\n- **Deeper Discovery**\\\n  Combines Layer-2 and Layer 3 scanning
+        for more accurate device\n  identification and visibility.\n- **True Management**\\\n  Go
+        beyond monitoring with robust management tools and a custom\n  scripting framework.\n-
+        **Centralized Dashboard**\\\n  Manage all your networks and devices from a
+        single, unified\n  interface---anywhere in the world.\n- **Built for Security**\\\n  ISO/IEC
+        27001 and SOC 2 Type II certified. Domotz uses strict\n  controls, encrypted
+        communications, and continuous monitoring to\n  protect your data.\n\n**Installation
+        notes** \n\nPlease connect the following interfaces:\n\n* sudo snap connect
+        domotzpro-agent-publicstore:firewall-control\n* sudo snap connect domotzpro-agent-publicstore:network-observe\n*
+        sudo snap connect domotzpro-agent-publicstore:raw-usb\n* sudo snap connect
+        domotzpro-agent-publicstore:shutdown\n* sudo snap connect domotzpro-agent-publicstore:system-observe\n\nThen,
+        click on the Domotz icon or go to http://127.0.0.1:3000 to configure the Domotz
+        Collector. Note: if TCP port 3000 has been already used by a different service,
+        Collector Web Interface might be available on subsequent ports (e.g. http://127.0.0.1:3001,
+        http://127.0.0.1:3002, etc)\n\n**Additional notes**\n\nIn case you want to
+        use the VPN on demand feature, you have to execute also:\n* sudo sh -c ''echo
+        tun >> /etc/modules''\n* sudo modprobe tun\n\nIn case Uncomplicated Firewall
+        (UFW) is configured on your machine, you might consider allowing the usage
+        of the port where the Collector Web Interface is available. For instance running
+        the following command:\n* sudo ufw allow 3000","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2019/03/new_domotz_icon.png","last_updated":"Fri,
+        17 Oct 2025 12:34:10 GMT","license":"GPL-3.0","links":{"contact":["mailto:support@domotz.com"],"website":["https://www.domotz.com/"]},"media":[{"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/03/new_domotz_icon.png"},{"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/05/banner_domotz.png"},{"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2018/06/Screen_Shot_2018-06-27_at_2.11.03_PM.png"},{"height":1442,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/07/Screen_Shot_2019-07-29_at_2.42.27_PM.png","width":1640},{"height":1528,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/04/Historical_Ping_Range_nuinJja.png","width":2880},{"height":1528,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/04/newsletter_december_KgnrDQh.png","width":2880},{"height":1440,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/04/Domotz_Inventory_defV2_NxG3Jre.png","width":2605}],"name":"domotzpro-agent-publicstore","publisher":"Domotz","revision":371,"snap_id":"YKK8n2wMJikrafz0jGwimYMOAPYHpays","summary":"Domotz
+        Network monitoring","title":"Domotz Pro Agent","version":"4.9.5-7.6.6-b001-223","website":"https://www.domotz.com/"},"rank":41,"snap_id":"YKK8n2wMJikrafz0jGwimYMOAPYHpays"},{"details":{"contact":"https://github.com/ghostty-org/ghostty/discussions","description":"Ghostty
+        is a fast, feature-rich, and cross-platform terminal emulator that\nuses platform-native
+        UI and GPU acceleration.","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2025/01/icon_512.png","last_updated":"Sat,
+        25 Oct 2025 23:03:21 GMT","license":"MIT","links":{"contact":["https://github.com/ghostty-org/ghostty/discussions"],"donations":[],"issues":["https://github.com/ghostty-org/ghostty/issues"],"source":["https://github.com/ghostty-org/ghostty"],"website":["https://ghostty.org"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/01/icon_512.png","width":512},{"height":884,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/01/Screenshot_from_2025-01-09_10-08-32-1736435544.png","width":1333}],"name":"ghostty","publisher":"Ken
+        VanDine","revision":436,"snap_id":"0Js0ucdWpbxjd5LqmGT5MVUywEWyNbvs","summary":"A
+        terminal emulator","title":"Ghostty","version":"v1.2.3","website":"https://ghostty.org"},"rank":42,"snap_id":"0Js0ucdWpbxjd5LqmGT5MVUywEWyNbvs"},{"details":{"contact":"https://todoist.com/contact","description":"Trusted
+        by over 47 million people, Todoist is a to do list and a planning center for
+        individuals and teams. Instantly declutter your mind, build habits, and boost
+        your productivity.\n\nWith a simple tap, add your daily tasks and set reminders,
+        enjoy multiple views like calendar, list and board, filter activity by work
+        and/or personal life, share notes, collaborate on projects, and achieve peace
+        of mind. \n\n**Why choose Todoist?**\n\nTodoist is a simple yet powerful planner
+        tool that organizes both your life and work.\n\n\u2022 As a habit tracker,
+        you can add tasks like \u201cPlan next week\u2019s work every Friday afternoon\u201d
+        or \u201cDo homework every Wednesday at 6pm\u201d using Todoist\u2019s powerful
+        language recognition and recurring dates.\n\n\u2022 Use it as a checklist
+        to reach that mental clarity you\u2019ve been longing for by capturing tasks
+        at the speed of thought.\n\n\u2022 View any project as a list, board or calendar
+        planner to give you ultimate flexibility when planning both your work and
+        time. \n\n\u2022 Link it with your calendar, voice assistant, and 100+ other
+        tools such as Outlook, Gmail, and Slack.\n\n\u2022 Collaborate on projects
+        of all sizes by assigning tasks to others. Have all your teamwork at hand
+        by adding deadlines, notes, and files.\n\n\u2022 Get up and running in no
+        time with templates ranging from a schedule planner to packing lists, meeting
+        agendas and more.\n\n\u2022 Work towards your goals with insights into your
+        personalized productivity trends.\n\n**Todoist on Linux**\n\n\u2022 It is
+        beautifully designed, simple to get started, and intuitive to use.\n\n\u2022
+        Use the global quick add shortcut to capture ideas and tasks the moment they
+        strike \u2014 even if you are in a different app.\n\n\u2022 Stay organized
+        by syncing across all other devices: apps, extensions, and widgets.\n\n\u2013\n*Questions?
+        Feedback? Visit https://todoist.com/help*\n\u2013\n\nUse Todoist to plan or
+        track anything:\n\n\u2022 Daily and weekly planner\n\n\u2022 Project management\n\n\u2022
+        Time management\n\n\u2022 Business planning\n\n\u2022 Grocery list\n\n\u2022
+        ADHD planner\n\n\u2022 And more\n\n**Recommended by**:\n\n> The Verge: \u201cSimple,
+        straightforward, and super powerful\u201d\n\n> Wirecutter: \u201cIt\u2019s
+        simply a joy to use\u201d\n\n> PC Mag: \u201cThe best to-do list app on the
+        market\u201d\n\n> TechRadar: \u201cNothing short of stellar\u201d\n\n\u2013\n*About
+        Pro and Business plans billing*: Todoist is free. But if you choose to upgrade
+        to Pro and Business plans, payment will be processed via the Web app.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2020/08/Todoist_logo.png","last_updated":"Wed,
+        22 Oct 2025 04:15:00 GMT","license":"Proprietary","links":{"contact":["https://todoist.com/contact"],"donations":[],"issues":[],"source":[],"website":["https://doist.com"]},"media":[{"height":280,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2020/08/Todoist_logo.png","width":280},{"height":1680,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/03/1-Organize-1743416132.png","width":2880},{"height":1680,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/03/2-Achieve-1743416132.png","width":2880},{"height":1680,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/03/3-Collaborate-1743416132.png","width":2880},{"height":1680,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/03/4-Quick_Add-1743416132.png","width":2880},{"height":1680,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/03/5-Calendar-1743416132.png","width":2880}],"name":"todoist","publisher":"Doist","revision":1346,"snap_id":"pP800io06HKwwkUmX8gDG1pFCfsinLHY","summary":"Simple
+        yet powerful to do list, habit tracker & reminders. Organize work & life.","title":"Todoist:
+        Planner & Calendar","version":"9.22.0","website":"https://doist.com"},"rank":43,"snap_id":"pP800io06HKwwkUmX8gDG1pFCfsinLHY"},{"details":{"contact":"https://support.stackit.cloud/","description":"A
+        command-line interface to manage STACKIT resources.\nThis CLI is in a BETA
+        state. More services and functionality will be supported soon.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2024/02/ColorWhite_TypeSquare.svg.png","last_updated":"Wed,
+        29 Oct 2025 16:09:02 GMT","license":"Apache-2.0","links":{"contact":["https://support.stackit.cloud/"],"donations":[],"issues":["https://github.com/stackitcloud/stackit-cli/issues/new"],"source":["https://github.com/stackitcloud/stackit-cli"],"website":["https://stackit.de","https://portal.stackit.cloud"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/02/ColorWhite_TypeSquare.svg.png","width":512}],"name":"stackit","publisher":"STACKIT
+        Cloud","revision":259,"snap_id":"cvK4Vw75zrnOjvSyeFTOdSt7coIu5xdA","summary":"A
+        command-line interface to manage STACKIT resources.","title":"stackit","version":"0.46.0","website":"https://stackit.de"},"rank":44,"snap_id":"cvK4Vw75zrnOjvSyeFTOdSt7coIu5xdA"},{"details":{"contact":"https://github.com//snapcrafters/alacritty/issues","description":"Alacritty
+        is a modern terminal emulator that comes with sensible defaults, but allows
+        for\nextensive configuration. By integrating with other applications, rather
+        than reimplementing their\nfunctionality, it manages to provide a flexible
+        set of features with high performance\n\n**Authors**\n\nThis snap is maintained
+        by the Snapcrafters community, and is not necessarily endorsed or\nofficially
+        maintained by the upstream developers.\n","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2019/12/icon.svg_WTg5Oeb.png","last_updated":"Thu,
+        23 Oct 2025 16:22:34 GMT","license":"Apache-2.0","links":{"contact":["https://github.com//snapcrafters/alacritty/issues"],"issues":["https://github.com//snapcrafters/alacritty/issues"],"source":["https://github.com/alacritty/discord"],"website":["https://alacritty.org"]},"media":[{"height":256,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2019/12/icon.svg_WTg5Oeb.png","width":256},{"height":607,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2021/04/alacritty.png","width":980}],"name":"alacritty","publisher":"Snapcrafters","revision":150,"snap_id":"CPA6L7h6dWM7VAmIPTHX14eMgKEZqMJw","summary":"A
+        cross-platform, GPU enhanced terminal emulator.","title":"alacritty","version":"0.16.1","website":"https://alacritty.org"},"rank":45,"snap_id":"CPA6L7h6dWM7VAmIPTHX14eMgKEZqMJw"},{"details":{"contact":"https://bugs.launchpad.net/ubuntu/+source/chromium-browser/+bugs?field.tag=snap","description":"An
+        open-source browser project that aims to build a safer, faster, and more\nstable
+        way for all Internet users to experience the web.\n","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2018/05/chromium-browser.png","last_updated":"Wed,
+        29 Oct 2025 21:44:22 GMT","license":"Apache-2.0 AND BSD-3-Clause AND LGPL-2.0
+        AND LGPL-2.1 AND MIT AND MS-PL AND (GPL-2.0+ OR LGPL-2.1+ OR MPL-1.1)","links":{"contact":["https://bugs.launchpad.net/ubuntu/+source/chromium-browser/+bugs?field.tag=snap"],"website":["https://code.launchpad.net/~chromium-team/chromium-browser/+git/snap-from-source"]},"media":[{"height":256,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2018/05/chromium-browser.png","width":256},{"height":711,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2022/05/Screenshot_from_2022-05-19_18-11-22.png","width":1069},{"height":711,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2022/05/Screenshot_from_2022-05-19_18-16-04.png","width":1069},{"height":699,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2022/05/Screenshot_from_2022-05-19_18-14-56.png","width":1005}],"name":"chromium","publisher":"Canonical","revision":3293,"snap_id":"XKEcBqPM06H1Z7zGOdG5fbICuf8NWK5R","summary":"Chromium
+        web browser, open-source version of Chrome","title":"chromium","version":"142.0.7444.59","website":"https://code.launchpad.net/~chromium-team/chromium-browser/+git/snap-from-source"},"rank":46,"snap_id":"XKEcBqPM06H1Z7zGOdG5fbICuf8NWK5R"},{"details":{"contact":null,"description":"Pure
+        instant messaging \u2014 simple, fast, secure, and synced across all your
+        devices. One of the world''s top 10 most downloaded apps with over 500 million
+        active users.\n\nFAST: Telegram is the fastest messaging app on the market,
+        connecting people via a unique, distributed network of data centers around
+        the globe.\n\nSYNCED: You can access your messages from all your phones, tablets
+        and computers at once. Telegram apps are standalone, so you don\u2019t need
+        to keep your phone connected. Start typing on one device and finish the message
+        from another. Never lose your data again.\n\nUNLIMITED: You can send media
+        and files, without any limits on their type and size. Your entire chat history
+        will require no disk space on your device, and will be securely stored in
+        the Telegram cloud for as long as you need it.\n\nSECURE: We made it our mission
+        to provide the best security combined with ease of use. Everything on Telegram,
+        including chats, groups, media, etc. is encrypted using a combination of 256-bit
+        symmetric AES encryption, 2048-bit RSA encryption, and Diffie\u2013Hellman
+        secure key exchange.\n\n100% FREE & OPEN: Telegram has a fully documented
+        and free API for developers, open source apps and verifiable builds to prove
+        the app you download is built from the exact same source code that is published.\n\nPOWERFUL:
+        You can create group chats with up to 200,000 members, share large videos,
+        documents of any type (.DOCX, .MP3, .ZIP, etc.) up to 2 GB each, and even
+        set up bots for specific tasks. Telegram is the perfect tool for hosting online
+        communities and coordinating teamwork.\n\nRELIABLE: Built to deliver your
+        messages using as little data as possible, Telegram is the most reliable messaging
+        system ever made. It works even on the weakest mobile connections.\n\nFUN:
+        Telegram has powerful photo and video editing tools, animated stickers and
+        emoji, fully customizable themes to change the appearance of your app, and
+        an open sticker/GIF platform to cater to all your expressive needs.\n\nSIMPLE:
+        While providing an unprecedented array of features, we take great care to
+        keep the interface clean. Telegram is so simple you already know how to use
+        it.\n\nPRIVATE: We take your privacy seriously and will never give any third
+        parties access to your data. You can delete any message you ever sent or received
+        for both sides, at any time and without a trace. Telegram will never use your
+        data to show you ads.\n\nWe keep expanding the boundaries of what you can
+        do with a messaging app. Don\u2019t wait years for older messengers to catch
+        up with Telegram \u2014 join the revolution today.","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2018/02/icon256.png","last_updated":"Wed,
+        22 Oct 2025 20:15:18 GMT","license":"GPL-3.0","links":{"contact":[],"donations":[],"issues":["https://github.com/telegramdesktop/tdesktop/issues"],"source":[],"website":["https://desktop.telegram.org/"]},"media":[{"height":256,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2018/02/icon256.png","width":256},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/12/slide.011-1733378584.jpg","width":2880},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/12/slide.021-1733378355.jpg","width":2880},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/12/slide.031-1733378355.jpg","width":2880},{"height":1800,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2024/12/slide.041-1733378355.jpg","width":2880}],"name":"telegram-desktop","publisher":"Telegram
+        FZ-LLC","revision":6833,"snap_id":"jpdoHqMd90M39DdH2JSZbeQxipqHtwLo","summary":"New
+        era of messaging","title":"Telegram","version":"6.2.4","website":"https://desktop.telegram.org/"},"rank":47,"snap_id":"jpdoHqMd90M39DdH2JSZbeQxipqHtwLo"},{"details":{"contact":"https://github.com/opentofu/opentofu/issues","description":"OpenTofu
+        is an OSS tool for building, changing, and versioning infrastructure\nsafely
+        and efficiently. OpenTofu can manage existing and popular service\nproviders
+        as well as custom in-house solutions.\n","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2023/09/Untitled.png","last_updated":"Thu,
+        06 Nov 2025 13:28:05 GMT","license":"MPL-2.0","links":{"contact":["https://github.com/opentofu/opentofu/issues"],"website":["https://opentofu.org/"]},"media":[{"height":500,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/09/Untitled.png","width":500},{"height":1440,"type":"banner","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/09/Untitled_1_2HJIFkd.png","width":4320}],"name":"opentofu","publisher":"OpenTofu
+        Core Team","revision":192,"snap_id":"CgDJ4iyv7tkysyBgZhHkJNQYolAYWB9H","summary":"OpenTofu
+        lets you declaratively manage your cloud infrastructure.","title":"opentofu","version":"1.10.7","website":"https://opentofu.org/"},"rank":48,"snap_id":"CgDJ4iyv7tkysyBgZhHkJNQYolAYWB9H"},{"details":{"contact":"https://github.com/JGCarroll","description":"Pinta
+        is an easy to use image editor.\n\nLayers are a native class feature whilst
+        the application is designed to be both usable for daily tasks without getting
+        in your way. \n\nAdd big text and a red rectangle to your screenshot. Crop
+        your selfie. Frame your pets. \ud83d\ude09\n\nWanting to get involved? Pinta
+        is built on C# and Libadwaita. Don''t worry KDE users, we use the XDG Desktop
+        File Open Portal - you can use the KDE file picker, and even disable the header
+        bar to use a traditional menu bar! That''s the third kitty, Cheese; alongside
+        Nova and Kiki in reverse order - if you''ve got screenshots enabled above.\n\nPinta
+        supports addons, and is freely licensed (MIT). Please find us on Github and
+        get involved with feedback, support, or development.\n\nPinta runs on Linux,
+        Windows, and MacOS, and is free of charge for all users. Pinta doesn''t aim
+        to replace Photoshop, or GIMP, filling the needs of simpler users closer to
+        being MSPaint.exe for Linux, but having enough that you might never need anything
+        else.","developer_validation":"starred","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2023/01/pinta.svg.png","last_updated":"Wed,
+        08 Oct 2025 19:57:16 GMT","license":"MIT","links":{"contact":["https://github.com/JGCarroll"],"donations":[],"issues":["https://github.com/JGCarroll/pinta-snap/issues","https://github.com/pintaproject/pinta/issues"],"source":["https://github.com/pintaproject/pinta","https://github.com/JGCarroll/pinta-snap"],"website":["https://pinta-project.com/"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/01/pinta.svg.png","width":512},{"height":872,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/06/Screenshot_2025-06-10_234639-1749595753.png","width":1222},{"height":872,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/06/Screenshot_2025-06-10_234542-1749595753.png","width":1222},{"height":872,"type":"screenshot","url":"https://dashboard.snapcraft.io/site_media/appmedia/2025/06/Screenshot_2025-06-10_234841-1749595753.png","width":1222}],"name":"pinta","publisher":"James
+        Carroll","revision":78,"snap_id":"BjE9sgvAgtIBuxSaYGdEuJOVoOZGsz0s","summary":"\ud83c\udfa8
+        Painting made simple \ud83d\udd8c\ufe0f\ud83d\uddbc\ufe0f","title":"Pinta","version":"3.0.4","website":"https://pinta-project.com/"},"rank":49,"snap_id":"BjE9sgvAgtIBuxSaYGdEuJOVoOZGsz0s"},{"details":{"contact":"mailto:info@dwellir.com","description":"This
+        snap ships the polkadot as a service for node operators.\n\nConfigure your
+        polkadot service (_written to /var/snap/polkadot/common/service-args_):\n
+        \n    sudo snap set polkadot service-args=\"--name=MyName --chain=polkadot\"\n\n_Note:
+        --base-path is always set by the snap to `$SNAP_COMMON/polkadot_base` and
+        is not allowed to be configured._\n\nStart the service with:\n\n   sudo snap
+        start polkadot\n\nCheck logs from the Polkadot service:\n\n   snap logs polkadot
+        -f\n\nMake the snap not restart when upgraded/refreshed (very useful for validators).\n\n   sudo
+        snap set polkadot endure=true\n\n_Note the Polkadot service will still be
+        restarted as the result of changing service-args, etc._\n\nDwellir is a trusted
+        and verified provider of blockchains https://dwellir.com","developer_validation":"verified","icon":"https://dashboard.snapcraft.io/site_media/appmedia/2023/06/polkadot-logo-256x256.svg.png","last_updated":"Fri,
+        24 Oct 2025 06:59:17 GMT","license":"GPL-3.0-with-GCC-exception","links":{"contact":["mailto:info@dwellir.com"],"donations":[],"issues":["https://github.com/dwellir-public/snap-polkadot/issues"],"source":["https://github.com/dwellir-public/snap-polkadot/"],"website":["https://www.dwellir.com"]},"media":[{"height":512,"type":"icon","url":"https://dashboard.snapcraft.io/site_media/appmedia/2023/06/polkadot-logo-256x256.svg.png","width":512}],"name":"polkadot","publisher":"Dwellir
+        AB","revision":57,"snap_id":"GhpiJYzaBKeV2mQ1zvoFR7Te48mOMoUN","summary":"Polkadot
+        - A multi-chain framework for better blockchain interoperability","title":"Polkadot","version":"polkadot-stable2506-1-bd19559","website":"https://www.dwellir.com"},"rank":50,"snap_id":"GhpiJYzaBKeV2mQ1zvoFR7Te48mOMoUN"}]
+
+        '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '135650'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 13 Nov 2025 09:56:16 GMT
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    status:
+      code: 200
+      message: OK
+version: 1
