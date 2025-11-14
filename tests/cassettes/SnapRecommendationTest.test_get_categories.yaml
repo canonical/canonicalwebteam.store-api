@@ -1,0 +1,40 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.5
+    method: GET
+    uri: https://recommendations.snapcraft.io/api/categories
+  response:
+    body:
+      string: '[{"description":"Snaps that are popular and downloaded frequently","id":"popular","name":"Popular
+        snaps"},{"description":"Snaps that have a sudden increase in popularity","id":"trending","name":"Trending
+        snaps"},{"description":"Snaps that have been updated recently","id":"recent","name":"Recently
+        updated snaps"},{"description":"Snaps with the highest user ratings","id":"top_rated","name":"Top
+        rated snaps"}]
+
+        '
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '411'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 13 Nov 2025 09:56:14 GMT
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    status:
+      code: 200
+      message: OK
+version: 1
