@@ -10,7 +10,7 @@ RECOMMENDATIONS_API_URL = getenv(
 
 
 class SnapRecommendations:
-    """ Helpers for Snap Recommendation Service."""
+    """Helpers for Snap Recommendation Service."""
 
     def __init__(self, session=Session()):
         self.session = session
@@ -59,7 +59,9 @@ class SnapRecommendations:
     def get_top_rated(self) -> list:
         return self.get_category("top_rated")
 
-    def get_recently_updated(self, page: int = 1, size: int = 10, timeout: int = 10) -> dict:
+    def get_recently_updated(
+        self, page: int = 1, size: int = 10, timeout: int = 10
+    ) -> dict:
         """
         Return recently updated snaps with pagination.
 

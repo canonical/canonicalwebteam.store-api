@@ -1,6 +1,6 @@
 from vcr_unittest import VCRTestCase
 
-from canonicalwebteam.snap_recommendations import SnapRecommendation
+from canonicalwebteam.snap_recommendations import SnapRecommendations
 
 
 class SnapRecommendationTest(VCRTestCase):
@@ -12,7 +12,7 @@ class SnapRecommendationTest(VCRTestCase):
         return {"filter_headers": ["Authorization", "Macaroons"]}
 
     def setUp(self):
-        self.client = SnapRecommendation()
+        self.client = SnapRecommendations()
         return super().setUp()
 
     def test_get_categories(self):
