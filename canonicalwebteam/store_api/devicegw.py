@@ -245,7 +245,10 @@ class DeviceGW(Base):
         params = {}
         if fields:
             params = {"fields": ",".join(fields)}
-        if channel:
+        # Having an empty channel string tells details endpoint to
+        # not filter by channel. Having None and not including the channel
+        # parameter makes the endpoint default to latest/stable channel
+        if channel is not None:
             params["channel"] = channel
         headers = self.config[api_version].get("headers")
 
