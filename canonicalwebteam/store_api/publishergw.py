@@ -813,6 +813,22 @@ class PublisherGW(Base):
 
         return response
 
+    def get_remodel_allowlist(self, session: dict, store_id: str) -> dict:
+        """
+        Documentation:
+            https://api.charmhub.io/docs/model-service-admin.html
+            #read-remodel-allowlist
+        Endpoint:
+            [GET]
+            https://api.charmhub.io/v1/brand/{store_id}/remodel-allowlist
+        """
+        response = self.session.get(
+            url=self.get_endpoint_url(f"brand/{store_id}/remodel-allowlist"),
+            headers=self._get_dev_token_authorization_header(session),
+        )
+
+        return self.process_response(response)
+
     def get_brand(self, session: dict, store_id: str) -> dict:
         """
         Documentation:
