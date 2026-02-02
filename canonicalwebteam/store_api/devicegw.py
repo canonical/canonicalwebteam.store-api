@@ -3,7 +3,6 @@ from typing import Optional
 from requests import Session
 from canonicalwebteam.store_api.base import Base
 
-
 DEVICEGW_URL = getenv("DEVICEGW_URL", "https://api.snapcraft.io/")
 DEVICEGW_URL_STAGING = getenv(
     "DEVICEGW_URL_STAGING", "https://api.staging.snapcraft.io/"

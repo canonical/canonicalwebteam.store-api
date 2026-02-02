@@ -16,7 +16,6 @@ from canonicalwebteam.exceptions import (
     StoreApiServiceUnavailableError,
 )
 
-
 logger = logging.getLogger(__name__)
 
 

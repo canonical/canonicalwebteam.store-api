@@ -3,7 +3,6 @@ from random import uniform
 from sys import maxsize as MAX_INT
 import functools
 
-
 P = TypeVar("P")
 R = TypeVar("R")
 
