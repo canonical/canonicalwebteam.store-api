@@ -154,7 +154,7 @@ class PublisherGWTest(VCRTestCase):
             test_dev_auth,
             store_id="marketplace_test_store_id",
         )
-        self.assertIsInstance(response, list)
+        self.assertIsInstance(response, dict)
 
     def test_create_store_model(self):
         response = self.client.create_store_model(
