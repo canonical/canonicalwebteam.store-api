@@ -18,7 +18,7 @@ mypy = "^1.14.1"
 redis = "^6.4.0"
 cachetools = "^6.2.0"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 vcrpy-unittest = '^0.1.7'
 
 [build-system]
