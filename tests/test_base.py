@@ -19,7 +19,6 @@ from canonicalwebteam.store_api.base import (
     logger as LOGGER,
 )
 
-
 STATUS_MAPPING = {
     500: StoreApiInternalError,
     501: StoreApiNotImplementedError,

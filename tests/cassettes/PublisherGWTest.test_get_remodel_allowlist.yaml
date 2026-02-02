@@ -1,0 +1,38 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate, zstd
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.5
+    method: GET
+    uri: https://api.charmhub.io/v1/brand/marketplace_test_store_id/remodel-allowlist
+  response:
+    body:
+        string: '{ "allowlist": [], "next-cursor": null }'
+    headers:
+      content-length:
+      - '67'
+      content-type:
+      - application/json
+      date:
+      - Mon, 02 Feb 2026 11:34:11 GMT
+      publishergw-version:
+      - '65'
+      server:
+      - gunicorn
+      x-request-id:
+      - 2A0023C73D042A01C09693AE01A2D034CBB82620002D4000101000000000000002D601BB69808BB312B117D1
+      x-vcs-revision:
+      - aaaeca13d76052855b06ea6842ea2c066ce06eb4
+      x-view-name:
+      - publishergw.webapi_admin.read_remodel_allowlist
+    status:
+      code: 200
+      message: OK 
+version: 1

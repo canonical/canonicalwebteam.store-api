@@ -1,7 +1,6 @@
 from vcr_unittest import VCRTestCase
 from canonicalwebteam.retry_utils import retry
 
-
 LIMIT = 5
 
 

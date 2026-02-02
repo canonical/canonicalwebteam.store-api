@@ -2,7 +2,6 @@ from os import getenv
 
 from requests import Session
 
-
 RECOMMENDATIONS_API_URL = getenv(
     "SNAP_RECOMMENDATIONS_API_URL",
     "https://recommendations.snapcraft.io/api/",

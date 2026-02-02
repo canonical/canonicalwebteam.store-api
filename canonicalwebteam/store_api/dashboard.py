@@ -8,7 +8,6 @@ from canonicalwebteam.exceptions import (
     PublisherMacaroonRefreshRequired,
 )
 
-
 DASHBOARD_API_URL = getenv(
     "SNAPSTORE_DASHBOARD_API_URL", "https://dashboard.snapcraft.io/"
 )
