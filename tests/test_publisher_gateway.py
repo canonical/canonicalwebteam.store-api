@@ -164,6 +164,21 @@ class PublisherGWTest(VCRTestCase):
         )
         self.assertEqual("test-model", response["name"])
 
+    def test_create_remodel_allowlist(self):
+        response = self.client.create_remodel_allowlist(
+            test_dev_auth,
+            store_id="marketplace_test_store_id",
+            allowlist=[
+                {
+                    "from-model": "test-from-model",
+                    "to-model": "test-to-model",
+                    "from-serial": "test-to-serial",
+                    "description": "Test description",
+                }
+            ],
+        )
+        self.assertEqual("test-to-model", response["allowlist"][0]["to-model"])
+
     def test_get_store_model_policies(self):
         response = self.client.get_store_model_policies(
             test_dev_auth,
