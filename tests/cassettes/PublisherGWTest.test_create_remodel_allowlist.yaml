@@ -1,0 +1,47 @@
+interactions:
+  - request:
+      body:
+        '{"allowlist": [{"from-model": "test-from-model", "to-model": "test-to-model",
+        "from-serial": "test-to-serial", "description": "Test description"}]}'
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate, zstd
+        Connection:
+          - keep-alive
+        Content-Length:
+          - "147"
+        Content-Type:
+          - application/json
+        User-Agent:
+          - python-requests/2.32.5
+      method: POST
+      uri: https://api.charmhub.io/v1/brand/marketplace_test_store_id/remodel-allowlist
+    response:
+      body:
+        string:
+          '{"allowlist": [{"from-model": "test-from-model", "to-model": "test-to-model", "from-serial": "test-to-serial", "description": "Test description"}]}
+
+          '
+      headers:
+        content-length:
+          - "130"
+        content-type:
+          - application/json
+        date:
+          - Tue, 03 Feb 2026 11:49:17 GMT
+        publishergw-version:
+          - "65"
+        server:
+          - gunicorn
+        x-request-id:
+          - 2A0023C73D042A01C09693AE01A2D034DBC32620002D4000101000000000000002D601BB6981E0BD23E7CDCB
+        x-vcs-revision:
+          - aaaeca13d76052855b06ea6842ea2c066ce06eb4
+        x-view-name:
+          - publishergw.webapi_admin.create_remodel_allowlist
+      status:
+        code: 201
+        message: CREATED
+version: 1
