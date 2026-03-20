@@ -187,6 +187,14 @@ class PublisherGWTest(VCRTestCase):
         )
         self.assertIsInstance(response, list)
 
+    def test_get_store_model_serial_log(self):
+        response = self.client.get_store_model_serial_log(
+            test_dev_auth,
+            store_id="marketplace_test_store_id",
+            model_name="test-model",
+        )
+        self.assertIsInstance(response, dict)
+
     def test_create_store_model_policy(self):
         response = self.client.create_store_model_policy(
             test_dev_auth,
