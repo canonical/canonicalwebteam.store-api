@@ -699,7 +699,7 @@ class PublisherGW(Base):
 
         return self.process_response(response)
 
-    def get_store_model_serial_log(
+    def get_store_model_serial_logs(
         self,
         session: dict,
         store_id: str,
@@ -715,6 +715,33 @@ class PublisherGW(Base):
         response = self.session.get(
             url=self.get_endpoint_url(
                 f"brand/{store_id}/model/{model_name}/serial-log"
+            ),
+            headers=self._get_dev_token_authorization_header(session),
+        )
+
+        return self.process_response(response)
+
+    def get_store_model_serial_log(
+        self,
+        session: dict,
+        store_id: str,
+        model_name: str,
+        serial: str,
+    ) -> dict:
+        """
+        Documentation:
+            https://api.charmhub.io/docs/model-service-admin.html#read-serial-logs-by-serial
+        Endpoint: [GET]
+            https://api.charmhub.io/v1/brand/{store_id}/model/{model_name}/serial/{serial}/serial-log
+
+        """
+        response = self.session.get(
+            url=self.get_endpoint_url(
+                (
+                    f"brand/{store_id}/model/{model_name}"
+                    f"/serial/{serial}/serial-log"
+                    f"?include-serial-assertion=true"
+                )
             ),
             headers=self._get_dev_token_authorization_header(session),
         )
