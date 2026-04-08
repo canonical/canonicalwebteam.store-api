@@ -11,7 +11,7 @@ interactions:
       User-Agent:
       - python-requests/2.32.5
     method: GET
-    uri: https://api.charmhub.io/v1/brand/marketplace_test_store_id/model/test-model/serial/test-serial/serial-log?include-serial-assertion=true
+    uri: https://api.charmhub.io/v1/brand/marketplace_test_store_id/model/test-model/serial/test-serial/serial-log?include-serial-assertion=true&include-serial-request-assertion=true
   response:
     body:
         string: '{ "items": [], "next-cursor": null }'

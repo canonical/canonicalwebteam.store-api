@@ -192,6 +192,10 @@ class PublisherGWTest(VCRTestCase):
             test_dev_auth,
             store_id="marketplace_test_store_id",
             model_name="test-model",
+            start_time="2025-03-20T05:19:52.00",
+            end_time="2026-03-20T05:19:52.00",
+            page_size=10,
+            cursor="next",
         )
         self.assertIsInstance(response, dict)
 
@@ -201,6 +205,8 @@ class PublisherGWTest(VCRTestCase):
             store_id="marketplace_test_store_id",
             model_name="test-model",
             serial="test-serial",
+            include_serial_assertion=True,
+            include_serial_request_assertion=True,
         )
         self.assertIsInstance(response, dict)
 
