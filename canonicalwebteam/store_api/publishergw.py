@@ -704,6 +704,10 @@ class PublisherGW(Base):
         session: dict,
         store_id: str,
         model_name: str,
+        start_time=None,
+        end_time=None,
+        page_size=None,
+        cursor=None,
     ) -> dict:
         """
         Documentation:
@@ -712,11 +716,28 @@ class PublisherGW(Base):
             https://api.charmhub.io/v1/brand/{store_id}/model/{model_name}/serial-log
 
         """
+        request_url = self.get_endpoint_url(
+            f"brand/{store_id}/model/{model_name}/serial-log"
+        )
+
+        params = {}
+
+        if start_time is not None:
+            params["start-time"] = start_time
+
+        if end_time is not None:
+            params["end-time"] = end_time
+
+        if page_size is not None:
+            params["page-size"] = page_size
+
+        if cursor is not None:
+            params["cursor"] = cursor
+
         response = self.session.get(
-            url=self.get_endpoint_url(
-                f"brand/{store_id}/model/{model_name}/serial-log"
-            ),
+            url=request_url,
             headers=self._get_dev_token_authorization_header(session),
+            params=params,
         )
 
         return self.process_response(response)
