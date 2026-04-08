@@ -201,6 +201,8 @@ class PublisherGWTest(VCRTestCase):
             store_id="marketplace_test_store_id",
             model_name="test-model",
             serial="test-serial",
+            include_serial_assertion=True,
+            include_serial_request_assertion=True,
         )
         self.assertIsInstance(response, dict)
 

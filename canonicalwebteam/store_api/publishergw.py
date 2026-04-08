@@ -727,6 +727,8 @@ class PublisherGW(Base):
         store_id: str,
         model_name: str,
         serial: str,
+        include_serial_assertion=None,
+        include_serial_request_assertion=None,
     ) -> dict:
         """
         Documentation:
@@ -735,15 +737,22 @@ class PublisherGW(Base):
             https://api.charmhub.io/v1/brand/{store_id}/model/{model_name}/serial/{serial}/serial-log
 
         """
+        request_url = self.get_endpoint_url(
+            f"brand/{store_id}/model/{model_name}/serial/{serial}/serial-log"
+        )
+
+        params = {}
+
+        if include_serial_assertion is not None:
+            params["include-serial-assertion"] = "true"
+
+        if include_serial_request_assertion is not None:
+            params["include-serial-request-assertion"] = "true"
+
         response = self.session.get(
-            url=self.get_endpoint_url(
-                (
-                    f"brand/{store_id}/model/{model_name}"
-                    f"/serial/{serial}/serial-log"
-                    f"?include-serial-assertion=true"
-                )
-            ),
+            url=request_url,
             headers=self._get_dev_token_authorization_header(session),
+            params=params,
         )
 
         return self.process_response(response)
