@@ -928,6 +928,48 @@ class PublisherGW(Base):
 
         return self.process_response(response)
 
+    def update_remodel_allowlist(
+        self, session: dict, store_id: str, allowlist: list[dict]
+    ) -> dict:
+        """
+        Documentation:
+            https://api.charmhub.io/docs/model-service-admin.html
+                #update-remodel-allowlist
+        Endpoint: [PATCH]
+            https://api.charmhub.io/v1/brand/{store_id}/remodel-allowlist
+        """
+        payload = {"allowlist": allowlist}
+
+        response = self.session.patch(
+            url=self.get_endpoint_url(f"brand/{store_id}/remodel-allowlist"),
+            headers=self._get_dev_token_authorization_header(session),
+            json=payload,
+        )
+
+        return self.process_response(response)
+
+    def delete_remodel_allowlist(
+        self, session: dict, store_id: str, allowlist: list[dict]
+    ) -> dict:
+        """
+        Documentation:
+            https://api.charmhub.io/docs/model-service-admin.html
+                #delete-remodel-allowlist
+        Endpoint: [POST]
+            https://api.charmhub.io/v1/brand/{store_id}/remodel-allowlist/delete
+        """
+        payload = {"allowlist": allowlist}
+
+        response = self.session.post(
+            url=self.get_endpoint_url(
+                f"brand/{store_id}/remodel-allowlist/delete"
+            ),
+            headers=self._get_dev_token_authorization_header(session),
+            json=payload,
+        )
+
+        return response
+
     def get_brand(self, session: dict, store_id: str) -> dict:
         """
         Documentation:

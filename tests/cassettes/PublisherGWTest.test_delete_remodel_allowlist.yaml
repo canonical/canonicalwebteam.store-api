@@ -1,0 +1,45 @@
+interactions:
+- request:
+    body: '{"allowlist": [{"from-model": "test-from-model", "to-model": "test-to-model",
+      "from-serial": "test-serial"}]}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate, zstd
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '109'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.32.5
+    method: POST
+    uri: https://api.charmhub.io/v1/brand/marketplace_test_store_id/remodel-allowlist/delete
+  response:
+    body:
+      string: '{"error-list":[{"code":"api-error","message":"Invalid macaroon"}]}
+
+        '
+    headers:
+      content-length:
+      - '67'
+      content-type:
+      - application/json
+      date:
+      - Wed, 22 Apr 2026 08:26:57 GMT
+      publishergw-version:
+      - '66'
+      server:
+      - gunicorn
+      x-request-id:
+      - 2A0023C73D042A01C4541B269722FF94D2862620002D40001010000000000000011701BB69E886514ED4F6C
+      x-vcs-revision:
+      - 63983ae640fb0c414534facedb3f85eedc6d4f32
+      x-view-name:
+      - publishergw.webapi_admin.delete_remodel_allowlist
+    status:
+      code: 400
+      message: BAD REQUEST
+version: 1
