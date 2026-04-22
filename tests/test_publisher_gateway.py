@@ -4,6 +4,7 @@ from vcr_unittest import VCRTestCase
 from canonicalwebteam.store_api.publishergw import PublisherGW
 from canonicalwebteam.exceptions import (
     StoreApiResponseError,
+    StoreApiResponseErrorList,
 )
 
 test_session = getenv(
@@ -198,18 +199,18 @@ class PublisherGWTest(VCRTestCase):
         self.assertEqual("test-to-model", response["allowlist"][0]["to-model"])
 
     def test_delete_remodel_allowlist(self):
-        response = self.client.delete_remodel_allowlist(
-            test_dev_auth,
-            store_id="marketplace_test_store_id",
-            allowlist=[
-                {
-                    "from-model": "test-from-model",
-                    "to-model": "test-to-model",
-                    "from-serial": "test-serial",
-                }
-            ],
-        )
-        self.assertEqual(response.status_code, 400)
+        with self.assertRaises(StoreApiResponseErrorList):
+            self.client.delete_remodel_allowlist(
+                test_dev_auth,
+                store_id="marketplace_test_store_id",
+                allowlist=[
+                    {
+                        "from-model": "test-from-model",
+                        "to-model": "test-to-model",
+                        "from-serial": "test-serial",
+                    }
+                ],
+            )
 
     def test_get_store_model_policies(self):
         response = self.client.get_store_model_policies(

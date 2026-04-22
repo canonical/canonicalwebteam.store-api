@@ -968,7 +968,7 @@ class PublisherGW(Base):
             json=payload,
         )
 
-        return response
+        return self.process_response(response)
 
     def get_brand(self, session: dict, store_id: str) -> dict:
         """
