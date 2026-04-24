@@ -892,7 +892,9 @@ class PublisherGW(Base):
 
         return response
 
-    def get_remodel_allowlist(self, session: dict, store_id: str) -> dict:
+    def get_remodel_allowlist(
+        self, session: dict, store_id: str, params: dict
+    ) -> dict:
         """
         Documentation:
             https://api.charmhub.io/docs/model-service-admin.html
@@ -901,9 +903,21 @@ class PublisherGW(Base):
             [GET]
             https://api.charmhub.io/v1/brand/{store_id}/remodel-allowlist
         """
+        query_params = {}
+
+        if params["cursor"] is not None:
+            query_params["cursor"] = params["cursor"]
+
+        if params["from-model"] is not None:
+            query_params["from-model"] = params["from-model"]
+
+        if params["page-size"] is not None:
+            query_params["page-size"] = params["page-size"]
+
         response = self.session.get(
             url=self.get_endpoint_url(f"brand/{store_id}/remodel-allowlist"),
             headers=self._get_dev_token_authorization_header(session),
+            params=query_params,
         )
 
         return self.process_response(response)

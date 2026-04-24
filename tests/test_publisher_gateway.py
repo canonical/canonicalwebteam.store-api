@@ -154,8 +154,14 @@ class PublisherGWTest(VCRTestCase):
         response = self.client.get_remodel_allowlist(
             test_dev_auth,
             store_id="marketplace_test_store_id",
+            params={
+                "cursor": None,
+                "from-model": None,
+                "page-size": None,
+            },
         )
         self.assertIsInstance(response, dict)
+        self.assertIn("allowlist", response)
 
     def test_create_store_model(self):
         response = self.client.create_store_model(
