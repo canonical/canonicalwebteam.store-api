@@ -700,14 +700,7 @@ class PublisherGW(Base):
         return self.process_response(response)
 
     def get_store_model_serial_logs(
-        self,
-        session: dict,
-        store_id: str,
-        model_name: str,
-        start_time=None,
-        end_time=None,
-        page_size=None,
-        cursor=None,
+        self, session: dict, store_id: str, model_name: str, params: dict
     ) -> dict:
         """
         Documentation:
@@ -720,24 +713,24 @@ class PublisherGW(Base):
             f"brand/{store_id}/model/{model_name}/serial-log"
         )
 
-        params = {}
+        query_params = {}
 
-        if start_time is not None:
-            params["start-time"] = start_time
+        if params["start_time"] is not None:
+            query_params["start-time"] = params["start_time"]
 
-        if end_time is not None:
-            params["end-time"] = end_time
+        if params["end_time"] is not None:
+            query_params["end-time"] = params["end_time"]
 
-        if page_size is not None:
-            params["page-size"] = page_size
+        if params["page_size"] is not None:
+            query_params["page-size"] = params["page_size"]
 
-        if cursor is not None:
-            params["cursor"] = cursor
+        if params["cursor"] is not None:
+            query_params["cursor"] = params["cursor"]
 
         response = self.session.get(
             url=request_url,
             headers=self._get_dev_token_authorization_header(session),
-            params=params,
+            params=query_params,
         )
 
         return self.process_response(response)
