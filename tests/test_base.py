@@ -105,9 +105,17 @@ class TestBase(unittest.TestCase):
         with self.assertNoLogs(logger=LOGGER):
             self.client.process_response(response)
 
-    def test_process_response_requires_macaroon_reauth(self):
+    def test_process_response_requires_macaroon_reauth_header(self):
         response = build_response(401)
         response.headers = {"WWW-Authenticate": "Macaroon"}
+        response.json = MagicMock(return_value={"code": "unauthorized"})
+
+        with self.assertRaises(PublisherMacaroonRefreshRequired):
+            self.client.process_response(response)
+
+    def test_process_response_requires_macaroon_reauth_body(self):
+        response = build_response(401)
+        response.headers = {}
         response.json = MagicMock(
             return_value={
                 "Code": "macaroon discharge required",

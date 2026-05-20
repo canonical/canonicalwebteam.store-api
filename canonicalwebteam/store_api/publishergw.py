@@ -140,8 +140,6 @@ class PublisherGW(Base):
         Return a root macaroon to be discharged by Ubuntu SSO.
         Endpoint URL: [POST] https://api.charmhub.io/v1/tokens/usso
         """
-        if ttl is None:
-            raise ValueError("ttl is required")
         if not permissions:
             raise ValueError("permissions must contain at least one entry")
 
@@ -194,7 +192,9 @@ class PublisherGW(Base):
             url=self.get_endpoint_url("tokens/usso/exchange"),
             headers={
                 "Authorization": (
-                    f"Macaroon root={root_macaroon}, discharge={discharge_macaroon}"
+                    "Macaroon "
+                    f"root={root_macaroon}, "
+                    f"discharge={discharge_macaroon}"
                 )
             },
             json=data,
