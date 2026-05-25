@@ -54,10 +54,10 @@ class PublisherGWTest(VCRTestCase):
             )
 
     def test_get_package_metadata_key_error(self):
-        response = self.client.get_package_metadata(
-            test_dev_auth, package_name="marketplace-test-charm4"
-        )
-        self.assertEqual(response["error"], "Some error")
+        with self.assertRaises(StoreApiResponseError):
+            self.client.get_package_metadata(
+                test_dev_auth, package_name="marketplace-test-charm4"
+            )
 
     def test_update_package_metadata(self):
         metadata = self.client.update_package_metadata(

@@ -48,7 +48,6 @@ class Dashboard(Base):
             return {
                 "Authorization": f"macaroon root={root}, discharge={bound}"
             }
-        # With Candid the header is Macaroons
         elif "macaroons" in session:
             return {"Macaroons": session["macaroons"]}
         return {"Macaroons": ""}

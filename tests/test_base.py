@@ -6,6 +6,7 @@ from typing import Dict, cast
 from unittest.mock import Mock, MagicMock
 
 from canonicalwebteam.exceptions import (
+    PublisherMacaroonRefreshRequired,
     StoreApiInternalError,
     StoreApiNotImplementedError,
     StoreApiBadGatewayError,
@@ -102,4 +103,35 @@ class TestBase(unittest.TestCase):
     def test_process_response_ok(self):
         response = build_response(200)
         with self.assertNoLogs(logger=LOGGER):
+            self.client.process_response(response)
+
+    def test_process_response_requires_macaroon_reauth_header(self):
+        response = build_response(401)
+        response.headers = {"WWW-Authenticate": "Macaroon"}
+        response.json = MagicMock(return_value={"code": "unauthorized"})
+
+        with self.assertRaises(PublisherMacaroonRefreshRequired):
+            self.client.process_response(response)
+
+    def test_process_response_requires_macaroon_reauth_body(self):
+        response = build_response(401)
+        response.headers = {}
+        response.json = MagicMock(
+            return_value={
+                "Code": "macaroon discharge required",
+                "Message": "discharge required",
+            }
+        )
+
+        with self.assertRaises(PublisherMacaroonRefreshRequired):
+            self.client.process_response(response)
+
+    def test_process_response_not_ok_with_non_error_list(self):
+        response = build_response(401)
+        response.headers = {}
+        response.json = MagicMock(
+            return_value={"code": "unauthorized", "message": "Unauthorized"}
+        )
+
+        with self.assertRaises(StoreApiResponseError):
             self.client.process_response(response)

@@ -111,7 +111,7 @@ class PublisherGW(Base):
         ttl: Optional[list] = None,
     ) -> str:
         """
-        Return a bakery v2 macaroon to be discharged by Candid.
+        Return a bakery v2 macaroon to be discharged by Ubuntu SSO.
         Documentation: https://api.charmhub.io/docs/default.html#issue_macaroon
         Endpoint URL: [POST] https://api.charmhub.io/v1/tokens
         """
@@ -129,6 +129,35 @@ class PublisherGW(Base):
         )
         return self.process_response(response)["macaroon"]
 
+    def issue_usso_macaroon(
+        self,
+        ttl: int,
+        permissions: list,
+        channels: Optional[list] = None,
+        packages: Optional[list] = None,
+    ) -> str:
+        """
+        Return a root macaroon to be discharged by Ubuntu SSO.
+        Endpoint URL: [POST] https://api.charmhub.io/v1/tokens/usso
+        """
+        if not permissions:
+            raise ValueError("permissions must contain at least one entry")
+
+        data = {"ttl": ttl, "permissions": permissions}
+
+        if channels is not None:
+            data["channels"] = channels
+
+        if packages is not None:
+            data["packages"] = packages
+
+        response = self.session.post(
+            url=self.get_endpoint_url("tokens/usso"),
+            json=data,
+        )
+
+        return self.process_response(response)["macaroon"]
+
     def exchange_macaroons(self, issued_macaroon: str) -> str:
         """
         Return an exchanged snapstore-only authentication macaroon.
@@ -141,6 +170,34 @@ class PublisherGW(Base):
             url=self.get_endpoint_url("tokens/exchange"),
             headers={"Macaroons": issued_macaroon},
             json={},
+        )
+
+        return self.process_response(response)["macaroon"]
+
+    def exchange_usso_macaroons(
+        self,
+        root_macaroon: str,
+        discharge_macaroon: str,
+        client_description: Optional[str] = None,
+    ) -> str:
+        """
+        Return an exchanged snapstore-only authentication macaroon.
+        Endpoint URL: [POST] https://api.charmhub.io/v1/tokens/usso/exchange
+        """
+        data = {}
+        if client_description is not None:
+            data["client-description"] = client_description
+
+        response = self.session.post(
+            url=self.get_endpoint_url("tokens/usso/exchange"),
+            headers={
+                "Authorization": (
+                    "Macaroon "
+                    f"root={root_macaroon}, "
+                    f"discharge={discharge_macaroon}"
+                )
+            },
+            json=data,
         )
 
         return self.process_response(response)["macaroon"]

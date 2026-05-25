@@ -114,6 +114,10 @@ class Base:
             raise PublisherMacaroonRefreshRequired
 
         if not response.ok:
+            if self._requires_macaroon_reauth(response, body):
+                logger.error("Publisher macaroon reauthentication required")
+                raise PublisherMacaroonRefreshRequired
+
             self.log_detailed_error(response)
             error_list = (
                 body["error_list"]
@@ -141,6 +145,18 @@ class Base:
                 raise StoreApiResponseError(
                     "Unknown error from api", response.status_code
                 )
+            else:
+                message = (
+                    body.get("Message")
+                    if isinstance(body, dict)
+                    else "Unknown error from api"
+                )
+                if not message and isinstance(body, dict):
+                    message = body.get("message")
+                raise StoreApiResponseError(
+                    message or "Unknown error from api",
+                    response.status_code,
+                )
 
         return body
 
@@ -150,3 +166,22 @@ class Base:
         the header response.
         """
         return headers.get("WWW-Authenticate") == ("Macaroon needs_refresh=1")
+
+    def _requires_macaroon_reauth(self, response, body):
+        if response.status_code != 401:
+            return False
+
+        www_authenticate = (
+            response.headers.get("WWW-Authenticate")
+            or response.headers.get("www-authenticate")
+            or ""
+        )
+        if "macaroon" in www_authenticate.lower():
+            return True
+
+        if not isinstance(body, dict):
+            return False
+
+        error_code = str(body.get("Code", "")).lower()
+        message = str(body.get("Message", "")).lower()
+        return "macaroon" in error_code or "discharge required" in message
