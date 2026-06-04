@@ -96,6 +96,19 @@ class SnapRecommendationTest(VCRTestCase):
             self.assertIn("snap_id", snap)
             self.assertIn("details", snap)
 
+    def test_get_featured_snaps(self):
+        response = self.client.get_featured_snaps()
+        self.assertIsInstance(response, list)
+        if len(response) > 0:
+            snap = response[0]
+            self.assertIn("details", snap)
+            self.assertIn("name", snap["details"])
+            self.assertIn("icon", snap["details"])
+            self.assertIn("title", snap["details"])
+            self.assertIn("publisher", snap["details"])
+            self.assertIn("developer_validation", snap["details"])
+            self.assertIn("summary", snap["details"])
+
     def test_get_recently_updated_default(self):
         response = self.client.get_recently_updated()
         self.assertIsInstance(response, dict)
