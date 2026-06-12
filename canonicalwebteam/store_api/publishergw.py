@@ -958,8 +958,11 @@ class PublisherGW(Base):
         if params["cursor"] is not None:
             query_params["cursor"] = params["cursor"]
 
-        if params["from-model"] is not None:
+        if params.get("from-model") is not None:
             query_params["from-model"] = params["from-model"]
+
+        if params.get("to-model") is not None:
+            query_params["to-model"] = params.get("to-model")
 
         if params["page-size"] is not None:
             query_params["page-size"] = params["page-size"]
