@@ -157,11 +157,27 @@ class PublisherGWTest(VCRTestCase):
             params={
                 "cursor": None,
                 "from-model": None,
+                "to-model": None,
                 "page-size": None,
             },
         )
         self.assertIsInstance(response, dict)
         self.assertIn("allowlist", response)
+
+    def test_get_remodel_allowlist_with_to_model(self):
+        response = self.client.get_remodel_allowlist(
+            test_dev_auth,
+            store_id="marketplace_test_store_id",
+            params={
+                "cursor": None,
+                "from-model": None,
+                "to-model": "test-to-model",
+                "page-size": None,
+            },
+        )
+        self.assertIsInstance(response, dict)
+        self.assertIn("allowlist", response)
+        self.assertIn("to-model=test-to-model", self.cassette.requests[0].uri)
 
     def test_create_store_model(self):
         response = self.client.create_store_model(
