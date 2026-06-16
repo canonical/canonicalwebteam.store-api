@@ -157,10 +157,12 @@ class PublisherGWTest(VCRTestCase):
         response.request.headers = {}
         response.request._cookies = {}
         response.request.body = '{"token":"test-token"}'
-        self.client.session.post = Mock(return_value=response)
+        session = Mock()
+        session.post.return_value = response
+        client = PublisherGW("charm", session=session)
 
         with self.assertRaises(StoreApiResponseErrorList) as context:
-            self.client.accept_invite(
+            client.accept_invite(
                 test_session,
                 package_name="test",
                 token="test-token",
