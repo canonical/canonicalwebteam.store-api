@@ -1,3 +1,4 @@
+import json
 from os import getenv
 from unittest.mock import Mock
 
@@ -137,22 +138,23 @@ class PublisherGWTest(VCRTestCase):
         self.assertEqual(response.status_code, 204)
 
     def test_accept_invite_error_raises_error_list(self):
+        body = {
+            "error-list": [
+                {"code": "invalid-token", "message": "Invalid invite token"}
+            ]
+        }
         response = Mock(
             ok=False,
             status_code=400,
-            headers={},
+            headers={"content-type": "application/json"},
             cookies={},
-            text='{"error-list":[{"code":"invalid-token"}]}',
+            text=json.dumps(body),
             url=(
                 "https://api.charmhub.io/v1/charm/test/"
                 "collaborators/invites/accept"
             ),
         )
-        response.json.return_value = {
-            "error-list": [
-                {"code": "invalid-token", "message": "Invalid invite token"}
-            ]
-        }
+        response.json.return_value = body
         response.request.url = response.url
         response.request.headers = {}
         response.request._cookies = {}
