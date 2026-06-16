@@ -637,6 +637,8 @@ class PublisherGW(Base):
             headers=self._get_authorization_header(publisher_auth),
             json={"token": token},
         )
+        if not response.ok:
+            self.process_response(response)
         return response
 
     def reject_invite(

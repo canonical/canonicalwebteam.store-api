@@ -1,4 +1,5 @@
 from os import getenv
+from unittest.mock import Mock
 
 from vcr_unittest import VCRTestCase
 from canonicalwebteam.store_api.publishergw import PublisherGW
@@ -134,6 +135,41 @@ class PublisherGWTest(VCRTestCase):
             emails=["alimot.akinbode@test.canonical.com"],
         )
         self.assertEqual(response.status_code, 204)
+
+    def test_accept_invite_error_raises_error_list(self):
+        response = Mock(
+            ok=False,
+            status_code=400,
+            headers={},
+            cookies={},
+            text='{"error-list":[{"code":"invalid-token"}]}',
+            url=(
+                "https://api.charmhub.io/v1/charm/test/"
+                "collaborators/invites/accept"
+            ),
+        )
+        response.json.return_value = {
+            "error-list": [
+                {"code": "invalid-token", "message": "Invalid invite token"}
+            ]
+        }
+        response.request.url = response.url
+        response.request.headers = {}
+        response.request._cookies = {}
+        response.request.body = '{"token":"test-token"}'
+        self.client.session.post = Mock(return_value=response)
+
+        with self.assertRaises(StoreApiResponseErrorList) as context:
+            self.client.accept_invite(
+                test_session,
+                package_name="test",
+                token="test-token",
+            )
+
+        self.assertEqual(context.exception.status_code, 400)
+        self.assertEqual(
+            context.exception.errors[0]["message"], "Invalid invite token"
+        )
 
     def test_create_store_signing_key(self):
         response = self.client.create_store_signing_key(
