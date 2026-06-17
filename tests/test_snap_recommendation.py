@@ -121,6 +121,13 @@ class SnapRecommendationTest(VCRTestCase):
         self.assertIsInstance(response["snaps"], list)
         self.assertEqual(len(response["snaps"]), 5)
 
+    def test_get_stats(self):
+        response = self.client.get_stats()
+        self.assertIsInstance(response, dict)
+        self.assertIn("total_tracked", response)
+        self.assertIn("updated_today", response)
+        self.assertIn("new_today", response)
+
     def test_get_recently_updated_large_size(self):
         response = self.client.get_recently_updated(page=1, size=20)
         self.assertIsInstance(response, dict)
