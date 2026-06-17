@@ -58,6 +58,17 @@ class SnapRecommendations:
     def get_top_rated(self) -> list:
         return self.get_category("top_rated")
 
+    def get_stats(self) -> dict:
+        """
+        Return store statistics.
+
+        Endpoint: [GET] /stats
+        Returns: { "total_tracked": n, "updated_today": n, "new_today": n }
+        """
+        url = self.get_endpoint_url("stats")
+        response = self.session.get(url)
+        return self._process_response(response)
+
     def get_recently_updated(
         self, page: int = 1, size: int = 10, timeout: int = 10
     ) -> dict:
