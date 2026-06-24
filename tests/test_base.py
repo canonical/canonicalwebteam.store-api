@@ -107,7 +107,7 @@ class TestBase(unittest.TestCase):
 
     def test_process_response_requires_macaroon_reauth_header(self):
         response = build_response(401)
-        response.headers = {"WWW-Authenticate": "Macaroon"}
+        response.headers = {"WWW-Authenticate": "Macaroon needs_refresh=1"}
         response.json = MagicMock(return_value={"code": "unauthorized"})
 
         with self.assertRaises(PublisherMacaroonRefreshRequired):

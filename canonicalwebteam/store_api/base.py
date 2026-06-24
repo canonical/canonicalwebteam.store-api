@@ -171,14 +171,6 @@ class Base:
         if response.status_code != 401:
             return False
 
-        www_authenticate = (
-            response.headers.get("WWW-Authenticate")
-            or response.headers.get("www-authenticate")
-            or ""
-        )
-        if "macaroon" in www_authenticate.lower():
-            return True
-
         if not isinstance(body, dict):
             return False
 
