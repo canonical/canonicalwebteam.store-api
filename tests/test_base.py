@@ -13,7 +13,9 @@ from canonicalwebteam.exceptions import (
     StoreApiServiceUnavailableError,
     StoreApiGatewayTimeoutError,
     StoreApiConnectionError,
+    StoreApiResourceNotFound,
     StoreApiResponseError,
+    StoreApiResponseErrorList,
 )
 from canonicalwebteam.store_api.base import (
     Base,
@@ -99,6 +101,49 @@ class TestBase(unittest.TestCase):
                     self.assertIn(expected_log, record_request["body"])
                     self.assertEqual(SAMPLE_URL, record_response["url"])
                     self.assertEqual(404, record_response["status"])
+
+    def test_process_response_resource_not_found_is_not_logged(self):
+        for error_key in ["error_list", "error-list"]:
+            response = build_response(404)
+            response.json = MagicMock(
+                return_value={
+                    error_key: [
+                        {
+                            "code": "resource-not-found",
+                            "message": "No snap named 'test-snap'",
+                        }
+                    ]
+                }
+            )
+
+            with self.assertNoLogs(logger=LOGGER):
+                with self.assertRaises(StoreApiResourceNotFound):
+                    self.client.process_response(response)
+
+    def test_process_response_error_list_is_logged(self):
+        for error_key in ["error_list", "error-list"]:
+            response = build_response(400)
+            response.json = MagicMock(
+                return_value={
+                    error_key: [
+                        {
+                            "code": "invalid",
+                            "message": "Something went wrong",
+                        }
+                    ]
+                }
+            )
+
+            with self.assertLogs(logger=LOGGER) as log_manager:
+                with self.assertRaises(StoreApiResponseErrorList):
+                    self.client.process_response(response)
+
+            self.assertEqual(1, len(log_manager.records))
+            record_response = cast(
+                Dict[str, int],
+                log_manager.records[0].__dict__.get("response", {}),
+            )
+            self.assertEqual(400, record_response["status"])
 
     def test_process_response_ok(self):
         response = build_response(200)
