@@ -118,12 +118,19 @@ class Base:
                 logger.error("Publisher macaroon reauthentication required")
                 raise PublisherMacaroonRefreshRequired
 
-            self.log_detailed_error(response)
             error_list = (
                 body["error_list"]
                 if "error_list" in body
                 else body.get("error-list")
             )
+            is_resource_not_found = any(
+                error.get("code") == "resource-not-found"
+                for error in error_list or []
+            )
+
+            if not is_resource_not_found:
+                self.log_detailed_error(response)
+
             if "error_list" in body or "error-list" in body:
                 for error in error_list:
                     if error["code"] == "user-missing-latest-tos":
