@@ -14,6 +14,7 @@ from canonicalwebteam.exceptions import (
     StoreApiResponseError,
     StoreApiResponseErrorList,
     StoreApiServiceUnavailableError,
+    StoreApiTooManyRequestsError,
 )
 
 logger = logging.getLogger(__name__)
@@ -78,6 +79,23 @@ class Base:
         )
 
     def process_response(self, response):
+        # 429 responses are rate limiting and not in JSON format
+        if response.status_code == 429:
+            retry_after = response.headers.get("Retry-After")
+            logger.warning(
+                "Upstream rate limited the request to %s"
+                "%s. Back off before retrying.",
+                response.url,
+                (
+                    f" after {retry_after} seconds"
+                    if retry_after is not None
+                    else ""
+                ),
+            )
+            raise StoreApiTooManyRequestsError(
+                "Rate limited by upstream service"
+            )
+
         # 5xx responses are not in JSON format
         if response.status_code >= 500:
             self.log_detailed_error(response)

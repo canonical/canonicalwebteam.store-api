@@ -1,3 +1,4 @@
+import logging
 import unittest
 
 from requests import Session
@@ -16,6 +17,7 @@ from canonicalwebteam.exceptions import (
     StoreApiResourceNotFound,
     StoreApiResponseError,
     StoreApiResponseErrorList,
+    StoreApiTooManyRequestsError,
 )
 from canonicalwebteam.store_api.base import (
     Base,
@@ -65,6 +67,25 @@ class TestBase(unittest.TestCase):
             response = build_response(status)
             with self.assertRaises(exception):
                 self.client.process_response(response)
+
+    def test_process_response_rate_limited(self):
+        # Rate limited responses are HTML, not JSON: they must raise
+        # a StoreApiTooManyRequestsError and log a warning, without
+        # trying to decode the body (SNAPCRAFT-IO-4)
+        response = build_response(429)
+        response.headers = {"Retry-After": "30"}
+        response.json = MagicMock(side_effect=ValueError("not JSON"))
+        response.text = (
+            "<html><body><h1>429 Too Many Requests</h1></body></html>"
+        )
+
+        with self.assertLogs(logger=LOGGER, level="WARNING") as log_manager:
+            with self.assertRaises(StoreApiTooManyRequestsError):
+                self.client.process_response(response)
+
+        self.assertEqual(1, len(log_manager.records))
+        self.assertEqual(logging.WARNING, log_manager.records[0].levelno)
+        self.assertIn("rate limited", log_manager.records[0].getMessage())
 
     def test_process_response_unknown_status(self):
         response = build_response(599)  # unknown code
