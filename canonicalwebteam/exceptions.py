@@ -125,3 +125,11 @@ class PublisherMacaroonRefreshRequired(StoreApiError):
     """
 
     pass
+
+
+class StoreApiTooManyRequestsError(StoreApiError):
+    """
+    The API rate limited the request (HTTP 429)
+    """
+
+    pass
