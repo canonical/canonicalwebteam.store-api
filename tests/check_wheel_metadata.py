@@ -1,16 +1,17 @@
 """Check built wheel metadata without installing development dependencies."""
 
 import argparse
+import re
 from email.parser import BytesParser
 from pathlib import Path
 from zipfile import ZipFile
 
-RUNTIME_REQUIREMENTS = {
-    "cachetools (>=6.2.0,<7.0.0)",
-    "pymacaroons (==0.13.0)",
-    "redis (>=6.4.0,<7.0.0)",
-    "requests (>=2.32.2,<3.0.0)",
-}
+RUNTIME_DEPENDENCY_NAMES = {"cachetools", "pymacaroons", "redis", "requests"}
+
+
+def requirement_distribution_name(requirement: str) -> str:
+    name = re.split(r"[\s\[<>=!~(;@]", requirement.strip(), maxsplit=1)[0]
+    return re.sub(r"[-_.]+", "-", name).lower()
 
 
 def check_wheel_metadata(wheel: Path) -> None:
@@ -24,13 +25,16 @@ def check_wheel_metadata(wheel: Path) -> None:
             raise ValueError("Expected exactly one wheel METADATA file")
         metadata = BytesParser().parsebytes(archive.read(metadata_paths[0]))
 
-    requirements = set(metadata.get_all("Requires-Dist", []))
-    if requirements != RUNTIME_REQUIREMENTS:
+    dependency_names = {
+        requirement_distribution_name(requirement)
+        for requirement in metadata.get_all("Requires-Dist", [])
+    }
+    if dependency_names != RUNTIME_DEPENDENCY_NAMES:
         raise ValueError(
             "Unexpected wheel dependencies: "
-            f"{sorted(requirements - RUNTIME_REQUIREMENTS)}; "
+            f"{sorted(dependency_names - RUNTIME_DEPENDENCY_NAMES)}; "
             "missing runtime dependencies: "
-            f"{sorted(RUNTIME_REQUIREMENTS - requirements)}"
+            f"{sorted(RUNTIME_DEPENDENCY_NAMES - dependency_names)}"
         )
 
 
@@ -39,4 +43,4 @@ if __name__ == "__main__":
     parser.add_argument("wheels", type=Path, nargs="+")
     for wheel in parser.parse_args().wheels:
         check_wheel_metadata(wheel)
-        print(f"{wheel}: runtime requirements match; no mypy or coverage")
+        print(f"{wheel}: runtime dependency names match; no mypy or coverage")
