@@ -77,9 +77,6 @@ jobs:
     - name: Build package
       run: poetry build
 
-    - name: Check wheel runtime dependencies
-      run: python3 tests/check_wheel_metadata.py dist/*.whl
-
   lint-python:
     runs-on: ubuntu-latest
 

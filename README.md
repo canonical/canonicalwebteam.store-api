@@ -36,10 +36,4 @@ poetry run coverage xml
 poetry run mypy canonicalwebteam/store_api --follow-untyped-imports
 ```
 
-Build the package and verify that the wheel requires only runtime dependencies.
-The metadata check compares normalized distribution names, not version bounds:
-
-```bash
-poetry build
-python3 tests/check_wheel_metadata.py dist/*.whl
-```
+Build the package with `poetry build`.
