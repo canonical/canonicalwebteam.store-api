@@ -18,9 +18,27 @@ See also the documentation for [pip install](https://pip.pypa.io/en/stable/refer
 ## Development
 
 The package leverages [poetry](https://poetry.eustace.io/) for dependency management.
+Install the development dependencies, including coverage and mypy, with:
+
+```bash
+poetry install --with dev
+```
 
 ## Testing
 
 All tests can be run with `poetry run python3 -m unittest discover tests`.
 
-Note: You might have to do `poetry install` before runnning the command above.
+To measure coverage and check type hints using the development dependencies:
+
+```bash
+poetry run coverage run --source=. -m unittest discover tests
+poetry run coverage xml
+poetry run mypy canonicalwebteam/store_api --follow-untyped-imports
+```
+
+To build the package and verify that the wheel requires only runtime dependencies:
+
+```bash
+poetry build
+python3 tests/check_wheel_metadata.py dist/*.whl
+```

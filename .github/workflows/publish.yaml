@@ -22,6 +22,9 @@ jobs:
     - name: Build package
       run: poetry build
 
+    - name: Check wheel runtime dependencies
+      run: python3 tests/check_wheel_metadata.py dist/*.whl
+
     - name: Publish to PyPI
       uses: pypa/gh-action-pypi-publish@bea5cda687c2b79989126d589ef4411bedce0195
       with:
@@ -42,7 +45,7 @@ jobs:
       run: sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 
     - name: Install poetry dependencies
-      run: poetry install
+      run: poetry install --with dev
 
     - name: Test Python with Coverage
       run: |
