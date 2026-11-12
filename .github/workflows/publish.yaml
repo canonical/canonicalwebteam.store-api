@@ -42,7 +42,7 @@ jobs:
       run: sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 
     - name: Install poetry dependencies
-      run: poetry install
+      run: poetry install --with dev
 
     - name: Test Python with Coverage
       run: |
